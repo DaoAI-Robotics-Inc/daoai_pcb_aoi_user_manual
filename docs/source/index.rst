@@ -6,7 +6,8 @@ DaoAI PCB AOI 用户手册
    :caption: Introduction
 
    introduce/quick_start/index
-   introduce/quick_start/release-notes
+   introduce/config/detection_config_2d
+   introduce/config/detection_config_3d
 
 
 
