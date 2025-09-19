@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'DaoAI PCB AOI User Manual'
+project = 'DaoAI PCBA AOI User Manual'
 copyright = '2021-2024 DaoAI Robotics Inc.'
 author = 'DaoAI'
 
