@@ -1,0 +1,20 @@
+{
+  "steps": [
+    {
+      "path": "data\\0430\\",
+      "sensors" : [0]
+    }
+  ],
+  "calibration_config" :{
+    "frame_config" : {
+      "exposure_stop": 0,
+      "brightness": 3,
+      "gain": 0
+    },
+    "pattern_config" : {
+      "pattern_row" : 21,
+      "pattern_col" : 21,
+      "center_distance": 2.5
+    }
+  }
+}
