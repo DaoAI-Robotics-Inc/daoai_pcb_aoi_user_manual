@@ -32,7 +32,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
 后端默认地址为 ``http://localhost:8000/``。
 
 .. image:: images/login.png
-   :scale: 80%
+   :scale: 50%
    :alt: 登录界面
 
 .. image:: images/host_addr.png
@@ -49,7 +49,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
 首次进入可以使用 **管理员** 登录账号：用户名 **admin**，密码在部署时提供。
 
 .. image:: images/login.png
-   :scale: 70%
+   :scale: 50%
    :alt: 登录界面示意
 
 登录后点击右上角齿轮进入设置，可执行：
@@ -83,24 +83,24 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
 创建产品
 -----------------
 
-在主页点击 **训练PCB**，开始注册新的 PCB 产品。
+在主页点击 **训练 PCB**，开始注册新的 PCB 产品。
 
 .. image:: images/create_product_1.png
-   :scale: 100%
+   :scale: 50%
    :alt: 创建产品第一步
 
 输入产品名称。下方为系统支持的检测项列表，可按需启用/关闭。
 
 .. image:: images/create_product_2.png
-   :scale: 100%
+   :scale: 50%
    :alt: 创建产品第二步
 
-**将PCB放在传送带上**
+**将 PCB 放在传送带上**
 
    将 PCB 平整放置于传送带中央，选择对应传送带并点击“锁定”。输入或确认传送带宽度参数，随后点击“进板”，PCB 将自动输送至相机下方的拍摄/定位区域；到位后点击“下一步”。
 
   .. image:: images/create_product_3.png
-     :scale: 80%
+     :scale: 50%
      :alt: 将PCB放在传送带上示意
 
 **输入 PCB 尺寸**  
@@ -109,7 +109,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
    若尺寸不确定，可移动相机分别拍摄 PCB 左下角与右上角，在图像上依次点击这两个位置并选择 **自动计算** ，系统将自动推算尺寸。
 
    .. image:: images/size_calculation.png
-      :scale: 80%
+      :scale: 50%
       :alt: 自动尺寸计算示意
 
 **完整 PCB 拍摄**  
@@ -120,14 +120,14 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
    此界面可实时调整相机参数（亮度、曝光、增益、白平衡、点云滤波等）；如效果不佳，可重新拍摄覆盖上一版本。
 
    .. image:: images/full_pcb_capture.png
-      :scale: 80%
+      :scale: 55%
       :alt: 完整 PCB 拍摄
 
-   拍摄时可按需调整相机参数（亮度、曝光时间、点云滤波器等）。
+.. （相机参数可调已在上文说明，此句删去避免重复）
 
 **半自动编程（上传 CAD）**  
 
-   提供CAD（.csv）文件后，系统可：
+   提供 CAD（.csv）文件后，系统可：
    - 自动读取：封装(Package)、丝印/标识、料号(PN)、X/Y 坐标、旋转角度；
    - 按封装或料号聚类，同类元件一次建模，加速训练；
    - 减少后续人工分组与命名工作。
@@ -135,7 +135,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
    若不提供 CAD，后续自动编程仍可执行；检测质量不受影响，仅失去基于封装/料号的聚类加速，系统将对元件逐一建模。
 
    .. image:: images/upload_cad.png
-      :scale: 80%
+      :scale: 50%
       :alt: 上传 CAD 文件界面
 
    步骤：
@@ -145,7 +145,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
    4. 点击“运行自动编程”。
 
    .. image:: images/upload_cad2.png
-      :scale: 80%
+      :scale: 50%
       :alt: 字段映射示意
 
    若 CAD 初次与拍摄图像未正确重合，系统将进入“对齐调整”界面；通过旋转、平移、缩放（必要时辅助少量基准点）微调至主要元件位置大致重合后，点击“重新运行自动编程”即可重新生成。
@@ -161,12 +161,8 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
    自动编程耗时约 30 秒。
 
 .. image:: images/full_auto_program.png
-   :scale: 80%
+   :scale: 50%
    :alt: 全自动编程示意
-
-.. image:: images/full_auto_program.png
-   :scale: 80%
-   :alt: 手动编程示例
 
 产品编程页面
 -----------------
@@ -182,7 +178,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
 点击“+ 标记”，框选 PCB 上固定的参考标记（圆形、矩形或复杂图案均可）。框选区域应略大，以保证在轻微位移情况下仍能正确定位。确认后，点击“预测中心”完成标记定义。
 
 .. image:: images/mark_alignment.png
-   :scale: 80%
+   :scale: 50%
    :alt: 标记对齐示例
 
 **模板编辑器**：  
@@ -195,7 +191,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
    :alt: 模板编辑器示例
 
 手动编程
------------------
+~~~~~~~~~~~~~~~~
 
 右侧工具栏提供多种手动编程工具：
 
@@ -206,10 +202,6 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
 5. **引脚工具**：定义引脚检测框  
 6. **文本工具**：定义文本检测框  
 7. **条形码工具**：定义条码检测框（支持 PCB 序列号识别）  
-
-.. image:: images/tools_overview.png
-   :scale: 80%
-   :alt: 手动编程工具栏
 
 常见元件的编程方法
 -----------------
@@ -227,7 +219,7 @@ DaoAI PCB AOI 软件是一款面向电子制造的智能光学检测系统。
    - 框贴合元件实际形状，避免包含过多空白区域；
    
    .. image:: images/program_resistor.png
-      :scale: 80%
+      :scale: 60%
       :alt: 手动编程电容、电阻示意
 
 分组与属性：
@@ -257,11 +249,11 @@ QFP 封装 IC 芯片
    - (2D) IC 引脚检测需要划分 3 个区域：焊盘、焊料、引脚末端；参见 :ref:`3.2 IC 引脚检测 v2（2D，基于颜色比例）` 以了解区域划分标准。
 
    .. image:: images/program_qfc_1.png
-      :scale: 80%
+      :scale: 50%
       :alt: QFP 封装 IC 芯片
 
-   .. image:: images/program_qfc_1.png
-      :scale: 80%
+   .. image:: images/program_qfc_2.png
+      :scale: 50%
       :alt: QFP 封装 IC 芯片
 
 分组与属性：
@@ -299,7 +291,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 3. 过滤搜索不健康的元件：低置信度 / CAD 未匹配 / 尺寸或重叠异常。
 
    .. image:: images/unhealthy.png
-      :scale: 80%
+      :scale: 70%
       :alt: 不健康元件示意
 
 **正确但是标为不健康的元件**：若置信度较低被标为不健康但框位置正确，可点击列表中对应元件的问号图标即可确认，归为健康。
@@ -309,7 +301,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 **CAD 中存在但未被自动检测的元件**：若出现 missing 标记，先删除该标记并手动新增；若实板确实无此元件，则直接删除/忽略。
 
    .. image:: images/missing.png
-      :scale: 80%
+      :scale: 60%
       :alt: 不健康元件示意
 
 
@@ -319,7 +311,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 确认全部元件框与属性无误后，点击“训练”启动模型训练，耗时约 1 分钟。
 
    .. image:: images/train.png
-      :scale: 80%
+      :scale: 50%
       :alt: 训练示意
 
 训练完成后，点击“自动生成检测参数”，系统会基于当前模板与训练结果生成一套初始检测参数。
@@ -327,7 +319,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 随后点击“评估全部”，系统将批量评估所有元件，并以颜色标记（绿：健康；红：不健康）。可按需查看不健康项并参考 :ref:`检测参数` 继续微调。
 
    .. image:: images/eval.png
-      :scale: 80%
+      :scale: 50%
       :alt: 评估示意
 
 
@@ -338,7 +330,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 2. 任务配置：选择 PCB 产品、传送带及启动模式（单板 / 连续 / 调试），点击“开始检测”。
 
    .. image:: images/start_inspection.png
-      :scale: 80%
+      :scale: 50%
       :alt: 新建检测任务
 
    .. image:: images/start_mode.png
@@ -352,7 +344,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
    - 右侧信息栏：实时显示检测计数、良率与缺陷统计。
 
    .. image:: images/inspect_page.png
-      :scale: 80%
+      :scale: 50%
       :alt: 检测页面
 
 检测到缺陷时自动跳转至缺陷详情页，可查看放大图、定位框、缺陷类型及判定依据，并立即反馈。 
@@ -360,7 +352,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 反馈后的数据会添加到数据集里，供后续持续优化使用。
 
 .. image:: images/inspect_detail.png
-   :scale: 80%
+   :scale: 50%
    :alt: 缺陷详情
 
 快捷键：
@@ -376,19 +368,19 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 在主页点击“工作列表”进入历史任务列表。
 
    .. image:: images/worklist.png
-      :scale: 80%
+      :scale: 50%
       :alt: 工作列表概览
 
 列表展示每个任务的：创建时间、合格/不合格数量、良率、缺陷统计等。点击任意一行进入该任务详情。
 
    .. image:: images/worklist1.png
-      :scale: 80%
+      :scale: 50%
       :alt: 任务详情概览
 
 在任务详情中可展开单次检测记录；点击某次记录进入缺陷详情页，查看放大图、定位框、缺陷类型与判定依据，并可直接反馈。
 
    .. image:: images/worklist2.png
-      :scale: 80%
+      :scale: 50%
       :alt: 缺陷记录与反馈
 
 提交的反馈会写入数据集，用于后续再训练与参数自适应迭代。
@@ -399,5 +391,7 @@ SOP/TSSOP 封装的存储芯片或驱动芯片
 
 反馈写入数据集后，回到产品编程页面重新训练并评估，针对仍为红色的异常元件微调参数即可完成一次迭代。
 
+|
+|
 
 以上即为快速开始全部流程，感谢您的使用。后续更多功能与更详细的说明请继续阅读完整用户手册。
