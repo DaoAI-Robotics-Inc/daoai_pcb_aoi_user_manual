@@ -11,20 +11,14 @@ DaoAI PCBA AOI 用户手册
    :maxdepth: 1
    :caption: 使用指南
 
-   complete_user_guide/installation/index
-   complete_user_guide/features/index
+   complete_user_guide/features/create_product
+   complete_user_guide/features/auto_programming
+   complete_user_guide/features/manual_programming
+   complete_user_guide/features/part_library_and_grouping
+   complete_user_guide/config/index
+   complete_user_guide/features/pcb_array
    complete_user_guide/inspection/index
-   complete_user_guide/training_and_optimization/index
-
-
    complete_user_guide/system_management/index
-
-
-
-
-   introduce/config/detection_config_2d
-   introduce/config/detection_config_3d
-
 
 
 
