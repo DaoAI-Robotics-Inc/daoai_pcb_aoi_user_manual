@@ -222,7 +222,7 @@
 
 主要界面说明（见下图）：
 
-.. image:: images/data_migration.png
+.. image:: images/aoi_pcb_blob_liner.png
   :scale: 60%
   :alt: 数据迁移示意
 
