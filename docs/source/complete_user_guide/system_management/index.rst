@@ -226,7 +226,11 @@
   :scale: 60%
   :alt: 数据迁移示意
 
-- 左上角 File → FTP mount points 可配置 FTP 服务器，实现远程备份到 NAS 或其他网络硬盘。
+.. image:: images/ftp_usage.png
+  :scale: 60%
+  :alt: FTP 配置示意
+
+- 左上角 File → FTP mount points 可配置 FTP 服务器，实现远程备份到 NAS 或其他网络硬盘。输入用户名密码，服务器地址与路径，点击添加即可。
 - 右上角 Destination Volume 用于选择目标盘（如移动硬盘、第二磁盘等）。
 - 上方搜索栏可按产品名或序列号快速检索检测记录。
 - 搜索栏旁边的过滤器按钮可按日期、时间等条件过滤记录，便于批量操作。
