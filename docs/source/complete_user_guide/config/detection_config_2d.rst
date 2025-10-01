@@ -111,10 +111,10 @@
       :alt: 多颜色范围示例（蓝/红）
 
 - **二值化与有效比例（Valid Ratio）**：  
-  将 ROI 内属于颜色范围的像素计为“有效点”，有效比例定义为  
-  :math:`\text{valid_ratio} = 100 \times \dfrac{\text{valid_point_count}}{\text{roi_area}}`。  
+  将 ROI 内属于颜色范围的像素计为“有效点”，有效比例定义为： **有效比例 = 100 × 有效点数 / ROI 面积**  
+  
   在评价时，会检查每个颜色范围对应的有效比例是否落入给定范围。  
-  一个 ROI 可设置多组颜色范围，而这些范围可以在 **颜色范围（HSV）** 中配置。  
+  一个 ROI 可设置多组颜色范围，而这些范围可以在 **颜色范围（HSV）** 中配置。
   
    .. image:: images/solder2d_binarize.png
       :scale: 80%
@@ -188,7 +188,6 @@
          :scale: 80%
          :alt: V2焊料色盘
    
-   TODO: 等待更新
    - **焊料平均阈值 (Solder Mean Threshold)**  
       当引脚的 valid_ratio 未能落入预设的 **Solder Valid Ratio Range** 时，会触发二次判定。  
       此时，系统会计算该引脚的 valid_ratio 与所有引脚平均值 (mean_valid_ratio) 的差异：  
@@ -220,8 +219,6 @@
       .. image:: images/lead2d_v2_pad_color.png
          :scale: 80%
          :alt: V2焊盘/翘脚参数
-
-   TODO: 等待更新
 
    - **引脚翘起焊料平均阈值**  
       当前引脚 **焊料区 (Solder)** 的有效比例 − 所有引脚焊料区有效比例的平均值 > 设定阈值  
