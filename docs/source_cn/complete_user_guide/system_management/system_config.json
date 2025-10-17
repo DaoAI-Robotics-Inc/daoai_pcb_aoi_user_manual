@@ -1,0 +1,880 @@
+{
+    "camera_view_layout": [
+        1
+    ],
+    "inspection_view_layout": [
+        1
+    ],
+    "default_component_types": [
+        "mount",
+        "ic_lead",
+        "text",
+        "solder",
+        "barcode"
+    ],
+    "num_conveyors": 1,
+    "pause_when_ng" : false,
+    "default_line_items": {
+        "barcode_scanner": {
+            "name": "barcode_scanner",
+            "agent_name": "barcode_scanner",
+            "enabled": true,
+            "params": {}
+        },
+        "mounting_inspection_2d": {
+            "name": "mounting_inspection_2d",
+            "agent_name": "mounting_inspection_2d",
+            "enabled": true,
+            "params": {
+                "threshold": {
+                    "param_range": {
+                        "min": 0,
+                        "max": 1,
+                        "ok_max": 0.2,
+                        "ok_min": 0
+                    },
+                    "active": true,
+                    "required": true
+                },
+                "polarity_roi": {
+                    "param_roi": {
+                        "type": "obb",
+                        "points": [
+                            {
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "x": 40,
+                                "y": 40
+                            }
+                        ],
+                        "angle": 0
+                    },
+                    "active": false
+                },
+                "mask_roi": {
+                    "param_roi": {
+                        "type": "obb",
+                        "points": [
+                            {
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "x": 60,
+                                "y": 60
+                            }
+                        ],
+                        "angle": 0
+                    },
+                    "active": false
+                },
+                "defect_check_threshold": {
+                    "param_range": {
+                        "min": 0,
+                        "max": 1,
+                        "ok_max": 0.2,
+                        "ok_min": 0
+                    },
+                    "active": false
+                },
+                "polarity_check_threshold": {
+                    "param_range": {
+                        "min": 0,
+                        "max": 1,
+                        "ok_max": 0.2,
+                        "ok_min": 0
+                    },
+                    "active": false
+                },
+                "max_shift_x" : {
+                    "param_float": {
+                        "min": 0,
+                        "max": 100,
+                        "value": 5
+                    },
+                    "active": false
+                },
+                "max_shift_y" : {
+                    "param_float": {
+                        "min": 0,
+                        "max": 100,
+                        "value": 5
+                    },
+                    "active": false
+                },
+                "max_rotation_angle" : {
+                    "param_float": {
+                        "min": 0,
+                        "max": 100,
+                        "value": 3
+                    },
+                    "active": false
+                }
+            }
+        },
+        "lead_inspection_2d": {
+            "name": "lead_inspection_2d",
+            "agent_name": "lead_inspection_2d",
+            "enabled": true,
+            "params": {
+                "lead_count": {
+                    "param_int": {
+                        "min": 1,
+                        "max": 50,
+                        "value": 5
+                    },
+                    "active": true,
+                    "required": true
+                },
+                "lead_width_mm": {
+                    "param_float": {
+                        "min": 0,
+                        "max": 50,
+                        "value": 0.376
+                    },
+                    "active": true,
+                    "required": true
+                },
+                "bridge_width_percentage": {
+                    "param_float": {
+                        "min": 0,
+                        "max": 100,
+                        "value": 50
+                    },
+                    "active": true,
+                    "required": true
+                },
+                "lead_threshold": {
+                    "param_range": {
+                        "min": 0,
+                        "max": 1,
+                        "ok_max": 0.2
+                    },
+                    "active": true,
+                    "required": true
+                },
+                "bridge_threshold": {
+                    "param_range": {
+                        "min": 0,
+                        "max": 1,
+                        "ok_max": 0.2
+                    },
+                    "active": true,
+                    "required": true
+                }
+            }
+        },
+        "text_verification": {
+            "name": "text_verification",
+            "agent_name": "text_verification",
+            "enabled": true,
+            "params": {
+                "expected_text": {
+                    "param_string": "",
+                    "active": true,
+                    "required": true
+                },
+                "bidirectional": {
+                    "param_bool": false,
+                    "active": true,
+                    "required": true
+                },
+                "fuzzy_mode": {
+                    "param_bool": true,
+                    "active": true,
+                    "required": true
+                },
+                "max_mismatch_count": {
+                    "param_int": {
+                        "value" : 0,
+                        "min" : 0,
+                        "max" : 100
+                    },
+                    "active": true,
+                    "required": true
+                }
+            }
+        },
+        "solder_inspection_2d": {
+            "name": "solder_inspection_2d",
+            "agent_name": "solder_inspection_2d",
+            "enabled": true,
+            "params": {
+                "enable_visualization": {
+                    "param_bool": false,
+                    "active": true
+                },
+                "center_hue": {
+                    "param_vector": [
+                        {
+                            "param_int": {
+                                "value": 0,
+                                "max": 360,
+                                "min": 0
+                            },
+                            "active": true
+                        }
+                    ],
+                    "active": true
+                },
+                "center_sat": {
+                    "param_vector": [
+                        {
+                            "param_int": {
+                                "value": 0,
+                                "max": 100,
+                                "min": 0
+                            },
+                            "active": true
+                        }
+                    ],
+                    "active": true
+                },
+                "start_hue": {
+                    "param_vector": [
+                        {
+                            "param_int": {
+                                "value": 0,
+                                "max": 360,
+                                "min": 0
+                            },
+                            "active": true
+                        }
+                    ],
+                    "active": true
+                },
+                "end_hue": {
+                    "param_vector": [
+                        {
+                            "param_int": {
+                                "value": 120,
+                                "max": 360,
+                                "min": 0
+                            },
+                            "active": true
+                        }
+                    ],
+                    "active": true
+                },
+                "start_val": {
+                    "param_vector": [
+                        {
+                            "param_int": {
+                                "value": 0,
+                                "max": 100,
+                                "min": 0
+                            },
+                            "active": true
+                        }
+                    ],
+                    "active": true
+                },
+                "end_val": {
+                    "param_vector": [
+                        {
+                            "param_int": {
+                                "value": 100,
+                                "max": 100,
+                                "min": 0
+                            },
+                            "active": true
+                        }
+                    ],
+                    "active": true
+                },
+                "valid_ratio_ranges": {
+                    "param_vector": [
+                        {
+                            "param_range": {
+                                "ok_min": 50,
+                                "ok_max": 100
+                            },
+                            "active": true
+                        }
+                    ],
+                    "active": true
+                }
+            }
+        },
+        "lead_inspection_2d_v2": {
+            "name": "lead_inspection_2d_v2",
+            "agent_name": "lead_inspection_2d_v2",
+            "enabled": true,
+            "params": {
+                "enable_visualization": {
+                    "description": null,
+                    "param_int": null,
+                    "param_float": null,
+                    "param_enum": null,
+                    "param_range": null,
+                    "param_bool": true,
+                    "param_string": null,
+                    "param_roi": null,
+                    "active": true
+                },
+                "lead_count": {
+                    "description": null,
+                    "param_int": {
+                        "value": 7,
+                        "max": 50,
+                        "min": 1
+                    },
+                    "param_float": null,
+                    "param_enum": null,
+                    "param_range": null,
+                    "param_bool": null,
+                    "param_string": null,
+                    "param_roi": null,
+                    "active": true
+                },
+                "lead_width_mm": {
+                    "description": null,
+                    "param_int": null,
+                    "param_float": {
+                        "value": 0.3,
+                        "max": 50,
+                        "min": 0
+                    },
+                    "param_enum": null,
+                    "param_range": null,
+                    "param_bool": null,
+                    "param_string": null,
+                    "param_roi": null,
+                    "active": true
+                },
+                "enable_advanced_solder_criteria" : {
+                    "param_bool": false,
+                    "active": true
+                },
+                "solder_color_center_hue": {
+                    "param_int": {
+                        "value": 0,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "solder_color_center_sat": {
+                    "param_int": {
+                        "value": 0,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "solder_color_start_hue": {
+                    "param_int": {
+                        "value": 175,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "solder_color_end_hue": {
+                    "param_int": {
+                        "value": 240,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "solder_color_start_val": {
+                    "param_int": {
+                        "value": 35,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "solder_color_end_val": {
+                    "param_int": {
+                        "value": 100,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "pad_color_center_hue": {
+                    "param_int": {
+                        "value": 0,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "pad_color_center_sat": {
+                    "param_int": {
+                        "value": 0,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "pad_color_start_hue": {
+                    "param_int": {
+                        "value": 175,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "pad_color_end_hue": {
+                    "param_int": {
+                        "value": 240,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "pad_color_start_val": {
+                    "param_int": {
+                        "value": 35,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "pad_color_end_val": {
+                    "param_int": {
+                        "value": 100,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "tip_color_center_hue": {
+                    "param_int": {
+                        "value": 0,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "tip_color_center_sat": {
+                    "param_int": {
+                        "value": 0,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "tip_color_start_hue": {
+                    "param_int": {
+                        "value": 355,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "tip_color_end_hue": {
+                    "param_int": {
+                        "value": 50,
+                        "max": 360,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "tip_color_start_val": {
+                    "param_int": {
+                        "value": 20,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "tip_color_end_val": {
+                    "param_int": {
+                        "value": 100,
+                        "max": 100,
+                        "min": 0
+                    },
+                    "active": true
+                },
+                "solder_valid_ratio_range": {
+                    "param_range": {
+                        "ok_max": 100,
+                        "ok_min": 20
+                    },
+                    "active": true
+                },
+                "solder_mean_threshold": {
+                    "param_float": {
+                        "value": -20,
+                        "max": 100,
+                        "min": -100
+                    },
+                    "active": true
+                },
+                "solder_neighbor_threshold": {
+                    "param_float": {
+                        "max": 100,
+                        "min": -100,
+                        "value": -30
+                    },
+                    "active": true
+                },
+                "lifted_lead_min_solder_pad_difference": {
+                    "param_float": {
+                        "value": -5,
+                        "max": 100,
+                        "min": -100
+                    },
+                    "active": true
+                },
+                "lifted_lead_solder_mean_threshold": {
+                    "param_float": {
+                        "value": -20,
+                        "max": 100,
+                        "min": -100
+                    },
+                    "active": true
+                },
+                "lifted_lead_solder_neighbor_threshold": {
+                    "param_float": {
+                        "max": 100,
+                        "min": -100,
+                        "value": -20
+                    },
+                    "active": true
+                },
+                "lifted_lead_pad_mean_threshold": {
+                    "param_float": {
+                        "max": 100,
+                        "min": -100,
+                        "value": -20
+                    },
+                    "active": true
+                },
+                "lifted_lead_pad_neighbor_threshold" :{
+                    "param_float": {
+                        "max": 100,
+                        "min": -100,
+                        "value": -20
+                    },
+                    "active": true
+                },
+                "lifted_lead_tip_valid_ratio_range": {
+                    "param_range": {
+                        "ok_max": 100,
+                        "ok_min": 20
+                    },
+                    "active": true
+                },
+                "lifted_lead_tip_mean_lower_threshold": {
+                    "param_float": {
+                        "max": 100,
+                        "min": -100,
+                        "value": -20
+                    },
+                    "active": true
+                },
+                "lifted_lead_tip_mean_upper_threshold": {
+                    "param_float": {
+                        "max": 100,
+                        "min": -100,
+                        "value": 20
+                    },
+                    "active": true
+                },
+                "ext_bottom": {
+                    "param_int": {
+                        "value": 15
+                    },
+                    "active": true
+                },
+                "ext_top": {
+                    "param_int": {
+                        "value": 10
+                    },
+                    "active": true
+                }
+            }
+        },
+        "aligner_2d": {
+            "name": "aligner_2d",
+            "agent_name": "aligner_2d",
+            "enabled": true,
+            "params": {
+                "marker_type": {
+                    "active": true,
+                    "required": true,
+                    "param_enum": {
+                        "value": "CIRCLE",
+                        "options": [
+                            "CIRCLE",
+                            "RECTANGLE",
+                            "TEMPLATE"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "line_items_for_class": {},
+    "score_to_param_map": {
+        "mounting_inspection_2d/threshold": "mounting_inspection_2d/threshold",
+        "mounting_inspection_2d/polarity_check_threshold": "mounting_inspection_2d/polarity_check_threshold",
+        "mounting_inspection_2d/defect_check_threshold": "mounting_inspection_2d/defect_check_threshold",
+        "mounting_inspection_3d/height": "mounting_inspection_3d/height_range",
+        "mounting_inspection_3d/rotation": "mounting_inspection_3d/rotation_offset",
+        "mounting_inspection_3d/shift_x": "mounting_inspection_3d/x_offset",
+        "mounting_inspection_3d/shift_y": "mounting_inspection_3d/y_offset",
+        "mounting_inspection_3d/tilt_angle": "mounting_inspection_3d/max_slope",
+        "lead_inspection_2d/lead_threshold": "lead_inspection_2d/lead_threshold",
+        "lead_inspection_2d/bridge_threshold": "lead_inspection_2d/bridge_threshold",
+        "lead_inspection_3d/height_mean": "lead_inspection_2d/min_height_mean",
+        "lead_inspection_3d/height_std": "lead_inspection_2d/max_height_std",
+        "lead_inspection_3d/height_min": "lead_inspection_3d/height_range",
+        "lead_inspection_3d/height_max": "lead_inspection_3d/height_range",
+        "solder_inspection/fillet_height_rate": "solder_inspection/min_fillet_height_rate",
+        "solder_inspection/fillet_volume_ratio": "solder_inspection/fillet_upper_threshold;solder_inspection/fillet_lower_threshold;solder_inspection/fillet_open_threshold",
+        "solder_inspection/component_angle": "solder_inspection/max_component_angle",
+        "solder_inspection/pcb_angle": "solder_inspection/max_pcb_angle",
+        "text_verification/predicted_text": "text_verification/expected_text"
+    },
+    "error_type_to_code": {
+        "no_error": 0,
+        "missing_component": 1,
+        "wrong_component": 2,
+        "turnover": 3,
+        "wrong_polarity": 4,
+        "damaged_component": 5,
+        "solder_fillet_error": 6,
+        "wrong_text": 7,
+        "IC_misalignment": 8,
+        "lifted_lead": 9,
+        "solder_bridge": 10,
+        "IC_lead_solder_fillet_error": 11,
+        "no_error(marked_as_variation)": 12,
+        "misalignment": 13,
+        "unknown": 999
+    },
+    "inference_steps": 1,
+    "inference_result_list": {
+        "mounting_inspection_2d/basic": 0,
+        "mounting_inspection_2d/polarity": 1,
+        "mounting_inspection_2d/defect": 2,
+        "solder_inspection_2d/basic": 3,
+        "lead_inspection_2d/lead": 4,
+        "lead_inspection_2d/bridge": 5,
+        "lead_inspection_2d_v2/solder": 6,
+        "lead_inspection_2d_v2/lifted_lead": 7,
+        "text_verification/basic": 8,
+        "mounting_inspection_2d/misalignment": 9
+    },
+    "inference_result_saver":  {
+        "ng_blobs_only": true,
+        "ng_inference_details_only": true,
+        "image_format": "png"
+    },
+    "error_type_rules": {
+        "missing_component": {
+            "must_perform": [
+                0
+            ],
+            "must_fail": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "must_pass": []
+        },
+        "misalignment": {
+            "must_perform": [
+                0,
+                9
+            ],
+            "must_fail": [
+                9
+            ],
+            "must_pass": [
+                0
+            ]
+        },
+        "wrong_component": {
+            "must_perform": [
+                0
+            ],
+            "must_fail": [
+                0,
+                1,
+                2,
+                8
+            ],
+            "must_pass": []
+        },
+        "turnover": {
+            "must_perform": [
+                0
+            ],
+            "must_fail": [
+                0,
+                1,
+                2,
+                8
+            ],
+            "must_pass": [
+                3
+            ]
+        },
+        "wrong_polarity": {
+            "must_perform": [
+                1
+            ],
+            "must_fail": [
+                1
+            ],
+            "must_pass": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "damaged_component": {
+            "must_perform": [
+                2
+            ],
+            "must_fail": [
+                2
+            ],
+            "must_pass": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "solder_fillet_error": {
+            "must_perform": [
+                3
+            ],
+            "must_fail": [
+                3
+            ],
+            "must_pass": [
+                0,
+                1,
+                2,
+                8
+            ]
+        },
+        "wrong_text": {
+            "must_perform": [
+                8
+            ],
+            "must_fail": [
+                8
+            ],
+            "must_pass": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "IC_misalignment": {
+            "must_perform": [
+                4
+            ],
+            "must_fail": [
+                4
+            ],
+            "must_pass": []
+        },
+        "solder_bridge": {
+            "must_perform": [
+                4,
+                5
+            ],
+            "must_fail": [
+                5
+            ],
+            "must_pass": [
+                0,
+                1,
+                2,
+                4,
+                8
+            ]
+        },
+        "lifted_lead": {
+            "must_perform": [
+                7
+            ],
+            "must_fail": [
+                7
+            ],
+            "must_pass": [
+                0,
+                1,
+                2,
+                8
+            ]
+        },
+        "ic_lead_solder_fillet_error": {
+            "must_perform": [
+                6
+            ],
+            "must_fail": [
+                6
+            ],
+            "must_pass": [
+                0,
+                1,
+                2,
+                8
+            ]
+        }
+    },
+    "feedback_type_to_line_item": {
+        "missing_component": [
+            "mounting_inspection_2d"
+        ],
+        "wrong_component": [
+            "mounting_inspection_2d"
+        ],
+        "turnover": [
+            "mounting_inspection_2d"
+        ],
+        "wrong_polarity": [
+            "mounting_inspection_2d"
+        ],
+        "damaged_component": [
+            "mounting_inspection_2d"
+        ],
+        "solder_fillet_error": [
+            "solder_inspection_2d"
+        ],
+        "wrong_text": [
+            "text_verification"
+        ],
+        "IC_misalignment": [
+            "lead_inspection_2d"
+        ],
+        "lifted_lead": [
+            "lead_inspection_2d_v2"
+        ],
+        "solder_bridge": [
+            "lead_inspection_2d"
+        ],
+        "ic_lead_solder_fillet_error": [
+            "lead_inspection_2d_v2"
+        ]
+    },
+    "wasted_array_board_failure_ratio": 0.5,
+    "allowed_component_shift_mm": 0.12,
+    "allowed_component_rotation_degree": 3
+}

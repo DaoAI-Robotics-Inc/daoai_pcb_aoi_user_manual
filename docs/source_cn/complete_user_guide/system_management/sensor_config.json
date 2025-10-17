@@ -1,0 +1,87 @@
+{
+    "sensors": [
+        {
+            "camera_name": "Daheng Imaging-2BA200005507-NE0190120057",
+            "id": 0,
+            "is_3d": true,
+            "camera_configs": [
+                {
+                    "is_3d_mode": null,
+                    "capture_step": 0,
+                    "config_3d": {
+                        "anti_flicker": "off",
+                        "d2_capture_settings": {
+                            "exposure_mode": "Disabled",
+                            "exposure_time": 0,
+                            "gain": null,
+                            "trigger_mode": null,
+                            "trigger_source": "Software",
+                            "color_balance_red": null,
+                            "color_balance_green": null,
+                            "color_balance_blue": null
+                        },
+                        "frame_settings": [
+{
+"exposure_stop": 0,
+"brightness" : 3,
+"gain" : 0
+}
+		],
+                        "algorithm_params": {
+                            "intensity": 3,
+                            "enable_intensity": true,
+                            "outlier": 1,
+                            "enable_outlier": true,
+                            "saturation": true,
+                            "enable_contrast_distortion": false,
+                            "contrast_distortion_treatment": null,
+                            "contrast_distortion_strength": null,
+                            "enable_median": false,
+                            "median_kernel_size": null,
+                            "enable_face_normal": false,
+                            "face_normal_angle": null,
+                            "enable_smooth": false,
+                            "smooth_granularity": null,
+                            "enable_fill_hole": false,
+                            "hole_size": null,
+                            "depth_diff": null,
+                            "enable_phase_quality": false,
+                            "phase_quality_threshold": null,
+                            "enable_gaussian": true,
+                            "gaussian_strength": 20,
+                            "enable_cluster_filter": false,
+                            "cluster_neighbor_distance": null,
+                            "cluster_filter_strength": null,
+                            "coord_system": null,
+                            "pointcloud_resolution": null,
+                            "projector_pattern": null,
+                            "color_balance_red": null,
+                            "color_balance_green": null,
+                            "color_balance_blue": null,
+                            "color_space": null,
+                            "sampling": null,
+                            "enable_roi": false,
+                            "roi_box_center_x": null,
+                            "roi_box_center_y": null,
+                            "roi_box_center_z": null,
+                            "roi_box_dimension_x": null,
+                            "roi_box_dimension_y": null,
+                            "roi_box_dimension_z": null,
+                            "roi_box_rotation_angle_z": null
+                        }
+                    },
+                    "config_2d": {
+                        "exposure_mode": "Timed",
+                        "exposure_time": 10,
+                        "gain": 0,
+                        "trigger_mode": "software",
+                        "trigger_source": "Software",
+                        "color_balance_red": 0.5834000110626221,
+                        "color_balance_green": 0.1800000071525574,
+                        "color_balance_blue": 0.3100000023841858
+                    }
+                }
+            ]
+        }
+    ]
+}

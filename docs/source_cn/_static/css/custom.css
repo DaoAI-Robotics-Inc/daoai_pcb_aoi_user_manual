@@ -1,0 +1,24 @@
+.wy-nav-content {
+    max-width: 90%;
+    /* max-width: none; */
+}
+
+body {
+    max-width: 60%;
+    /* font-family: Luminari, fantasy, sans-serif;
+    color: darkred;
+    text-shadow: 1px 1px black; */
+}
+
+h1 {
+    /* font-family: Luminari, fantasy, sans-serif;  */
+}
+
+img {
+    /* max-width: 60%; */
+}
+
+.rst-content img {
+    max-width: 100%;
+    height: auto !important;
+}

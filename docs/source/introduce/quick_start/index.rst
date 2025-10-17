@@ -1,10 +1,10 @@
-快速开始
+Quick Start
 =================
 
-DaoAI PCBA AOI 软件是一款面向电子制造的智能光学检测系统。  
-系统以视觉 AI 为核心，提供从自动建模、参数生成到缺陷检测与持续优化的完整流程。  
-与传统需要频繁手动调参的方式不同，系统可快速适配生产现场，在提升效率的同时确保精度与稳定性。  
-依托自适应算法与反馈机制，软件既能识别常见与细微缺陷，也能在生产过程中持续学习，提升良率并降低运维成本。
+DaoAI PCBA AOI is an intelligent Automated Optical Inspection Software for electronics manufacturing.  
+The system is centered around visual AI and provides a complete process from automatic modeling, parameter generation to defect detection and continuous optimization.  
+Unlike traditional approaches that require frequent manual parameter tuning, the system quickly adapts to the production floor while improving efficiency and maintaining accuracy and stability.
+With adaptive algorithms and feedback mechanisms, it detects both common and subtle defects and continuously learns during production to improve yield and reduce maintenance costs.
 
 .. raw:: html
 
@@ -14,27 +14,27 @@ DaoAI PCBA AOI 软件是一款面向电子制造的智能光学检测系统。
         </video>
     </div>
 
-本章节演示如何使用 DaoAI AOI System 在 2D 检测模式下快速完成一块 PCB 的建模、检测与反馈流程。
+This chapter demonstrates how to use DaoAI AOI System to quickly complete modeling, inspection, and feedback of a PCB in 2D inspection mode.
 
 .. note::
-   系统也支持工业级 3D 相机及高质量 3D 检测，包括高度、焊盘/焊点体积、引脚翘起、立碑、缺料等三维特征分析；本文快速开始以 2D 流程为例，3D 使用与参数说明将在后续章节中单独介绍。
+   This system also supports industrial-grade 3D cameras and high-quality 3D inspection, including analysis of height, pad/solder volume, lead lift, tombstoning, missing parts, and other 3D features. This Quick Start uses the 2D workflow as an example; 3D usage and parameter details are covered in a later chapter.
 
-启动软件
+Software Launch
 -----------------
 
-在开始之前，建议您进行以下设置以优化性能：
+Before you start, we recommend the following settings to optimize performance:
 
-- :ref:`如何避免 GPU 进入低功耗模式导致推理变慢？`
-- :ref:`如何开启浏览器的硬件加速以避免浏览器卡顿？`
+- :ref:`How to disable GPU power saving mode to avoid slow inference?`
+- :ref:`How to enable hardware acceleration in the browser to avoid lag?`
 
-在桌面点击启动器即可启动软件。  
+Start the software by clicking the launcher on the desktop.  
 
 .. image:: images/instance_manager.png
    :scale: 80%
    :alt: 启动软件界面
 
-浏览器将自动打开 ``http://localhost:3005/``。  
-后端默认地址为 ``http://localhost:8000/``。
+The browser will automatically open ``http://localhost:3005/``.  
+The default backend address is ``http://localhost:8000/``.
 
 .. image:: images/login.png
    :scale: 50%
@@ -45,153 +45,182 @@ DaoAI PCBA AOI 软件是一款面向电子制造的智能光学检测系统。
    :alt: 主机地址示意
 
 .. note::
-   如需从其他设备访问，将 ``localhost`` 替换为目标机器的 IP。
+   To access from other devices, replace ``localhost`` with the target device's IP address.
 
 
-登录与设置
+Login and Settings
 -----------------
 
-首次进入可以使用 **管理员** 登录账号：用户名 **admin**，密码在部署时提供。
+You can log in for the first time using the **admin** account. 
+Username will be **admin**, and the password will be provided during deployment.
 
 .. image:: images/login.png
    :scale: 50%
    :alt: 登录界面示意
 
-登录后点击右上角齿轮进入设置可以设置系统语言：
+After logging in, click the ⚙️ icon in the upper right corner to enter settings where you can set the system language:
 
    .. image:: images/settings.png
       :scale: 70%
       :alt: 设置界面示意
 
-- 切换界面语言；
+- language settings interface;
    .. image:: images/change_language.png
       :scale: 70%
       :alt: 语言设置
 
-更多设置选项请参见 :ref:`系统管理` 章节。
+For more settings options, please refer to the :ref:`System Settings` chapter.
 
-创建产品
+Create Product
 -----------------
 
-在主页点击 **训练 PCB**，开始注册新的 PCB 产品。
+On the home page, click **Teach PCB** to register a new PCB product.
 
 .. image:: images/create_product_1.png
    :scale: 50%
    :alt: 创建产品第一步
 
-输入产品名称。下方为系统支持的检测项列表，可按需启用/关闭。
+Enter a product name (e.g., "Test PCB") and select the list of inspection items desired.
+After serlection, click "Next".
+
 
 .. image:: images/create_product_2.png
    :scale: 50%
    :alt: 创建产品第二步
 
-**将 PCB 放在传送带上**
+**Place the PCB on the Conveyor**
 
-   将 PCB 平整放置于传送带中央，选择对应传送带并点击“锁定”。输入或确认传送带宽度参数，随后点击“进板”，PCB 将自动输送至相机下方的拍摄/定位区域；到位后点击“下一步”。
+   - Place the PCB flat in the center of the conveyor
+   - Select the corresponding conveyor, and click "Lock Conveyor for this task".
+   - Enter or confirm the conveyor width parameters, then click "PCB In". 
+   The PCB will be automatically shifted to the camera's capture/positioning area; 
+   after it is in place, click "Next".
 
   .. image:: images/create_product_3.png
      :scale: 50%
      :alt: 将PCB放在传送带上示意
 
-**输入 PCB 尺寸**  
-   
-   若已知 PCB 尺寸，直接输入其宽度与高度（单位：mm），然后点击“下一步”。
-   若尺寸不确定，可移动相机分别拍摄 PCB 左下角与右上角，在图像上依次点击这两个位置并选择 **自动计算** ，系统将自动推算尺寸。
+**PCB Dimensions**  
+
+   - If the PCB dimensions are known, enter width and height (mm), then click **“Next”**.
+
+   - If the dimensions are uncertain, you can move the camera to take pictures of the lower left and upper right corners of the PCB.
+      
+      - Click on these two positions in the image and select **Capture Dimensions**. The system will automatically calculate the dimensions.
+
 
    .. image:: images/size_calculation.png
       :scale: 50%
       :alt: 自动尺寸计算示意
 
-**完整 PCB 拍摄**  
+**Capture full PCB**  
 
-   点击“拍摄”，系统将联动相机与传送带分区采集并自动拼接生成完整 PCB 图像。
-   随后点击“定义区域”，在图像上框选用于自动编程的有效区域（通常为整板；若需排除治具/夹具边缘，可适当收缩）。
-   该基准图像将作为后续自动编程、对齐与检测的参考，务必使用洁净、无缺陷的 **Golden board（良品板）** 拍摄。
-   此界面可实时调整相机参数（亮度、曝光、增益、白平衡、点云滤波等）；如效果不佳，可重新拍摄覆盖上一版本。
+   #. Click **“Capture 2D/3D”**” to start the process. The system will coordinate the camera and conveyor to capture multiple sections and automatically stitch them into a complete PCB image.
+
+   #. Then click **“Define Area”** to select the valid region used for auto-programming (typically the entire board; shrink slightly if you need to exclude fixture/jig edges).
+
+   **IMPORTANT!** This reference image will be used for subsequent automatic programming, alignment, and detection. Be sure to use a clean, defect-free **Golden board** for shooting.
+   
+   Camera parameters such as brightness, exposure, gain, white balance, and point cloud filtering can be adjusted in real time. If needed, recapture to replace the previous image.
 
    .. image:: images/full_pcb_capture.png
       :scale: 55%
       :alt: 完整 PCB 拍摄
 
-**半自动编程（上传 CAD）**  
+**Semi-Automatic Programming (Using a CAD File)**  
 
-   提供 CAD（.csv）文件后，系统可：
-   - 自动读取：封装(Package)、丝印/标识、料号(PN)、X/Y 坐标、旋转角度；
-   - 按封装或料号聚类，同类元件一次建模，加速训练；
-   - 减少后续人工分组与命名工作。
+   After After providing a **CAD file (.csv format)**, the system can automatically:
+   
+   - Extract component information, including Package, Silkscreen/Label, Part Number (PN), X/Y Coordinates, and Rotation Angle.
+   - Group components by Package or Part Number, allowing identical components to be modeled once, significantly speeding up training.
+   - Reduce manual grouping and naming effort during later programming stages.
 
-   若不提供 CAD，后续自动编程仍可执行；检测质量不受影响，仅失去基于封装/料号的聚类加速，系统将对元件逐一建模。
+   If no CAD file is provided, the auto programming process can still be executed. 
+   The inspection quality will not be affected — only the grouping-based acceleration will be skipped. 
+   In this case, the system will model each component individually.
 
    .. image:: images/upload_cad.png
       :scale: 50%
       :alt: 上传 CAD 文件界面
 
-   步骤：
-   1. 上传 `.csv` 文件并点击“预览表格”。
-   2. 在字段映射界面依次指定：料号(PN)、封装(Package)、X、Y、旋转(°)，（可选）层/板面字段；如存在多层数据，可按层号或面别过滤。  
-   3. 选择坐标单位（mm 或 mil），确认原点与方向一致。  
-   4. 点击“运行自动编程”。
+   Steps: 
+
+   #. Upload the `.csv` file and click **"Preview Table"**.
+
+   #. In the Field Mapping window, assign the following columns in order: **Part Number (PN), Package, X, Y, and Rotation (°)**. Optionally, you may also map the Layer/Side field.
+
+   #. Select the **coordinate unit (mm or mil)** and ensure the origin and orientation are consistent.
+
+   #. Click **Run Auto Programming** to start processing.
 
    .. image:: images/upload_cad2.png
       :scale: 50%
       :alt: 字段映射示意
 
-   若 CAD 初次与拍摄图像未正确重合，系统将进入“对齐调整”界面；通过旋转、平移、缩放（必要时辅助少量基准点）微调至主要元件位置大致重合后，点击“重新运行自动编程”即可重新生成。
+   If the CAD layout does not align correctly with the captured image on the first attempt, the system will open the Alignment Adjustment interface.
+   Use rotation, translation, and scaling tools (with optional reference points if needed) to fine-tune the alignment until the main components roughly match.
+   Once aligned, click **Rerun Auto Programming** to regenerate the model.
 
-**全自动编程（无 CAD）**
+**Auto Programming (No CAD)**
 
-   不上传任何文件，直接点击“自动编程”即可。系统会通过视觉+AI自动：
+   If there is no CAD file, simply click **Auto Programming** to proceed. 
+   The system uses a combination of computer vision and AI algorithms to automatically:
 
-      - 识别并分割元件区域；
-      - 推断类别特征并生成初始检测模板；
-      - 建立后续对齐与检测所需的结构化数据。
+      - Detect and segment component areas.
+      - Infer category features and generate initial detection templates.
+      - Establish the structured data required for subsequent alignment and detection.
 
-   自动编程耗时约 30 秒。
+   The entire auto programming process takes approximately 30 seconds.
 
 .. image:: images/full_auto_program.png
    :scale: 50%
    :alt: 全自动编程示意
 
-产品编程页面
+Product Programming Page
 -----------------
 
-自动编程完成后，会进入 **产品编程页面**。页面包含三个 Tab：
+After automatic programming is completed, the system will open the **Product Programming page**.
+This page contains three tabs:
 
-1. **标记/对齐 PCB**  
-2. **模板编辑器**  
-3. **PCB 拼版**
+#. **Mark/Align PCB**  
+#. **Template Editor**  
+#. **PCB Array**
 
-**标记/对齐 PCB**：  
+**Mark/Align PCB**：  
 
-点击“+ 标记”，框选 PCB 上固定的参考标记（圆形、矩形或复杂图案均可）。框选区域应略大，以保证在轻微位移情况下仍能正确定位。确认后，点击“预测中心”完成标记定义。
+Click **"+"** Mark to select fixed reference marks on the PCB (these can be circular, rectangular, or complex patterns).
 
 .. image:: images/mark_alignment.png
    :scale: 50%
    :alt: 标记对齐示例
 
-**模板编辑器**：  
+**Template Editor**：  
 
-左侧显示自动编程获得的元件列表。若上传了 CAD，系统会自动显示丝印/标识，并将同类元件分组。  
-可通过搜索栏过滤存在问题的项。对于标记不正确的元件，可手动删除并重新编程。
+The left panel displays the list of components generated during automatic programming.
+If a CAD file was uploaded, the system will automatically show silkscreen/designator labels and group identical components by type.
+You can use the search bar to filter items that may contain errors.
+For any component with incorrect labeling or classification, you can manually delete it and reprogram the item.
 
 .. image:: images/template_editor.png
    :scale: 80%
    :alt: 模板编辑器示例
 
-有关手动编程的详细步骤与编辑工具用法，请参见 :ref:`手动编程与编辑工具`。
+For detailed instructions on manual programming and editing tools, please refer to the :ref:`Manual Programming and Editing Tools` section.
 
-训练和评估
------------------
+**Training and Evaluation**
+----------------------------------
 
-确认全部元件框与属性无误后，点击“训练”启动模型训练，耗时约 1 分钟。
+After confirming that all components are correctly labeled and classified, click **Train** to start model training (about 1 minute).
 
    .. image:: images/train.png
       :scale: 50%
       :alt: 训练示意
 
-训练完成后，点击“自动生成检测参数”，系统会基于当前模板与训练结果生成一套初始检测参数。
+When training completes, click **“Generate Params”** to produce an initial set of parameters based on the current templates and training results.
 
-随后点击“评估全部”，系统将批量评估所有元件，并以颜色标记（绿：健康；红：不健康）。可按需查看不健康项并参考 :ref:`检测参数` 继续微调。
+Next, click **Evaluate All** to run a batch evaluation of all components.
+The system will display results using **color codes** — Green indicates healthy, and Red indicates components that require adjustment.
+You can review the red items as needed and fine-tune their settings based on the Inspection Parameters section.
 
    .. image:: images/eval.png
       :scale: 50%
