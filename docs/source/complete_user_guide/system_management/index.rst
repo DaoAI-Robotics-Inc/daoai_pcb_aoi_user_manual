@@ -207,6 +207,103 @@
       * - allowed_component_shift_mm / allowed_component_rotation_degree
         - 全局位移与旋转容差参考值（供对齐与健康度策略使用）。
 
+
+如何更改检测的默认配置
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  
+在系统JSON配置，您可以通过修改以下字段来调整默认检测参数：
+
+  .. note:: 
+    您可以直接通过右上角的搜索栏搜索路径已达到需要修改的参数，需要确保上方的路径和文档里的一致性
+
+    .. image:: images/searchBar.png
+      :scale: 60%
+      :alt: 搜索栏
+
+主体检测 (Mounting Detection)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- **显著缺陷检测阈值 (Significant Defect Check Threshold)**
+
+  .. image:: images/significant_defect_check_threshold.png
+     :scale: 60%
+     :alt: 显著缺陷检测阈值示意
+
+  - **路径 (Path)**：`default_line_items/mounting_inspection_2d/params/threshold/param_range/ok_max`
+  - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置显著缺陷的最大容差值。
+  - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.5`）。
+
+
+- **微小缺陷检测阈值 (Subtle Defect Check Threshold)**
+
+  .. image:: images/subtle_defect_check_threshold.png
+     :scale: 60%
+     :alt: 微小缺陷检测阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/defect_check_threshold/param_range/ok_max`
+  - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置微小缺陷的最大容差值。
+  - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.2`），并可以通过 `"active"` 控制默认开启与否（`true` 启用，`false` 关闭）。
+
+- **极性检测阈值 (Polarity Check Threshold)**
+
+  .. image:: images/polarity_check_threshold.png
+     :scale: 60%
+     :alt: 极性检测阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/polarity_check_threshold/ok_max`
+  - **说明 (Description)**：设置极性检查的最大容差值。
+  - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.2`），并可以通过 `"active"` 控制默认开启与否（`true` 启用，`false` 关闭）。
+
+引脚检测 (Lead Inspection)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- **焊桥检测阈值 (Bridge Threshold)**
+
+  .. image:: images/Lead_Bridge_Threshold.png
+     :scale: 60%
+     :alt: 焊桥检测阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/lead_inspection_2d/params/bridge_threshold`
+  - **说明 (Description)**：设置焊桥检测的阈值。
+  - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.2`）
+
+OCR 检测 (Optical Character Recognition)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- **最大字符不匹配数量 (Max Mismatch Count)**
+
+  .. image:: images/max_mismatch_count.png
+     :scale: 60%
+     :alt: 最大字符不匹配数量示意
+
+  - **路径 (Path)**：`object/default_line_items/text_verification/params/max_mismatch_count/param_int/value`
+  - **说明 (Description)**：设置 OCR 检测中允许的最大字符不匹配数量。
+  - **操作 (Action)**：修改 `"value"` 的值来达到允许的不匹配字符数量。
+
+- **模糊模式 (Blur Mode)**
+
+  .. image:: images/Fuzzy_mode.png
+     :scale: 60%
+     :alt: 缺失标记示例
+
+  - **路径 (Path)**：`object/default_line_items/text_verification/params/fuzzy_mode`
+  - **说明 (Description)**：控制模糊模式的开关。
+  - **操作 (Action)**：通过 `"required"` 控制开关（`true` 启用，`false` 关闭）。
+
+- **双向检测 (Bidirectional Inspection)**
+
+  .. image:: images/Bidirectional_mode.png
+     :scale: 60%
+     :alt: 双向检测示意
+     
+  - **路径 (Path)**：`object/default_line_items/text_verification/params/text_verification/bidirectional`
+  - **说明 (Description)**：控制 OCR 双向检测的开关。
+  - **操作 (Action)**：通过 `"required"` 控制开关（`true` 启用，`false` 关闭）。
+
+修改完成后，请保存文件并重启系统以应用更改。
+
+
 导出 MES 路径
 ~~~~~~~~~~~~~~
 
