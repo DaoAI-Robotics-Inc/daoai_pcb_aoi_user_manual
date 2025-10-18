@@ -143,20 +143,18 @@
 
 .. list-table:: capture_agent_config 关键字段
     :header-rows: 1
-    :widths: 30 70
+    :widths: 30 66
 
     * - 字段
       - 说明
-    * - steps[].path
-      - 采集输出目录；虚拟相机模式下系统从此目录读取图像。
-    * - steps[].sensors
-      - 参与采集的传感器 ID 列表（与 `sensor_config.json` 中 `id` 对应）。
     * - calibration_config.frame_config.exposure_stop / brightness / gain
       - 标定图像的曝光/亮度/增益基线；现场光照稳定后再调整。
     * - calibration_config.pattern_config.pattern_row / pattern_col
       - 标定板行列数（棋盘 / 点阵）。
     * - calibration_config.pattern_config.center_distance
       - 标定板相邻特征中心间距（mm）；仅更换不同规格标定板时需要更新。
+
+
 
 传感器JSON配置
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,19 +170,13 @@
 
       * - 字段
         - 说明
-      * - sensors[].camera_name
-        - 相机识别名。
-      * - sensors[].id
-        - 传感器编号（供采集 & 系统引用）。
-      * - is_3d
-        - 是否是 3D 相机。
       * - camera_configs[].config_2d.exposure_time / gain
         - 2D 基线曝光与增益。
       * - camera_configs[].config_3d.frame_settings[]
         - 3D 一次或多次帧曝光序列（多帧可实现类 HDR 动态范围）。
       * - camera_configs[].config_3d.algorithm_params: {40}
-        - 算法滤波参数。
-
+        - 算法滤波参数。。
+      
 系统JSON配置
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -224,25 +216,25 @@
 主体检测 (Mounting Detection)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- **显著缺陷检测阈值 (Significant Defect Check Threshold)**
+- **常规检测阈值 (Significant Defect Check Threshold)**
 
   .. image:: images/significant_defect_check_threshold.png
      :scale: 60%
-     :alt: 显著缺陷检测阈值示意
+     :alt: 常规检测阈值示意
 
   - **路径 (Path)**：`default_line_items/mounting_inspection_2d/params/threshold/param_range/ok_max`
-  - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置显著缺陷的最大容差值。
+  - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置常规检测的最大容差值。默认开启，值为0.2。
   - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.5`）。
 
 
-- **微小缺陷检测阈值 (Subtle Defect Check Threshold)**
+- **损件检测阈值 (Subtle Defect Check Threshold)**
 
   .. image:: images/subtle_defect_check_threshold.png
      :scale: 60%
-     :alt: 微小缺陷检测阈值示意
+     :alt: 损件检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/defect_check_threshold/param_range/ok_max`
-  - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置微小缺陷的最大容差值。
+  - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置损件的最大容差值。
   - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.2`），并可以通过 `"active"` 控制默认开启与否（`true` 启用，`false` 关闭）。
 
 - **极性检测阈值 (Polarity Check Threshold)**
@@ -255,18 +247,68 @@
   - **说明 (Description)**：设置极性检查的最大容差值。
   - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.2`），并可以通过 `"active"` 控制默认开启与否（`true` 启用，`false` 关闭）。
 
+- **旋转角度阈值 (Max Rotation Angle Threshold)**
+
+  .. image:: images/max_rotation_angle_threshold.png
+     :scale: 60%
+     :alt: 旋转检测阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/max_rotation_angle/param_float/value`
+  - **说明 (Description)**：设置旋转检测的最大容差值。默认开启，角度为3度。  
+  - **操作 (Action)**：修改 `"value"` 的值（例如：`"value": 5.0`），并可以通过 `"active"` 控制默认开启与否（`true` 启用，`false` 关闭）。
+
+- **X偏移阈值 (Max shift x)**
+
+  .. image:: images/max_shift_x.png
+     :scale: 60%
+     :alt: X偏移检测阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/max_shift_x/param_float/value`
+  - **说明 (Description)**：设置X轴偏移检测的最大容差值。  
+  - **操作 (Action)**：修改 `"value"` 的值（例如：`"value": 0.8`），并可以通过 `"active"` 控制默认开启与否（`true` 启用，`false` 关闭）。
+
+  - **Y偏移阈值 (Max shift y)**
+
+  .. image:: images/max_shift_y.png
+     :scale: 60%
+     :alt: Y偏移检测阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/max_shift_y/param_float/value`
+  - **说明 (Description)**：设置Y轴偏移检测的最大容差值。。  
+  - **操作 (Action)**：修改 `"value"` 的值（例如：`"value": 0.8`），并可以通过 `"active"` 控制默认开启与否（`true` 启用，`false` 关闭）。
+
 引脚检测 (Lead Inspection)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- **焊桥检测阈值 (Bridge Threshold)**
+- **桥接检测阈值 (Bridge Threshold)**
 
   .. image:: images/Lead_Bridge_Threshold.png
      :scale: 60%
      :alt: 焊桥检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/lead_inspection_2d/params/bridge_threshold`
-  - **说明 (Description)**：设置焊桥检测的阈值。
+  - **说明 (Description)**：设置桥接检测的阈值。
   - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.2`）
+
+- **引脚检测阈值 (Lead Threshold)**
+
+  .. image:: images/Lead_Threshold.png
+     :scale: 60%
+     :alt: 引脚检测阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/lead_inspection_2d/params/lead_threshold`
+  - **说明 (Description)**：设置引脚检测的阈值。
+  - **操作 (Action)**：修改 `"ok_max"` 的值（例如：`"ok_max": 0.2`）
+
+- **桥接间隙阈值（Lead Gap Width）**
+
+  .. image:: images/Lead_Gap_Width.png
+     :scale: 60%
+     :alt: 桥接阈值示意
+
+  - **路径 (Path)**：`object/default_line_items/lead_inspection_2d/params/bridge_width_percentage/param_float/value`
+  - **说明 (Description)**：设置引脚间隙检测的阈值。
+  - **操作 (Action)**：修改 `"value"` 的值（例如：`"value": 0.3`）
 
 OCR 检测 (Optical Character Recognition)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -281,15 +323,15 @@ OCR 检测 (Optical Character Recognition)
   - **说明 (Description)**：设置 OCR 检测中允许的最大字符不匹配数量。
   - **操作 (Action)**：修改 `"value"` 的值来达到允许的不匹配字符数量。
 
-- **模糊模式 (Blur Mode)**
+.. - **模糊模式 (Blur Mode)**
 
-  .. image:: images/Fuzzy_mode.png
-     :scale: 60%
-     :alt: 缺失标记示例
+..   .. image:: images/Fuzzy_mode.png
+..      :scale: 60%
+..      :alt: 缺失标记示例
 
-  - **路径 (Path)**：`object/default_line_items/text_verification/params/fuzzy_mode`
-  - **说明 (Description)**：控制模糊模式的开关。
-  - **操作 (Action)**：通过 `"required"` 控制开关（`true` 启用，`false` 关闭）。
+..   - **路径 (Path)**：`object/default_line_items/text_verification/params/fuzzy_mode`
+..   - **说明 (Description)**：控制模糊模式的开关。
+..   - **操作 (Action)**：通过 `"required"` 控制开关（`true` 启用，`false` 关闭）。
 
 - **双向检测 (Bidirectional Inspection)**
 
@@ -299,9 +341,9 @@ OCR 检测 (Optical Character Recognition)
      
   - **路径 (Path)**：`object/default_line_items/text_verification/params/text_verification/bidirectional`
   - **说明 (Description)**：控制 OCR 双向检测的开关。
-  - **操作 (Action)**：通过 `"required"` 控制开关（`true` 启用，`false` 关闭）。
+  - **操作 (Action)**：通过 `"param_bool"` 控制开关（`true` 启用，`false` 关闭）。
 
-修改完成后，请保存文件并重启系统以应用更改。
+修改完成后，请保存文件以应用更改。
 
 
 导出 MES 路径
