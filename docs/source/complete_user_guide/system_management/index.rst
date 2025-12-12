@@ -372,10 +372,6 @@ OCR 检测 (Optical Character Recognition)
   </details>
   </br>
 
-导出 MES 路径
-~~~~~~~~~~~~~~
-
-检测页面中，缺陷详情页面可以点击“导出 MES 结果”， 生成的文件将保存在配置的导出路径中。
 
 模型更新器配置
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -445,13 +441,14 @@ OCR 检测 (Optical Character Recognition)
 
 
 关于
-----------
+~~~~~~~~~~~~~
 
 在该页面可以查询系统版本号、加密密钥ID。
 
 
 日志
-------------
+~~~~~~~~~~~~~~~~~~~
+
 
 .. image:: images/system_log.png
    :scale: 60%
