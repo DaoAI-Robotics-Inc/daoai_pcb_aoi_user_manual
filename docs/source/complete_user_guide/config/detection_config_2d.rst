@@ -195,6 +195,12 @@
 
 勾选 **启用高级设置** 后，才会额外显示下面这些阈值类参数（例如平均阈值、邻域阈值等），用于更精细地控制各子区域的判定逻辑。
 
+.. raw:: html
+
+   <details>
+   <summary class="collapsible-summary" style="cursor: pointer; font-weight: 600;">点击展开：高级设置详细说明（Solder / Pad / Tip）</summary>
+   <div class="collapsible-box">
+
 **焊料（Solder）**
 
       .. image:: images/lead2d_v2_solder.png
@@ -255,24 +261,6 @@
       比较当前引脚的 **焊料区 (Solder)** 和相邻引脚的焊料情况。  
       如果差异过大，说明它和左右邻居不一致，可能就是局部异常。  
 
-**引脚区域**
-
-      .. image:: images/lead2d_v2_area.png
-         :scale: 80%
-         :alt: V2 引脚区域参数
-
-   - **颜色范围（引脚区域）**：为“引脚区域”配置有效的 HSV 颜色范围, 和有效比例范围
-      
-      .. image:: images/lead2d_v2_area_color.png
-         :scale: 80%
-         :alt: V2 引脚区域 颜色
-
-   - **引脚翘起平均上限阈值**  
-      比较所有引脚的引脚区域 (Area) 的平均有效比例，若其值高于该上限阈值，则判定为异常。  
-
-   - **引脚翘起平均下限阈值**  
-      比较所有引脚的引脚区域 (Area) 的平均有效比例，若其值低于该下限阈值，则判定为异常。  
-
 **引脚末端 (tip) 区域**
 
       .. image:: images/lead2d_v2_tip.png
@@ -291,6 +279,13 @@
    - **引脚翘起平均下限阈值**  
       比较所有引脚的引脚末端 (Tip) 区域的平均有效比例，若其值低于该下限阈值，则判定为异常。  
 
+.. raw:: html
+
+   </div>
+   </details>
+   </br>
+
+   
 4. 文本工具
 ---------------------
 

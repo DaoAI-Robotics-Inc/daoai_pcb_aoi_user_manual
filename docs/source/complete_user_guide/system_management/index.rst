@@ -213,20 +213,26 @@
    :scale: 60%
    :alt: 编程默认参数界面示意
 
-用途：为新建 PCB 产品或新增检测项提供一套“起始参数模板”。保存后，这些默认值将作为各模块的初始阈值与颜色范围。
+用途：为新建 PCB 产品的各类检测项提供一套“起始参数模板”。保存后，这些默认值将作为各模块的初始阈值与颜色范围。
 
 
 通过修改系统配置更改默认参数
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+  <details>
+  <summary class="collapsible-summary" style="cursor: pointer; font-weight: 600;">点击展开：如何通过 system_config.json 修改默认检测参数</summary>
+  <div class="collapsible-box">
 
 在系统JSON配置，您可以通过修改以下字段来调整默认检测参数：
 
   .. note:: 
     您可以直接通过右上角的搜索栏搜索路径已达到需要修改的参数，需要确保上方的路径和文档里的一致性
 
-    .. image:: images/searchBar.png
-      :scale: 60%
-      :alt: 搜索栏
+   .. image:: images/searchBar.png
+    :scale: 60%
+    :alt: 搜索栏
 
 主体检测 (Mounting Detection)
 ````````````````````````````````````````````
@@ -234,8 +240,8 @@
 - **常规检测阈值 (Significant Defect Check Threshold)**
 
   .. image:: images/significant_defect_check_threshold.png
-     :scale: 60%
-     :alt: 常规检测阈值示意
+    :scale: 60%
+    :alt: 常规检测阈值示意
 
   - **路径 (Path)**：`default_line_items/mounting_inspection_2d/params/threshold/param_range/ok_max`
   - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置常规检测的最大容差值。默认开启，值为0.2。
@@ -245,8 +251,8 @@
 - **损件检测阈值 (Subtle Defect Check Threshold)**
 
   .. image:: images/subtle_defect_check_threshold.png
-     :scale: 60%
-     :alt: 损件检测阈值示意
+    :scale: 60%
+    :alt: 损件检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/defect_check_threshold/param_range/ok_max`
   - **说明 (Description)**：通过修改 `"ok_max"` 的值来设置损件的最大容差值。
@@ -255,8 +261,8 @@
 - **极性检测阈值 (Polarity Check Threshold)**
 
   .. image:: images/polarity_check_threshold.png
-     :scale: 60%
-     :alt: 极性检测阈值示意
+    :scale: 60%
+    :alt: 极性检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/polarity_check_threshold/ok_max`
   - **说明 (Description)**：设置极性检查的最大容差值。
@@ -265,8 +271,8 @@
 - **旋转角度阈值 (Max Rotation Angle Threshold)**
 
   .. image:: images/max_rotation_angle_threshold.png
-     :scale: 60%
-     :alt: 旋转检测阈值示意
+    :scale: 60%
+    :alt: 旋转检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/max_rotation_angle/param_float/value`
   - **说明 (Description)**：设置旋转检测的最大容差值。默认开启，角度为3度。  
@@ -275,8 +281,8 @@
 - **X偏移阈值 (Max shift x)**
 
   .. image:: images/max_shift_x.png
-     :scale: 60%
-     :alt: X偏移检测阈值示意
+    :scale: 60%
+    :alt: X偏移检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/max_shift_x/param_float/value`
   - **说明 (Description)**：设置X轴偏移检测的最大容差值。  
@@ -285,8 +291,8 @@
   - **Y偏移阈值 (Max shift y)**
 
   .. image:: images/max_shift_y.png
-     :scale: 60%
-     :alt: Y偏移检测阈值示意
+    :scale: 60%
+    :alt: Y偏移检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/mounting_inspection_2d/params/max_shift_y/param_float/value`
   - **说明 (Description)**：设置Y轴偏移检测的最大容差值。。  
@@ -298,8 +304,8 @@
 - **桥接检测阈值 (Bridge Threshold)**
 
   .. image:: images/Lead_Bridge_Threshold.png
-     :scale: 60%
-     :alt: 焊桥检测阈值示意
+    :scale: 60%
+    :alt: 焊桥检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/lead_inspection_2d/params/bridge_threshold`
   - **说明 (Description)**：设置桥接检测的阈值。
@@ -308,8 +314,8 @@
 - **引脚检测阈值 (Lead Threshold)**
 
   .. image:: images/Lead_Threshold.png
-     :scale: 60%
-     :alt: 引脚检测阈值示意
+    :scale: 60%
+    :alt: 引脚检测阈值示意
 
   - **路径 (Path)**：`object/default_line_items/lead_inspection_2d/params/lead_threshold`
   - **说明 (Description)**：设置引脚检测的阈值。
@@ -318,8 +324,8 @@
 - **桥接间隙阈值（Lead Gap Width）**
 
   .. image:: images/Lead_Gap_Width.png
-     :scale: 60%
-     :alt: 桥接阈值示意
+    :scale: 60%
+    :alt: 桥接阈值示意
 
   - **路径 (Path)**：`object/default_line_items/lead_inspection_2d/params/bridge_width_percentage/param_float/value`
   - **说明 (Description)**：设置引脚间隙检测的阈值。
@@ -331,8 +337,8 @@ OCR 检测 (Optical Character Recognition)
 - **最大字符不匹配数量 (Max Mismatch Count)**
 
   .. image:: images/max_mismatch_count.png
-     :scale: 60%
-     :alt: 最大字符不匹配数量示意
+    :scale: 60%
+    :alt: 最大字符不匹配数量示意
 
   - **路径 (Path)**：`object/default_line_items/text_verification/params/max_mismatch_count/param_int/value`
   - **说明 (Description)**：设置 OCR 检测中允许的最大字符不匹配数量。
@@ -351,8 +357,8 @@ OCR 检测 (Optical Character Recognition)
 - **双向检测 (Bidirectional Inspection)**
 
   .. image:: images/Bidirectional_mode.png
-     :scale: 60%
-     :alt: 双向检测示意
+    :scale: 60%
+    :alt: 双向检测示意
      
   - **路径 (Path)**：`object/default_line_items/text_verification/params/text_verification/bidirectional`
   - **说明 (Description)**：控制 OCR 双向检测的开关。
@@ -360,6 +366,11 @@ OCR 检测 (Optical Character Recognition)
 
 修改完成后，请保存文件以应用更改。
 
+.. raw:: html
+
+  </div>
+  </details>
+  </br>
 
 导出 MES 路径
 ~~~~~~~~~~~~~~
