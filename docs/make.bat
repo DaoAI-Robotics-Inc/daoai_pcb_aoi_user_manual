@@ -25,6 +25,25 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
+REM --- i18n / multi-language targets (zh_CN = source, en = translation) ---
+if "%1" == "gettext" (
+	%SPHINXBUILD% -b gettext %SOURCEDIR% %BUILDDIR%\gettext %SPHINXOPTS%
+	goto end
+)
+if "%1" == "intl-update" (
+	%SPHINXBUILD% -b gettext %SOURCEDIR% %BUILDDIR%\gettext %SPHINXOPTS%
+	sphinx-intl update -p %BUILDDIR%\gettext -l en -d %SOURCEDIR%\locale
+	goto end
+)
+if "%1" == "html-cn" (
+	%SPHINXBUILD% -b html -D language=zh_CN %SOURCEDIR% %BUILDDIR%\html\zh_CN %SPHINXOPTS%
+	goto end
+)
+if "%1" == "html-en" (
+	%SPHINXBUILD% -b html -D language=en %SOURCEDIR% %BUILDDIR%\html\en %SPHINXOPTS%
+	goto end
+)
+
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
 
