@@ -11,7 +11,8 @@ DIP 桥接检测（DIP Bridge）
 
 **操作流程**
 
-- **桥接颜色公式（Bridge Color Formula）/ 灵敏度（Sensitivity）**：连锡颜色识别公式与灵敏度。
+- **桥接颜色公式（Bridge Color Formula）**：选择用于识别连锡的颜色公式（如 ``2B-R-G``）；选择三色时配置 **三色 X / Y / Z / A** 系数。
+- **灵敏度（Sensitivity）**：桥接颜色检测灵敏度（0–1），值越大检测范围越大。
 - **桥接有效比率范围（Bridge Valid Ratio Range）**：连锡有效比例 OK 区间。
 - **桥接宽度 (%)（Bridge Width）**：桥接检测带宽度。
 - **焊点数量（Solder Count）/ 焊点宽度 (mm)（Solder Width）**：焊点子框划分。

@@ -26,6 +26,7 @@
 - **有效比例范围（Valid Ratio Ranges）**：每组颜色范围对应的有效比例上下限；落入范围内判 OK。
 - **有效比例列表（Valid Ratio List）**：评估样本得到的各 ROI 有效比例统计，辅助设定合理范围。
 - **启用可视化（Enable Visualization）**：显示二值化 Mask 与比例统计（仅建议调试时开启）。
+- **使用共享参数（Use Shared Parameters）**：开启后，对同一组件下所有同类型特征共用一套参数；关闭后可对单个特征单独调参。
 
    .. image:: ../images/solder2d_hsv_pick.png
       :scale: 80%

@@ -29,9 +29,14 @@ IC 引脚检测 2D v2（Lead 2D v2，基于颜色比例）
 - **焊盘长度 (像素)（Pad Length / ext_top）/ 引脚长度 (像素)（Lead Length / ext_bottom）**：沿引脚法线方向向上 / 向下扩展 ROI，使其完整覆盖焊盘与引脚区域。可手动输入或在窗口中拖拽调整。
 - **引脚尖端长度 (像素)（Tip Length）**：引脚末端 Tip 子区域的长度。
 - **引脚数量（Lead Count）/ 引脚宽度 (mm)（Lead Width）**：在 ROI 内自动均分生成子框并与实体引脚对齐。
+- **引脚角度（Lead Angle）**：引脚相对 ROI 的方向角。
+- **引脚阈值（Lead Threshold）**：基于每个引脚子 ROI 的 AI 分数判定缺陷。
+- **桥接阈值（Bridge Threshold）**：相邻引脚间连锡（短路）的 AI 判定阈值。
+- **桥接宽度 (mm)（Bridge Width (mm)）**：相邻引脚间桥接检测带的绝对宽度（毫米）。
 - **间隙宽度 (%)（Gap Width）**：相邻引脚间桥接检测带宽度（按间隙百分比），居中裁剪以减少引脚边缘干扰。
 - **引脚忽略列表 / 桥接忽略列表**：选择不参与检测的引脚 / 桥接（从左到右编号）。
 - **启用可视化（Enable Visualization）**：显示各子区域二值化结果与比例统计（仅建议调试时开启）。
+- **使用共享参数（Use Shared Parameters）**：开启后，对同一组件下所有同类型引脚特征共用一套参数；关闭后可对单个特征单独调参。
 
    .. image:: ../images/lead2d_v2_visualizae.png
       :scale: 60%
@@ -45,6 +50,8 @@ IC 引脚检测 2D v2（Lead 2D v2，基于颜色比例）
 
 - **焊料颜色范围（Solder Color Range）/ 焊盘颜色范围（Pad Color Range）/ 引脚尖端颜色范围（Tip Color Range）**：分别为三类子区域配置 HSV 或三色颜色公式。
 - **焊料 / 焊盘 / 引脚 有效比例范围（Valid Ratio Range）**：各子区域有效比例的 OK 区间。
+- **桥接颜色公式（Bridge Color Formula）**：选择用于间隙区连锡检测的颜色公式（如 ``2B-R-G`` 或三色）；选择三色时配置 **三色 X / Y / Z / A** 系数。
+- **灵敏度（Sensitivity）**：间隙桥接颜色检测灵敏度（0–1），值越大检测范围越大。
 - **桥接颜色范围（Bridge Color Range）/ 桥接有效比例范围（Bridge Valid Ratio Range）**：用于连锡检测。
 
    .. image:: ../images/lead2d_v2_solder_color.png

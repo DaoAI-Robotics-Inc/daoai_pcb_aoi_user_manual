@@ -27,6 +27,7 @@ IC 引脚检测 2D（Lead 2D，AI）
 - **桥接宽度 (mm)（Bridge Width）/ 间隙宽度 (%)（Gap Width）**：定义相邻引脚间桥接检测带的宽度；可按毫米或按引脚间隙百分比设定，居中裁剪以避免引脚边缘干扰。
 - **引脚忽略列表（Lead Ignore List）/ 桥接忽略列表（Bridge Ignore List）**：选择不参与检测的引脚 / 桥接（从左到右编号，注意特征框角度）。
 - **启用可视化（Enable Visualization）**：显示引脚子框与检测结果。
+- **使用同步参数（Use sync param）**：开启后，对同一组件下所有同类型引脚特征共用一套参数；关闭后可对单个特征单独调参。
 
    .. image:: ../images/lead2d_ai_inference.png
       :scale: 80%
