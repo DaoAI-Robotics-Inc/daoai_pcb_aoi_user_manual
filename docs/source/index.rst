@@ -19,6 +19,7 @@ DaoAI PCBA AOI 用户手册
    complete_user_guide/features/pcb_array
    complete_user_guide/inspection/index
    complete_user_guide/system_management/index
+   complete_user_guide/system_management/models
 
 
 
