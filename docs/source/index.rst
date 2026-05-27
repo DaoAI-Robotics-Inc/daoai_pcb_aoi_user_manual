@@ -23,6 +23,7 @@ DaoAI PCBA AOI 用户手册
    complete_user_guide/features/manual_programming
    complete_user_guide/features/part_library_and_grouping
    complete_user_guide/features/pcb_array
+   complete_user_guide/features/collinearity_inspection
    complete_user_guide/config/index
 
 .. toctree::
