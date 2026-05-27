@@ -1,0 +1,30 @@
+文本检测（Text / OCR · OCV）
+==============================
+
+**此页面的用途**
+
+识别并校验检测框内文本（丝印、字符、批次 / 日期等），同时支持 OCR（识别字符内容）与 OCV（与参考图像比对）两种方式。
+
+**如何进入**
+
+模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。
+
+**操作流程**
+
+**用途**：识别并校验检测框内文本（丝印、字符、批次 / 日期等）。检测框上的三角箭头表示文本阅读方向，应与实际字符方向一致。同时支持 OCR（识别字符内容）与 OCV（与参考图像比对）两种方式。
+
+   .. image:: ../images/text_tool.png
+      :scale: 70%
+      :alt: 文本工具参数
+
+**参数说明**
+
+- **期望文本（Expected Text）/ 期望文本 (反向)（Expected Text Reverse）**：目标字符串；反向用于 180° 方向。
+- **启用 OCR（Enable OCR）**：识别检测框内字符内容并与期望文本比对。
+- **启用 OCV（Enable OCV）**：将检测框与 **OCV 参考（OCV References）** 图像比对，输出 **OCV 最佳匹配分数（OCV Best Match Score）**。
+- **OCV 接受阈值（OCV Acceptance Threshold）**：提高阈值可降低漏报（false negative）。
+- **OCR/OCV 通过条件（Pass Condition）**：可选 **OCR 与 OCV 均须通过** 或 **OCR 或 OCV 任一通过**。
+- **最大不匹配字符数（Max Mismatch Count）**：与期望文本比较时允许的最大不匹配字符数（仅当识别与参考长度相同时才显示不匹配计数）。
+- **模糊模式（Blur Mode）**：启用后形状相似的字符（如 ``1`` / ``l``）视为正确，可通过反馈加入模糊表。
+- **双向检测（Bidirectional Inspection）**：进行 0° / 180° 两次识别，任一方向匹配即判 OK。
+- **启用旋转（Enable Rotation）/ 自动搜索文本位置（Auto search text location）**：当文本在框内位置有偏移时，加强搜索以提升识别稳定性。

@@ -159,7 +159,7 @@ QFP 封装 IC 芯片
             :scale: 50%
             :alt: QFP 封装 IC 芯片
 
-   - (2D) IC 引脚检测需要划分 3 个区域：焊盘、焊料、引脚末端；参见 :ref:`4. IC 引脚检测 2D v2（Lead 2D v2，基于颜色比例）` 以了解区域划分标准。
+   - (2D) IC 引脚检测需要划分 3 个区域：焊盘、焊料、引脚末端；参见 :ref:`IC 引脚检测 2D v2（Lead 2D v2，基于颜色比例）` 以了解区域划分标准。
 
         .. image:: images/program_qfc_2.png
             :scale: 50%
