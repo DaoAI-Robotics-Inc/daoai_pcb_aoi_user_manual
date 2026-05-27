@@ -31,6 +31,48 @@ This user manual is powered by Read the Docs, which works as a hosting provider 
    ```
 5. Output files can be found under `docs/_build`. Open `docs/_build/html/index.html` to view the result.
 
+## Translating the documentation (multi-language)
+
+The source language is **Chinese (`zh_CN`)** — all `.rst` files under `docs/source/`
+are written in Chinese. Other languages are **gettext translation catalogs**, not
+copies of the source. Never fork `docs/source/` per language, and never put a
+language on its own git branch (branches/tags are for *versions*, not languages).
+
+### Update catalogs after editing source
+
+```sh
+cd docs
+make intl-update      # re-extracts strings and refreshes docs/source/locale/en/LC_MESSAGES/*.po
+```
+
+Changed source paragraphs become "fuzzy" entries in the `.po` files — that is your
+translation to-do list.
+
+### Translate
+
+Edit the `.po` files (e.g. with [Poedit](https://poedit.net/)) and fill in each
+`msgstr`. An empty `msgstr` falls back to the Chinese source at build time, so
+partial translations are fine.
+
+### Build a specific language
+
+```sh
+cd docs
+make html-cn    # Chinese -> _build/html/zh_CN
+make html-en    # English -> _build/html/en
+```
+
+On Windows you can also run `\.i18n_build.ps1` (in `docs/`) to refresh catalogs and
+build every language in one step; add `-Serve en` to preview the English site on
+`http://127.0.0.1:8001`.
+
+### Versions vs. languages
+
+Versions (latest/stable/tags) are managed by git branches/tags + `sphinx-multiversion`.
+Languages are managed by catalogs + separate Read the Docs translation projects (set
+each project's *Settings → Language*, then link them under the main project's
+*Translations*). The two axes are independent.
+
 ## How to contribute to the documentation (requires write permission for a repository)
 
 1. Create a new branch from the `main` branch of the documentation repository you want to contribute to.
