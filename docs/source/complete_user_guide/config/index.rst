@@ -9,4 +9,3 @@
 
    component_settings
    detection_config_2d
-   detection_config_3d

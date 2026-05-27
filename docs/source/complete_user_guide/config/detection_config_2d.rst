@@ -79,7 +79,7 @@
       :alt: 遮罩
 
 2. 焊料工具（2D，基于颜色比例）
----------------------
+----------------------------------------
 
 **核心思路**：在 ROI 内用 **HSV 颜色范围** 对像素进行二值化，计算“有效像素比例”，并与设定范围比较以判定 OK/NG。一个 ROI 可配置 **多个颜色范围** （如蓝通道斜面焊料、红通道平面焊盘），分别计算比例并独立设阈值。
 
@@ -189,14 +189,16 @@
          :alt: V2焊料色盘
    
    TODO: 等待更新
-   - **焊料平均阈值 (Solder Mean Threshold)**  
-      当引脚的 valid_ratio 未能落入预设的 **Solder Valid Ratio Range** 时，会触发二次判定。  
+   - **焊料平均阈值 (Solder Mean Threshold)**
+
+      当引脚的 valid_ratio 未能落入预设的 **Solder Valid Ratio Range** 时，会触发二次判定。
       此时，系统会计算该引脚的 valid_ratio 与所有引脚平均值 (mean_valid_ratio) 的差异：  
       - 如果差异 **大于阈值** ⇒ 视为正常；  
       - 如果差异 **小于或等于阈值** ⇒ 判定为 NG。  
 
-   - **焊料邻域阈值 (Solder Neighbor Threshold)**  
-      同样在 valid_ratio 超出 **Solder Valid Ratio Range** 时启用。  
+   - **焊料邻域阈值 (Solder Neighbor Threshold)**
+
+      同样在 valid_ratio 超出 **Solder Valid Ratio Range** 时启用。
       系统会比较该引脚的 valid_ratio 与相邻引脚的 valid_ratio：  
       - 如果差异 **大于阈值** ⇒ 视为正常；  
       - 如果差异 **小于或等于阈值** ⇒ 判定为 NG。  
@@ -204,9 +206,10 @@
    .. note::
       判定流程为：  
       1. 首先检查 valid_ratio 是否在 **Solder Valid Ratio Range** 内，若在范围内 ⇒ OK；  
-      2. 若超出范围，则进入二次判定：  
-         - 只要满足 **平均阈值** 或 **邻域阈值** 中的任意一个条件 ⇒ OK；  
-         - 如果两者都不满足 ⇒ NG。  
+      2. 若超出范围，则进入二次判定：
+
+         - 只要满足 **平均阈值** 或 **邻域阈值** 中的任意一个条件 ⇒ OK；
+         - 如果两者都不满足 ⇒ NG。
 
 
 **焊盘（Pad）**

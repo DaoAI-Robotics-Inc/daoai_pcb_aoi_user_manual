@@ -96,7 +96,7 @@
 2. 调整过镜头焦距或光圈，导致成像比例明显变化；
 3. 相机支撑结构被移动、震动或维护后位置可能偏移；
 4. 图像边缘出现明显拉伸 / 弯曲，或测量尺寸偏差增大；
-5. 3D 对齐或模板匹配稳定性下降（需先排除光照与污渍因素）。
+5. 模板匹配稳定性下降（需先排除光照与污渍因素）。
 
 .. note::
    校准操作会更新当前使用的标定文件（`certificate.bin`）。若需保留旧版本，可在执行前手动备份原文件。
@@ -163,7 +163,7 @@
 文件路径： ``<安装目录>/capture_agent/sensor_config.json``
 
 
-用途：单台或多台（2D/3D）相机参数与算法过滤。
+用途：单台或多台相机参数与算法过滤。
 
 .. list-table:: sensor_config 关键字段
       :header-rows: 1
@@ -175,14 +175,8 @@
         - 相机识别名。
       * - sensors[].id
         - 传感器编号（供采集 & 系统引用）。
-      * - is_3d
-        - 是否是 3D 相机。
       * - camera_configs[].config_2d.exposure_time / gain
-        - 2D 基线曝光与增益。
-      * - camera_configs[].config_3d.frame_settings[]
-        - 3D 一次或多次帧曝光序列（多帧可实现类 HDR 动态范围）。
-      * - camera_configs[].config_3d.algorithm_params: {40}
-        - 算法滤波参数。
+        - 基线曝光与增益。
 
 系统JSON配置
 ~~~~~~~~~~~~~~~~~~~~~~~~~
