@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2024 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:2
+msgid "PCB 拼版"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:4
+msgid "本章介绍 PCB 拼版功能，包括拼版新建方式、参数继承与同步、条码检测工具、判废板阈值设置等。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:7
+msgid "拼版新建流程"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:9
+msgid "切换至PCB拼版视图"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:11
+msgid "在产品详情页，点击右上角的“拼版”按钮，进入拼版管理界面。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst
+msgid "拼版入口示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:17
+msgid "点击创建拼版单元，然后鼠标框选绘制主板区域。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst
+msgid "拼版主板绘制示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:25
+msgid "手动新建："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:24
+msgid "可以点击列表中的 “添加图标” 逐个添加子板，然后切换至选择工具，用鼠标拖拽调整位置。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:25
+msgid "适用于不规则或特殊拼版场景。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:34
+msgid "智能工具辅助："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst
+msgid "拼版智能工具示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:32
+msgid "依次选择 3 个在子板中相对位置固定的圆形特征作为锚点，分别选取左上角、右上角和左下角子板上的锚点，以确保阵列自动生成时定位准确。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:33
+msgid "输入子板尺寸、行列数、间距等参数，此时可以看到预览效果。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:34
+msgid "点击创建拼版，即可完成创建，并回到模板编辑器视图。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:36
+msgid "当需要删除一个拼版单元时，鼠标悬停至目标子板列表边的 ··· , 点击删除即可。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst
+msgid "删除拼版单元示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:43
+msgid "参数继承与同步原则"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:45
+msgid "默认情况下，所有子板的检测参数（如 ROI、阈值、检测项）均继承主板设置，并且子板上的检测框不可编辑"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:53
+msgid "通过“同步 ROI”选项："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst
+msgid "同步 ROI 设置示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:52
+msgid "（默认开启）开启时，主板调整会同步到所有子板。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:53
+msgid "关闭后，可在每个子板单独调整该元件的 ROI，适用于局部差异或特殊需求。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:56
+msgid "数据管理："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:56
+msgid "数据集自动按元件分组，统计所有子板的检测结果。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:59
+msgid "条形码检测工具"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:61
+msgid "支持在拼版场景下识别每个子板的序列号、批次号等条码信息。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:67
+msgid "操作流程："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:65
+msgid "在模板编辑器中，先为主板添加条形码检测框，并分组为新元件。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:66
+msgid "创建拼版后，系统会自动将该条形码检测框复制到所有子板。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:67
+msgid "检测时，系统可分别识别每个子板上的条码内容，并自动作为序列号归档。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:69
+msgid "应用场景：追溯生产批次、定位异常子板、自动分组统计。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:71
+msgid "判废板阈值设置"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:73
+msgid ""
+"可在系统配置中为拼版设置整体判废板阈值。参考 :ref:`系统JSON配置`，编辑 "
+"wasted_array_board_failure_ratio 参数并保存。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:74
+msgid "检测过程中，若任一子板的元件 NG 率超过该阈值，则该子板会被判定为废板并报出。"
+msgstr ""
+
