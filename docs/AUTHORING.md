@@ -6,8 +6,11 @@
   `autosectionlabel` has no doc-prefix, so repeated block headings would cause duplicate-label
   build warnings.
 - Name every control by its **exact Chinese string from `aoi_pcb_web_client/src/translations/*.js`**.
-- Screenshots: `.. image:: images/<name>.png` with `:scale:` and a Chinese `:alt:`. Reuse existing
-  shots; for missing ones, write the prose + the `.. image::` line (capture is a later pass).
+- Screenshots: reuse an **existing** image with `.. image:: images/<name>.png` (`:scale:` + Chinese
+  `:alt:`). For a screenshot that does **not exist yet**, do NOT use a live `.. image::` directive —
+  Sphinx warns on a missing image file and breaks the 0-warning build. Instead leave a reST **comment
+  placeholder** so the build stays clean and the later capture pass can find it:
+  `.. screenshot-todo: images/<name>.png — <中文说明>` (single colon = a comment, not a directive).
 - Cross-references: `:ref:`<目标页面中文标题>`` (autosectionlabel keys off the Chinese heading).
 - Scope: NO online/multi-backend, NO MES, NO 3D.
 - Build check (from `docs/`): `sphinx-build -E -a -b html -D language=zh_CN source _build/html/zh_CN 2>&1 | grep -E "WARNING|ERROR"` must print nothing.
