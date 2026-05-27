@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst:2
 msgid "手动编程与编辑工具"
-msgstr ""
+msgstr "Manual Programming and Editing Tools"
 
 #: ../../source/complete_user_guide/features/manual_programming.rst:4
 msgid "本节概述自动编程完成后从标记对齐、模板审查、手动补录的完整操作讲解。"

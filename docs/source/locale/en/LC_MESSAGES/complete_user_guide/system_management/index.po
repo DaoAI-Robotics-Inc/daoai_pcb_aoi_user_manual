@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../source/complete_user_guide/system_management/index.rst:2
 msgid "系统管理"
-msgstr ""
+msgstr "System Settings"
 
 #: ../../source/complete_user_guide/system_management/index.rst:4
 msgid "本章节介绍系统级通用配置"
