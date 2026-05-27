@@ -40,8 +40,15 @@ templates_path = ['_templates']
 html_static_path = ['_static']
 
 # -- Options for HTML output
-language = 'EN'
-html_search_language = 'en'
+# Canonical SOURCE language of the .rst files (see PLAN.md Decision 0).
+# Per-language builds override this with `-D language=en`.
+language = 'zh_CN'
+
+# gettext translation catalogs live next to the source tree.
+locale_dirs = ['locale/']
+# One .po file per source document (not a single merged catalog) so
+# translation drift is attributable to a specific page.
+gettext_compact = False
 
 html_theme = 'sphinx_rtd_theme'
 
