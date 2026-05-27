@@ -1,0 +1,500 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2024 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/introduce/quick_start/index.rst:2
+msgid "快速开始"
+msgstr "Quick Start"
+
+#: ../../source/introduce/quick_start/index.rst:4
+msgid ""
+"DaoAI PCBA AOI 软件是一款面向电子制造的智能光学检测系统。 系统以视觉 AI "
+"为核心，提供从自动建模、参数生成到缺陷检测与持续优化的完整流程。 "
+"与传统需要频繁手动调参的方式不同，系统可快速适配生产现场，在提升效率的同时确保精度与稳定性。 "
+"依托自适应算法与反馈机制，软件既能识别常见与细微缺陷，也能在生产过程中持续学习，提升良率并降低运维成本。"
+msgstr ""
+"DaoAI PCBA AOI is an intelligent Automated Optical Inspection software for "
+"electronics manufacturing. Centered on visual AI, it provides a complete "
+"workflow from automatic modeling and parameter generation to defect "
+"detection and continuous optimization. Unlike traditional approaches that "
+"require frequent manual parameter tuning, the system quickly adapts to the "
+"production floor, improving efficiency while maintaining accuracy and "
+"stability. With adaptive algorithms and feedback mechanisms, it detects "
+"both common and subtle defects and keeps learning during production to "
+"improve yield and reduce maintenance costs."
+
+#: ../../source/introduce/quick_start/index.rst:17
+msgid "本章节演示如何使用 DaoAI AOI System 在 2D 检测模式下快速完成一块 PCB 的建模、检测与反馈流程。"
+msgstr ""
+"This chapter demonstrates how to use the DaoAI AOI System to quickly "
+"complete modeling, inspection, and feedback for a PCB in 2D inspection mode."
+
+#: ../../source/introduce/quick_start/index.rst:20
+msgid ""
+"系统也支持工业级 3D 相机及高质量 3D 检测，包括高度、焊盘/焊点体积、引脚翘起、立碑、缺料等三维特征分析；本文快速开始以 2D "
+"流程为例，3D 使用与参数说明将在后续章节中单独介绍。"
+msgstr ""
+"The system also supports industrial-grade 3D cameras and high-quality 3D "
+"inspection, including analysis of height, pad/solder volume, lead lift, "
+"tombstoning, missing parts, and other 3D features. This Quick Start uses "
+"the 2D workflow as an example; 3D usage and parameter details are covered "
+"separately in later chapters."
+
+#: ../../source/introduce/quick_start/index.rst:23
+msgid "启动软件"
+msgstr "Software Launch"
+
+#: ../../source/introduce/quick_start/index.rst:25
+msgid "在开始之前，建议您进行以下设置以优化性能："
+msgstr "Before you start, we recommend the following settings to optimize performance:"
+
+#: ../../source/introduce/quick_start/index.rst:27
+msgid ":ref:`如何避免 GPU 进入低功耗模式导致推理变慢？`"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:28
+msgid ":ref:`如何开启浏览器的硬件加速以避免浏览器卡顿？`"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:30
+msgid "在桌面点击启动器即可启动软件。"
+msgstr "Start the software by clicking the launcher on the desktop."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "启动软件界面"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:36
+msgid "浏览器将自动打开 ``http://localhost:3005/``。 后端默认地址为 ``http://localhost:8000/``。"
+msgstr ""
+"The browser will automatically open ``http://localhost:3005/``. The default "
+"backend address is ``http://localhost:8000/``."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "登录界面"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "主机地址示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:48
+msgid "如需从其他设备访问，将 ``localhost`` 替换为目标机器的 IP。"
+msgstr "To access from another device, replace ``localhost`` with the target machine's IP address."
+
+#: ../../source/introduce/quick_start/index.rst:52
+msgid "登录与设置"
+msgstr "Login and Settings"
+
+#: ../../source/introduce/quick_start/index.rst:54
+msgid "首次进入可以使用 **管理员** 登录账号：用户名 **admin**，密码在部署时提供。"
+msgstr ""
+"On first entry you can sign in with the **administrator** account: username "
+"**admin**; the password is provided during deployment."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "登录界面示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:60
+msgid "登录后点击右上角齿轮进入设置可以设置系统语言："
+msgstr ""
+"After logging in, click the gear icon in the upper-right corner to open "
+"Settings, where you can set the system language:"
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "设置界面示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:69
+msgid "切换界面语言；"
+msgstr "switch the interface language;"
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "语言设置"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:71
+msgid "更多设置选项请参见 :ref:`系统管理` 章节。"
+msgstr "For more configuration options, see the :ref:`系统管理` chapter."
+
+#: ../../source/introduce/quick_start/index.rst:74
+msgid "创建产品"
+msgstr "Create Product"
+
+#: ../../source/introduce/quick_start/index.rst:76
+msgid "在主页点击 **训练 PCB**，开始注册新的 PCB 产品。"
+msgstr "On the home page, click **Teach PCB** to start registering a new PCB product."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "创建产品第一步"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:82
+msgid "输入产品名称。下方为系统支持的检测项列表，可按需启用/关闭。"
+msgstr ""
+"Enter a product name. Below is the list of inspection items the system "
+"supports, which you can enable or disable as needed."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "创建产品第二步"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:88
+msgid "**将 PCB 放在传送带上**"
+msgstr "**Place the PCB on the Conveyor**"
+
+#: ../../source/introduce/quick_start/index.rst:90
+msgid ""
+"将 PCB 平整放置于传送带中央，选择对应传送带并点击“锁定”。输入或确认传送带宽度参数，随后点击“进板”，PCB "
+"将自动输送至相机下方的拍摄/定位区域；到位后点击“下一步”。"
+msgstr ""
+"Place the PCB flat in the center of the conveyor, select the corresponding "
+"conveyor, and click \"Lock\". Enter or confirm the conveyor width "
+"parameter, then click \"PCB In\"; the PCB is automatically conveyed to the "
+"capture/positioning area beneath the camera. Once in place, click \"Next\"."
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "将PCB放在传送带上示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:96
+msgid "**输入 PCB 尺寸**"
+msgstr "**Enter PCB Dimensions**"
+
+#: ../../source/introduce/quick_start/index.rst:98
+msgid ""
+"若已知 PCB 尺寸，直接输入其宽度与高度（单位：mm），然后点击“下一步”。 若尺寸不确定，可移动相机分别拍摄 PCB "
+"左下角与右上角，在图像上依次点击这两个位置并选择 **自动计算** ，系统将自动推算尺寸。"
+msgstr ""
+"If the PCB dimensions are known, enter the width and height directly (in "
+"mm), then click \"Next\". If the dimensions are uncertain, move the camera "
+"to capture the lower-left and upper-right corners of the PCB, click these "
+"two positions on the image in turn, and choose **Auto Calculate**; the "
+"system will automatically estimate the dimensions."
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "自动尺寸计算示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:105
+msgid "**完整 PCB 拍摄**"
+msgstr "**Capture Full PCB**"
+
+#: ../../source/introduce/quick_start/index.rst:107
+msgid ""
+"点击“拍摄”，系统将联动相机与传送带分区采集并自动拼接生成完整 PCB 图像。 "
+"随后点击“定义区域”，在图像上框选用于自动编程的有效区域（通常为整板；若需排除治具/夹具边缘，可适当收缩）。 "
+"该基准图像将作为后续自动编程、对齐与检测的参考，务必使用洁净、无缺陷的 **Golden board（良品板）** 拍摄。 "
+"此界面可实时调整相机参数（亮度、曝光、增益、白平衡、点云滤波等）；如效果不佳，可重新拍摄覆盖上一版本。"
+msgstr ""
+"Click \"Capture\"; the system coordinates the camera and conveyor to "
+"capture the board in sections and automatically stitches them into a "
+"complete PCB image. Then click \"Define Area\" and frame the valid region "
+"used for auto-programming (usually the whole board; shrink it slightly to "
+"exclude fixture/jig edges if needed). This reference image serves as the "
+"baseline for subsequent auto-programming, alignment, and inspection, so be "
+"sure to capture it from a clean, defect-free **Golden board**. Camera "
+"parameters (brightness, exposure, gain, white balance, point-cloud "
+"filtering, etc.) can be adjusted in real time on this screen; if the result "
+"is poor, recapture to overwrite the previous version."
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "完整 PCB 拍摄"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:116
+msgid "**半自动编程（上传 CAD）**"
+msgstr "**Semi-Automatic Programming (Upload CAD)**"
+
+#: ../../source/introduce/quick_start/index.rst:118
+msgid ""
+"提供 CAD（.csv）文件后，系统可： - 自动读取：封装(Package)、丝印/标识、料号(PN)、X/Y 坐标、旋转角度； - "
+"按封装或料号聚类，同类元件一次建模，加速训练； - 减少后续人工分组与命名工作。"
+msgstr ""
+"After you provide a CAD (.csv) file, the system can: - automatically read "
+"Package, silkscreen/designator, Part Number (PN), X/Y coordinates, and "
+"rotation angle; - cluster components by package or part number so identical "
+"components are modeled once, accelerating training; - reduce subsequent "
+"manual grouping and naming work."
+
+#: ../../source/introduce/quick_start/index.rst:123
+msgid "若不提供 CAD，后续自动编程仍可执行；检测质量不受影响，仅失去基于封装/料号的聚类加速，系统将对元件逐一建模。"
+msgstr ""
+"If no CAD is provided, auto-programming can still run; inspection quality is "
+"unaffected — only the package/part-number clustering acceleration is lost, "
+"and the system models each component individually."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "上传 CAD 文件界面"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:129
+msgid ""
+"步骤： 1. 上传 `.csv` 文件并点击“预览表格”。 2. "
+"在字段映射界面依次指定：料号(PN)、封装(Package)、X、Y、旋转(°)，（可选）层/板面字段；如存在多层数据，可按层号或面别过滤。 3."
+" 选择坐标单位（mm 或 mil），确认原点与方向一致。 4. 点击“运行自动编程”。"
+msgstr ""
+"Steps: 1. Upload the `.csv` file and click \"Preview Table\". 2. In the "
+"field-mapping screen, assign in order: Part Number (PN), Package, X, Y, "
+"Rotation (°), and (optionally) layer/side fields; if multi-layer data "
+"exists, you can filter by layer number or side. 3. Select the coordinate "
+"unit (mm or mil) and confirm the origin and orientation are consistent. 4. "
+"Click \"Run Auto Programming\"."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "字段映射示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:139
+msgid ""
+"若 CAD "
+"初次与拍摄图像未正确重合，系统将进入“对齐调整”界面；通过旋转、平移、缩放（必要时辅助少量基准点）微调至主要元件位置大致重合后，点击“重新运行自动编程”即可重新生成。"
+msgstr ""
+"If the CAD does not initially align correctly with the captured image, the "
+"system opens the \"Alignment Adjustment\" screen; use rotation, "
+"translation, and scaling (with a few reference points if needed) to fine-"
+"tune until the main components roughly coincide, then click \"Rerun Auto "
+"Programming\" to regenerate."
+
+#: ../../source/introduce/quick_start/index.rst:141
+msgid "**全自动编程（无 CAD）**"
+msgstr "**Auto Programming (No CAD)**"
+
+#: ../../source/introduce/quick_start/index.rst:143
+msgid "不上传任何文件，直接点击“自动编程”即可。系统会通过视觉+AI自动："
+msgstr ""
+"Without uploading any file, simply click \"Auto Programming\". Using vision "
+"plus AI, the system automatically:"
+
+#: ../../source/introduce/quick_start/index.rst:145
+msgid "识别并分割元件区域；"
+msgstr "detects and segments component areas;"
+
+#: ../../source/introduce/quick_start/index.rst:146
+msgid "推断类别特征并生成初始检测模板；"
+msgstr "infers category features and generates initial inspection templates;"
+
+#: ../../source/introduce/quick_start/index.rst:147
+msgid "建立后续对齐与检测所需的结构化数据。"
+msgstr "builds the structured data required for subsequent alignment and inspection."
+
+#: ../../source/introduce/quick_start/index.rst:149
+msgid "自动编程耗时约 30 秒。"
+msgstr "Auto-programming takes about 30 seconds."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "全自动编程示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:156
+msgid "产品编程页面"
+msgstr "Product Programming Page"
+
+#: ../../source/introduce/quick_start/index.rst:158
+msgid "自动编程完成后，会进入 **产品编程页面**。页面包含三个 Tab："
+msgstr ""
+"After auto-programming completes, the **Product Programming page** opens. "
+"The page contains three tabs:"
+
+#: ../../source/introduce/quick_start/index.rst:160
+msgid "**标记/对齐 PCB**"
+msgstr "**Mark/Align PCB**"
+
+#: ../../source/introduce/quick_start/index.rst:161
+msgid "**模板编辑器**"
+msgstr "**Template Editor**"
+
+#: ../../source/introduce/quick_start/index.rst:162
+msgid "**PCB 拼版**"
+msgstr "**PCB Array**"
+
+#: ../../source/introduce/quick_start/index.rst:164
+msgid "**标记/对齐 PCB**："
+msgstr "**Mark/Align PCB**:"
+
+#: ../../source/introduce/quick_start/index.rst:166
+msgid ""
+"点击“+ 标记”，框选 PCB "
+"上固定的参考标记（圆形、矩形或复杂图案均可）。框选区域应略大，以保证在轻微位移情况下仍能正确定位。确认后，点击“预测中心”完成标记定义。"
+msgstr ""
+"Click \"+ Mark\" and frame a fixed reference mark on the PCB (circular, "
+"rectangular, or a complex pattern all work). Frame a slightly larger region "
+"so positioning still succeeds under minor displacement. After confirming, "
+"click \"Predict Center\" to finish defining the mark."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "标记对齐示例"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:172
+msgid "**模板编辑器**："
+msgstr "**Template Editor**:"
+
+#: ../../source/introduce/quick_start/index.rst:174
+msgid ""
+"左侧显示自动编程获得的元件列表。若上传了 CAD，系统会自动显示丝印/标识，并将同类元件分组。 "
+"可通过搜索栏过滤存在问题的项。对于标记不正确的元件，可手动删除并重新编程。"
+msgstr ""
+"The left panel lists the components obtained from auto-programming. If a CAD "
+"was uploaded, the system automatically shows silkscreen/designators and "
+"groups identical components. Use the search bar to filter problematic "
+"items. For incorrectly marked components, you can manually delete and "
+"reprogram them."
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "模板编辑器示例"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:181
+msgid "有关手动编程的详细步骤与编辑工具用法，请参见 :ref:`手动编程与编辑工具`。"
+msgstr ""
+"For detailed steps on manual programming and how to use the editing tools, "
+"see :ref:`手动编程与编辑工具`."
+
+#: ../../source/introduce/quick_start/index.rst:184
+msgid "训练和评估"
+msgstr "Training and Evaluation"
+
+#: ../../source/introduce/quick_start/index.rst:186
+msgid "确认全部元件框与属性无误后，点击“训练”启动模型训练，耗时约 1 分钟。"
+msgstr ""
+"After confirming that all component boxes and attributes are correct, click "
+"\"Train\" to start model training (about 1 minute)."
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "训练示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:192
+msgid "训练完成后，点击“自动生成检测参数”，系统会基于当前模板与训练结果生成一套初始检测参数。"
+msgstr ""
+"When training completes, click \"Generate Inspection Parameters\"; the "
+"system generates an initial set of inspection parameters based on the "
+"current templates and training results."
+
+#: ../../source/introduce/quick_start/index.rst:194
+msgid "随后点击“评估全部”，系统将批量评估所有元件，并以颜色标记（绿：健康；红：不健康）。可按需查看不健康项并参考 :ref:`检测参数` 继续微调。"
+msgstr ""
+"Then click \"Evaluate All\"; the system evaluates every component in batch "
+"and marks them by color (green: healthy; red: unhealthy). Review the "
+"unhealthy items as needed and fine-tune them by referring to the "
+":ref:`检测参数` section."
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "评估示意"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:202
+msgid "开始检测"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:204
+msgid "返回主页：点击左上角 Logo 回到主页，点击“新建检测任务”。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:205
+msgid "任务配置：选择 PCB 产品、传送带及启动模式（单板 / 连续 / 调试），点击“开始检测”。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "新建检测任务"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "启动模式选择"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:215
+msgid "进入检测页面后："
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:217
+msgid "按空格键：进板并立即开始检测。更多快捷键请参见 :ref:`快捷键` 章节。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:218
+msgid "左侧控制按钮：进板 | 出板 | 通过 | 复位。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:219
+msgid "右侧信息栏：实时显示检测计数、良率与缺陷统计"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "检测页面"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:225
+msgid "检测到缺陷时自动跳转至缺陷详情页，可查看放大图、定位框、缺陷类型及判定依据，并立即反馈。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:227
+msgid "反馈后的数据会添加到数据集里，供后续持续优化使用。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:-1
+msgid "缺陷详情"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:234
+msgid "查看检测历史"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:236
+msgid "在主页点击“工作列表”进入历史任务列表。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "工作列表概览"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:242
+msgid "列表展示每个任务的：创建时间、合格/不合格数量、良率、缺陷统计等。点击任意一行进入该任务详情。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "任务详情概览"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:248
+msgid "在任务详情中可展开单次检测记录；点击某次记录进入缺陷详情页，查看放大图、定位框、缺陷类型与判定依据，并可直接反馈。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst
+msgid "缺陷记录与反馈"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:254
+msgid "提交的反馈会写入数据集，用于后续再训练与参数自适应迭代。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:258
+msgid "迭代模型"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:260
+msgid "反馈写入数据集后，回到产品编程页面重新训练并评估，针对仍为红色的异常元件微调参数即可完成一次迭代。"
+msgstr ""
+
+#: ../../source/introduce/quick_start/index.rst:265
+msgid "以上即为快速开始全部流程，感谢您的使用。后续更多功能与更详细的说明请继续阅读完整用户手册。"
+msgstr ""

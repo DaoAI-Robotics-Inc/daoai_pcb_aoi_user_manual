@@ -6,3 +6,5 @@ sphinx-tabs
 sphinxcontrib-video==0.0.1.dev3
 sphinx-toolbox
 sphinxemoji
+sphinx-multiversion==0.2.4
+sphinx-intl==2.1.0
