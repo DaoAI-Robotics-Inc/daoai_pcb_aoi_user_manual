@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-26 22:31-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -81,14 +81,22 @@ msgid "搜索示例"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst:47
-msgid "健康性核对"
+msgid "整板检测"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst:49
+msgid "产品编程页面顶部还提供 **整板检测** 标签页，用于配置整板级别（而非单个元件）的检测项，作为元件级检测的补充。具体可检项目随产品与系统配置而定。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/manual_programming.rst:52
+msgid "健康性核对"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/manual_programming.rst:54
 msgid "训练前检查："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:51
+#: ../../source/complete_user_guide/features/manual_programming.rst:56
 msgid "基础信息：确认，或者按需录入 标识（丝印）、封装、料号（PN）。"
 msgstr ""
 
@@ -96,19 +104,19 @@ msgstr ""
 msgid "组件属性填写示例"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:57
+#: ../../source/complete_user_guide/features/manual_programming.rst:62
 msgid "全板预览：是否存在缺失、漂移、超大/超小框。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:58
+#: ../../source/complete_user_guide/features/manual_programming.rst:63
 msgid "局部密集区：是否重叠、是否覆盖相邻器件。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:59
+#: ../../source/complete_user_guide/features/manual_programming.rst:64
 msgid "不健康列表：低置信度 / CAD 未匹配 / 尺寸异常。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:61
+#: ../../source/complete_user_guide/features/manual_programming.rst:66
 msgid "正确但标为不健康：若位置无误可点击列表边上的 ``?`` 直接确认恢复为健康。"
 msgstr ""
 
@@ -116,7 +124,7 @@ msgstr ""
 msgid "不健康元件示例"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:67
+#: ../../source/complete_user_guide/features/manual_programming.rst:72
 msgid "CAD 中存在但未检测：若实板缺失则忽略；若实际存在则手动补录。"
 msgstr ""
 
@@ -124,16 +132,16 @@ msgstr ""
 msgid "缺失标记示例"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:73
+#: ../../source/complete_user_guide/features/manual_programming.rst:78
 msgid "自动编程误检时：删除并重新手动补录。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst
-#: ../../source/complete_user_guide/features/manual_programming.rst:77
+#: ../../source/complete_user_guide/features/manual_programming.rst:82
 msgid "手动编程工具栏"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:79
+#: ../../source/complete_user_guide/features/manual_programming.rst:84
 msgid "右侧工具栏包含："
 msgstr ""
 
@@ -141,176 +149,141 @@ msgstr ""
 msgid "手动编程工具栏示例"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:85
+#: ../../source/complete_user_guide/features/manual_programming.rst:90
 msgid "选择工具：左键拖拽框选多项未分组的检测框，右键唤出菜单，可以分组合并为元件；中键拖拽平移；滚轮缩放。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:86
+#: ../../source/complete_user_guide/features/manual_programming.rst:91
 msgid "拖拽工具：按住任意鼠标键平移视图；滚轮缩放；用于纯浏览不影响选择。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:87
-msgid ""
-"3D 视图工具（仅 3D "
-"模式）：框选后弹出局部点云，查看局部点云质量。在右上角可以看到点云颜色的选项，可以切换为绿色，伪彩色，深度等不同的显示模式，方便查看点云细节。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst
-msgid "3D 视图示意"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst:93
+#: ../../source/complete_user_guide/features/manual_programming.rst:92
 msgid "本体工具：绘制主体检测框。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:94
+#: ../../source/complete_user_guide/features/manual_programming.rst:93
 msgid "焊料工具：绘制焊料检测框。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:95
+#: ../../source/complete_user_guide/features/manual_programming.rst:94
 msgid "引脚工具：绘制整排的引脚检测框，框选后，可以右键复制 / 旋转用于其它侧。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:96
+#: ../../source/complete_user_guide/features/manual_programming.rst:95
 msgid "文本工具：标注丝印、字符、批次 / 日期等需要 OCR 的区域。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:97
+#: ../../source/complete_user_guide/features/manual_programming.rst:96
 msgid "条形码工具：绘制条形码检测区域，用于 PCB 序列号追溯。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:99
+#: ../../source/complete_user_guide/features/manual_programming.rst:98
 msgid "关于快捷键，参考 :ref:`编程页面快捷键`"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:102
-msgid "2D 模式下常见封装编程示例"
+#: ../../source/complete_user_guide/features/manual_programming.rst:101
+msgid "常见封装编程示例"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:105
-#: ../../source/complete_user_guide/features/manual_programming.rst:181
+#: ../../source/complete_user_guide/features/manual_programming.rst:104
 msgid "电容、电阻"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:109
-#: ../../source/complete_user_guide/features/manual_programming.rst:139
-#: ../../source/complete_user_guide/features/manual_programming.rst:186
-#: ../../source/complete_user_guide/features/manual_programming.rst:226
-#: ../../source/complete_user_guide/features/manual_programming.rst:293
+#: ../../source/complete_user_guide/features/manual_programming.rst:108
+#: ../../source/complete_user_guide/features/manual_programming.rst:138
+#: ../../source/complete_user_guide/features/manual_programming.rst:198
 msgid "步骤："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:108
-#: ../../source/complete_user_guide/features/manual_programming.rst:184
+#: ../../source/complete_user_guide/features/manual_programming.rst:107
 msgid "选择“本体工具”框出元件主体区域（紧贴真实外廓，尽量减少空白）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:109
-#: ../../source/complete_user_guide/features/manual_programming.rst:185
+#: ../../source/complete_user_guide/features/manual_programming.rst:108
 msgid "选择“焊料工具”分别框出左右（或多端）焊盘/焊点区域；"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:117
-#: ../../source/complete_user_guide/features/manual_programming.rst:152
-#: ../../source/complete_user_guide/features/manual_programming.rst:188
-#: ../../source/complete_user_guide/features/manual_programming.rst:243
+#: ../../source/complete_user_guide/features/manual_programming.rst:116
+#: ../../source/complete_user_guide/features/manual_programming.rst:151
 msgid "质量建议："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:112
-#: ../../source/complete_user_guide/features/manual_programming.rst:229
+#: ../../source/complete_user_guide/features/manual_programming.rst:111
 msgid "本体框贴合元件实际形状，避免包含过多空白区域；"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:113
-msgid "焊料框应该紧贴焊料的爬锡区域，不确定时可以使用3D视图工具来确认；"
+#: ../../source/complete_user_guide/features/manual_programming.rst:112
+msgid "焊料框应该紧贴焊料的爬锡区域；"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst
 msgid "手动编程电容、电阻示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:119
-#: ../../source/complete_user_guide/features/manual_programming.rst:206
+#: ../../source/complete_user_guide/features/manual_programming.rst:118
 msgid "分组与属性： 使用“选择工具”框选主体与全部焊料框 → 右键 “分组” 生成一个元件，填写："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/manual_programming.rst:121
+#: ../../source/complete_user_guide/features/manual_programming.rst:156
+msgid "标识（必填，建议与丝印一致）"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst:122
 #: ../../source/complete_user_guide/features/manual_programming.rst:157
-#: ../../source/complete_user_guide/features/manual_programming.rst:209
-#: ../../source/complete_user_guide/features/manual_programming.rst:248
-msgid "标识（必填，建议与丝印一致）"
+msgid "（可选）料号 / 封装"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst:123
 #: ../../source/complete_user_guide/features/manual_programming.rst:158
-#: ../../source/complete_user_guide/features/manual_programming.rst:210
-#: ../../source/complete_user_guide/features/manual_programming.rst:249
-msgid "（可选）料号 / 封装"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst:124
-#: ../../source/complete_user_guide/features/manual_programming.rst:159
-#: ../../source/complete_user_guide/features/manual_programming.rst:211
-#: ../../source/complete_user_guide/features/manual_programming.rst:250
 msgid "（可选）备注或版本号"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:126
-#: ../../source/complete_user_guide/features/manual_programming.rst:161
-#: ../../source/complete_user_guide/features/manual_programming.rst:213
-#: ../../source/complete_user_guide/features/manual_programming.rst:252
+#: ../../source/complete_user_guide/features/manual_programming.rst:125
+#: ../../source/complete_user_guide/features/manual_programming.rst:160
 msgid "点击“创建新元件”完成。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/manual_programming.rst
-#: ../../source/complete_user_guide/features/manual_programming.rst:134
-#: ../../source/complete_user_guide/features/manual_programming.rst:221
+#: ../../source/complete_user_guide/features/manual_programming.rst:133
 msgid "QFP 封装 IC 芯片"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:137
-#: ../../source/complete_user_guide/features/manual_programming.rst:224
+#: ../../source/complete_user_guide/features/manual_programming.rst:136
 msgid "选择“本体工具”框出芯片主体（紧贴封装外沿）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:138
-#: ../../source/complete_user_guide/features/manual_programming.rst:225
+#: ../../source/complete_user_guide/features/manual_programming.rst:137
 msgid "选择“IC 引脚工具”框出任意一侧整排引脚（覆盖焊盘 + 焊料 + 引脚末端区域）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:139
-#: ../../source/complete_user_guide/features/manual_programming.rst:226
+#: ../../source/complete_user_guide/features/manual_programming.rst:138
 msgid "右键“复制”该引脚框，拖动至对侧或其它边；必要时使用右键旋转使其与该边引脚方向一致。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:142
+#: ../../source/complete_user_guide/features/manual_programming.rst:141
 msgid "框贴合元件实际形状，避免包含过多空白区域；"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:148
+#: ../../source/complete_user_guide/features/manual_programming.rst:147
 msgid ""
 "(2D) IC 引脚检测需要划分 3 个区域：焊盘、焊料、引脚末端；参见 :ref:`3.2 IC 引脚检测 v2（2D，基于颜色比例）` "
 "以了解区域划分标准。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:159
-#: ../../source/complete_user_guide/features/manual_programming.rst:250
+#: ../../source/complete_user_guide/features/manual_programming.rst:158
 msgid "分组与属性："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:155
-#: ../../source/complete_user_guide/features/manual_programming.rst:246
+#: ../../source/complete_user_guide/features/manual_programming.rst:154
 msgid "使用“选择工具”框选主体与全部焊料框 → 右键 “分组” 生成一个元件，填写："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:168
-#: ../../source/complete_user_guide/features/manual_programming.rst:259
+#: ../../source/complete_user_guide/features/manual_programming.rst:167
 msgid "SOP/TSSOP 封装的存储芯片或驱动芯片"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:170
-#: ../../source/complete_user_guide/features/manual_programming.rst:261
+#: ../../source/complete_user_guide/features/manual_programming.rst:169
 msgid "与 QFP 类似：本体工具框主体 → IC 引脚工具框一侧引脚后复制到另一侧 → 分组创建元件。"
 msgstr ""
 
@@ -318,35 +291,15 @@ msgstr ""
 msgid "SOP/TSSOP 封装示例"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:178
-msgid "3D 模式下常见封装编程示例"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst:190
-msgid "主体框应贴合元件实际形状，避免包含过多空白区域；"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst:196
-msgid "焊料框应该紧贴焊料的爬锡区域，虚线部分延展ROI一边延展到基板上，一边延展到元件表面上，不确定时可以使用3D视图工具来确认。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst
-msgid "手动编程电容、电阻焊料示意"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst:235
-msgid "(3D) IC 引脚检测需要定义在爬锡区域部分，然后延展ROI延展至部分基板上"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/manual_programming.rst:272
+#: ../../source/complete_user_guide/features/manual_programming.rst:177
 msgid "私有库"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:274
+#: ../../source/complete_user_guide/features/manual_programming.rst:179
 msgid "编程好的元件可以添加至私有库，方便后续在其它产品中复用。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:277
+#: ../../source/complete_user_guide/features/manual_programming.rst:182
 msgid "选择已编程好的元件，右键唤出菜单，点击“添加到私有库”。"
 msgstr ""
 
@@ -354,19 +307,19 @@ msgstr ""
 msgid "私有库示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:286
+#: ../../source/complete_user_guide/features/manual_programming.rst:191
 msgid "在弹出的对话框中填写元件的封装、料号，点击“添加到私有库”完成添加。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:288
+#: ../../source/complete_user_guide/features/manual_programming.rst:193
 msgid "在“私有库”页面可以选择元件模板, 点击 ``使用此模板`` 来添加到视图，或者删除库里的元件。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:296
+#: ../../source/complete_user_guide/features/manual_programming.rst:201
 msgid "训练与评估"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:298
+#: ../../source/complete_user_guide/features/manual_programming.rst:203
 msgid "确认全部元件后点击 ``训练`` ，耗时 ~1 分钟；完成后点击 ``自动生成检测参数`` 来基于所有元件的训练集数据分布生成检测参数。"
 msgstr ""
 
@@ -374,11 +327,40 @@ msgstr ""
 msgid "训练示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:304
+#: ../../source/complete_user_guide/features/manual_programming.rst:209
 msgid "点击下方的“评估全部”按钮，对所有元件进行评估，（绿=模型预测正确 / 红=模型预测与实际不符）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/manual_programming.rst:311
+#: ../../source/complete_user_guide/features/manual_programming.rst:216
 msgid "后续：不健康项可参考 :ref:`检测参数` 章节按需微调；修改或补录后重新训练+评估即可迭代。"
 msgstr ""
+
+#~ msgid ""
+#~ "3D 视图工具（仅 3D "
+#~ "模式）：框选后弹出局部点云，查看局部点云质量。在右上角可以看到点云颜色的选项，可以切换为绿色，伪彩色，深度等不同的显示模式，方便查看点云细节。"
+#~ msgstr ""
+
+#~ msgid "3D 视图示意"
+#~ msgstr ""
+
+#~ msgid "2D 模式下常见封装编程示例"
+#~ msgstr ""
+
+#~ msgid "焊料框应该紧贴焊料的爬锡区域，不确定时可以使用3D视图工具来确认；"
+#~ msgstr ""
+
+#~ msgid "3D 模式下常见封装编程示例"
+#~ msgstr ""
+
+#~ msgid "主体框应贴合元件实际形状，避免包含过多空白区域；"
+#~ msgstr ""
+
+#~ msgid "焊料框应该紧贴焊料的爬锡区域，虚线部分延展ROI一边延展到基板上，一边延展到元件表面上，不确定时可以使用3D视图工具来确认。"
+#~ msgstr ""
+
+#~ msgid "手动编程电容、电阻焊料示意"
+#~ msgstr ""
+
+#~ msgid "(3D) IC 引脚检测需要定义在爬锡区域部分，然后延展ROI延展至部分基板上"
+#~ msgstr ""
 

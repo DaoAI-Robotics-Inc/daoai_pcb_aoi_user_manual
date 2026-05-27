@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2024 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-26 22:31-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/system_management/models.rst:2
+msgid "模型管理"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:4
+msgid ""
+"系统的检测能力由一组深度学习模型驱动。本章介绍如何管理这些模型与其训练数据集：包括查看 / 上传 / "
+"切换模型，以及导入导出数据集、查看训练分布并发起训练。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:6
+msgid "模型有两个入口："
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:8
+msgid "**设置 → 管理模型**：模型清单与生命周期操作（设为默认、重命名、导出、删除等）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:9
+msgid "**模型页面（Models）**：以数据集为中心的视图，用于查看训练样本、训练 / 测试分布并发起训练。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:12
+msgid "模型清单（管理模型）"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:14
+msgid "在 **设置** 左侧点击 **管理模型**，可按 **全部 / 预训练 / 已训练** 筛选系统中的模型。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "管理模型界面示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:20
+msgid "常用操作："
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:22
+msgid "**上传模型**：导入外部训练好的模型文件。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:23
+msgid "**训练模型**：基于当前数据集发起一次训练。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:24
+msgid "**设为默认**：将某模型设为对应检测类型的默认推理模型。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:25
+msgid "**重命名 / 导出 / 删除**：对模型条目进行管理。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:26
+msgid "**导出数据集 / 导入数据集**：在不同环境间迁移训练样本。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:27
+msgid "**重置初始图片**：将数据集恢复到初始样本集合。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:30
+msgid "数据集与训练（模型页面）"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:32
+msgid "模型页面以 **数据集** 为中心，展示当前检测类型已积累的训练样本（来自自动编程、评估与现场反馈）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "模型数据集与训练界面示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:38
+msgid "顶部在 **数据集** 与 **训练** 视图间切换。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:39
+msgid "右侧显示 **训练集 / 测试集** 的样本数量与划分比例（训练 / 测试分布）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:40
+msgid "**查看训练 / 测试分布**：检查样本在各类别上的分布是否均衡，避免某一类别样本过少。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:41
+msgid "**导入数据集 / 导出数据集**：在环境间迁移或备份样本。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:44
+msgid "训练流程"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:46
+msgid "确认数据集中已积累足够且类别均衡的样本（可先在产品编程页面通过反馈补充样本）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:47
+msgid "（可选）点击 **查看训练 / 测试分布**，确认各类别样本数量合理。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:48
+msgid "点击 **训练模型**，系统基于当前数据集发起训练（耗时视数据量与硬件而定）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:49
+msgid "训练完成后，可在 **管理模型** 中将新模型 **设为默认**，使其在后续检测中生效。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:52
+msgid "反馈写入数据集后，建议在稳定的光照与工艺条件下积累一段时间样本再训练，避免短期波动导致模型过度拟合。"
+msgstr ""
+

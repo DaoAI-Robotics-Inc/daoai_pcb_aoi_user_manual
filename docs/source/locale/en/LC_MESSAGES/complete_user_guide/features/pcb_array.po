@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-26 22:31-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -33,43 +33,45 @@ msgid "拼版新建流程"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:9
-msgid "切换至PCB拼版视图"
+msgid "切换至 **PCB 拼板** 标签页"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:11
-msgid "在产品详情页，点击右上角的“拼版”按钮，进入拼版管理界面。"
+msgid ""
+"在产品编程页面顶部点击 **PCB 拼板** 标签页，进入拼板管理界面。界面提供 "
+"**管理子板模板**、**拼板列表**、**手动生成拼板**（矩形 / 多边形）与 **自动调整拼板** 等功能。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst
-msgid "拼版入口示意"
+msgid "PCB 拼板界面"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:17
-msgid "点击创建拼版单元，然后鼠标框选绘制主板区域。"
+msgid "点击创建拼板单元，然后鼠标框选绘制主板区域。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst
-msgid "拼版主板绘制示意"
+msgid "拼板主板绘制示意"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:25
-msgid "手动新建："
+msgid "手动生成拼板（矩形 / 多边形）："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:24
-msgid "可以点击列表中的 “添加图标” 逐个添加子板，然后切换至选择工具，用鼠标拖拽调整位置。"
+msgid "在 **拼板列表** 中点击添加，使用 **矩形** 或 **多边形** 工具逐个框出子板，再切换至选择工具用鼠标拖拽调整位置。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:25
-msgid "适用于不规则或特殊拼版场景。"
+msgid "适用于不规则或特殊拼板场景。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:34
-msgid "智能工具辅助："
+msgid "自动调整拼板（锚点辅助）："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst
-msgid "拼版智能工具示意"
+msgid "自动调整拼板示意"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:32
@@ -165,4 +167,34 @@ msgstr ""
 #: ../../source/complete_user_guide/features/pcb_array.rst:74
 msgid "检测过程中，若任一子板的元件 NG 率超过该阈值，则该子板会被判定为废板并报出。"
 msgstr ""
+
+#~ msgid "切换至PCB拼版视图"
+#~ msgstr ""
+
+#~ msgid "在产品详情页，点击右上角的“拼版”按钮，进入拼版管理界面。"
+#~ msgstr ""
+
+#~ msgid "拼版入口示意"
+#~ msgstr ""
+
+#~ msgid "点击创建拼版单元，然后鼠标框选绘制主板区域。"
+#~ msgstr ""
+
+#~ msgid "拼版主板绘制示意"
+#~ msgstr ""
+
+#~ msgid "手动新建："
+#~ msgstr ""
+
+#~ msgid "可以点击列表中的 “添加图标” 逐个添加子板，然后切换至选择工具，用鼠标拖拽调整位置。"
+#~ msgstr ""
+
+#~ msgid "适用于不规则或特殊拼版场景。"
+#~ msgstr ""
+
+#~ msgid "智能工具辅助："
+#~ msgstr ""
+
+#~ msgid "拼版智能工具示意"
+#~ msgstr ""
 

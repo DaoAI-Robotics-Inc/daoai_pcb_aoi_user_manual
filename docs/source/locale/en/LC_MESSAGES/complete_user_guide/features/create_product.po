@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-26 22:31-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -33,211 +33,209 @@ msgid "基础创建流程"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/create_product.rst:9
-msgid "在主页点击 **训练 PCB** 进入自动编程向导。"
+msgid "在主页点击 **训练PCBA** 进入 **自动编程向导**。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/create_product.rst:11
+msgid ""
+"在 **基本信息** 步骤中输入 **产品名称**（需唯一，重复会提示失败），并在 **自动编程检测类型** "
+"中按需勾选关注的检测项；如有需要，可在 **自动编程参数** 中开启桥接检测。完成后点击 **下一步**。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/create_product.rst
-msgid "创建产品第一步"
+msgid "创建产品-基本信息"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:15
-msgid "输入产品名称；按需启用/关闭检测模块。名称需唯一，重复会提示失败。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst
-msgid "创建产品第二步"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:21
+#: ../../source/complete_user_guide/features/create_product.rst:17
 msgid "自动检测支持类型总览:"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:27
+#: ../../source/complete_user_guide/features/create_product.rst:23
 msgid "本体"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:28
+#: ../../source/complete_user_guide/features/create_product.rst:24
 msgid "极性"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:29
+#: ../../source/complete_user_guide/features/create_product.rst:25
 msgid "焊料"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:30
+#: ../../source/complete_user_guide/features/create_product.rst:26
 msgid "IC 引脚"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:31
+#: ../../source/complete_user_guide/features/create_product.rst:27
 msgid "文字"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:32
+#: ../../source/complete_user_guide/features/create_product.rst:28
 msgid "电容器（片式电容）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:33
-#: ../../source/complete_user_guide/features/create_product.rst:57
+#: ../../source/complete_user_guide/features/create_product.rst:29
+#: ../../source/complete_user_guide/features/create_product.rst:53
 msgid "铝电解电容"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:34
-#: ../../source/complete_user_guide/features/create_product.rst:41
+#: ../../source/complete_user_guide/features/create_product.rst:30
+#: ../../source/complete_user_guide/features/create_product.rst:37
 msgid "电阻器（片式）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:35
+#: ../../source/complete_user_guide/features/create_product.rst:31
 msgid "SOIC / SOP / TSOP / TSSOP / MSOP（细间距：检测翘脚、短少、桥连、形变）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:36
-#: ../../source/complete_user_guide/features/create_product.rst:39
+#: ../../source/complete_user_guide/features/create_product.rst:32
+#: ../../source/complete_user_guide/features/create_product.rst:35
 msgid "电容器（片式）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:37
+#: ../../source/complete_user_guide/features/create_product.rst:33
 msgid "电阻器（片式电阻）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:38
-#: ../../source/complete_user_guide/features/create_product.rst:49
-#: ../../source/complete_user_guide/features/create_product.rst:62
+#: ../../source/complete_user_guide/features/create_product.rst:34
+#: ../../source/complete_user_guide/features/create_product.rst:45
+#: ../../source/complete_user_guide/features/create_product.rst:58
 msgid "钽电容"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:40
+#: ../../source/complete_user_guide/features/create_product.rst:36
 msgid "QFP（四边引脚：翘起、桥连、缺失、偏移、脚形不规则）"
 msgstr ""
 
+#: ../../source/complete_user_guide/features/create_product.rst:38
 #: ../../source/complete_user_guide/features/create_product.rst:42
-#: ../../source/complete_user_guide/features/create_product.rst:46
-#: ../../source/complete_user_guide/features/create_product.rst:54
+#: ../../source/complete_user_guide/features/create_product.rst:50
 msgid "多层片式电感器"
 msgstr ""
 
+#: ../../source/complete_user_guide/features/create_product.rst:39
 #: ../../source/complete_user_guide/features/create_product.rst:43
-#: ../../source/complete_user_guide/features/create_product.rst:47
 msgid "LED"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:44
+#: ../../source/complete_user_guide/features/create_product.rst:40
 msgid "铝电解电容（焊脚 / 焊盘润湿）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:48
-#: ../../source/complete_user_guide/features/create_product.rst:77
+#: ../../source/complete_user_guide/features/create_product.rst:44
+#: ../../source/complete_user_guide/features/create_product.rst:73
 msgid "SOT / SOD"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:51
+#: ../../source/complete_user_guide/features/create_product.rst:47
 msgid "LED（部分带极性标识）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:52
+#: ../../source/complete_user_guide/features/create_product.rst:48
 msgid "排阻（电阻网络）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:53
-#: ../../source/complete_user_guide/features/create_product.rst:61
-#: ../../source/complete_user_guide/features/create_product.rst:82
+#: ../../source/complete_user_guide/features/create_product.rst:49
+#: ../../source/complete_user_guide/features/create_product.rst:57
+#: ../../source/complete_user_guide/features/create_product.rst:78
 msgid "SOIC / SOP / TSOP / TSSOP / MSOP"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:56
+#: ../../source/complete_user_guide/features/create_product.rst:52
 msgid "SOT / SOD（型号/极性字符）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:58
-#: ../../source/complete_user_guide/features/create_product.rst:87
+#: ../../source/complete_user_guide/features/create_product.rst:54
+#: ../../source/complete_user_guide/features/create_product.rst:83
 msgid "QFP"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:59
+#: ../../source/complete_user_guide/features/create_product.rst:55
 msgid "SOT / SOD（小型引脚/贴片焊点）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:63
+#: ../../source/complete_user_guide/features/create_product.rst:59
 msgid "QFN / DFN"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:64
+#: ../../source/complete_user_guide/features/create_product.rst:60
 msgid "LED（两端焊盘）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:66
+#: ../../source/complete_user_guide/features/create_product.rst:62
 msgid "排阻（网络标识 / 阵列编号）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:67
+#: ../../source/complete_user_guide/features/create_product.rst:63
 msgid "功率电感"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:68
+#: ../../source/complete_user_guide/features/create_product.rst:64
 msgid "DFN（含无锡外露型）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:69
+#: ../../source/complete_user_guide/features/create_product.rst:65
 msgid "TO-263 / TO-252（大功率引脚与散热焊盘）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:71
+#: ../../source/complete_user_guide/features/create_product.rst:67
 msgid "铝电解电容（容量/电压标识）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:72
+#: ../../source/complete_user_guide/features/create_product.rst:68
 msgid "Fuse（保险丝）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:73
-#: ../../source/complete_user_guide/features/create_product.rst:102
+#: ../../source/complete_user_guide/features/create_product.rst:69
+#: ../../source/complete_user_guide/features/create_product.rst:98
 msgid "TO-263 / TO-252"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:74
+#: ../../source/complete_user_guide/features/create_product.rst:70
 msgid "Fuse（端部焊盘）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:76
+#: ../../source/complete_user_guide/features/create_product.rst:72
 msgid "钽电容（容量/极性）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:78
+#: ../../source/complete_user_guide/features/create_product.rst:74
 msgid "Fuse（多数无极性）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:81
+#: ../../source/complete_user_guide/features/create_product.rst:77
 msgid "功率电感（电感值标识）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:86
+#: ../../source/complete_user_guide/features/create_product.rst:82
 msgid "QFP（型号/批次丝印）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:91
+#: ../../source/complete_user_guide/features/create_product.rst:87
 msgid "QFN（型号/批次丝印，低对比度需适当增亮）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:92
+#: ../../source/complete_user_guide/features/create_product.rst:88
 msgid "QFN"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:96
+#: ../../source/complete_user_guide/features/create_product.rst:92
 msgid "TO-263 / TO-252（型号/批次）"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:97
+#: ../../source/complete_user_guide/features/create_product.rst:93
 msgid "DFN"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:109
+#: ../../source/complete_user_guide/features/create_product.rst:105
 msgid "自动编程向导需要一次完成, 如果在中途退出，则无法重新回到之前的步骤。如果不小心中途退出，可以删除当前未完成的产品，重新创建一个新的产品。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:112
+#: ../../source/complete_user_guide/features/create_product.rst:108
 msgid "放置 PCB 与锁定传送带"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:114
+#: ../../source/complete_user_guide/features/create_product.rst:110
 msgid "将 PCB 平整放置于传送带中央，选择传送带并点击“锁定”。确认或输入传送带宽度后点击“进板”，等待 PCB 自动输送至拍摄区域，再点击“下一步”。"
 msgstr ""
 
@@ -245,15 +243,15 @@ msgstr ""
 msgid "将 PCB 放在传送带上示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:121
+#: ../../source/complete_user_guide/features/create_product.rst:117
 msgid "输入或计算尺寸"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:123
+#: ../../source/complete_user_guide/features/create_product.rst:119
 msgid "若已知 PCB 尺寸，直接输入宽、高（mm）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:125
+#: ../../source/complete_user_guide/features/create_product.rst:121
 msgid ""
 "若未知：仅调整相机 X/Y（Z 保持不变）分别拍摄左下与右上；点击“选择像素”依次点 PCB 左下角与右上角像素后，点 "
 "**自动计算**，系统推算尺寸供后续完整拍摄。"
@@ -264,139 +262,145 @@ msgid "自动尺寸计算示意"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/create_product.rst:-1
-#: ../../source/complete_user_guide/features/create_product.rst:132
+#: ../../source/complete_user_guide/features/create_product.rst:128
 msgid "完整 PCB 拍摄"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:134
+#: ../../source/complete_user_guide/features/create_product.rst:130
 msgid ""
 "点击“拍摄”后系统联动相机与传送带分区采集并拼接生成完整 PCB "
 "图像。随后点击“定义区域”框选有效区域（通常为整板；若需排除治具边缘，可适当收缩）。请务必使用洁净、无缺陷的良品板（Golden "
 "board）。必要时可在该界面调整亮度、曝光、增益、白平衡等参数并重新拍摄。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:140
-msgid ""
-"可以在此处更改相机参数， "
-"（亮度、曝光、增益、白平衡、点云滤波等）；参数会随着产品创建，在检测时，也会使用产品的拍摄参数拍摄。如效果不佳，可重新拍摄覆盖上一版本。"
+#: ../../source/complete_user_guide/features/create_product.rst:136
+msgid "可以在此处更改相机参数（亮度、曝光、增益、白平衡等）；参数会随着产品创建，在检测时，也会使用产品的拍摄参数拍摄。如效果不佳，可重新拍摄覆盖上一版本。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:143
-msgid "2D 模式下的相机参数"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:-1
-msgid "2D 相机参数示意"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:149
-msgid "2D模式下，只需要调整曝光时间，达到合适的亮度即可。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:152
-msgid "3D 模式下的相机参数"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:154
-msgid "3D 模式在创建产品阶段主要关注两类设置：采集帧（成像亮度/动态范围）与点云滤波（质量与噪声控制）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:156
-msgid "绝大多数场景保持默认即可，相机已在封闭光学箱内预设完成，仅在不同基板颜色导致整体偏暗或偏亮时微调亮度即可。下方提供了完整的参数说明，供参考及高级调试。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:159
-msgid "采集帧设置（亮度相关）"
+#: ../../source/complete_user_guide/features/create_product.rst:139
+msgid "相机参数"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/create_product.rst:-1
-msgid "3D 相机参数示意"
+msgid "相机参数示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:165
-msgid "基本三个参数：曝光值 (Exposure Stop)、亮度 (Brightness / 投影)、增益 (Gain)。"
+#: ../../source/complete_user_guide/features/create_product.rst:145
+msgid "只需要调整曝光时间，达到合适的亮度即可。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:166
-msgid "每提升 1 级通常亮度近似加倍；同时也可能增加噪点或采集时间。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:167
-msgid "推荐增亮优先级：亮度 → 曝光值 → 增益；降低时反向：增益 → 曝光值 → 亮度。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:170
-msgid "点云滤波器（质量提升）"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:-1
-msgid "3D 点云滤波器示意"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:176
-msgid ""
-"参见：`滤波器 <http://docs.welinkirt.com/daoai-inspectra-user-"
-"manual/chinese-2.24.4.0/connect-camera-"
-"config/3d/config/filter/index.html>`_"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:178
-msgid "滤波划分为四大类（常用子项括号内）："
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:180
-msgid "异常值 (Outlier)：离群阈值、法向量滤波、移除小型离散区域；去除孤立噪点和悬浮点片。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:181
-msgid "平滑 (Smoothing)：高斯 / 中值 / Smooth（步进取整）；降低随机噪声或深度微振荡。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:182
-msgid "对比度 (Contrast)：饱和区域移除、灰度阈值、相位质量滤波；剔除过曝、低亮度或低质量区域。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:183
-msgid "补偿 (Correction)：填补空洞 (Fill Gaps)、对比度失真补偿；针对小缺口与边缘高对比畸变。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:185
-msgid "使用建议："
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:187
-msgid "优先启用“离群阈值 + 小型离散区域”清理明显杂点，再视需要少量平滑；过度平滑会降低细节（如细引脚边缘）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:188
-msgid "对金属高光/强反射可先通过多帧降低溢出，再用饱和滤镜剔除残余过曝点。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:189
-msgid "Fill Gaps 仅在后续检测依赖完整高度轮廓（如大面积平面基准）且空洞较小/规则时启用，避免误填真实凹陷。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:191
-msgid "最小化调整策略：先保证亮度范围（采集帧设置）合适，再做轻量去噪。每次改动后重拍一张参考全板，确保未损失关键细节。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/create_product.rst:194
+#: ../../source/complete_user_guide/features/create_product.rst:148
 msgid "完成后会进入产品编程选项界面，从这一步开始，可以分为全自动编程，半自动编程，和手动编程，详见后续章节。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:200
-msgid "常见问题与排查"
+#: ../../source/complete_user_guide/features/create_product.rst:154
+msgid "创建产品常见问题与排查"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:202
+#: ../../source/complete_user_guide/features/create_product.rst:156
 msgid "完整拍摄图像拼接异常：检查 PCB 在采集过程中是否发生移动/震动；若确认无移动，可能为相机标定失准，请执行 :ref:`相机现场校准` 后重拍。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:203
+#: ../../source/complete_user_guide/features/create_product.rst:157
 msgid "创建产品提示“传送带占用”：确认是否有正在运行的检测任务或未释放的产品锁；若无任务仍显示占用，可重启软件刷新状态。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/create_product.rst:204
+#: ../../source/complete_user_guide/features/create_product.rst:158
 msgid "退出向导后无法回到中途步骤：当前版本不支持断点续建，只能删除该未完成产品后重新创建。"
 msgstr ""
+
+#~ msgid "在主页点击 **训练 PCB** 进入自动编程向导。"
+#~ msgstr ""
+
+#~ msgid "创建产品第一步"
+#~ msgstr ""
+
+#~ msgid "输入产品名称；按需启用/关闭检测模块。名称需唯一，重复会提示失败。"
+#~ msgstr ""
+
+#~ msgid "创建产品第二步"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "可以在此处更改相机参数， "
+#~ "（亮度、曝光、增益、白平衡、点云滤波等）；参数会随着产品创建，在检测时，也会使用产品的拍摄参数拍摄。如效果不佳，可重新拍摄覆盖上一版本。"
+#~ msgstr ""
+
+#~ msgid "2D 模式下的相机参数"
+#~ msgstr ""
+
+#~ msgid "2D 相机参数示意"
+#~ msgstr ""
+
+#~ msgid "2D模式下，只需要调整曝光时间，达到合适的亮度即可。"
+#~ msgstr ""
+
+#~ msgid "3D 模式下的相机参数"
+#~ msgstr ""
+
+#~ msgid "3D 模式在创建产品阶段主要关注两类设置：采集帧（成像亮度/动态范围）与点云滤波（质量与噪声控制）。"
+#~ msgstr ""
+
+#~ msgid "绝大多数场景保持默认即可，相机已在封闭光学箱内预设完成，仅在不同基板颜色导致整体偏暗或偏亮时微调亮度即可。下方提供了完整的参数说明，供参考及高级调试。"
+#~ msgstr ""
+
+#~ msgid "采集帧设置（亮度相关）"
+#~ msgstr ""
+
+#~ msgid "3D 相机参数示意"
+#~ msgstr ""
+
+#~ msgid "基本三个参数：曝光值 (Exposure Stop)、亮度 (Brightness / 投影)、增益 (Gain)。"
+#~ msgstr ""
+
+#~ msgid "每提升 1 级通常亮度近似加倍；同时也可能增加噪点或采集时间。"
+#~ msgstr ""
+
+#~ msgid "推荐增亮优先级：亮度 → 曝光值 → 增益；降低时反向：增益 → 曝光值 → 亮度。"
+#~ msgstr ""
+
+#~ msgid "点云滤波器（质量提升）"
+#~ msgstr ""
+
+#~ msgid "3D 点云滤波器示意"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "参见：`滤波器 <http://docs.welinkirt.com/daoai-inspectra-"
+#~ "user-manual/chinese-2.24.4.0/connect-camera-"
+#~ "config/3d/config/filter/index.html>`_"
+#~ msgstr ""
+
+#~ msgid "滤波划分为四大类（常用子项括号内）："
+#~ msgstr ""
+
+#~ msgid "异常值 (Outlier)：离群阈值、法向量滤波、移除小型离散区域；去除孤立噪点和悬浮点片。"
+#~ msgstr ""
+
+#~ msgid "平滑 (Smoothing)：高斯 / 中值 / Smooth（步进取整）；降低随机噪声或深度微振荡。"
+#~ msgstr ""
+
+#~ msgid "对比度 (Contrast)：饱和区域移除、灰度阈值、相位质量滤波；剔除过曝、低亮度或低质量区域。"
+#~ msgstr ""
+
+#~ msgid "补偿 (Correction)：填补空洞 (Fill Gaps)、对比度失真补偿；针对小缺口与边缘高对比畸变。"
+#~ msgstr ""
+
+#~ msgid "使用建议："
+#~ msgstr ""
+
+#~ msgid "优先启用“离群阈值 + 小型离散区域”清理明显杂点，再视需要少量平滑；过度平滑会降低细节（如细引脚边缘）。"
+#~ msgstr ""
+
+#~ msgid "对金属高光/强反射可先通过多帧降低溢出，再用饱和滤镜剔除残余过曝点。"
+#~ msgstr ""
+
+#~ msgid "Fill Gaps 仅在后续检测依赖完整高度轮廓（如大面积平面基准）且空洞较小/规则时启用，避免误填真实凹陷。"
+#~ msgstr ""
+
+#~ msgid "最小化调整策略：先保证亮度范围（采集帧设置）合适，再做轻量去噪。每次改动后重拍一张参考全板，确保未损失关键细节。"
+#~ msgstr ""
+
+#~ msgid "常见问题与排查"
+#~ msgstr ""
 
