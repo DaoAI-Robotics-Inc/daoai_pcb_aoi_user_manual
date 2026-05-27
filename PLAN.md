@@ -8,6 +8,8 @@
 
 **Decisions on open questions:** 2D detection reference = separate later effort (Phase 3, 2D-only); operator feature flags = **deferred** (listed as known gaps, not documented now); screenshots = **recapture all** on each touched page in Chinese; `case_study` = **remove**.
 
+**UPDATE (max-effort pass):** Document **every** standalone page/feature in the frontend (`aoi_pcb_web_client`). The previously-deferred feature flags are now **in scope**. New detection-tool screenshots are captured by drawing ROI boxes on the teach page. Online/multi-backend + MES remain out of scope. See §7 (FE Coverage Audit) and Phase 6.
+
 **Method:** Source language is **Chinese (`zh_CN`)**; the running app is set to **Chinese UI**. Update zh_CN prose + screenshots first; refresh the English `.po` catalog in a later pass. Screenshots are captured via headless Edge + Playwright (the `webapp-testing` skill / persistent logged-in profile). Each page is verified by a clean `sphinx-build`.
 
 **Status of this document:** Gap analysis + plan only. No doc edits beyond Quick Start (already done this session).
@@ -127,3 +129,49 @@ Each page-task = **(a)** recapture the needed Chinese screenshots, **(b)** rewri
 - **Models / model management** → **full how-to** (train a model, dataset import/export, train-test distribution, set-default/rename/delete, upload) — dedicated page in Phase 4.
 
 All open questions resolved — the plan is ready to execute.
+
+---
+
+## 7. FE Coverage Audit (every page/feature in `aoi_pcb_web_client`)
+
+Legend — **Done**: documented & current · **Thin**: mentioned but incomplete · **GAP**: undocumented · **OOS**: out of scope (online/multi-backend/MES).
+
+### Routes / pages
+| FE page / route | Doc | Status |
+|-----------------|-----|--------|
+| `Login`, `LandingVideo`, `SystemInitializing` | quick_start | Done (login); splash pages trivial |
+| `Home` | quick_start (home shot) | **Thin** → Home features undocumented (below) |
+| `MultiBackendHome`, `inspection/*Online`, `ReviewDeviceConveyorPicker` | — | **OOS** |
+| `MES`, `MES/InspectionDetailExport`, MesAlarm | system_management (MES export path) | **OOS** (only export-path config kept) |
+| `autoProgramming` (+`uploadCAD`) | create_product, auto_programming | Done |
+| `inspection/Live`, `inspection/Review` | inspection | Done |
+| `models` | system_management/models | Done |
+| `settings` (+`systemSettings`) | system_management | Done |
+| `teach/components/templateEditor` | manual_programming, component_settings, detection_config_2d, part_library | Done (flags pending below) |
+| `teach/components/PCBArray` | pcb_array | Done |
+| `teach/recipe` (设置 tab: ConveyorSetup, PCBDetail, PCBDimension, fullCapture, **InspectionSettings**) | create_product (partial) | **GAP** → Recipe/产品设置 + badmark recipe config |
+| `teach` Whole Board Inspection tab | manual_programming (note) | **Thin** → expand |
+| `worklist` (Data Analysis Report) | inspection | Done |
+
+### Features / modals → GAP items to document
+| Feature (FE source) | Action |
+|---------------------|--------|
+| **Component feature flags** — badmark / skip-inspection / must-capture-centered / AI alignment (`ComponentInfo.jsx`) | Add to `component_settings` |
+| **Recipe → InspectionSettings** — badmark combine logic, recipe-level inspection config | New section in `manual_programming` (or recipe) |
+| **Sub-board FPY** + badmark in live/worklist (`fpyMode*`, `subboardFPY`, `badmarkVerdictActive`) | Expand `inspection` |
+| **AI Detect ROI** (`AIDetectROI.jsx`, `GenerateROIComfirmation`) | Add to `manual_programming` |
+| **Home page** — tags (add/remove), Upload PCBA `.zip`, Copy / Export product, Recent Inspection Task, Conveyor status / Reset Device | New `Home/主页` section |
+| **Detection tools w/o screenshots** — bridge, color, glue-on-pad, DIP solder, DIP bridge, open solder, surface contamination, text OCV | Draw ROI boxes on teach page → capture param panels for `detection_config_2d` |
+| Private library (`AddFromLibrary`), alternative/substitute component | Done (manual_programming / inspection) — verify |
+
+---
+
+## Phase 6 — FE-complete coverage (max-effort pass)
+- [ ] **detection_config_2d screenshots** — draw a box for each new tool on the teach page; capture bridge / color / glue-on-pad / DIP / open-solder / surface-contamination / text-OCV param panels.
+- [ ] **component_settings** — document badmark, skip-inspection, must-capture-centered, AI-alignment flags (Chinese labels from `ComponentInfo`).
+- [ ] **Recipe / 产品设置** — document the 设置 tab (re-access conveyor/PCB detail/dimension/capture) + **InspectionSettings** (badmark combine logic, recipe-level config).
+- [ ] **inspection** — expand sub-board FPY (Board/Sub-board) + badmark verdict behavior in live + Data Analysis Report.
+- [ ] **Home / 主页** — new section: product list actions (编辑/复制/删除/重命名/导出为文件), tags, Upload PCBA `.zip`, Recent Inspection Task, 传送带状态 / 重置轨道.
+- [ ] **Whole Board Inspection** — expand the brief note into a proper section.
+- [ ] **AI Detect ROI** — document AI-assisted ROI generation in manual_programming.
+- [ ] Full build (zh_CN + en) clean + refresh en catalog.
