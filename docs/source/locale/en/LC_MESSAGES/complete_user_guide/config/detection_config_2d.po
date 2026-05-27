@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-26 22:55-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -25,7 +25,9 @@ msgid "检测参数 2D"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:4
-msgid "本章节详细介绍 2D 检测工具及其参数含义，并结合典型用法与调参思路，帮助你在实际产线中高效完成建模与检测。"
+msgid ""
+"本章节详细介绍 2D 检测工具（检测项）及其参数含义。每个元件可包含一个或多个检测项；在 **模板编辑器** "
+"中选中元件后，可在右侧面板查看并编辑各检测项的参数。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
@@ -33,35 +35,78 @@ msgid "检测参数总览"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:15
-msgid "1. 本体工具"
+msgid "通用概念"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:17
-msgid "**用途**：检测元件本体缺陷，支持 AI 缺陷检测、角度/偏移、极性等。绘制区域应覆盖元器件主体表面。"
+msgid "在阅读各工具参数前，先了解几个贯穿全篇的通用概念："
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:19
+msgid ""
+"**AI 异常分数**：基于 AI 模型的检测会输出一个 0~1 的异常分数；接近 0 表示与正常样本相似，接近 1 "
+"表示差异大。可通过统计图表对比正常 / 异常样本的分数分布，选择合适的判定阈值。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:20
+msgid ""
+"**颜色范围与有效比例（Valid Ratio）**：基于颜色的检测在 ROI 内用 **HSV 颜色范围** "
+"将像素二值化为“有效点”，有效比例定义为 :math:`100 \\times \\dfrac{\\text{有效点数}}{\\text{ROI "
+"面积}}`。判定时检查有效比例是否落入设定的 **有效比例范围**。一个 ROI 可配置多组颜色范围，分别独立判定。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:21
+msgid ""
+"**颜色公式（Color Formula）**：定义如何从像素计算颜色特征。可选 HSV（中心 / 起止色调 + "
+"明度范围），或三色公式（Tricolor，如 ``2B-R-G`` 线性组合，配合 X/Y/Z/A 系数与阈值）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:22
+msgid "**对齐（Alignment）**：部分检测在判定前先将元件图像与标准样本自动对齐，以消除位置偏移带来的误判。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:23
+msgid ""
+"**启用可视化（Enable Visualization）**：评估后叠加显示二值化 / "
+"检测中间结果，便于调参；因有额外计算开销，建议仅在调试阶段开启。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:24
+msgid ""
+"**使用共享参数（Use Shared Parameters）**：元件加入封装 / "
+"料号分组后默认与组内共享参数；关闭后可对该实例单独调参，不再继承分组设置。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:27
+msgid "1. 本体检测（Mounting）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:29
+msgid "**用途**：检测元件本体的贴装缺陷，包括缺件、错件、损件、偏移、旋转与极性等。ROI 应覆盖元器件主体表面。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "本体检测ROI示例"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:23
-msgid "**参数说明**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:35
+msgid "**位置与姿态**"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:26
-msgid "**旋转角度 (°)**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:37
+msgid "**旋转角度 (°)（Max Rotation Angle）**：元件本体相对标准姿态的角度偏差；当偏差超过该阈值时判定为 NG。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:26
-msgid "元件本体的姿态偏差；启用后当偏差角度 > 阈值判定为 NG。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:38
+msgid "**X 偏移 (mm)（Shift X）/ Y 偏移 (mm)（Shift Y）**：样本元件与标准元件本体的平移偏差；超过阈值判 NG。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:36
-msgid "**常规检测（AI）**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:40
+msgid "**缺陷检测（AI）**"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:29
-msgid "对元件本体的 AI 异常分数进行判定；分数接近 0 代表与正常相似，接近 1 代表与正常不相似。通过统计表查看正常/异常分数分布，选择合适阈值。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:42
+msgid "**常规检测（Significant Defect Check）**：对元件本体的明显缺陷（缺件、错件、方向严重错误等）进行 AI 异常分数判定。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
@@ -72,22 +117,10 @@ msgstr ""
 msgid "本体AI分数分布示例2"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:39
-msgid "**X 偏移 (mm) / Y 偏移 (mm)**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:39
-msgid "样本元件本体 与 标准元件本体 的平移偏差；大于阈值则 NG。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:55
-msgid "**损件检测（AI，对齐后检测）**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:42
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:51
 msgid ""
-"针对元件本体的破损、缺口等异常。检测前会先将元件图像与 标准样本 自动对齐，避免因位置偏移导致误判。 模型会输出一个分数：接近 0 "
-"表示与正常样本相似，接近 1 表示与正常样本差异大。 用户可以通过统计图表对比正常样本和异常样本的分数分布，进而选择合适的判定阈值。"
+"**损件检测（Subtle Defect Check）**：针对本体的破损、缺口等细微异常；检测前先将元件图像与标准样本自动对齐，再以 AI "
+"异常分数判定，避免位置偏移导致误判。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
@@ -102,18 +135,34 @@ msgstr ""
 msgid "本体对齐后检测2"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:72
-msgid "**极性检测（AI，对齐后检测）**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:63
+msgid "**缺件检测（Missing Check）**：判定该位置是否缺少元件。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:58
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:64
 msgid ""
-"用于判断元件的极性方向是否正确。检测前同样会先对齐，以减少位置误差。 系统会在检测框内生成一个绿色的极性 ROI，只在该 ROI "
-"区域内学习和判定极性特征，从而识别是否存在极性反转。 分数判定方式与损件检测相同：0 趋近正常，1 趋近异常，可通过分布图表设定阈值。"
+"**增强缺件检测（Enhanced Missing "
+"Check）**：利用对位结果在元件疑似缺失时提前告警；属实验性功能，当对位误判导致误报时可关闭。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:62
-msgid "**极性 ROI**：点击 *设置 ROI* 或在显示窗口中直接拖拽 调整ROI框。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:66
+msgid "**极性检测（AI，对齐后）**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:68
+msgid ""
+"**极性检测（Polarity Check）**：判断元件极性方向是否正确。检测前先对齐，并在 **极性 ROI** "
+"区域内学习与判定极性特征，以识别极性反转。判定方式同样基于 AI 异常分数。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:69
+msgid "**极性检测灵敏度（Polarity Sensitivity）**：调节极性判定的灵敏度；灵敏度越高越容易报出极性异常。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:70
+msgid ""
+"**极性 ROI（Polarity ROI）**：点击 *设置 ROI* "
+"或在显示窗口中直接拖拽，框选用于极性判定的局部区域（通常为极性标识所在处）。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
@@ -128,49 +177,68 @@ msgstr ""
 msgid "极性检测2"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:74
-msgid "**启用遮罩** 对含有不固定字符/图案的区域进行遮蔽，避免影响 AI 检测。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:82
+msgid "**其它**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:84
+msgid "**启用遮罩（Enable Mask）**：对含有不固定字符 / 图案的区域进行遮蔽，避免其影响 AI 检测。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "遮罩"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:82
-msgid "2. 焊料工具（2D，基于颜色比例）"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:91
+msgid "2. 焊料检测 2D（Solder 2D，基于颜色比例）"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:84
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:93
 msgid ""
-"**核心思路**：在 ROI 内用 **HSV 颜色范围** 对像素进行二值化，计算“有效像素比例”，并与设定范围比较以判定 OK/NG。一个 "
-"ROI 可配置 **多个颜色范围** （如蓝通道斜面焊料、红通道平面焊盘），分别计算比例并独立设阈值。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:86
-msgid "**步骤与参数**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:88
-msgid "**设置 ROI**：框选存在焊料（爬锡/焊盘）的区域，ROI 支持旋转。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:-1
-msgid "焊料2D ROI"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:95
-msgid "**启用可视化**： 评估后显示有效/无效区域的二值化 Mask；因有额外计算，建议仅在调试阶段开启。"
+"**核心思路**：在焊料 ROI 内用 **HSV 颜色范围** 对像素二值化，计算 **有效比例** 并与设定范围比较以判定 OK/NG。一个 "
+"ROI 可配置多组颜色范围（如蓝通道斜面焊料、红通道平面焊盘），分别独立设阈值。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
-msgid "焊料2D可视化"
+msgid "焊料2D ROI"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:99
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:128
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:212
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:238
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:283
+msgid "**参数说明**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:101
+msgid ""
+"**颜色公式（Color Formula）**：选择 HSV 或三色（Tricolor）公式；选择三色时配置 **三色 X / Y / Z / "
+"A** 系数。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:102
-msgid ""
-"**颜色范围（HSV）**： 在 HSV 色彩空间中，通过在色盘上选择三个点来定义颜色范围：中心点 (center) "
-"位于色盘内部，作为色调基准；起点 (hsv_start) 和终点 (hsv_end) "
-"位于圆环边缘（S=100），共同形成一个扇形区域作为有效色相范围，并配合下方的 **亮度范围** 限定最终有效的颜色区间。"
+msgid "**中心色调（Center Hue）/ 中心饱和度（Center Saturation）**：HSV 模式下色相基准点（位于色盘内部）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:103
+msgid "**起始色调（Start Hue）/ 终止色调（End Hue）**：色盘圆环边缘的两点，与中心点共同构成扇形有效色相范围。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:104
+msgid "**起始明度（Start Value）/ 终止明度（End Value）**：限定有效像素的明度区间。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:105
+msgid "**有效比例范围（Valid Ratio Ranges）**：每组颜色范围对应的有效比例上下限；落入范围内判 OK。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:106
+msgid "**有效比例列表（Valid Ratio List）**：评估样本得到的各 ROI 有效比例统计，辅助设定合理范围。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:107
+msgid "**启用可视化（Enable Visualization）**：显示二值化 Mask 与比例统计（仅建议调试时开启）。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
@@ -181,278 +249,688 @@ msgstr ""
 msgid "多颜色范围示例（蓝/红）"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:113
-msgid ""
-"**二值化与有效比例（Valid Ratio）**： 将 ROI 内属于颜色范围的像素计为“有效点”，有效比例定义为 "
-":math:`\\text{valid_ratio} = 100 \\times "
-"\\dfrac{\\text{valid_point_count}}{\\text{roi_area}}`。 "
-"在评价时，会检查每个颜色范围对应的有效比例是否落入给定范围。 一个 ROI 可设置多组颜色范围，而这些范围可以在 **颜色范围（HSV）** "
-"中配置。"
-msgstr ""
-
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "颜色范围二值化与比例统计"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:130
-msgid "3. 引脚工具"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:120
+msgid "3. IC 引脚检测 2D（Lead 2D，AI）"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:133
-msgid "3.1 IC 引脚检测（2D，AI）"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:135
-msgid "**用途**：在引脚阵列上自动生成引脚子框，结合 AI 缺陷检测识别桥接、缺焊、虚焊、少锡等。 **方向标识**：检测框上的三角箭头指向 *外侧*。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:122
+msgid "**用途**：在引脚阵列上自动生成引脚子框，结合 AI 缺陷检测识别桥接、缺焊、虚焊、少锡等。检测框上的三角箭头指向引脚 *外侧*。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "引脚2D(AI)示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:142
-msgid "**关键参数**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:130
+msgid "**引脚数量（Lead Count）**：在 ROI 内自动均分生成对应个数的子 ROI。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:144
-msgid "**引脚数量**：自动均分生成对应个数的子 ROI。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:131
+msgid "**引脚宽度 (mm)（Lead Width）**：匹配实际引脚宽度，使子 ROI 与实体引脚对齐。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:145
-msgid "**引脚宽度 (mm)**：用于匹配实际引脚宽度，使子 ROI 与实体引脚对齐。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:132
+msgid "**引脚角度（Lead Angle）**：引脚相对 ROI 的方向角。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:146
-msgid "**引脚阈值（AI）**：基于每个子 ROI 的 AI 分数进行判定。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:133
+msgid "**引脚阈值（Lead Threshold）**：基于每个引脚子 ROI 的 AI 分数判定缺陷。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:134
+msgid "**桥接阈值（Bridge Threshold）**：相邻引脚间连锡（短路）的判定阈值。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:135
+msgid ""
+"**桥接宽度 (mm)（Bridge Width）/ 间隙宽度 (%)（Gap "
+"Width）**：定义相邻引脚间桥接检测带的宽度；可按毫米或按引脚间隙百分比设定，居中裁剪以避免引脚边缘干扰。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:136
+msgid ""
+"**引脚忽略列表（Lead Ignore List）/ 桥接忽略列表（Bridge Ignore List）**：选择不参与检测的引脚 / "
+"桥接（从左到右编号，注意特征框角度）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:137
+msgid "**启用可视化（Enable Visualization）**：显示引脚子框与检测结果。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "引脚2D AI检测示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:153
-msgid "3.2 IC 引脚检测 v2（2D，基于颜色比例）"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:144
+msgid "4. IC 引脚检测 2D v2（Lead 2D v2，基于颜色比例）"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:155
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:146
 msgid ""
-"**核心思路**：将“引脚区域”划分为 **Solder（焊料）/Pad（焊盘）/Tip（引脚顶端）** 三类子区域，分别以 **颜色范围** "
-"做二值化，计算各自与整体的 **有效比例** 与 **均值/邻域** 统计，对桥接与翘脚（Lifted Lead）等典型缺陷进行鲁棒判定。"
+"**核心思路**：将引脚区域划分为 **焊料（Solder）/ 焊盘（Pad）/ 引脚尖端（Tip）** "
+"三类子区域，分别用颜色范围二值化并计算有效比例，再结合 **均值 / 邻域** 统计对桥接、翘脚（Lifted Lead）等缺陷做鲁棒判定。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:158
-msgid "总结：上 = **焊盘区 (Pad), 橙色框**，下 = **引脚末端（Tip）, 红色框**，中间 = **焊料区（Solder）**。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:149
+msgid "区域划分：上 = **焊盘区（Pad，橙色框）**，下 = **引脚尖端（Tip，红色框）**，中间 = **焊料区（Solder）**。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "V2区域划分与子ROI"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:164
-msgid "**通用**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:155
+msgid "**通用参数**"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "V2通用参数"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:170
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:161
 msgid ""
-"**扩展底部长度（像素） / 扩展顶部长度（像素）**：沿着引脚的法线方向向上和向下扩展 "
-"ROI，使其能够覆盖焊盘和引脚末端区域，从而完整包含三个子区域。扩展方式既可以通过手动输入数值完成，也可以直接在显示窗口中拖拽调整检测框。"
+"**焊盘长度 (像素)（Pad Length / ext_top）/ 引脚长度 (像素)（Lead Length / "
+"ext_bottom）**：沿引脚法线方向向上 / 向下扩展 ROI，使其完整覆盖焊盘与引脚区域。可手动输入或在窗口中拖拽调整。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:171
-msgid "**引脚数量** / **引脚宽度 (mm)**：用于在 ROI 内自动均分生成子框，并与实际引脚对齐。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:162
+msgid "**引脚尖端长度 (像素)（Tip Length）**：引脚末端 Tip 子区域的长度。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:172
-msgid ""
-"**桥接宽度 "
-"(mm)**：定义相邻引脚之间的“桥接检测带”宽度，用于检测短路或连锡。默认情况下，系统会以两个引脚间的间隙为基准。可以更改宽度值，在间隙区域居中裁剪出检测带。这样可以避免引脚边缘被截入，减少图像差异带来的干扰。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:163
+msgid "**引脚数量（Lead Count）/ 引脚宽度 (mm)（Lead Width）**：在 ROI 内自动均分生成子框并与实体引脚对齐。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:173
-msgid "**启用可视化**：显示各子区域的二值化结果与比例统计，因有额外计算，建议仅在调试阶段开启。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:164
+msgid "**间隙宽度 (%)（Gap Width）**：相邻引脚间桥接检测带宽度（按间隙百分比），居中裁剪以减少引脚边缘干扰。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:165
+msgid "**引脚忽略列表 / 桥接忽略列表**：选择不参与检测的引脚 / 桥接（从左到右编号）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:166
+msgid "**启用可视化（Enable Visualization）**：显示各子区域二值化结果与比例统计（仅建议调试时开启）。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "V2 可视化"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:179
-msgid "**焊料（Solder）**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:172
+msgid "**焊料 / 焊盘 / 引脚尖端的颜色范围**"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "V2焊料参数"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:185
-msgid "**颜色范围**：为“焊料”区域配置有效的 HSV 颜色范围, 和有效比例范围"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:178
+msgid ""
+"**焊料颜色范围（Solder Color Range）/ 焊盘颜色范围（Pad Color Range）/ 引脚尖端颜色范围（Tip Color"
+" Range）**：分别为三类子区域配置 HSV 或三色颜色公式。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:179
+msgid "**焊料 / 焊盘 / 引脚 有效比例范围（Valid Ratio Range）**：各子区域有效比例的 OK 区间。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:180
+msgid "**桥接颜色范围（Bridge Color Range）/ 桥接有效比例范围（Bridge Valid Ratio Range）**：用于连锡检测。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "V2焊料色盘"
 msgstr ""
 
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:186
+msgid "**高级设置（Enable Advanced Settings）**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:188
+msgid ""
+"开启 **启用高级设置（enable_advanced_solder_criteria）** 后，当某引脚的有效比例未落入其 **有效比例范围**"
+" 时，会进入二次判定，结合下列阈值降低误报："
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:190
+msgid "**焊料平均阈值（Solder Mean Threshold）**：比较该引脚焊料有效比例与所有引脚的平均值；差异大于阈值视为正常。"
+msgstr ""
+
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:191
-msgid "TODO: 等待更新 - **焊料平均阈值 (Solder Mean Threshold)**"
+msgid "**焊料邻域阈值（Solder Neighbor Threshold）**：比较该引脚焊料有效比例与相邻引脚；差异大于阈值视为正常。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:192
+msgid ""
+"**焊盘平均阈值（Pad Mean Threshold）/ 焊盘邻域阈值（Pad Neighbor Threshold）**：对焊盘区做同样的均值"
+" / 邻域比较，用于翘脚判定。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:193
 msgid ""
-"当引脚的 valid_ratio 未能落入预设的 **Solder Valid Ratio Range** 时，会触发二次判定。 "
-"此时，系统会计算该引脚的 valid_ratio 与所有引脚平均值 (mean_valid_ratio) 的差异： - 如果差异 **大于阈值**"
-" ⇒ 视为正常； - 如果差异 **小于或等于阈值** ⇒ 判定为 NG。"
+"**最小焊料焊盘差异（Min Solder Pad Difference）**：比较同一引脚的焊料区与焊盘区；正常时焊料 > "
+"焊盘，差距过小说明焊盘暴露、焊料不足，可能翘脚。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:202
-msgid "**焊料邻域阈值 (Solder Neighbor Threshold)**"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:194
+msgid "**引脚尖端有效比例范围（Tip Valid Ratio Range）**：引脚尖端区域的 OK 比例区间。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:199
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:195
 msgid ""
-"同样在 valid_ratio 超出 **Solder Valid Ratio Range** 时启用。 系统会比较该引脚的 "
-"valid_ratio 与相邻引脚的 valid_ratio： - 如果差异 **大于阈值** ⇒ 视为正常； - 如果差异 "
-"**小于或等于阈值** ⇒ 判定为 NG。"
+"**引脚平均上限阈值（Tip Mean Upper Threshold）/ 平均下限阈值（Tip Mean Lower "
+"Threshold）**：所有引脚尖端平均有效比例高于上限或低于下限时判异常。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:205
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:198
 msgid ""
-"判定流程为： 1. 首先检查 valid_ratio 是否在 **Solder Valid Ratio Range** 内，若在范围内 ⇒ OK；"
-" 2. 若超出范围，则进入二次判定："
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:208
-msgid "只要满足 **平均阈值** 或 **邻域阈值** 中的任意一个条件 ⇒ OK；"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:209
-msgid "如果两者都不满足 ⇒ NG。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:212
-msgid "**焊盘（Pad）**"
+"判定流程：先检查有效比例是否在 **有效比例范围** 内，若在范围内 ⇒ OK；若超出，则进入二次判定——满足 **平均阈值** 或 "
+"**邻域阈值** 任一条件 ⇒ OK，两者都不满足 ⇒ NG。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "V2焊盘参数"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:218
-msgid "**颜色范围（Pad）**：为“焊盘”区域配置有效的 HSV 颜色范围。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst
-msgid "V2焊盘/翘脚参数"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:224
-msgid "TODO: 等待更新"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:228
-msgid "**引脚翘起焊料平均阈值**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:227
-msgid ""
-"当前引脚 **焊料区 (Solder)** 的有效比例 − 所有引脚焊料区有效比例的平均值 > 设定阈值 若条件成立，则判定为 OK，否则判定为 "
-"NG。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:232
-msgid "**引脚翘起焊盘平均阈值**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:231
-msgid "当前引脚 **焊盘区 (Pad)** 的有效比例 − 所有引脚焊料区有效比例的平均值 > 设定阈值 若条件成立，则判定为 OK，否则判定为 NG。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:236
-msgid "**引脚翘起最小焊盘差异**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:235
-msgid ""
-"比较同一个引脚的 **焊料区 (Solder)** 和 **焊盘区 (Pad)**。 正常情况下，焊料 > "
-"焊盘；如果两者差距太小，就说明焊盘暴露、焊料不足，有可能是翘脚。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:240
-msgid "**引脚翘起焊料邻域阈值**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:239
-msgid "比较当前引脚的 **焊料区 (Solder)** 和相邻引脚的焊料情况。 如果差异过大，说明它和左右邻居不一致，可能就是局部异常。"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:242
-msgid "**引脚末端**"
-msgstr ""
-
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "V2 Tip参数"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:248
-msgid "**颜色范围（Tip）**：为“引脚末端”区域配置有效的 HSV 颜色范围, 和有效比例范围"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:208
+msgid "5. 桥接检测（Bridge）"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst
-msgid "V2 Tip 颜色"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:210
+msgid "**用途**：独立检测相邻引脚 / 焊点之间的连锡（短路）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:214
+msgid ""
+"**桥接颜色公式（Bridge Color Formula）**：选择用于识别连锡的颜色公式（如 ``2B-R-G``）；选择三色时配置 **三色"
+" X / Y / Z / A**。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:215
+msgid "**值范围（Value Range）**：``2B-R-G`` 等公式的阈值范围（0–100），落入该范围的像素被检出。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:216
+msgid "**灵敏度（Sensitivity）**：桥接颜色检测灵敏度（0–1），值越大检测范围越大。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:217
+msgid "**启用可视化（Enable Visualization）**：显示桥接检测中间结果。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:220
+msgid "6. 颜色检测（Color）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:222
+msgid "**用途**：基于颜色比例校验目标区域颜色特征（如带色标识、色环等）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:224
+msgid "**颜色有效比例范围（Valid Color Ratio Ranges）**：配置一组或多组颜色范围及其有效比例区间，落入范围内判 OK。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:227
+msgid "7. 焊盘沾胶检测（Glue on Pad）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:229
+msgid "**用途**：检测焊盘上是否存在点胶 / 残胶等，通过颜色比例判定。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:231
+msgid "**有效比例范围（Valid Ratio Ranges）**：胶体颜色范围对应的有效比例区间。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:234
+msgid "8. DIP 焊点检测（DIP Solder）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:236
+msgid "**用途**：针对插装（DIP）器件的焊点检测，可结合颜色范围与自定义模型。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:240
+msgid "**DIP 类型（DIP Type）/ 子类型（Sub Type）**：选择 DIP 焊点形态类别。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:241
+msgid "**自定义模型（Custom Model）**：选用为该焊点类型训练的自定义分类模型。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:242
+msgid "**置信度阈值（Confidence Threshold）**：模型判定的置信度门限。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:243
+msgid "**焊点数量（Solder Count）/ 焊点宽度 (mm)（Solder Width）**：在 ROI 内均分生成焊点子框。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:244
+msgid "**桥接宽度 (%)（Bridge Width）**：相邻焊点连锡检测带宽度。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:245
+msgid "**启用焊点颜色范围检测（Enable Solder Color Range Criteria）**：开启后按颜色范围辅助判定。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:246
+msgid "**焊点颜色中心色调 / 饱和度、起止色调、起止明度**：HSV 焊点颜色范围定义。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:247
+msgid "**焊点颜色有效比率范围（Solder Color Valid Ratio Range）**：焊点颜色有效比例的 OK 区间。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:250
+msgid "9. DIP 桥接检测（DIP Bridge）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:252
+msgid "**用途**：检测 DIP 器件相邻引脚 / 焊点之间的连锡。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:254
+msgid "**桥接颜色公式（Bridge Color Formula）/ 灵敏度（Sensitivity）**：连锡颜色识别公式与灵敏度。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:255
-msgid "**引脚翘起平均上限阈值**"
+msgid "**桥接有效比率范围（Bridge Valid Ratio Range）**：连锡有效比例 OK 区间。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:255
-msgid "比较所有引脚的引脚末端 (Tip) 区域的平均有效比例，若其值高于该上限阈值，则判定为异常。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:256
+msgid "**桥接宽度 (%)（Bridge Width）**：桥接检测带宽度。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:257
+msgid "**焊点数量（Solder Count）/ 焊点宽度 (mm)（Solder Width）**：焊点子框划分。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:258
-msgid "**引脚翘起平均下限阈值**"
-msgstr ""
-
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:258
-msgid "比较所有引脚的引脚末端 (Tip) 区域的平均有效比例，若其值低于该下限阈值，则判定为异常。"
+msgid "**启用可视化（Enable Visualization）**。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:261
-msgid "4. 文本工具"
+msgid "10. 开焊检测（Open Solder）"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst:263
-msgid "**用途**：识别并校验检测框内文本。检测框上的三角形箭头用于表示文本的阅读方向，应确保箭头方向与实际字符方向一致，以便正确识别。"
+msgid "**用途**：检测焊点开路 / 未连接（虚焊、空焊）等缺陷。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:265
+msgid "**启用开焊检测（Enable Open Solder Inspection）**：开关该检测项。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:266
+msgid "**置信度阈值（Confidence Threshold）**：模型判定门限。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:267
+msgid "**自定义模型（Custom Model）/ 自定义模型路径（Custom Model Path）**：选用自定义训练模型。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:270
+msgid "11. 表面污染检测（Surface Contamination）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:272
+msgid ""
+"**用途**：检测元件 / 焊盘表面的污渍、异物、残留等污染缺陷。通常作为开关型检测项启用，并基于 AI "
+"模型给出判定；具体可检范围随模型与产品配置而定。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:275
+msgid "12. 文本检测（Text / OCR · OCV）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:277
+msgid ""
+"**用途**：识别并校验检测框内文本（丝印、字符、批次 / 日期等）。检测框上的三角箭头表示文本阅读方向，应与实际字符方向一致。同时支持 "
+"OCR（识别字符内容）与 OCV（与参考图像比对）两种方式。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "文本工具参数"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:269
-msgid "**模糊模式**：当“期望文本”与检测文本长度一致时，可通过反馈把易混字符（如 `1` / `l` ）加入模糊表；两者互换也视为正确。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:285
+msgid ""
+"**期望文本（Expected Text）/ 期望文本 (反向)（Expected Text Reverse）**：目标字符串；反向用于 180°"
+" 方向。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:270
-msgid "**双向检测**：进行 0°/180° 两次识别，任意方向匹配即判定 OK。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:286
+msgid "**启用 OCR（Enable OCR）**：识别检测框内字符内容并与期望文本比对。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:271
-msgid "**期望文本**：输入目标字符串。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:287
+msgid ""
+"**启用 OCV（Enable OCV）**：将检测框与 **OCV 参考（OCV References）** 图像比对，输出 **OCV "
+"最佳匹配分数（OCV Best Match Score）**。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:275
-msgid "5. 条形码工具"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:288
+msgid "**OCV 接受阈值（OCV Acceptance Threshold）**：提高阈值可降低漏报（false negative）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_config_2d.rst:277
-msgid "**用途**：识别条码/二维码，并将读出的序列号用于与历史检测记录关联（如 PCB 唯一序列号）。"
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:289
+msgid ""
+"**OCR/OCV 通过条件（Pass Condition）**：可选 **OCR 与 OCV 均须通过** 或 **OCR 或 OCV "
+"任一通过**。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:290
+msgid ""
+"**最大不匹配字符数（Max Mismatch "
+"Count）**：与期望文本比较时允许的最大不匹配字符数（仅当识别与参考长度相同时才显示不匹配计数）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:291
+msgid "**模糊模式（Blur Mode）**：启用后形状相似的字符（如 ``1`` / ``l``）视为正确，可通过反馈加入模糊表。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:292
+msgid "**双向检测（Bidirectional Inspection）**：进行 0° / 180° 两次识别，任一方向匹配即判 OK。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:293
+msgid ""
+"**启用旋转（Enable Rotation）/ 自动搜索文本位置（Auto search text "
+"location）**：当文本在框内位置有偏移时，加强搜索以提升识别稳定性。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:296
+msgid "13. 条形码检测（Barcode）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:298
+msgid "**用途**：识别一维条码 / 二维码，并将读出的序列号用于与历史检测记录关联（如 PCB 唯一序列号），支持批次追溯与按子板归档。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_config_2d.rst
 msgid "条码工具参数"
 msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_config_2d.rst:304
+msgid "框选包含条码的区域即可；系统在检测时自动读取并记录条码内容，无需额外阈值参数。"
+msgstr ""
+
+#~ msgid "本章节详细介绍 2D 检测工具及其参数含义，并结合典型用法与调参思路，帮助你在实际产线中高效完成建模与检测。"
+#~ msgstr ""
+
+#~ msgid "1. 本体工具"
+#~ msgstr ""
+
+#~ msgid "**用途**：检测元件本体缺陷，支持 AI 缺陷检测、角度/偏移、极性等。绘制区域应覆盖元器件主体表面。"
+#~ msgstr ""
+
+#~ msgid "**旋转角度 (°)**"
+#~ msgstr ""
+
+#~ msgid "元件本体的姿态偏差；启用后当偏差角度 > 阈值判定为 NG。"
+#~ msgstr ""
+
+#~ msgid "**常规检测（AI）**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "对元件本体的 AI 异常分数进行判定；分数接近 0 代表与正常相似，接近 1"
+#~ " 代表与正常不相似。通过统计表查看正常/异常分数分布，选择合适阈值。"
+#~ msgstr ""
+
+#~ msgid "**X 偏移 (mm) / Y 偏移 (mm)**"
+#~ msgstr ""
+
+#~ msgid "样本元件本体 与 标准元件本体 的平移偏差；大于阈值则 NG。"
+#~ msgstr ""
+
+#~ msgid "**损件检测（AI，对齐后检测）**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "针对元件本体的破损、缺口等异常。检测前会先将元件图像与 标准样本 自动对齐，避免因位置偏移导致误判。 "
+#~ "模型会输出一个分数：接近 0 表示与正常样本相似，接近 1 表示与正常样本差异大。 "
+#~ "用户可以通过统计图表对比正常样本和异常样本的分数分布，进而选择合适的判定阈值。"
+#~ msgstr ""
+
+#~ msgid "**极性检测（AI，对齐后检测）**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "用于判断元件的极性方向是否正确。检测前同样会先对齐，以减少位置误差。 系统会在检测框内生成一个绿色的极性 "
+#~ "ROI，只在该 ROI 区域内学习和判定极性特征，从而识别是否存在极性反转。 "
+#~ "分数判定方式与损件检测相同：0 趋近正常，1 趋近异常，可通过分布图表设定阈值。"
+#~ msgstr ""
+
+#~ msgid "**极性 ROI**：点击 *设置 ROI* 或在显示窗口中直接拖拽 调整ROI框。"
+#~ msgstr ""
+
+#~ msgid "**启用遮罩** 对含有不固定字符/图案的区域进行遮蔽，避免影响 AI 检测。"
+#~ msgstr ""
+
+#~ msgid "2. 焊料工具（2D，基于颜色比例）"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**核心思路**：在 ROI 内用 **HSV 颜色范围** "
+#~ "对像素进行二值化，计算“有效像素比例”，并与设定范围比较以判定 OK/NG。一个 ROI 可配置 "
+#~ "**多个颜色范围** （如蓝通道斜面焊料、红通道平面焊盘），分别计算比例并独立设阈值。"
+#~ msgstr ""
+
+#~ msgid "**步骤与参数**"
+#~ msgstr ""
+
+#~ msgid "**设置 ROI**：框选存在焊料（爬锡/焊盘）的区域，ROI 支持旋转。"
+#~ msgstr ""
+
+#~ msgid "**启用可视化**： 评估后显示有效/无效区域的二值化 Mask；因有额外计算，建议仅在调试阶段开启。"
+#~ msgstr ""
+
+#~ msgid "焊料2D可视化"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**颜色范围（HSV）**： 在 HSV 色彩空间中，通过在色盘上选择三个点来定义颜色范围：中心点"
+#~ " (center) 位于色盘内部，作为色调基准；起点 (hsv_start) 和终点 "
+#~ "(hsv_end) 位于圆环边缘（S=100），共同形成一个扇形区域作为有效色相范围，并配合下方的 **亮度范围**"
+#~ " 限定最终有效的颜色区间。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**二值化与有效比例（Valid Ratio）**： 将 ROI "
+#~ "内属于颜色范围的像素计为“有效点”，有效比例定义为 :math:`\\text{valid_ratio} = "
+#~ "100 \\times "
+#~ "\\dfrac{\\text{valid_point_count}}{\\text{roi_area}}`。 "
+#~ "在评价时，会检查每个颜色范围对应的有效比例是否落入给定范围。 一个 ROI "
+#~ "可设置多组颜色范围，而这些范围可以在 **颜色范围（HSV）** 中配置。"
+#~ msgstr ""
+
+#~ msgid "3. 引脚工具"
+#~ msgstr ""
+
+#~ msgid "3.1 IC 引脚检测（2D，AI）"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**用途**：在引脚阵列上自动生成引脚子框，结合 AI 缺陷检测识别桥接、缺焊、虚焊、少锡等。 "
+#~ "**方向标识**：检测框上的三角箭头指向 *外侧*。"
+#~ msgstr ""
+
+#~ msgid "**关键参数**"
+#~ msgstr ""
+
+#~ msgid "**引脚数量**：自动均分生成对应个数的子 ROI。"
+#~ msgstr ""
+
+#~ msgid "**引脚宽度 (mm)**：用于匹配实际引脚宽度，使子 ROI 与实体引脚对齐。"
+#~ msgstr ""
+
+#~ msgid "**引脚阈值（AI）**：基于每个子 ROI 的 AI 分数进行判定。"
+#~ msgstr ""
+
+#~ msgid "3.2 IC 引脚检测 v2（2D，基于颜色比例）"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**核心思路**：将“引脚区域”划分为 **Solder（焊料）/Pad（焊盘）/Tip（引脚顶端）** "
+#~ "三类子区域，分别以 **颜色范围** 做二值化，计算各自与整体的 **有效比例** 与"
+#~ " **均值/邻域** 统计，对桥接与翘脚（Lifted Lead）等典型缺陷进行鲁棒判定。"
+#~ msgstr ""
+
+#~ msgid "总结：上 = **焊盘区 (Pad), 橙色框**，下 = **引脚末端（Tip）, 红色框**，中间 = **焊料区（Solder）**。"
+#~ msgstr ""
+
+#~ msgid "**通用**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**扩展底部长度（像素） / 扩展顶部长度（像素）**：沿着引脚的法线方向向上和向下扩展 "
+#~ "ROI，使其能够覆盖焊盘和引脚末端区域，从而完整包含三个子区域。扩展方式既可以通过手动输入数值完成，也可以直接在显示窗口中拖拽调整检测框。"
+#~ msgstr ""
+
+#~ msgid "**引脚数量** / **引脚宽度 (mm)**：用于在 ROI 内自动均分生成子框，并与实际引脚对齐。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**桥接宽度 "
+#~ "(mm)**：定义相邻引脚之间的“桥接检测带”宽度，用于检测短路或连锡。默认情况下，系统会以两个引脚间的间隙为基准。可以更改宽度值，在间隙区域居中裁剪出检测带。这样可以避免引脚边缘被截入，减少图像差异带来的干扰。"
+#~ msgstr ""
+
+#~ msgid "**启用可视化**：显示各子区域的二值化结果与比例统计，因有额外计算，建议仅在调试阶段开启。"
+#~ msgstr ""
+
+#~ msgid "**焊料（Solder）**"
+#~ msgstr ""
+
+#~ msgid "**颜色范围**：为“焊料”区域配置有效的 HSV 颜色范围, 和有效比例范围"
+#~ msgstr ""
+
+#~ msgid "TODO: 等待更新 - **焊料平均阈值 (Solder Mean Threshold)**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "当引脚的 valid_ratio 未能落入预设的 **Solder Valid "
+#~ "Ratio Range** 时，会触发二次判定。 此时，系统会计算该引脚的 "
+#~ "valid_ratio 与所有引脚平均值 (mean_valid_ratio) 的差异： -"
+#~ " 如果差异 **大于阈值** ⇒ 视为正常； - 如果差异 "
+#~ "**小于或等于阈值** ⇒ 判定为 NG。"
+#~ msgstr ""
+
+#~ msgid "**焊料邻域阈值 (Solder Neighbor Threshold)**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "同样在 valid_ratio 超出 **Solder Valid Ratio"
+#~ " Range** 时启用。 系统会比较该引脚的 valid_ratio 与相邻引脚的"
+#~ " valid_ratio： - 如果差异 **大于阈值** ⇒ 视为正常；"
+#~ " - 如果差异 **小于或等于阈值** ⇒ 判定为 NG。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "判定流程为： 1. 首先检查 valid_ratio 是否在 **Solder"
+#~ " Valid Ratio Range** 内，若在范围内 ⇒ OK；"
+#~ " 2. 若超出范围，则进入二次判定："
+#~ msgstr ""
+
+#~ msgid "只要满足 **平均阈值** 或 **邻域阈值** 中的任意一个条件 ⇒ OK；"
+#~ msgstr ""
+
+#~ msgid "如果两者都不满足 ⇒ NG。"
+#~ msgstr ""
+
+#~ msgid "**焊盘（Pad）**"
+#~ msgstr ""
+
+#~ msgid "**颜色范围（Pad）**：为“焊盘”区域配置有效的 HSV 颜色范围。"
+#~ msgstr ""
+
+#~ msgid "V2焊盘/翘脚参数"
+#~ msgstr ""
+
+#~ msgid "TODO: 等待更新"
+#~ msgstr ""
+
+#~ msgid "**引脚翘起焊料平均阈值**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "当前引脚 **焊料区 (Solder)** 的有效比例 − "
+#~ "所有引脚焊料区有效比例的平均值 > 设定阈值 若条件成立，则判定为 OK，否则判定为 "
+#~ "NG。"
+#~ msgstr ""
+
+#~ msgid "**引脚翘起焊盘平均阈值**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "当前引脚 **焊盘区 (Pad)** 的有效比例 − "
+#~ "所有引脚焊料区有效比例的平均值 > 设定阈值 若条件成立，则判定为 OK，否则判定为 "
+#~ "NG。"
+#~ msgstr ""
+
+#~ msgid "**引脚翘起最小焊盘差异**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "比较同一个引脚的 **焊料区 (Solder)** 和 **焊盘区 "
+#~ "(Pad)**。 正常情况下，焊料 > 焊盘；如果两者差距太小，就说明焊盘暴露、焊料不足，有可能是翘脚。"
+#~ msgstr ""
+
+#~ msgid "**引脚翘起焊料邻域阈值**"
+#~ msgstr ""
+
+#~ msgid "比较当前引脚的 **焊料区 (Solder)** 和相邻引脚的焊料情况。 如果差异过大，说明它和左右邻居不一致，可能就是局部异常。"
+#~ msgstr ""
+
+#~ msgid "**引脚末端**"
+#~ msgstr ""
+
+#~ msgid "**颜色范围（Tip）**：为“引脚末端”区域配置有效的 HSV 颜色范围, 和有效比例范围"
+#~ msgstr ""
+
+#~ msgid "V2 Tip 颜色"
+#~ msgstr ""
+
+#~ msgid "**引脚翘起平均上限阈值**"
+#~ msgstr ""
+
+#~ msgid "比较所有引脚的引脚末端 (Tip) 区域的平均有效比例，若其值高于该上限阈值，则判定为异常。"
+#~ msgstr ""
+
+#~ msgid "**引脚翘起平均下限阈值**"
+#~ msgstr ""
+
+#~ msgid "比较所有引脚的引脚末端 (Tip) 区域的平均有效比例，若其值低于该下限阈值，则判定为异常。"
+#~ msgstr ""
+
+#~ msgid "4. 文本工具"
+#~ msgstr ""
+
+#~ msgid "**用途**：识别并校验检测框内文本。检测框上的三角形箭头用于表示文本的阅读方向，应确保箭头方向与实际字符方向一致，以便正确识别。"
+#~ msgstr ""
+
+#~ msgid "**模糊模式**：当“期望文本”与检测文本长度一致时，可通过反馈把易混字符（如 `1` / `l` ）加入模糊表；两者互换也视为正确。"
+#~ msgstr ""
+
+#~ msgid "**双向检测**：进行 0°/180° 两次识别，任意方向匹配即判定 OK。"
+#~ msgstr ""
+
+#~ msgid "**期望文本**：输入目标字符串。"
+#~ msgstr ""
+
+#~ msgid "5. 条形码工具"
+#~ msgstr ""
+
+#~ msgid "**用途**：识别条码/二维码，并将读出的序列号用于与历史检测记录关联（如 PCB 唯一序列号）。"
+#~ msgstr ""
 
