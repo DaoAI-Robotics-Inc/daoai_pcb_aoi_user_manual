@@ -11,6 +11,7 @@ DaoAI PCBA AOI 用户手册
    :maxdepth: 1
    :caption: 使用指南
 
+   complete_user_guide/home/index
    complete_user_guide/features/create_product
    complete_user_guide/features/auto_programming
    complete_user_guide/features/manual_programming
