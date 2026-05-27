@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 22:31-0700\n"
+"POT-Creation-Date: 2026-05-26 23:11-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -354,23 +354,31 @@ msgstr ""
 msgid "复检详情与反馈"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:164
+#: ../../source/complete_user_guide/inspection/index.rst:163
+msgid ""
+"**子板良率（FPY）与坏板标记**：对于拼板产品，良率可在 **整板（Board）** 与 **子板（Sub-board）** "
+"口径间切换，按实际检测的子板数统计；非拼板产品的子板口径显示为 N/A。被标记为 **坏板标记** 的元件用于驱动子板好 / 坏判定，但 "
+"**不计入** 复检 NG 列表，也不计入数据分析报告的 总数 / 告警 / NG 统计。子板的自动判废逻辑（比例模式 / 坏板标记模式）在 "
+":ref:`检测设置（子板判废逻辑）` 中配置。"
+msgstr ""
+
+#: ../../source/complete_user_guide/inspection/index.rst:167
 msgid "反馈与模型迭代"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:166
+#: ../../source/complete_user_guide/inspection/index.rst:169
 msgid "提交的反馈会加入到产品的数据集中。推荐的迭代流程："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:168
+#: ../../source/complete_user_guide/inspection/index.rst:171
 msgid "进行一批次的检测， 在工作列表里查看 并提供反馈，反馈后的数据可以加到数据集中。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:170
+#: ../../source/complete_user_guide/inspection/index.rst:173
 msgid "回到产品编程页面，执行训练来更新模型（训练通常耗时约 1 分钟，视硬件而定）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:172
+#: ../../source/complete_user_guide/inspection/index.rst:175
 msgid "执行“评估全部”以检查各元件状态并针对仍为不合格的项微调参数。参考 :ref:`检测参数` 章节以了解具体的调参方法。"
 msgstr ""
 
