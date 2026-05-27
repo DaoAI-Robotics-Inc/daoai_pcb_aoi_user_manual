@@ -25,6 +25,7 @@ DaoAI PCBA AOI 用户手册
    complete_user_guide/features/pcb_array
    complete_user_guide/features/collinearity_inspection
    complete_user_guide/features/variations
+   complete_user_guide/features/recipe
    complete_user_guide/config/index
 
 .. toctree::
