@@ -209,6 +209,10 @@
 
 **用途**：独立检测相邻引脚 / 焊点之间的连锡（短路）。
 
+.. image:: images/tool_bridge.png
+   :scale: 45%
+   :alt: 模板编辑器中的桥接检测元件示例
+
 **参数说明**
 
 - **桥接颜色公式（Bridge Color Formula）**：选择用于识别连锡的颜色公式（如 ``2B-R-G``）；选择三色时配置 **三色 X / Y / Z / A**。
@@ -221,6 +225,10 @@
 
 **用途**：基于颜色比例校验目标区域颜色特征（如带色标识、色环等）。
 
+.. image:: images/tool_color.png
+   :scale: 45%
+   :alt: 模板编辑器中的颜色检测元件示例
+
 - **颜色有效比例范围（Valid Color Ratio Ranges）**：配置一组或多组颜色范围及其有效比例区间，落入范围内判 OK。
 
 7. 焊盘沾胶检测（Glue on Pad）
@@ -228,12 +236,20 @@
 
 **用途**：检测焊盘上是否存在点胶 / 残胶等，通过颜色比例判定。
 
+.. image:: images/tool_glue.png
+   :scale: 45%
+   :alt: 模板编辑器中的焊盘沾胶检测元件示例
+
 - **有效比例范围（Valid Ratio Ranges）**：胶体颜色范围对应的有效比例区间。
 
 8. DIP 焊点检测（DIP Solder）
 --------------------------------------
 
 **用途**：针对插装（DIP）器件的焊点检测，可结合颜色范围与自定义模型。
+
+.. image:: images/tool_dip.png
+   :scale: 45%
+   :alt: 模板编辑器中的 DIP 检测元件示例
 
 **参数说明**
 
@@ -261,6 +277,10 @@
 --------------------------------------
 
 **用途**：检测焊点开路 / 未连接（虚焊、空焊）等缺陷。
+
+.. image:: images/tool_opensolder.png
+   :scale: 45%
+   :alt: 模板编辑器中的开焊检测元件示例
 
 - **启用开焊检测（Enable Open Solder Inspection）**：开关该检测项。
 - **置信度阈值（Confidence Threshold）**：模型判定门限。
