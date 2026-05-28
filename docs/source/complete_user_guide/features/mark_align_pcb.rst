@@ -9,7 +9,9 @@
 
 进入 **产品编程页面**（Teach），点击顶部第一个标签页 **标记 / 对齐 PCB**。
 
-.. screenshot-todo: images/mark_align_pcb_overview.png — 标记/对齐 PCB 主界面
+.. image:: images/mark_align_pcb_overview.png
+   :scale: 70%
+   :alt: 标记 / 对齐 PCB 主界面：左侧标记列表 + 中央 PCB 画布
 
 **操作流程**
 

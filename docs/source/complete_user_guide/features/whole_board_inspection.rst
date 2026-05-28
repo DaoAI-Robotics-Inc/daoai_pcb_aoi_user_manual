@@ -9,7 +9,9 @@
 
 进入 **产品编程页面**（Teach），点击顶部标签页 **整板检测**。
 
-.. screenshot-todo: images/whole_board_inspection_overview.png — 整板检测主界面
+.. image:: images/whole_board_inspection_overview.png
+   :scale: 70%
+   :alt: 整板检测主界面：左侧检测项列表 + 包含 / 排除区域工具 + 中央 PCB 画布
 
 **操作流程**
 
