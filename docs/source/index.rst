@@ -20,10 +20,12 @@ DaoAI PCBA AOI 用户手册
 
    complete_user_guide/features/create_product
    complete_user_guide/features/auto_programming
+   complete_user_guide/features/mark_align_pcb
    complete_user_guide/features/manual_programming
    complete_user_guide/features/part_library_and_grouping
    complete_user_guide/features/pcb_array
    complete_user_guide/features/collinearity_inspection
+   complete_user_guide/features/whole_board_inspection
    complete_user_guide/features/variations
    complete_user_guide/features/recipe
    complete_user_guide/config/index

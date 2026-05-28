@@ -31,6 +31,5 @@
    dip_solder
    dip_bridge
    open_solder
-   surface_contamination
    text
    barcode
