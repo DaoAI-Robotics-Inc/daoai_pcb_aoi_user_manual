@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -38,230 +38,260 @@ msgstr ""
 msgid "替代料与主元件共享同一元件位置（designator），在模板编辑器中以独立行显示，可单独查看其特征。创建替代料后需重新训练模型，才能在后续检测任务中生效。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:12
-msgid "**如何进入**"
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "复检页面左侧 NG 列表区域，列出已检测的元件"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:14
-msgid "替代料功能有两个入口："
+msgid "**如何进入**"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:16
-msgid "**入口一：复检页面（创建替代料）**"
+msgid "替代料功能有两个入口："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:18
-msgid "在离线复检页面（``/inspection/review``）中，当某元件被判定为 NG 时："
+msgid "**入口一：复检页面（创建替代料）**"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:20
-msgid "在右侧 NG 元件列表中选中该元件。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/variations.rst:21
-msgid "点击元件标题行右上角的 **...** 按钮，展开下拉菜单。"
+msgid "在离线复检页面（``/inspection/review``）中，当某元件被判定为 NG 时："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:22
+msgid "在右侧 NG 元件列表中选中该元件。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:23
+msgid "点击元件标题行右上角的 **...** 按钮，展开下拉菜单。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:24
 msgid "点击 **设置为替代料**，打开替代料选择器对话框。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:26
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "复检页面元件标题行展开「...」下拉菜单，显示「设置为替代料」选项"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:30
 msgid "**入口二：模板编辑器（查看与管理替代料）**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:28
+#: ../../source/complete_user_guide/features/variations.rst:32
 msgid ""
 "进入产品编程页面 → **元件** 标签页，即可在元件列表中查看已存在的替代料。选中某替代料行后，右侧 **替代料** "
 "折叠面板将显示其料号和封装信息，并提供重命名与批量复制功能。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:32
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "模板编辑器元件列表与右侧替代料面板"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:38
 msgid "**操作流程**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:34
+#: ../../source/complete_user_guide/features/variations.rst:40
 msgid "**第一步：在复检页面触发替代料创建**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:36
+#: ../../source/complete_user_guide/features/variations.rst:42
 msgid ""
 "在复检页面选中误判为 NG 的元件后，点击 **...** → **设置为替代料**，弹出 **添加为替代料** "
 "对话框（``review.setAsAlternativeChoiceTitle``）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:38
+#: ../../source/complete_user_guide/features/variations.rst:44
 msgid "对话框说明：请选择操作方式：在视野图像上重新定义元件 ROI，或使用当前元件图像作为替代料参考。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:42
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "替代料选择器：「沿用当前元件图像」与「在视野图上绘制 ROI」两个操作选项"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:50
 msgid "**第二步：选择创建方式**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:44
+#: ../../source/complete_user_guide/features/variations.rst:52
 msgid "对话框提供两种方式："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:46
+#: ../../source/complete_user_guide/features/variations.rst:54
 msgid ""
 "**沿用当前元件图像** "
 "：直接使用当前检测抓取的元件图像作为替代料的参考图像，进入下一步选择批量同步范围。适用于图像质量良好、无需调整取样区域的情况。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:48
+#: ../../source/complete_user_guide/features/variations.rst:56
 msgid ""
 "**在视野图上绘制 ROI** "
 "：重新在视野图上框选元件范围，用于调整采样区域以获取更高质量的参考图像。该路径不会立即创建替代料，而是先更新基准元件形状，再要求重新检测。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:52
+#: ../../source/complete_user_guide/features/variations.rst:60
 msgid ""
 "如果该元件已在本轮复检中完成过\"绘制 ROI\"操作（系统会高亮显示相应行），则 **在视野图上绘制 ROI** "
 "按钮将被禁用，并提示：您已为该元件重新定义过 ROI，请选择\"沿用当前元件图像\"以基于重新检测的图像创建替代料。此时应直接选择 "
 "**沿用当前元件图像**。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:54
+#: ../../source/complete_user_guide/features/variations.rst:62
 msgid "**第三步A：沿用当前元件图像 — 选择批量同步范围**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:56
+#: ../../source/complete_user_guide/features/variations.rst:64
 msgid "选择 **沿用当前元件图像** 后，对话框进入第二步，显示批量同步（fan-out）选项。操作员可选择同步范围："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:58
+#: ../../source/complete_user_guide/features/variations.rst:66
 msgid "**不批量生成（仅当前元件）** ：仅为当前元件创建替代料，不影响其他元件。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:60
+#: ../../source/complete_user_guide/features/variations.rst:68
 msgid "**按Part No同步** ：同时为所有与当前元件共享相同料号的其他元件批量生成此替代料。若当前元件无料号，则该选项禁用。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:62
+#: ../../source/complete_user_guide/features/variations.rst:70
 msgid "**按Package No同步** ：同时为所有与当前元件共享相同封装号的其他元件批量生成此替代料。若当前元件无封装号，则该选项禁用。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:64
+#: ../../source/complete_user_guide/features/variations.rst:72
 msgid "选择范围后，点击 **沿用当前元件图像** 按钮提交。替代料创建成功后，系统会弹出提示，告知需前往模板编辑页重新训练。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:68
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "替代料选择器第二步：批量同步单选按钮组（不批量生成 / 按 Part No 同步 / 按 Package No 同步）"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:78
 msgid "**第三步B：在视野图上绘制 ROI — 更新基准元件形状**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:70
+#: ../../source/complete_user_guide/features/variations.rst:80
 msgid "选择 **在视野图上绘制 ROI** 后，打开 **添加为替代料** 对话框，显示该 NG 元件的视野图像。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:72
+#: ../../source/complete_user_guide/features/variations.rst:82
 msgid "操作说明："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:74
+#: ../../source/complete_user_guide/features/variations.rst:84
 msgid "视野图中已默认预选当前元件的矩形框（红色虚线）。拖动角点或边缘手柄，从中心向外放大矩形框，使其完全覆盖目标元件轮廓——矩形框只能扩大，不可缩小至原始尺寸以下。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:75
+#: ../../source/complete_user_guide/features/variations.rst:85
 msgid "如无需调整大小，可直接确认以沿用原始形状。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:76
+#: ../../source/complete_user_guide/features/variations.rst:86
 msgid "点击 **更新基准元件形状** 按钮提交。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:80
-msgid "提交后，系统更新基准元件形状，并自动重载当前检测会话的产品定义。此时页面提示：基准元件形状已更新，请重新检测该板，再选择\"沿用当前元件图像\"以创建替代料。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/variations.rst:82
-msgid "**重新检测后的后续步骤：**"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/variations.rst:84
-msgid "重新触发该板的检测。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/variations.rst:85
-msgid "复检时再次选中该元件，点击 **...** → **设置为替代料**，进入选择器对话框。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/variations.rst:86
-msgid "此时该元件行左侧会显示黄色标记，提示已在此前重新定义过 ROI。选择 **沿用当前元件图像**，继续按\"第三步 A\"流程完成替代料创建。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/variations.rst:88
-msgid "**第四步：在模板编辑器中管理替代料**"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/variations.rst:90
-msgid "替代料创建成功后，可在模板编辑器的元件列表中查看和管理："
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "绘制 ROI 对话框：视野图像、可调整的元件矩形框及红色虚线基准轮廓"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:92
-msgid "选中某替代料行后，右侧展示 **替代料** 折叠面板，包含以下功能："
+msgid "提交后，系统更新基准元件形状，并自动重载当前检测会话的产品定义。此时页面提示：基准元件形状已更新，请重新检测该板，再选择\"沿用当前元件图像\"以创建替代料。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:94
-msgid "**料号（Part No.）输入框 + 保存按钮** ：修改该替代料组的料号，点击保存后将更新所有共享该料号的相关元件。"
+msgid "**重新检测后的后续步骤：**"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:96
-msgid "**封装号（Package No.）输入框 + 保存按钮** ：修改该替代料组的封装号，点击保存后将更新所有共享该封装号的相关元件。"
+msgid "重新触发该板的检测。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:97
+msgid "复检时再次选中该元件，点击 **...** → **设置为替代料**，进入选择器对话框。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:98
-msgid "**复制到相同料号** ：将当前替代料批量复制到所有共享相同料号的元件。料号为空时该按钮禁用。"
+msgid "此时该元件行左侧会显示黄色标记，提示已在此前重新定义过 ROI。选择 **沿用当前元件图像**，继续按\"第三步 A\"流程完成替代料创建。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:100
-msgid "**复制到相同封装** ：将当前替代料批量复制到所有共享相同封装号的元件。封装号为空时该按钮禁用。"
+msgid "**第四步：在模板编辑器中管理替代料**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:102
+msgid "替代料创建成功后，可在模板编辑器的元件列表中查看和管理："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:104
-msgid "**第五步：重新训练模型**"
+msgid "选中某替代料行后，右侧展示 **替代料** 折叠面板，包含以下功能："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:106
-msgid "替代料创建后，需在模板编辑器中触发重新训练，新建的替代料才能在后续检测任务中生效。替代料创建成功时，系统会弹出警告提示：替代料已创建。此替代料不会在当前检测任务中生效——请前往模板编辑页编辑特征并触发重新训练。"
+msgid "**料号（Part No.）输入框 + 保存按钮** ：修改该替代料组的料号，点击保存后将更新所有共享该料号的相关元件。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:108
-msgid "同时，若当前有正在运行的检测任务，系统会弹出对话框，询问是否停止当前任务。建议在重新训练前停止运行中的检测会话，以确保新训练后的模型能在下次检测时正确生效。"
+msgid "**封装号（Package No.）输入框 + 保存按钮** ：修改该替代料组的封装号，点击保存后将更新所有共享该封装号的相关元件。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/variations.rst:110
+msgid "**复制到相同料号** ：将当前替代料批量复制到所有共享相同料号的元件。料号为空时该按钮禁用。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:112
+msgid "**复制到相同封装** ：将当前替代料批量复制到所有共享相同封装号的元件。封装号为空时该按钮禁用。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:116
+msgid "**第五步：重新训练模型**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:118
+msgid "替代料创建后，需在模板编辑器中触发重新训练，新建的替代料才能在后续检测任务中生效。替代料创建成功时，系统会弹出警告提示：替代料已创建。此替代料不会在当前检测任务中生效——请前往模板编辑页编辑特征并触发重新训练。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:120
+msgid "同时，若当前有正在运行的检测任务，系统会弹出对话框，询问是否停止当前任务。建议在重新训练前停止运行中的检测会话，以确保新训练后的模型能在下次检测时正确生效。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:122
 msgid "**注意事项**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:114
+#: ../../source/complete_user_guide/features/variations.rst:126
 msgid ""
 "**替代料创建后不会自动触发重新训练。** "
 "必须前往模板编辑页手动触发重新训练，替代料才会对后续检测生效。运行中的检测任务需停止后再重新启动，方可使用新模型。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:115
+#: ../../source/complete_user_guide/features/variations.rst:127
 msgid ""
 "**\"在视野图上绘制 ROI\"路径需两步完成：** "
 "绘制并提交时仅更新基准元件形状，不立即创建替代料；需重新检测该板后，再通过\"沿用当前元件图像\"完成替代料的创建。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:116
+#: ../../source/complete_user_guide/features/variations.rst:128
 msgid "**批量同步（fan-out）只能选择一种范围（料号或封装号，二选一或不选）。** 若同一元件的料号或封装号字段为空，对应的同步选项将被禁用。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:117
+#: ../../source/complete_user_guide/features/variations.rst:129
 msgid "**替代料在模板编辑器中以独立行显示**，与原始主元件分开，不影响主元件的特征配置。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:118
+#: ../../source/complete_user_guide/features/variations.rst:130
 msgid "**本页面仅描述离线复检流程。** 联机多后端（ReviewOnline）场景及 MES 集成不在本页范围之内。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:120
+#: ../../source/complete_user_guide/features/variations.rst:134
+msgid ""
+"**拼板场景下的替代料默认作用于所有子板。** 添加一次替代料后，所有子板上同一位置的元件都会获得这条替代料；**无需也不应** "
+"重复在不同子板的相同位置上各添加一遍。重复添加会显著增加每次检测的耗时（每条替代料都是一组独立的推理参考），并可能拖累整体节拍。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/variations.rst:136
 msgid "**相关页面**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/variations.rst:122
+#: ../../source/complete_user_guide/features/variations.rst:138
 msgid ":doc:`manual_programming`"
 msgstr ""
 

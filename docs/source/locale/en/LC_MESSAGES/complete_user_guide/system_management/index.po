@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -906,7 +906,7 @@ msgid "传送带参数（宽度 / 速度）已正确配置。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/index.rst:391
-#: ../../source/complete_user_guide/system_management/index.rst:461
+#: ../../source/complete_user_guide/system_management/index.rst:468
 msgid "操作步骤："
 msgstr ""
 
@@ -959,7 +959,7 @@ msgid "**加密密钥ID**：系统授权加密密钥标识符。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/index.rst:417
-msgid "**加密有效期至** \\ （若存在）：授权到期日期；若已过期请联系 DaoAI 技术支持更新授权。"
+msgid "**加密有效期至** \\ （若存在）：授权到期日期；若已过期请联系技术支持更新授权。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/index.rst:421
@@ -975,41 +975,59 @@ msgid "系统日志界面示意"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/index.rst:429
-msgid "**输出日志详细程度** \\ （logVerbosity）：取值范围 0–10，数值越大日志输出越详细。"
+msgid "**输出日志详细程度（log verbosity）**"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:432
-msgid "较高的日志详细程度（如 8–10）可能使每次检测时长增加约 100–200 毫秒，生产环境建议保持较低值（默认 3），仅在排查问题时临时调高。"
+#: ../../source/complete_user_guide/system_management/index.rst:431
+msgid "页面提供一个数字输入框，取值范围 **0–10 的整数**："
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/index.rst:433
+msgid "**0**：仅输出错误与启动 / 关闭信息（最简）。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/index.rst:434
-msgid "调整后点击 **应用** 立即生效，无需重启服务。"
+msgid "**3–5**：常规生产环境推荐值，仅记录关键流程与必要诊断信息。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:438
+#: ../../source/complete_user_guide/system_management/index.rst:435
+msgid "**8–10**：调试 / 排查问题时使用；记录每次检测的详细推理过程与中间数据。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/index.rst:437
+msgid "调整后点击 **应用** 按钮立即生效，无需重启后端服务；当前值由后端持久保存，重启后保留。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/index.rst:441
+msgid ""
+"将日志详细程度调到较高值（约 8–10）会显著增加每次检测的耗时（约 100–200 "
+"毫秒每板），并占用更多磁盘空间。建议平时保持较低值，仅在排查问题时临时调高，问题定位完成后再调回。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/index.rst:445
 msgid "管理模型"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:440
+#: ../../source/complete_user_guide/system_management/index.rst:447
 msgid ""
 "**设置** 左侧的 **管理模型** 用于查看系统中的检测模型（按 全部 / 预训练 / 已训练 "
 "筛选），并支持上传模型、训练模型、设为默认、重命名、导出与删除，以及数据集的导出 / 导入和训练预热重置等操作。模型训练、数据集导入 / "
 "导出等完整流程详见 :ref:`模型管理` 章节。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:444
+#: ../../source/complete_user_guide/system_management/index.rst:451
 msgid "数据备份和迁移"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:446
+#: ../../source/complete_user_guide/system_management/index.rst:453
 msgid "随着检测记录不断积累，硬盘空间会逐渐减少，建议定期进行数据备份和清理。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:448
+#: ../../source/complete_user_guide/system_management/index.rst:455
 msgid "请在安装目录下运行 `aoi_pcb_blob_liner.exe` 工具。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:450
+#: ../../source/complete_user_guide/system_management/index.rst:457
 msgid "主要界面说明（见下图）："
 msgstr ""
 
@@ -1017,43 +1035,43 @@ msgstr ""
 msgid "数据迁移示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:456
+#: ../../source/complete_user_guide/system_management/index.rst:463
 msgid "左上角 File → FTP mount points 可配置 FTP 服务器，实现远程备份到 NAS 或其他网络硬盘。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:457
+#: ../../source/complete_user_guide/system_management/index.rst:464
 msgid "右上角 Destination Volume 用于选择目标盘（如移动硬盘、第二磁盘等）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:458
+#: ../../source/complete_user_guide/system_management/index.rst:465
 msgid "上方搜索栏可按产品名或序列号快速检索检测记录。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:459
+#: ../../source/complete_user_guide/system_management/index.rst:466
 msgid "搜索栏旁边的过滤器按钮可按日期、时间等条件过滤记录，便于批量操作。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:463
+#: ../../source/complete_user_guide/system_management/index.rst:470
 msgid "选择目标盘（Destination Volume），如需远程备份可先配置 FTP。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:464
+#: ../../source/complete_user_guide/system_management/index.rst:471
 msgid "可通过搜索栏输入产品名或序列号，或点击 过滤器 按钮按日期/时间筛选需要迁移的检测记录。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:465
+#: ../../source/complete_user_guide/system_management/index.rst:472
 msgid "在列表中框选或按住 Shift 选中多个检测记录。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:466
+#: ../../source/complete_user_guide/system_management/index.rst:473
 msgid "点击下方 Archive 按钮，即可将选中的记录迁移至目标盘。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:467
+#: ../../source/complete_user_guide/system_management/index.rst:474
 msgid "如需恢复数据，可点击 Unarchive 按钮从目标盘导入。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:468
+#: ../../source/complete_user_guide/system_management/index.rst:475
 msgid "若需删除无用记录，可点击 Delete 按钮。"
 msgstr ""
 
@@ -1061,7 +1079,7 @@ msgstr ""
 msgid "目标磁盘中的归档文件示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/index.rst:474
+#: ../../source/complete_user_guide/system_management/index.rst:481
 msgid "建议定期将重要检测数据备份到安全存储介质，防止因硬盘故障或空间不足导致数据丢失。"
 msgstr ""
 
@@ -1378,5 +1396,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "输出日志详细程度 1-10，数值越大日志越详细。默认值为 3"
+#~ msgstr ""
+
+#~ msgid "**加密有效期至** \\ （若存在）：授权到期日期；若已过期请联系  技术支持更新授权。"
+#~ msgstr ""
+
+#~ msgid "**输出日志详细程度** \\ （logVerbosity）：取值范围 0–10，数值越大日志输出越详细。"
+#~ msgstr ""
+
+#~ msgid "较高的日志详细程度（如 8–10）可能使每次检测时长增加约 100–200 毫秒，生产环境建议保持较低值（默认 3），仅在排查问题时临时调高。"
+#~ msgstr ""
+
+#~ msgid "调整后点击 **应用** 立即生效，无需重启服务。"
 #~ msgstr ""
 

@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -282,6 +282,328 @@ msgstr ""
 msgid ""
 "该设置会持久化保存，页面刷新后仍保留。子板判废逻辑（比例模式 / 坏板标记模式）在产品设置的 **检测设置** 子标签中配置，详情请参见 "
 ":ref:`检测设置（子板判废逻辑）`。"
+msgstr ""
+
+#: ../../source/support/faq.rst:147
+msgid "软件升级与安装"
+msgstr ""
+
+#: ../../source/support/faq.rst:150
+msgid "升级后软件无法启动或拍不了照片"
+msgstr ""
+
+#: ../../source/support/faq.rst:152
+msgid "升级前请先 **重启电脑**，避免后台残留进程导致旧版本卸载不干净。"
+msgstr ""
+
+#: ../../source/support/faq.rst:154
+msgid "重启电脑。"
+msgstr ""
+
+#: ../../source/support/faq.rst:155
+msgid "卸载旧软件（使用安装目录下的 ``unins000.exe``）。"
+msgstr ""
+
+#: ../../source/support/faq.rst:156
+msgid "安装新版本。"
+msgstr ""
+
+#: ../../source/support/faq.rst:157
+msgid "参考随版本发布的更新说明文档完成升级后的额外操作（如校准、配置迁移等）。"
+msgstr ""
+
+#: ../../source/support/faq.rst:160
+msgid "更新软件后第一次启动很慢"
+msgstr ""
+
+#: ../../source/support/faq.rst:162
+msgid "i7-8 代工控机上首次启动大约需要 **2.5 分钟** 属正常现象；第二次及以后启动会显著加快。等待启动完成即可。"
+msgstr ""
+
+#: ../../source/support/faq.rst:165
+msgid "新版本功能不显示 / 设置里看不到"
+msgstr ""
+
+#: ../../source/support/faq.rst:167
+msgid "浏览器缓存可能未刷新。按 ``Ctrl + R`` 或 ``Ctrl + Shift + R`` 强制刷新浏览器，让最新的前端代码加载进来。"
+msgstr ""
+
+#: ../../source/support/faq.rst:168
+msgid "确认实际安装的软件版本正确（**设置 → 系统设置 → 关于** 页面查看版本号）。"
+msgstr ""
+
+#: ../../source/support/faq.rst:171
+msgid "授权 / 加密狗过期，软件无法使用"
+msgstr ""
+
+#: ../../source/support/faq.rst:173
+msgid "检查加密狗是否插好、USB 接口是否松动。"
+msgstr ""
+
+#: ../../source/support/faq.rst:174
+msgid "在 **设置 → 系统设置 → 关于** 页面查看授权到期日期。"
+msgstr ""
+
+#: ../../source/support/faq.rst:175
+msgid "备用方案：若有备用加密狗，可临时替换使用。"
+msgstr ""
+
+#: ../../source/support/faq.rst:178
+msgid "软件长时间启动失败（i.e. 与其他软件端口冲突）"
+msgstr ""
+
+#: ../../source/support/faq.rst:180
+msgid "AOI 软件后端使用 **8000 端口**。若同设备上运行其他占用 8000 端口的程序（如个别音乐 / 通讯软件），AOI 软件无法正常启动。"
+msgstr ""
+
+#: ../../source/support/faq.rst:182
+msgid "关闭可能占用 8000 端口的其他程序后重新启动 AOI 软件。"
+msgstr ""
+
+#: ../../source/support/faq.rst:183
+msgid "命令行可通过 ``netstat -ano | findstr :8000`` 查看 8000 端口当前被哪个进程占用。"
+msgstr ""
+
+#: ../../source/support/faq.rst:187
+msgid "软件启动 / 崩溃 / 卡顿"
+msgstr ""
+
+#: ../../source/support/faq.rst:190
+msgid "浏览器页面卡顿、不出图"
+msgstr ""
+
+#: ../../source/support/faq.rst:192
+msgid ""
+"按 ``Ctrl + R`` 或 ``Ctrl + Shift + R`` 强制刷新浏览器缓存。如频繁出现，建议同时启用 "
+":ref:`如何开启浏览器的硬件加速以避免浏览器卡顿？` 中介绍的浏览器硬件加速。"
+msgstr ""
+
+#: ../../source/support/faq.rst:195
+msgid "SSE 报错（后台模块崩溃）"
+msgstr ""
+
+#: ../../source/support/faq.rst:197
+msgid "启动器面板上可看到各后端模块的状态指示。若有模块显示为红色（STOPPED），通常重启软件即可恢复。"
+msgstr ""
+
+#: ../../source/support/faq.rst:200
+msgid "检测记录积累过多导致卡顿"
+msgstr ""
+
+#: ../../source/support/faq.rst:202
+msgid ""
+"自 **v4.1-587** 起，软件支持自动清理旧检测数据。可在 **设置 → 系统设置 → 系统配置** 中设置保留天数 / "
+"磁盘阈值，过期数据会被自动清理。"
+msgstr ""
+
+#: ../../source/support/faq.rst:203
+msgid "也可在 **数据分析报告 → 检测结果** 标签页中手动多选并删除指定时间段的检测记录。"
+msgstr ""
+
+#: ../../source/support/faq.rst:207
+msgid ""
+"**请勿手动删除安装目录下的数据库文件夹**。手动删除可能误删程序数据，导致软件黑屏 / 无法启动。如需清理空间，请使用软件内置的自动 / "
+"手动清理功能。"
+msgstr ""
+
+#: ../../source/support/faq.rst:210
+msgid "软件更新后启动卡在 99%"
+msgstr ""
+
+#: ../../source/support/faq.rst:212
+msgid "重启电脑后重新尝试。"
+msgstr ""
+
+#: ../../source/support/faq.rst:213
+msgid "重新运行版本更新。"
+msgstr ""
+
+#: ../../source/support/faq.rst:214
+msgid ""
+"检查启动器面板上各模块状态。如果 ``conveyor_server`` "
+"显示为红色（STOPPED），可能是设备处于急停状态或硬件初始化失败：先解除急停状态再重启软件；若是硬件初始化失败，请参见硬件相关章节。"
+msgstr ""
+
+#: ../../source/support/faq.rst:218
+msgid "图像质量"
+msgstr ""
+
+#: ../../source/support/faq.rst:221
+msgid "编程拍照时拼接的大图上有重影"
+msgstr ""
+
+#: ../../source/support/faq.rst:223
+msgid "换一块 PCB 重新拍摄。若依然有重影，说明轨道标定已偏，需要 **重新校准**\\ （相机标定 + 轨道标定）。"
+msgstr ""
+
+#: ../../source/support/faq.rst:224
+msgid ""
+"若重影是偶发现象，可进入 **设置 → 系统设置 → 捕获模块**，把 **图像拼接配置 → 最大偏移像素 X 与 Y** 调大（例如调到 "
+"30）；重启软件后再试。"
+msgstr ""
+
+#: ../../source/support/faq.rst:227
+msgid "编程时元件显示正常，检测时元件表面泛红"
+msgstr ""
+
+#: ../../source/support/faq.rst:229
+msgid "原因：元件本身存在一定倾斜，编程时位于视野中部（光照均匀），但检测时智能路径规划可能让该元件落在视野边缘，被环形光源照得表面反光发红。"
+msgstr ""
+
+#: ../../source/support/faq.rst:231
+msgid ""
+"解决方法：在该元件 **周围** "
+"添加一个更大的占位元件（仅包含本体检测，阈值放到最宽松）。占位元件本身不会真正影响判定，但能改变路径规划，使原元件落在视野中部。"
+msgstr ""
+
+#: ../../source/support/faq.rst:235
+msgid "其他常见问题"
+msgstr ""
+
+#: ../../source/support/faq.rst:238
+msgid "板子放反 / 全部被屏蔽时报错处理"
+msgstr ""
+
+#: ../../source/support/faq.rst:240
+msgid "**板子放反**：在新建检测任务前请再次确认 PCB 放置方向；若使用拼板，注意拼板基准位置。"
+msgstr ""
+
+#: ../../source/support/faq.rst:241
+msgid "**全部子板被判定为坏板时**：v4.0.1-561 起，复检页面会按 NG 处理，避免被误标记为 OK。"
+msgstr ""
+
+#: ../../source/support/faq.rst:244
+msgid "同名程序保留两个版本"
+msgstr ""
+
+#: ../../source/support/faq.rst:246
+msgid "**临时解决**：先 **复制** 旧程序为另一名称，删除旧程序，再导入同名新程序。"
+msgstr ""
+
+#: ../../source/support/faq.rst:247
+msgid "**注意**：删除旧程序后，相关检测记录的图像可能不可见。"
+msgstr ""
+
+#: ../../source/support/faq.rst:248
+msgid "4.2 版本起会优化此处的程序命名 / 版本管理逻辑。"
+msgstr ""
+
+#: ../../source/support/faq.rst:251
+msgid "按料号跳过某些元件不检测"
+msgstr ""
+
+#: ../../source/support/faq.rst:253
+msgid "在模板编辑器中找到对应料号的元件，关闭它们的所有检测项；或直接使用 :ref:`跳过此元件的检测` 开关进行整体跳过。"
+msgstr ""
+
+#: ../../source/support/faq.rst:256
+msgid "二次对齐如何启用"
+msgstr ""
+
+#: ../../source/support/faq.rst:258
+msgid ""
+"在 **PCB 拼板 → 拼板对齐设置** 中可启用 **二次对齐**。开启后，每块拼板在 mark "
+"点定位完成后会再做一次局部对齐，可补偿拼板间的微小累计偏移。多拼板大尺寸 PCB 经常需要启用此功能。"
+msgstr ""
+
+#: ../../source/support/faq.rst:261
+msgid "红胶板检测"
+msgstr ""
+
+#: ../../source/support/faq.rst:263
+msgid "红胶板专用的检测模型与算法尚在开发中；当前版本暂无可靠的红胶板检测方案。"
+msgstr ""
+
+#: ../../source/support/faq.rst:267
+msgid "版本升级影响矩阵"
+msgstr ""
+
+#: ../../source/support/faq.rst:269
+msgid "升级前请对照下表了解可能需要的额外操作。"
+msgstr ""
+
+#: ../../source/support/faq.rst:275
+msgid "版本"
+msgstr ""
+
+#: ../../source/support/faq.rst:276
+msgid "日期"
+msgstr ""
+
+#: ../../source/support/faq.rst:277
+msgid "升级注意事项"
+msgstr ""
+
+#: ../../source/support/faq.rst:278
+msgid "v4.0.1-565+"
+msgstr ""
+
+#: ../../source/support/faq.rst:279
+msgid "2026-03-05"
+msgstr ""
+
+#: ../../source/support/faq.rst:280
+msgid "完整安装包。v4.0-541 或更高版本可直接安装升级；早于 v3.9 的版本需先按升级流程操作。在线机版本 / 无商标版本有独立安装包。"
+msgstr ""
+
+#: ../../source/support/faq.rst:281
+msgid "v4.0.1-568"
+msgstr ""
+
+#: ../../source/support/faq.rst:282
+msgid "2026-03-06"
+msgstr ""
+
+#: ../../source/support/faq.rst:283
+msgid "修复 IC 引脚检测工具 *使用同步参数* 开关无法关闭的问题。"
+msgstr ""
+
+#: ../../source/support/faq.rst:284
+msgid "v4.0.1-561"
+msgstr ""
+
+#: ../../source/support/faq.rst:285
+msgid "2026-03-04"
+msgstr ""
+
+#: ../../source/support/faq.rst:286
+msgid "修复全部子板被判为坏板时复检页面错报 OK 的问题。"
+msgstr ""
+
+#: ../../source/support/faq.rst:287
+msgid "v4.1-587"
+msgstr ""
+
+#: ../../source/support/faq.rst:288
+msgid "2026-03-16"
+msgstr ""
+
+#: ../../source/support/faq.rst:289
+msgid "新增自动清理旧检测记录功能，可在 **系统配置** 中设置保留天数。"
+msgstr ""
+
+#: ../../source/support/faq.rst:290
+msgid "v3.9-503"
+msgstr ""
+
+#: ../../source/support/faq.rst:291
+msgid "2026-01-30"
+msgstr ""
+
+#: ../../source/support/faq.rst:292
+msgid "桥接检测工具支持独立放置（可手动添加到元件旁），增强电容 / 电阻连锡检测能力。"
+msgstr ""
+
+#: ../../source/support/faq.rst:293
+msgid "v3.8-473"
+msgstr ""
+
+#: ../../source/support/faq.rst:294
+msgid "2026-01-22"
+msgstr ""
+
+#: ../../source/support/faq.rst:295
+msgid "修复 OCR 识别到检测框外文字的问题。"
 msgstr ""
 
 #~ msgid "在右侧属性栏找到“在组中添加 ROI”按钮。"

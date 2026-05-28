@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -140,95 +140,103 @@ msgstr ""
 msgid "**训练模型**：跳转到训练视图，发起模型训练。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:58
-msgid "训练视图"
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "数据集视图：图像库、右侧训练 / 测试分布面板与顶部按钮"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:60
-msgid "切换到 **训练** 视图后，界面分为左侧 **训练设置** 面板与右侧 **摘要** 面板，下方为可拖拽调整高度的 **数据集** 样本库。"
+msgid "训练视图"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:62
-msgid "**训练设置面板**"
+msgid "切换到 **训练** 视图后，界面分为左侧 **训练设置** 面板与右侧 **摘要** 面板，下方为可拖拽调整高度的 **数据集** 样本库。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:64
+msgid "**训练设置面板**"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:66
 msgid ""
 "左侧面板顶部可在 **训练** 与 **测试** "
 "子标签之间切换（用于筛选下方标签统计表的展示范围），下方显示样本标签分布统计表，列出各标签在训练集、测试集及未分配中的数量："
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:66
+#: ../../source/complete_user_guide/system_management/models.rst:68
 msgid "行标签：**正常（OK）** / **异常（NG）** / **无标签**"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:67
+#: ../../source/complete_user_guide/system_management/models.rst:69
 msgid "列标签：**标签** / **训练** / **测试** / **未分配**"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:69
+#: ../../source/complete_user_guide/system_management/models.rst:71
 msgid "**摘要面板**"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:71
+#: ../../source/complete_user_guide/system_management/models.rst:73
 msgid ""
 "右侧面板展示已选模型针对当前数据集的 **混淆矩阵** （Confusion "
 "Matrix）。矩阵行为实际标签（Actual），列为模型预测标签（Predicted），对角线格子（绿色背景）表示预测正确，非对角线格子（红色背景）表示预测错误。若尚未训练模型，面板显示提示信息。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:73
+#: ../../source/complete_user_guide/system_management/models.rst:75
 msgid "面板底部的 **开始训练** 按钮用于发起训练（见下节训练流程）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:78
-msgid "训练流程"
-msgstr ""
-
-#: ../../source/complete_user_guide/system_management/models.rst:80
-msgid "在 **数据集** 视图或 **训练** 视图中确认已积累足够且类别均衡的样本。"
-msgstr ""
-
-#: ../../source/complete_user_guide/system_management/models.rst:81
-msgid "（可选）点击 **查看训练/测试分布**，确认各类别样本数量合理，避免某一类别样本过少导致过拟合。"
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "训练视图：训练设置面板（标签统计）、摘要面板（混淆矩阵）与开始训练按钮"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:82
-msgid "在训练视图底部点击 **开始训练** 按钮。系统弹出 **为模型命名** 对话框，输入模型名称后点击 **开始训练** 确认。"
+msgid "训练流程"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:83
-msgid "训练开始后，界面切换到 **训练进度** 视图，展示："
+#: ../../source/complete_user_guide/system_management/models.rst:84
+msgid "在 **数据集** 视图或 **训练** 视图中确认已积累足够且类别均衡的样本。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:85
-msgid "当前 Epoch 进度与预计剩余时间。"
+msgid "（可选）点击 **查看训练/测试分布**，确认各类别样本数量合理，避免某一类别样本过少导致过拟合。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:86
-msgid "实时 **准确率** 与 **最佳** （best）准确率及进度条。"
+msgid "在训练视图底部点击 **开始训练** 按钮。系统弹出 **为模型命名** 对话框，输入模型名称后点击 **开始训练** 确认。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:87
-msgid "**训练图表**：准确率曲线（Accuracy）与训练/验证损失曲线（Training / Validation Loss）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/system_management/models.rst:88
-msgid "**停止训练** 按钮：点击后系统在当前 Epoch 完成评估后终止训练，并保留已达到最佳准确率的模型权重。"
+msgid "训练开始后，界面切换到 **训练进度** 视图，展示："
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:89
-msgid "**返回模板** 按钮：退出训练进度视图，返回设置面板（训练仍在后台继续）。"
+msgid "当前 Epoch 进度与预计剩余时间。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:90
+msgid "实时 **准确率** 与 **最佳** （best）准确率及进度条。"
 msgstr ""
 
 #: ../../source/complete_user_guide/system_management/models.rst:91
+msgid "**训练图表**：准确率曲线（Accuracy）与训练/验证损失曲线（Training / Validation Loss）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:92
+msgid "**停止训练** 按钮：点击后系统在当前 Epoch 完成评估后终止训练，并保留已达到最佳准确率的模型权重。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:93
+msgid "**返回模板** 按钮：退出训练进度视图，返回设置面板（训练仍在后台继续）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/system_management/models.rst:95
 msgid "训练完成后，可在 **管理模型** 中将新模型 **设为默认**，使其在后续检测中生效。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:94
+#: ../../source/complete_user_guide/system_management/models.rst:98
 msgid "反馈写入数据集后，建议在稳定的光照与工艺条件下积累一段时间样本再训练，避免短期波动导致模型过度拟合。"
 msgstr ""
 
-#: ../../source/complete_user_guide/system_management/models.rst:97
+#: ../../source/complete_user_guide/system_management/models.rst:101
 msgid "训练完成后，当前运行的检测会话不会自动切换到新模型。需在 **管理模型** 中执行 **设为默认** 并重新启动检测会话，新模型方可生效。"
 msgstr ""
 

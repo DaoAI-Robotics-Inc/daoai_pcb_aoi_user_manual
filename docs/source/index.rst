@@ -1,4 +1,4 @@
-DaoAI PCBA AOI 用户手册
+PCBA AOI 用户手册
 ==============================
 
 .. toctree::

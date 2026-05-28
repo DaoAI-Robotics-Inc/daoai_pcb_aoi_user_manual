@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -98,5 +98,21 @@ msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst
 msgid "引脚2D AI检测示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:37
+msgid "**常见问题与提示**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:41
+msgid "**引脚末端误报多**：若元件末端没有红色焊料，关闭 **引脚末端** 子检测。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:42
+msgid "**焊盘检测误报多**：焊盘检测把红色作为有效区域；若元件引脚没有明显焊盘区域，关闭 **焊盘** 子检测。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:43
+msgid "**短引脚定位不准**：使用 **短引脚模式**，整段引脚作为一个检测区域，定位更稳定。"
 msgstr ""
 

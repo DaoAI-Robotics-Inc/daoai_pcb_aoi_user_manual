@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -184,41 +184,45 @@ msgid ""
 "数据。当可用空间低于 25% 时显示黄色警告，低于 10% 时显示红色严重警告并闪烁。点击刷新图标可立即重新查询。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:78
-msgid "**注意事项**"
+#: ../../source/complete_user_guide/home/index.rst:-1
+msgid "磁盘使用情况微件，显示 C: 容量、警示图标与刷新按钮"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:80
-msgid "**急停状态下**：新建检测任务、编辑产品等按钮将被禁用，需先点击\"重置轨道\"恢复正常状态。"
-msgstr ""
-
-#: ../../source/complete_user_guide/home/index.rst:81
-msgid "**编辑信息** 对应 UI 标签为\"编辑信息\"，用于修改产品名称和标签；与 **编辑** 不同，后者进入产品的完整编程页面。"
+msgid "**注意事项**"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:82
+msgid "**急停状态下**：新建检测任务、编辑产品等按钮将被禁用，需先点击\"重置轨道\"恢复正常状态。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:83
+msgid "**编辑信息** 对应 UI 标签为\"编辑信息\"，用于修改产品名称和标签；与 **编辑** 不同，后者进入产品的完整编程页面。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:84
 msgid ""
 "**训练PCBA** 和产品管理区域仅对 **管理员** 与 **编程员** 角色显示；**操作员** "
 "角色只能看到新建检测任务入口和最近检测任务列表。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:83
+#: ../../source/complete_user_guide/home/index.rst:85
 msgid "标签（Tag）在产品行内以小徽章形式显示，可通过\"编辑信息\"对单个产品修改标签，或通过批量操作同时为多个产品添加/移除标签。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:85
+#: ../../source/complete_user_guide/home/index.rst:87
 msgid "**相关页面**"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:87
+#: ../../source/complete_user_guide/home/index.rst:89
 msgid ":ref:`检测与反馈` — 由\"新建检测任务\"进入"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:88
+#: ../../source/complete_user_guide/home/index.rst:90
 msgid ":ref:`创建产品` — 由\"训练PCBA\"进入"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:89
+#: ../../source/complete_user_guide/home/index.rst:91
 msgid ":ref:`查看检测历史（数据分析报告）` — 由\"工作列表\"进入"
 msgstr ""
 

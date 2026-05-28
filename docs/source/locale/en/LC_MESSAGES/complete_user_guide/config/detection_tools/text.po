@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -102,5 +102,27 @@ msgstr ""
 msgid ""
 "**启用旋转（Enable Rotation）/ 自动搜索文本位置（Auto search text "
 "location）**：当文本在框内位置有偏移时，加强搜索以提升识别稳定性。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/text.rst:33
+msgid "**常见问题与提示**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/text.rst:37
+msgid ""
+"**OCR vs OCV 怎么选**：OCR 识别具体字符内容（需要验证字符是什么），OCV "
+"仅验证字符外观与参考是否一致（不识别具体内容）。普通情况下 OCR 更稳定、误报更少；字符模糊或字体特殊时优先用 OCV。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/text.rst:38
+msgid "**OCR 检测框画多大**：建议比文字宽约 **20% 左右** 即可，过大容易识别到框外文字。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/text.rst:39
+msgid "**白底黑字 / 黄底黑字识别失败**：当前部分背景色组合 OCR 模型支持有限，可关闭 OCR、改用 OCV 比对字符外观。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/text.rst:40
+msgid "**手动添加的文本检测框识别不出**：先确认字符方向与 OCR 框内方向一致，必要时启用 **双向检测 / 启用旋转** 选项。"
 msgstr ""
 

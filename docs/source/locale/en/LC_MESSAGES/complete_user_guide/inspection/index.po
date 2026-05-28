@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -293,205 +293,209 @@ msgstr ""
 msgid "复检页面（``/inspection/review``）用于审核检测结果、提交缺陷反馈和创建替代料。页面布局为：左侧不良元件列表、中央图像查看区、右侧反馈与特征错误面板。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:130
+#: ../../source/complete_user_guide/inspection/index.rst:-1
+msgid "复检页面整体视图：左侧 NG 元件列表、中间检测视图与右侧基准视图"
+msgstr ""
+
+#: ../../source/complete_user_guide/inspection/index.rst:132
 msgid "**左侧：不良元件列表（NG Component List）**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:130
+#: ../../source/complete_user_guide/inspection/index.rst:132
 msgid "滚动列表，显示当前检测记录中所有被判为不合格的元件（设计位号）及其错误数量。点击某行选中该元件，图像区随即跳转到该元件的缺陷视图。已标注\"已重新定义ROI\"的行会显示黄色左边框提示。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:133
+#: ../../source/complete_user_guide/inspection/index.rst:135
 msgid "**中央：图像查看区**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:133
+#: ../../source/complete_user_guide/inspection/index.rst:135
 msgid ""
 "上半区显示整板缩略图（基准 + 检测结果叠加），下半区显示所选元件的放大缺陷图、定位框、基准图像。可通过 ``\\`` 键循环切换 "
 "**网格视图（上下平分）** / **聚焦下排** / **聚焦上排** 三种布局。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:136
+#: ../../source/complete_user_guide/inspection/index.rst:138
 msgid "**右侧上方：元件级错误和缺陷反馈**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:136
+#: ../../source/complete_user_guide/inspection/index.rst:138
 msgid ""
 "显示系统配置的所有反馈类别（由 ``systemMetadata.error_type_to_code`` "
 "决定），每张卡片右下角标注对应快捷键（见下方快捷键说明）。点击卡片或按快捷键即可提交元件级反馈。当前系统预测的错误类别高亮显示（红色背景）；已提交过反馈的条目会出现拇指图标。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:139
+#: ../../source/complete_user_guide/inspection/index.rst:141
 msgid "**右侧下方：特征错误（Feature Error）面板**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:139
+#: ../../source/complete_user_guide/inspection/index.rst:141
 msgid "可折叠，显示所选元件各特征（本体、焊料、引脚等）的详细检测结果，并可分别提交特征级反馈、添加模糊匹配或添加替代料参考。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:142
+#: ../../source/complete_user_guide/inspection/index.rst:144
 msgid "**子版信息（Array Info）**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:142
+#: ../../source/complete_user_guide/inspection/index.rst:144
 msgid "拼板产品时显示，列出当前板各子板的状态及元件NG率。使用 ``→`` 键可切换到下一个子板索引。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:146
+#: ../../source/complete_user_guide/inspection/index.rst:148
 msgid "**导航与反馈按钮**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:145
+#: ../../source/complete_user_guide/inspection/index.rst:147
 msgid "**返回实时检测**：回到 ``/inspection/live`` 页面。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:146
+#: ../../source/complete_user_guide/inspection/index.rst:148
 msgid "**返回工作列表**：回到数据分析报告页面。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:154
+#: ../../source/complete_user_guide/inspection/index.rst:156
 msgid "**添加为替代料**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:149
+#: ../../source/complete_user_guide/inspection/index.rst:151
 msgid ""
 "当某元件外观与基准差异较大但属可接受情形（如封装变化、引脚形态变化等），可在右侧面板点击 **添加为替代料** 或按 ``F`` "
 "键。系统提供两种操作方式："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:151
+#: ../../source/complete_user_guide/inspection/index.rst:153
 msgid "**沿用当前元件图像**：使用当前检测图像直接创建替代料。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:152
+#: ../../source/complete_user_guide/inspection/index.rst:154
 msgid "**在视野图上绘制 ROI**：在 FOV 图上重新圈定元件区域后再创建替代料。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:154
+#: ../../source/complete_user_guide/inspection/index.rst:156
 msgid ""
 "创建完成后系统提示是否停止正在运行的检测任务——新建替代料需在模板编辑页重新训练后方能生效。有关替代料的完整说明，请参见 "
 ":doc:`../features/variations`。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:158
+#: ../../source/complete_user_guide/inspection/index.rst:160
 msgid "**标注复检完成**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:157
+#: ../../source/complete_user_guide/inspection/index.rst:159
 msgid "完成反馈后，可将当前检测记录标注为已复检，供后续数据分析使用。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:163
+#: ../../source/complete_user_guide/inspection/index.rst:165
 msgid "复检快捷键"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:165
+#: ../../source/complete_user_guide/inspection/index.rst:167
 msgid "复检页面底部的 **快捷键说明栏** 显示常用快捷键（不含上下文相关快捷键）："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:171
+#: ../../source/complete_user_guide/inspection/index.rst:173
 msgid "按键"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:172
+#: ../../source/complete_user_guide/inspection/index.rst:174
 msgid "功能"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:173
+#: ../../source/complete_user_guide/inspection/index.rst:175
 msgid "``↑`` / ``↓``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:174
+#: ../../source/complete_user_guide/inspection/index.rst:176
 msgid "下一个/上一个不良元件"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:175
+#: ../../source/complete_user_guide/inspection/index.rst:177
 msgid "``←``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:176
+#: ../../source/complete_user_guide/inspection/index.rst:178
 msgid "切换到下一个不良特征/元件视图"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:177
+#: ../../source/complete_user_guide/inspection/index.rst:179
 msgid "``→``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:178
+#: ../../source/complete_user_guide/inspection/index.rst:180
 msgid "切换子版索引"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:179
+#: ../../source/complete_user_guide/inspection/index.rst:181
 msgid "``1``–``9``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:180
+#: ../../source/complete_user_guide/inspection/index.rst:182
 msgid "提供反馈（对应反馈列表第 1–9 项）"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:181
+#: ../../source/complete_user_guide/inspection/index.rst:183
 msgid "``Ctrl`` + ``1``–``9``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:182
+#: ../../source/complete_user_guide/inspection/index.rst:184
 msgid "提供反馈（第 10–18 项）"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:183
+#: ../../source/complete_user_guide/inspection/index.rst:185
 msgid "``Alt`` + ``1``–``9``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:184
+#: ../../source/complete_user_guide/inspection/index.rst:186
 msgid "提供反馈（第 19–27 项）"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:185
+#: ../../source/complete_user_guide/inspection/index.rst:187
 msgid "``Ctrl+Alt`` + ``1``–``9``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:186
+#: ../../source/complete_user_guide/inspection/index.rst:188
 msgid "提供反馈（第 28–36 项）"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:187
+#: ../../source/complete_user_guide/inspection/index.rst:189
 msgid "``M``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:188
+#: ../../source/complete_user_guide/inspection/index.rst:190
 msgid "显示标记图像"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:189
+#: ../../source/complete_user_guide/inspection/index.rst:191
 msgid "``[`` / ``]``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:190
+#: ../../source/complete_user_guide/inspection/index.rst:192
 msgid "展开/收起侧面板"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:191
+#: ../../source/complete_user_guide/inspection/index.rst:193
 msgid "``\\``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:192
+#: ../../source/complete_user_guide/inspection/index.rst:194
 msgid "切换视图布局（网格 / 聚焦下排 / 聚焦上排）"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:193
+#: ../../source/complete_user_guide/inspection/index.rst:195
 msgid "``Esc``"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:194
+#: ../../source/complete_user_guide/inspection/index.rst:196
 msgid "关闭标记窗口"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:197
+#: ../../source/complete_user_guide/inspection/index.rst:199
 msgid ""
 "``F`` 键为上下文快捷键，**不在底部快捷键说明栏中显示**：选中 OCR/文字特征时，在右侧特征面板内按 ``F`` "
 "可添加模糊匹配或替代料，仅当 OCR/文字特征处于选中状态时有效。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:200
+#: ../../source/complete_user_guide/inspection/index.rst:202
 msgid ""
 "反馈快捷键仅识别 ``1``–``9``，不识别 ``0``。对应关系如下：``1``–``9`` 选第 1–9 "
 "项；``Ctrl+1``–``9`` 选第 10–18 项（偏移 +9）；``Alt+1``–``9`` 选第 19–27 项（偏移 "
@@ -499,63 +503,63 @@ msgid ""
 "项。具体对应的反馈类别由系统管理员在产品或系统配置中设定（``error_type_to_code``）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:204
+#: ../../source/complete_user_guide/inspection/index.rst:206
 msgid "查看检测历史（数据分析报告）"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:206
+#: ../../source/complete_user_guide/inspection/index.rst:208
 msgid ""
 "在主页点击 **工作列表** 进入 **数据分析报告** （路由 "
 "``/worklist``）。页面顶部有四个标签页，下方为过滤栏，内容区随选中标签页切换。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:208
+#: ../../source/complete_user_guide/inspection/index.rst:210
 msgid "**四个标签页**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:210
+#: ../../source/complete_user_guide/inspection/index.rst:212
 msgid "**总结**：总览统计指标、NG/OK 环形图及前十不良元件柱状图。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:211
+#: ../../source/complete_user_guide/inspection/index.rst:213
 msgid "**检测结果**：逐条列出每次检测记录，支持进入复检。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:212
+#: ../../source/complete_user_guide/inspection/index.rst:214
 msgid "**不良元件**：按元件维度汇总不良结果，便于定位高发问题元件。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:213
+#: ../../source/complete_user_guide/inspection/index.rst:215
 msgid "**误判元件**：按元件维度汇总误报结果，用于优化模型减少误报。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:215
+#: ../../source/complete_user_guide/inspection/index.rst:217
 msgid "**过滤栏**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:217
+#: ../../source/complete_user_guide/inspection/index.rst:219
 msgid "过滤栏位于标签页下方，所有标签页共用以下过滤项："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:219
+#: ../../source/complete_user_guide/inspection/index.rst:221
 msgid "**按基准产品过滤**：下拉选择指定产品（仅限已训练的基准产品），不选则显示全部产品数据。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:220
+#: ../../source/complete_user_guide/inspection/index.rst:222
 msgid ""
 "**时间范围**：日期时间区间选择器（**从** / **到**）。可直接输入或点击以下快捷按钮自动填充：**今天** / **昨天** / "
 "**本周** / **本月** / **今年**。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:221
+#: ../../source/complete_user_guide/inspection/index.rst:223
 msgid "**按序列号搜索**：按板件序列号（S/N）过滤。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:222
+#: ../../source/complete_user_guide/inspection/index.rst:224
 msgid "**最大显示数量**：限制列表最多显示的条目数（默认 1000），输入后点击应用生效（**总结** 标签页无此项）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:223
+#: ../../source/complete_user_guide/inspection/index.rst:225
 msgid "在 **不良元件** 和 **误判元件** 标签页下，过滤栏额外显示 **按位号/料号搜索** 输入框，可按元件位号或料号过滤。"
 msgstr ""
 
@@ -563,65 +567,65 @@ msgstr ""
 msgid "数据分析报告-总结"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:229
+#: ../../source/complete_user_guide/inspection/index.rst:231
 msgid "**总结 标签页**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:231
+#: ../../source/complete_user_guide/inspection/index.rst:233
 msgid "**总结** 标签页由三个并列面板组成："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:243
+#: ../../source/complete_user_guide/inspection/index.rst:245
 msgid "**总览（Overview）面板**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:234
+#: ../../source/complete_user_guide/inspection/index.rst:236
 msgid "显示所选时间范围内的整体统计数据，分为两个区域："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:236
+#: ../../source/complete_user_guide/inspection/index.rst:238
 msgid "**PCBA** （整板维度）：检测总数、良好 **良好** 板数及占比、不良 **不良** 板数及占比。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:237
+#: ../../source/complete_user_guide/inspection/index.rst:239
 msgid "**报警元件** （元件维度）：报警元件总数 （``defective_component_count``），以及："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:239
+#: ../../source/complete_user_guide/inspection/index.rst:241
 msgid "**不良**：经反馈确认为不良的元件数及其 PPM 值；"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:240
+#: ../../source/complete_user_guide/inspection/index.rst:242
 msgid "**误判**：被误报（系统预测不良但反馈为良好）的元件数及其 PPM 值；"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:241
+#: ../../source/complete_user_guide/inspection/index.rst:243
 msgid "**DPU**：每板平均缺陷数（Defects Per Unit）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:243
+#: ../../source/complete_user_guide/inspection/index.rst:245
 msgid "面板底部显示当前查询的时间范围（**从** … **到** …）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:246
+#: ../../source/complete_user_guide/inspection/index.rst:248
 msgid "**不良/良品比 面板**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:246
+#: ../../source/complete_user_guide/inspection/index.rst:248
 msgid "以环形图（Donut Chart）直观展示合格（**合格**）与不良（**不良**）板件的数量与百分比；图例显示绿色（合格）和红色（不良）色块。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:249
+#: ../../source/complete_user_guide/inspection/index.rst:251
 msgid "**前十不良元件 面板**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:249
+#: ../../source/complete_user_guide/inspection/index.rst:251
 msgid ""
 "当选定了具体基准产品时，展示该产品下报警次数最多的前 10 个元件，以横向柱状图呈现（X 轴为元件数量，Y "
 "轴为元件位号）。未选择基准产品时显示提示文字，要求先选择产品。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:251
+#: ../../source/complete_user_guide/inspection/index.rst:253
 msgid "**检测结果 标签页**"
 msgstr ""
 
@@ -629,51 +633,51 @@ msgstr ""
 msgid "检测结果列表"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:257
+#: ../../source/complete_user_guide/inspection/index.rst:259
 msgid "**检测结果** 标签页以列表形式列出每一条检测记录，各列含义如下："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:259
+#: ../../source/complete_user_guide/inspection/index.rst:261
 msgid "**PCBA名称**：本次检测所用基准产品名称。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:260
+#: ../../source/complete_user_guide/inspection/index.rst:262
 msgid "**序列号（S/N）**：板件序列号（无序列号时为空）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:261
+#: ../../source/complete_user_guide/inspection/index.rst:263
 msgid "**总元件数量**：本次检测中参与检测的元件总数。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:262
+#: ../../source/complete_user_guide/inspection/index.rst:264
 msgid "**不良元件数量**：经反馈确认为不良的元件数。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:263
+#: ../../source/complete_user_guide/inspection/index.rst:265
 msgid "**报警元件数量**：系统报警（含待复检）的元件总数。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:264
+#: ../../source/complete_user_guide/inspection/index.rst:266
 msgid "**检测开始时间** / **检测结束时间**：本次检测的开始和结束时间戳。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:265
+#: ../../source/complete_user_guide/inspection/index.rst:267
 msgid "**操作**：每行提供以下操作按钮："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:267
+#: ../../source/complete_user_guide/inspection/index.rst:269
 msgid "**查看**：跳转至复检页面，在左侧查看该次检测的不良元件列表，在中部与右侧查看整板缩略图、缺陷放大图、定位框、缺陷类型与判定依据，并可直接提交反馈。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:268
+#: ../../source/complete_user_guide/inspection/index.rst:270
 msgid "**导出报告**：在新标签页打开该条记录的详细报告页面。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:269
+#: ../../source/complete_user_guide/inspection/index.rst:271
 msgid "**删除记录**：删除该条检测记录。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:271
+#: ../../source/complete_user_guide/inspection/index.rst:273
 msgid "列表顶部提供 **导出 CSV** 和 **删除选中记录** 操作，支持多选后批量删除。"
 msgstr ""
 
@@ -681,65 +685,65 @@ msgstr ""
 msgid "复检详情与反馈"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:277
+#: ../../source/complete_user_guide/inspection/index.rst:279
 msgid "在复检详情中，左侧列出该次检测的不良元件，中部与右侧展示整板及缺陷的放大图、定位框、缺陷类型与判定依据，并可直接反馈；反馈结果将回写到数据集。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:279
+#: ../../source/complete_user_guide/inspection/index.rst:281
 msgid "**不良元件 / 误判元件 标签页**"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:281
+#: ../../source/complete_user_guide/inspection/index.rst:283
 msgid "**不良元件** 和 **误判元件** 标签页结构相同，均以列表形式展示元件级别的汇总结果，各列含义如下："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:283
+#: ../../source/complete_user_guide/inspection/index.rst:285
 msgid "**图片**：元件的检测截图缩略图。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:284
+#: ../../source/complete_user_guide/inspection/index.rst:286
 msgid "**位号**：元件设计位号（Designator）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:285
+#: ../../source/complete_user_guide/inspection/index.rst:287
 msgid "**料号（Part No.）**：元件料号（未设置时显示 N/A）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:286
+#: ../../source/complete_user_guide/inspection/index.rst:288
 msgid "**拼版序列号**：子板序列号（非拼板产品显示 N/A）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:287
+#: ../../source/complete_user_guide/inspection/index.rst:289
 msgid "**主序列号**：整板序列号（无时显示 N/A）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:288
+#: ../../source/complete_user_guide/inspection/index.rst:290
 msgid "**拼版索引**：元件所属子板的序号（非拼板产品为空）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:289
+#: ../../source/complete_user_guide/inspection/index.rst:291
 msgid "**状态**：**良品** （系统判定通过）或 **不良** （系统判定不良）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:290
+#: ../../source/complete_user_guide/inspection/index.rst:292
 msgid "**不良类型**：经反馈确认的不良类型（未提供反馈时显示 N/A）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:291
+#: ../../source/complete_user_guide/inspection/index.rst:293
 msgid "**预测错误**：系统预测的错误类型（无预测时显示 N/A）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:293
+#: ../../source/complete_user_guide/inspection/index.rst:295
 msgid "列表顶部显示元件总数并提供 **导出 CSV** 按钮。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:295
+#: ../../source/complete_user_guide/inspection/index.rst:297
 msgid ""
 "两个标签页的区别：**不良元件** 显示系统预测不良且反馈确认为不良的元件；**误判元件** "
 "显示系统预测不良但反馈标记为良品（即误报）的元件，用于分析误报来源。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:298
+#: ../../source/complete_user_guide/inspection/index.rst:300
 msgid ""
 "**子板良率（FPY）与坏板标记**：对于拼板产品，良率可在 **整板** 与 **子板** "
 "口径间切换，按实际检测的子板数统计；非拼板产品的子板口径显示为 N/A。被标记为 **坏板标记** 的元件用于驱动子板好 / 坏判定，但 "
@@ -747,23 +751,23 @@ msgid ""
 ":ref:`检测设置（子板判废逻辑）` 中配置。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:302
+#: ../../source/complete_user_guide/inspection/index.rst:304
 msgid "反馈与模型迭代"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:304
+#: ../../source/complete_user_guide/inspection/index.rst:306
 msgid "提交的反馈会加入到产品的数据集中。推荐的迭代流程："
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:306
+#: ../../source/complete_user_guide/inspection/index.rst:308
 msgid "进行一批次的检测，在工作列表里查看并提供反馈，反馈后的数据可以加到数据集中。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:308
+#: ../../source/complete_user_guide/inspection/index.rst:310
 msgid "回到产品编程页面，执行训练来更新模型（训练通常耗时约 1 分钟，视硬件而定）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/inspection/index.rst:310
+#: ../../source/complete_user_guide/inspection/index.rst:312
 msgid "执行\"评估全部\"以检查各元件状态并针对仍为不合格的项微调参数。参考 :ref:`检测参数` 章节以了解具体的调参方法。"
 msgstr ""
 

@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -182,6 +182,26 @@ msgstr ""
 msgid ""
 "替代料（Variation）面板在元件为替代料时显示，用于管理替代料的料号/封装号重命名及批量复制操作。详见 "
 ":doc:`../features/variations` 页面，此处不重复说明。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/component_settings.rst:71
+msgid "**常见问题与提示**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/component_settings.rst:75
+msgid "**元件对齐 / 定位问题：**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/component_settings.rst:77
+msgid "**小料元件定位不准 / 误报多**：先确保第一块拼板的本体框对齐，再点击 **自动对齐元件**，其他拼板会自动跟随对齐。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/component_settings.rst:78
+msgid "**大料居中后偏斜**：可关闭该元件的 **AI 对齐**；将 **允许偏移距离** 调小一些，避免较大偏移时定位过头。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/component_settings.rst:79
+msgid "**整体元件偏移、焊锡检测误报**：确认产品已启用 **拼板对齐** 与 **元件对齐**；同样可将允许偏移距离调小。"
 msgstr ""
 
 #~ msgid "在模板编辑器的元件视图中，选中目标元件后，可在右侧“模板”栏查看并编辑其全部属性参数。"

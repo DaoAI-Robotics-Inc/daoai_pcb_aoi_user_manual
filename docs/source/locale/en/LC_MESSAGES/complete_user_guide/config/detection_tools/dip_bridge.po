@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -68,5 +68,13 @@ msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:19
 msgid "**启用可视化（Enable Visualization）**。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:22
+msgid "**常见问题与提示**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:26
+msgid "**DIP 桥接敏感度怎么调**：与普通桥接相同 —— **灵敏度** 小时只抽蓝色，大时包含偏红像素。"
 msgstr ""
 

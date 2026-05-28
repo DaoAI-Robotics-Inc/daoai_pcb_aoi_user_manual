@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -178,55 +178,59 @@ msgstr ""
 msgid "点击元件列表上方的 **从库中添加** 按钮，打开 **查找模板** 对话框。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:86
-msgid "对话框左侧为 **元件库** 导航栏，包含两个折叠分区："
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:-1
+msgid "查找模板对话框：元件库（公共 / 私有）面板、模板列表与右侧元件信息预览"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:88
+msgid "对话框左侧为 **元件库** 导航栏，包含两个折叠分区："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:90
 msgid "**公共**：系统内置的封装模板，按类别浏览或搜索。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:89
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:91
 msgid "**私有**：用户自行保存的模板，按封装编号列出。可通过 **私有库导出** 和 **导入私有库** 按钮备份或迁移私有库。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:91
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:93
 msgid "中间区域为模板搜索结果列表，列出匹配的模板条目，显示以下列："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:93
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:95
 msgid "**封装**：模板的封装编号。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:94
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:96
 msgid "**料号**：模板的料号。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:95
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:97
 msgid "**创建时间**：模板创建时间。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:96
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:98
 msgid "操作列：私有库模板可 **删除**；公共模板不可删除。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:98
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:100
 msgid "点击列表中某行可在右侧预览区查看 **元件信息**，包括封装、料号、描述、元件宽度（mm）和元件长度（mm），同时显示该模板的图形预览。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:100
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:102
 msgid "确认后点击 **使用此模板**，将模板应用到当前选中位置的元件。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:103
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:105
 msgid "保存到私有库"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:105
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:107
 msgid "在模板编辑器中完成元件的封装、料号配置后，可将其保存至私有库以供后续产品复用："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:107
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:109
 msgid ""
 "在右侧元件属性面板中，找到 **保存到私有库** "
 "按钮并点击，系统将当前元件的封装定义（包括检测区域及参数）保存为私有模板，下次可通过”从库中添加”检索并应用。"

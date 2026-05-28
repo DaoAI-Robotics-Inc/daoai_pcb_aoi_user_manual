@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -102,5 +102,72 @@ msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst
 msgid "颜色范围二值化与比例统计"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:41
+msgid "**三角形抽色（HSV 三角法）**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:43
+msgid ""
+"颜色范围支持 **三角形抽色** 配置：在 HSV "
+"颜色空间中，用一个三角形圈出目标颜色簇。三角形由三个顶点定义，分别对应中心色、起始色与结束色，比传统的\"矩形\" HSV "
+"范围更紧凑、误抽其他颜色更少。可点击 HSV 颜色块拖动顶点；也可在画布上 **按住 Ctrl 并点击像素** 直接采集目标颜色作为三角形顶点。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:45
+msgid "**多范围间的逻辑关系**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:47
+msgid "可同时配置多个颜色范围（例如：蓝色焊点 + 红色助焊剂）。系统对每个范围分别做二值化统计，最终判定时 **取所有范围的并集**："
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:49
+msgid "任一颜色范围匹配的像素都会被纳入\"焊锡有效像素\"统计。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:50
+msgid "颜色范围之间是 **OR** 关系，不会因为某一范围阈值过严而漏判其他颜色覆盖区域。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:51
+msgid "各范围的统计比例可在右侧参数面板中独立查看。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:53
+msgid "如果不需要某个范围，可将其 *阈值* 调至 0，或在颜色范围列表中删除该范围。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:55
+msgid "**画布快捷键 — 提取颜色**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:57
+msgid "**Ctrl + 鼠标左键**：在画布上单击像素，把该像素颜色作为新的三角形抽色顶点。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:58
+msgid "**Ctrl + 拖动**：框选一块小区域，把区域内的平均颜色作为顶点。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:59
+msgid "切到 **抽色二值化预览** 视图（参数面板顶部 toggle），可实时查看当前颜色范围抽到的像素分布，便于调参。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:62
+msgid "**常见问题与提示**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:66
+msgid ""
+"**焊锡阈值参数被 AI 更新拉飞**：避免把分数远超阈值的焊锡反馈为\"无错误\"——这会让 AI 学到错误的阈值。可在 **系统设置 → "
+"模型更新器** 关闭 **AI 更新覆盖**，关闭后 AI 更新最多调整到设定的比例上下限，不会大幅突破。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:67
+msgid ""
+"**参数更新计算不准确**：检查训练集中是否有打分极端的反馈图片，移除明显错误或极端的反馈后重新训练。也可关闭 **更新颜色范围 / "
+"更新颜色比例**，关闭后编程页面\"参数更新\"按钮将不会改动对应参数。"
 msgstr ""
 

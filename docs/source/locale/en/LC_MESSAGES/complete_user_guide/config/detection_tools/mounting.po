@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -76,7 +76,7 @@ msgstr ""
 msgid "本体AI分数分布示例2"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:34
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:35
 msgid ""
 "**损件检测（Subtle Defect Check）**：针对本体的破损、缺口等细微异常；检测前先将元件图像与标准样本自动对齐，再以 AI "
 "异常分数判定，避免位置偏移导致误判。"
@@ -94,31 +94,31 @@ msgstr ""
 msgid "本体对齐后检测2"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:46
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:49
 msgid "**缺件检测（Missing Check）**：判定该位置是否缺少元件。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:47
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:50
 msgid ""
 "**增强缺件检测（Enhanced Missing "
 "Check）**：利用对位结果在元件疑似缺失时提前告警；属实验性功能，当对位误判导致误报时可关闭。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:49
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:52
 msgid "**极性检测（AI，对齐后）**"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:51
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:54
 msgid ""
 "**极性检测（Polarity Check）**：判断元件极性方向是否正确。检测前先对齐，并在 **极性 ROI** "
 "区域内学习与判定极性特征，以识别极性反转。判定方式同样基于 AI 异常分数。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:52
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:55
 msgid "**极性检测灵敏度（Polarity Sensitivity）**：调节极性判定的灵敏度；灵敏度越高越容易报出极性异常。"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:53
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:56
 msgid ""
 "**极性 ROI（Polarity ROI）**：点击 *设置 ROI* "
 "或在显示窗口中直接拖拽，框选用于极性判定的局部区域（通常为极性标识所在处）。"
@@ -136,15 +136,23 @@ msgstr ""
 msgid "极性检测2"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:65
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:70
 msgid "**其它**"
 msgstr ""
 
-#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:67
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:72
 msgid "**启用遮罩（Enable Mask）**：对含有不固定字符 / 图案的区域进行遮蔽，避免其影响 AI 检测。"
 msgstr ""
 
 #: ../../source/complete_user_guide/config/detection_tools/mounting.rst
 msgid "遮罩"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:79
+msgid "**常见问题与提示**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/mounting.rst:83
+msgid "**LED 灯极性识别不出**：手动开启 **极性检测** 子项；如频繁失败，可联系下一次模型迭代时强化 LED 极性样本。"
 msgstr ""
 

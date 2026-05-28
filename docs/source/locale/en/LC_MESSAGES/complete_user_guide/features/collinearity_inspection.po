@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -43,220 +43,224 @@ msgstr ""
 msgid "在示教页面选择产品，切换至 **元件** 标签页，在左侧标签栏点击 **共线性检测** 标签。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:14
-msgid "**操作流程**"
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:-1
+msgid "共线性检测界面"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/collinearity_inspection.rst:16
-msgid "**第一步：查看和管理现有组**"
+msgid "**操作流程**"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/collinearity_inspection.rst:18
+msgid "**第一步：查看和管理现有组**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:20
 msgid ""
 "左侧面板顶部显示 **共线性组** 列表，每行呈现组名、网格规格（列数 × "
 "行数）与成员数量。单击某行可高亮该组在右侧视图中的成员；再次单击可取消高亮。每行右侧提供以下操作按钮："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:20
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:22
 msgid "**定位** — 图标为瞄准器，工具提示\"定位\"。将右侧视图自动缩放并居中至该组所有成员区域。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:21
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:23
 msgid ""
 "**运行共线性拟合** — "
 "图标为节点连线，工具提示\"运行共线性拟合\"。对该组执行共线性拟合计算，并在右侧视图上叠加拟合点阵、预期中心与残差标注。拟合结果保存于后端，检测时以此为基准评判元件位置。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:22
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:24
 msgid "**编辑共线性组** — 图标为铅笔，工具提示\"编辑共线性组\"。打开编辑对话框，可修改组名称及各项检测参数。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:23
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:25
 msgid "**移除** — 图标为垃圾桶（红色），工具提示\"移除\"。弹出确认对话框，确认后永久删除该组及其拟合数据。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:25
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:27
 msgid "**第二步：新建共线性组**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:27
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:29
 msgid "**新建组** 区域位于左侧面板中部。新建操作分为以下步骤："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:29
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:31
 msgid "**选择绘制工具** — 在 **矩形** 和 **多边形** 两个按钮中选择一种框选方式："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:31
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:33
 msgid "**矩形**：在板图上拖动鼠标绘制矩形选框。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:32
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:34
 msgid "**多边形**：逐点单击定义多边形顶点；右键撤销上一个顶点；按 Enter 键完成绘制。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:34
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:36
 msgid ""
 "**绘制选择区域** — 单击 **绘制选择区域** "
 "按钮，在右侧视图上按所选工具框出目标元件区域。框选完成后，被捕获到的贴装元件将进入精调状态，其他元件自动隐藏。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:38
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:40
 msgid "仅拥有至少一个贴装特征（``_mount`` 类型）的元件才会被纳入候选范围；无贴装特征的元件不会出现在选区中。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:40
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:42
 msgid ""
 "**精调选区** — "
 "进入精调模式后，左侧面板提示\"左键点击任意矩形可将其从选区移除。完成后点击确认。\"在右侧视图上单击某个元件矩形框即可将其移除，并在左侧 "
 "**已选元件** 列表中实时更新。若所选元件数少于 3 个，则显示红色提示：\"共线性组至少需要 3 个元件。\""
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:42
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:44
 msgid "**确认选区** — 选区包含至少 3 个元件后，单击 **确认** 按钮，弹出 **创建共线性组** 对话框。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:44
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:46
 msgid "**第三步：填写组信息（创建或编辑）**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:46
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:48
 msgid "对话框顶部显示当前已选元件数量（只读）。需填写以下字段："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:48
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:50
 msgid "**组名称** — 必填，最多 64 个字符，用于在列表中标识该组。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:49
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:51
 msgid "**网格宽度（列数）** — 整数，范围 1–1024，表示元件网格的列数。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:50
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:52
 msgid "**网格长度（行数）** — 整数，范围 1–1024，表示元件网格的行数。网格宽度 × 网格长度必须等于已选元件总数，否则无法保存。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:51
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:53
 msgid "**最大列偏差（毫米）** — 浮点数，步长 0.1，默认值 0.5 mm，表示检测时允许的最大列方向偏差。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:52
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:54
 msgid "**最大行偏差（毫米）** — 浮点数，步长 0.1，默认值 0.5 mm，表示检测时允许的最大行方向偏差。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:53
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:55
 msgid "**最大角度偏差（度）** — 浮点数，步长 0.1，范围 0–360，默认值 5°，表示检测时允许的最大旋转偏差。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:54
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:56
 msgid ""
 "**拟合所需最小成员数** — 整数，范围 2–1024，默认值 "
 "3，表示执行拟合计算时至少需要的可对齐成员数量。当实际可对齐成员数低于此阈值时，检测结果将显示为无法判定。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:56
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:58
 msgid "填写完成后单击 **保存** 创建或更新该组；单击 **取消** 放弃操作。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:58
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:60
 msgid "**第四步：运行拟合**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:60
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:62
 msgid "组创建完成后，在列表行上单击 **运行共线性拟合** 按钮，系统将向后端提交拟合请求。拟合成功后，右侧视图叠加以下信息（参见图例）："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:62
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:64
 msgid "**拟合点阵网格** — 蓝色虚线，根据网格宽度 × 行数计算出的理论排列。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:63
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:65
 msgid "**预期中心** — 绿色圆点，拟合模型对每个元件的预期位置。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:64
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:66
 msgid "**残差** — 红色线段，实测中心与预期中心之间的偏差向量。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:65
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:67
 msgid "**残差大小** — 黄色数字标注，以毫米为单位显示的残差大小。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:67
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:69
 msgid "**第五步：查看图例**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:69
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:71
 msgid "左侧面板底部的 **图例** 区域始终可见，说明右侧视图中各颜色与形状的含义："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:71
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:73
 msgid "蓝色实线矩形 — **可选元件**\\ （未加入任何组的候选元件）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:72
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:74
 msgid "黄色虚线矩形 — **贴装特征**\\ （元件的 ``_mount`` ROI）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:73
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:75
 msgid "绿色粗线矩形（半透明绿色填充）— **当前组成员**\\ （当前选中组的元件）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:74
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:76
 msgid "蓝色虚线 — **拟合点阵网格**。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:75
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:77
 msgid "绿色实心圆点 — **预期中心（拟合预测）**。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:76
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:78
 msgid "红色线段 — **残差（实测 → 预期）**。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:77
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:79
 msgid "黄色数字标注 — **残差大小（mm）**。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:79
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:81
 msgid "**注意事项**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:83
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:85
 msgid ""
 "组创建后必须单独执行 **运行共线性拟合** 操作，拟合结果才会写入后端。未完成拟合的组在检测时结果显示为\"无法判定：组尚未拟合 — "
 "请在示教页运行拟合\"。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:84
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:86
 msgid "**网格宽度（列数）× 网格长度（行数）** 必须精确等于所选元件数，否则保存时提示\"网格宽度×高度必须等于所选元件数量\"。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:85
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:87
 msgid "**拟合所需最小成员数** 默认为 3。若运行拟合时可对齐的成员数不足，则检测结果显示为\"无法判定：可对齐的成员数不足\"。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:86
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:88
 msgid "修改现有组的网格参数或偏差阈值后，需重新运行 **运行共线性拟合** 才能使更新后的判定阈值生效。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:87
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:89
 msgid "共线性检测仅适用于 2D 贴装检测场景，不涉及 3D 或在线多传送带模式。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:88
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:90
 msgid "正在查看某个分组（已高亮）时，**绘制选择区域** 按钮不可用；需先在列表中点击该组以取消高亮，方可开始创建新组。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:90
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:92
 msgid "**相关页面**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:92
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:94
 msgid ":ref:`手动编程与编辑工具`"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:93
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:95
 msgid ":ref:`料号封装和分组`"
 msgstr ""
 
