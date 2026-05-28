@@ -124,7 +124,9 @@
 
 复检页面（``/inspection/review``）用于审核检测结果、提交缺陷反馈和创建替代料。页面布局为：左侧不良元件列表、中央图像查看区、右侧反馈与特征错误面板。
 
-.. screenshot-todo: Review page overview screenshot
+.. image:: images/review_page_overview.png
+   :scale: 80%
+   :alt: 复检页面整体视图：左侧 NG 元件列表、中间检测视图与右侧基准视图
 
 **左侧：不良元件列表（NG Component List）**
    滚动列表，显示当前检测记录中所有被判为不合格的元件（设计位号）及其错误数量。点击某行选中该元件，图像区随即跳转到该元件的缺陷视图。已标注"已重新定义ROI"的行会显示黄色左边框提示。

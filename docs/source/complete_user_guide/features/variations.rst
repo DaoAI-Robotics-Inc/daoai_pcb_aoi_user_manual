@@ -7,7 +7,9 @@
 
 替代料与主元件共享同一元件位置（designator），在模板编辑器中以独立行显示，可单独查看其特征。创建替代料后需重新训练模型，才能在后续检测任务中生效。
 
-.. screenshot-todo: images/variation_overview.png — 替代料元件概览，显示复检页面 NG 列表中元件行及"..."下拉菜单
+.. image:: images/variation_overview.png
+   :scale: 70%
+   :alt: 复检页面左侧 NG 列表区域，列出已检测的元件
 
 **如何进入**
 
@@ -21,7 +23,9 @@
 2. 点击元件标题行右上角的 **...** 按钮，展开下拉菜单。
 3. 点击 **设置为替代料**，打开替代料选择器对话框。
 
-.. screenshot-todo: images/variation_entry_review.png — 复检页面元件标题行的"..."下拉菜单，高亮"设置为替代料"选项
+.. image:: images/variation_entry_review.png
+   :scale: 80%
+   :alt: 复检页面元件标题行展开「...」下拉菜单，显示「设置为替代料」选项
 
 **入口二：模板编辑器（查看与管理替代料）**
 
@@ -39,7 +43,9 @@
 
 对话框说明：请选择操作方式：在视野图像上重新定义元件 ROI，或使用当前元件图像作为替代料参考。
 
-.. screenshot-todo: images/variation_chooser_pick.png — 替代料选择器对话框，显示两个选项按钮
+.. image:: images/variation_chooser_pick.png
+   :scale: 80%
+   :alt: 替代料选择器：「沿用当前元件图像」与「在视野图上绘制 ROI」两个操作选项
 
 **第二步：选择创建方式**
 
@@ -65,7 +71,9 @@
 
 选择范围后，点击 **沿用当前元件图像** 按钮提交。替代料创建成功后，系统会弹出提示，告知需前往模板编辑页重新训练。
 
-.. screenshot-todo: images/variation_chooser_keep_current.png — 替代料选择器第二步，显示批量同步单选按钮组
+.. image:: images/variation_chooser_keep_current.png
+   :scale: 80%
+   :alt: 替代料选择器第二步：批量同步单选按钮组（不批量生成 / 按 Part No 同步 / 按 Package No 同步）
 
 **第三步B：在视野图上绘制 ROI — 更新基准元件形状**
 
@@ -77,7 +85,9 @@
 2. 如无需调整大小，可直接确认以沿用原始形状。
 3. 点击 **更新基准元件形状** 按钮提交。
 
-.. screenshot-todo: images/variation_draw_roi.png — 绘制 ROI 对话框，显示视野图像及可调整的元件矩形框
+.. image:: images/variation_draw_roi.png
+   :scale: 80%
+   :alt: 绘制 ROI 对话框：视野图像、可调整的元件矩形框及红色虚线基准轮廓
 
 提交后，系统更新基准元件形状，并自动重载当前检测会话的产品定义。此时页面提示：基准元件形状已更新，请重新检测该板，再选择"沿用当前元件图像"以创建替代料。
 
