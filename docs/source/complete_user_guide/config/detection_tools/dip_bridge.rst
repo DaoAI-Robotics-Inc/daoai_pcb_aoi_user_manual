@@ -17,3 +17,10 @@ DIP 桥接检测（DIP Bridge）
 - **桥接宽度 (%)（Bridge Width）**：桥接检测带宽度。
 - **焊点数量（Solder Count）/ 焊点宽度 (mm)（Solder Width）**：焊点子框划分。
 - **启用可视化（Enable Visualization）**。
+
+
+**常见问题与提示**
+
+.. tip::
+
+   - **DIP 桥接敏感度怎么调**：与普通桥接相同 —— **灵敏度** 小时只抽蓝色，大时包含偏红像素。
