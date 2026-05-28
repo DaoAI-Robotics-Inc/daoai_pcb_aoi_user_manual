@@ -53,3 +53,4 @@ Thumbs.db
 
 # Sphinx
 docs/_build/
+.screenshot_run/

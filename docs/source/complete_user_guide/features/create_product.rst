@@ -9,7 +9,9 @@
 
 在主页点击 **训练PCBA** 按钮，进入 **自动编程向导**。向导将自动停在第一步 **基本信息**。
 
-.. screenshot-todo: images/create_product_entry.png — 主页「训练PCBA」按钮示意
+.. image:: images/create_product_entry.png
+   :scale: 80%
+   :alt: 主页「训练PCBA」入口卡片
 
 .. note::
     自动编程向导需要一次完成。如果在中途退出，则无法重新回到之前的步骤。如果不小心中途退出，可以删除当前未完成的产品，重新创建一个新的产品。
@@ -66,7 +68,9 @@
 
 完成 **基本信息** 步骤后，点击 **下一步** 继续以下步骤。
 
-.. screenshot-todo: images/create_product_basic_info.png — 基本信息步骤全貌（产品名称、标签、检测类型、参数、健康检查）
+.. image:: images/create_product_basic_info.png
+   :scale: 80%
+   :alt: 自动编程向导基本信息步骤：产品名称、标签、检测类型、自动编程参数、健康检查
 
 **第二步：放置 PCB 与锁定传送带**
 

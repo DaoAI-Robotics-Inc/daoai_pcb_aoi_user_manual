@@ -9,7 +9,9 @@
 
 在示教页面选择产品，切换至 **元件** 标签页，在左侧标签栏点击 **共线性检测** 标签。
 
-.. screenshot-todo: images/collinearity.png — 共线性检测界面
+.. image:: images/collinearity.png
+   :scale: 70%
+   :alt: 共线性检测界面
 
 **操作流程**
 

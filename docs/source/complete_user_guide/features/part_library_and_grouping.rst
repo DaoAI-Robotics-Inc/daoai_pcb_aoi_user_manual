@@ -81,7 +81,9 @@
 
 点击元件列表上方的 **从库中添加** 按钮，打开 **查找模板** 对话框。
 
-.. screenshot-todo: AddFromLibrary 对话框截图（含左侧元件库面板、模板列表、右侧元件信息预览）
+.. image:: images/add_from_library_dialog.png
+   :scale: 80%
+   :alt: 查找模板对话框：元件库（公共 / 私有）面板、模板列表与右侧元件信息预览
 
 对话框左侧为 **元件库** 导航栏，包含两个折叠分区：
 

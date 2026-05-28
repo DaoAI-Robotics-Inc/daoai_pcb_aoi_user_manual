@@ -27,7 +27,9 @@
 
 进入产品编程页面 → **元件** 标签页，即可在元件列表中查看已存在的替代料。选中某替代料行后，右侧 **替代料** 折叠面板将显示其料号和封装信息，并提供重命名与批量复制功能。
 
-.. screenshot-todo: images/variation_template_editor.png — 模板编辑器元件列表，显示替代料行及右侧"替代料"面板
+.. image:: images/variation_template_editor.png
+   :scale: 70%
+   :alt: 模板编辑器元件列表与右侧替代料面板
 
 **操作流程**
 
