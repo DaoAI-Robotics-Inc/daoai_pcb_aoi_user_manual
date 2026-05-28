@@ -6,14 +6,6 @@ PCBA AOI 软件是一款面向电子制造的智能光学检测系统。
 与传统需要频繁手动调参的方式不同，系统可快速适配生产现场，在提升效率的同时确保精度与稳定性。
 依托自适应算法与反馈机制，软件既能识别常见与细微缺陷，也能在生产过程中持续学习，提升良率并降低运维成本。
 
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 0.25%; height: 0; overflow: hidden; max-width: 80%; height: auto;">
-        <video width="80%" height="auto" controls>
-            <source src="http://docs.welinkirt.com/static/videos/pcba_aoi_quick_intro.mp4" type="video/mp4">
-        </video>
-    </div>
-
 本章节演示如何使用 AOI 系统快速完成一块 PCB 的建模、检测与反馈流程。
 
 启动软件
