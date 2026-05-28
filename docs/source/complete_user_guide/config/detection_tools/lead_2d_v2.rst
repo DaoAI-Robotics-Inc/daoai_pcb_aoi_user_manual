@@ -75,6 +75,7 @@ IC 引脚检测 2D v2（Lead 2D v2，基于颜色比例）
    .. image:: ../images/lead2d_v2_pad.png
       :scale: 100%
       :alt: V2焊盘参数
+
    .. image:: ../images/lead2d_v2_tip.png
       :scale: 80%
       :alt: V2 Tip参数

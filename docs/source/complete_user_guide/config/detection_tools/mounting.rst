@@ -27,6 +27,7 @@
    .. image:: ../images/tool_body_ai.png
       :scale: 60%
       :alt: 本体AI分数分布示例
+
    .. image:: ../images/tool_body_ai2.png
       :scale: 70%
       :alt: 本体AI分数分布示例2
@@ -36,9 +37,11 @@
    .. image:: ../images/tool_body_align.png
       :scale: 120%
       :alt: 损件检测
+
    .. image:: ../images/tool_body_align_inference.png
       :scale: 60%
       :alt: 本体对齐后检测
+
    .. image:: ../images/tool_body_align_inference2.png
       :scale: 80%
       :alt: 本体对齐后检测2
@@ -55,9 +58,11 @@
    .. image:: ../images/tool_body_polarity.png
       :scale: 50%
       :alt: 极性检测框
+
    .. image:: ../images/tool_body_polarity_inference.png
       :scale: 60%
       :alt: 极性检测
+
    .. image:: ../images/tool_body_polarity_inference2.png
       :scale: 70%
       :alt: 极性检测2
