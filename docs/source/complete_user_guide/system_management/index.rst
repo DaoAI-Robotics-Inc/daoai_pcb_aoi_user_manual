@@ -300,9 +300,9 @@
 
    * - 参数（界面标签）
      - 说明
-   * - 允许旋转角度（allowed_rotation_degree）
+   * - 检测允许旋转 (°)（allowed_rotation_degree）
      - 元件允许的最大旋转偏差（度，0–360）。
-   * - 允许位移（mm）（allowed_shift_mm）
+   * - 检测允许偏移 (mm)（allowed_shift_mm）
      - 元件允许的最大位置偏移（毫米）。
    * - 检测时是否拍摄整板
      - 启用后检测时将拍摄完整板面而非仅分区拍摄。
