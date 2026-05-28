@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2024 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:2
+msgid "桥接检测（Bridge）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:4
+msgid "**此页面的用途**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:6
+msgid "独立检测相邻引脚 / 焊点之间的连锡（短路）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:8
+msgid "**如何进入**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:10
+msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:12
+msgid "**操作流程**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:-1
+msgid "模板编辑器中的桥接检测元件示例"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:18
+msgid "**参数说明**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:20
+msgid ""
+"**桥接颜色公式（Bridge Color Formula）**：选择用于识别连锡的颜色公式（如 ``2B-R-G``）；选择三色时配置 **三色"
+" X / Y / Z / A**。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:21
+msgid "**值范围（Value Range）**：``2B-R-G`` 等公式的阈值范围（0–100），落入该范围的像素被检出。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:22
+msgid "**灵敏度（Sensitivity）**：桥接颜色检测灵敏度（0–1），值越大检测范围越大。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/bridge.rst:23
+msgid "**启用可视化（Enable Visualization）**：显示桥接检测中间结果。"
+msgstr ""
+

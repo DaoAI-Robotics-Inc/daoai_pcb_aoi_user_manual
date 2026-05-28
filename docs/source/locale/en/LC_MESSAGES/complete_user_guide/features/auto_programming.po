@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -25,130 +25,290 @@ msgid "自动编程"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:4
-msgid "本节说明两种自动编程模式："
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:6
-msgid ""
-"**半自动编程** （上传 CAD）：在视觉预测结果的基础上，将 CAD 行记录与模型识别的元件自动匹配，直接赋值 "
-"标识(Designator)、封装(Package)、料号(PN)，并支持按封装/料号分组。"
+msgid "本节说明两种自动编程模式，以及上传 CAD/元件信息文件后的字段映射与坐标对齐流程。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:7
-msgid "**全自动编程** （无 CAD）：完全依赖视觉 + AI 自动识别、分割与建模所有器件，初始仅包含图像与自动推断出的类别/位置。"
+msgid ""
+"向导的前四步（基本信息、将PCB放置在传送带上、获取尺寸、拍摄）在 :ref:`创建产品` 中已有详细说明。 "
+"本页聚焦于向导第五步：运行自动编程或上传 CAD。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:9
-msgid ""
-"上传 CAD 不会改变自动编程的速度与基础质量；它提供的是“结构化属性 + 分组”增益， "
-"使数据集在后续训练/反馈阶段更快累积“同类多样本”，更容易较早获得稳定效果。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:10
+msgid "**两种编程模式对比**"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:12
-msgid "无 CAD 情况下仍可在后续通过手动补录和检测反馈机制逐渐丰富数据集。"
+msgid "**全自动编程（无 CAD）** — 完全依赖视觉 + AI 自动识别、分割与建模所有器件，生成初始检测框。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:13
+msgid ""
+"**半自动编程（上传 CAD）** — 在视觉预测结果的基础上，将 CAD 行记录与模型识别的元件自动匹配，直接赋值标识 "
+"(Designator)、封装 (Package)、料号 (PN)，并支持按封装/料号分组。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:15
-msgid "半自动编程（上传 CAD）"
+msgid ""
+"上传 CAD 不影响自动编程的速度与基础质量；它提供\"结构化属性 + 分组\"增益， "
+"使数据集在后续训练/反馈阶段更快积累\"同类多样本\"，更容易较早获得稳定效果。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:17
-msgid "支持导入标准化的 `.csv` CAD 兼容文件。可以有以下字段："
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:19
-msgid "（可选）料号 (PN)"
+#: ../../source/complete_user_guide/features/auto_programming.rst:18
+msgid "无 CAD 情况下仍可在后续通过手动补录和检测反馈机制逐渐丰富数据集。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:20
-msgid "封装 / 封装名 (Package)"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:21
-msgid "器件标识 / 丝印 (Designator / Ref)"
+msgid "**第五步：添加CAD (可选)**"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:22
-msgid "X / Y 坐标"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:23
-msgid "旋转角度 (Rotation °)"
+msgid "完成完整拍摄后，向导进入第五步 **添加CAD (可选)**。此步骤有三个选项："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:24
-msgid "（可选）层 / 面别字段（如 TOP/BOTTOM）"
+msgid "**返回全景采集** — 返回上一步重新拍摄。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:25
+msgid "**手动编程** — 跳过自动编程，直接进入产品编程界面。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:26
-msgid "导入CAD的好处："
+msgid "**运行自动编程** — 在未上传 CAD 文件时，点击此按钮执行全自动编程。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:28
-msgid "自动匹配并写入 标识 / 封装 / 料号，避免后期逐个补录。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:29
-msgid "按封装 / 料号即时分组 → 初始数据集中“同一类”样本数量有效放大（同类共享特征建模基准）。"
+msgid "若已上传 CAD 文件，则显示 **运行自动编程** 按钮，点击后执行半自动编程。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:30
-msgid "更早形成可复用的封装级统计（缺陷、尺寸、阈值分布），降低后续参数微调成本。"
+msgid "**设置检测区域**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:31
-msgid "协助发现坐标 / 单位 / 重复记录等 CAD 异常。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:32
+msgid "在运行自动编程之前，需要在完整拍摄图像上定义检测区域。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:33
-msgid "操作步骤："
+#: ../../source/complete_user_guide/features/auto_programming.rst:34
+msgid "**定义区域** — 支持两种方式："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:35
-msgid "点击 ``上传 CAD`` ， 上传一个 `.csv` 文件。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:36
+msgid "**设置矩形检测区域** — 在拍摄图像上拖动框选矩形范围。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst
-msgid "上传 CAD 文件界面"
+#: ../../source/complete_user_guide/features/auto_programming.rst:37
+msgid "**设置多边形检测区域** — 在拍摄图像上点击多个顶点，围成多边形范围。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:41
-msgid ""
-"点击 ``预览表格`` ，并在上方为各列指定字段：料号 (PN)、封装 (Package)、标识/丝印 (Designator / Ref)、X "
-"坐标 (X)、Y 坐标 (Y)、旋转角度 (Rotation)、层 (Layer，可选)。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:42
-msgid "指定坐标单位（mm / mil）。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:39
+msgid "检测区域决定了自动编程 AI 识别和生成检测框的范围。区域必须在运行自动编程前完成定义，否则系统会提示错误。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst:43
-msgid "确认无误后，点击运行自动编程, 系统会基于创建产品时定义的自动检测类别，自动识别并分割所选类别器件，生成初始的检测框。"
+msgid "**全自动编程（无 CAD）**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:45
+msgid "未上传任何文件时，点击 **运行自动编程** 即可开始纯视觉检测编程："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst
+msgid "上传 CAD 文件界面（未上传时点击运行自动编程）"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:51
+msgid "系统会基于 **基本信息** 步骤中定义的自动编程检测类型，自动识别并分割所选类别器件，生成初始的检测框。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:53
+msgid "自动编程约需 30 秒完成。是否提供 CAD 文件不影响编程质量。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst
+msgid "全自动编程示意"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:59
+msgid "完成后会进入产品编程界面，从这一步开始，需要定义对齐标记、确认检测框、微调参数，详见后续章节。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:61
+msgid "**半自动编程（上传 CAD）**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:63
+msgid "**支持的文件格式**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:65
+msgid "支持导入 SMT 机台导出的标准元件信息文件（`.csv`、`.tsv`、`.txt`）。文件须为 UTF-8 编码。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:67
+msgid "可以包含以下字段："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:69
+msgid "（可选）料号 (PN)"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:70
+msgid "封装号 (Package)"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:71
+msgid "标识 (Designator / Ref)"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:72
+msgid "中心X坐标 (Center X)、中心Y坐标 (Center Y)"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:73
+msgid "旋转角度 (Rotation °)"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:74
+msgid "（可选）层 / 面别字段（如 TOP/BOTTOM）"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:76
+msgid "导入 CAD 的好处："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:78
+msgid "自动匹配并写入标识 / 封装 / 料号，避免后期逐个补录。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:79
+msgid "按封装 / 料号即时分组，初始数据集中\"同一类\"样本数量有效放大。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:80
+msgid "更早形成可复用的封装级统计（缺陷、尺寸、阈值分布），降低后续参数微调成本。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:81
+msgid "协助发现坐标 / 单位 / 重复记录等 CAD 异常。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:83
+msgid "**操作步骤**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:85
+msgid "**步骤一：导入元件信息文件**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:87
+msgid "在 **添加CAD (可选)** 步骤中，点击 **选择文件** 上传一个 `.csv`（或 `.tsv`、`.txt`）文件。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst
+msgid "导入元件信息文件界面"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:93
+msgid "**步骤二：解析文件与字段映射**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:95
+msgid "文件上传成功后，进入 **解析文件** 界面。左侧显示文件原始内容，右侧为解析与字段映射面板。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:97
+msgid "**第一行索引 / 最后一行索引** — 指定 CSV 数据的起始行号和结束行号（从 1 计数）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:98
+msgid "**忽略底层** — 若仅检测正面（顶层），开启此开关后须填写底层标识符（如 `B`、`BOT`），系统会自动过滤底层行。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:99
+msgid "点击 **预览表格** — 系统按当前设置解析并显示表格内容，每列顶部显示一个下拉菜单。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:101
+msgid "**字段映射（映射数据）**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:103
+msgid "在 **映射数据** 区域，为每一列在下拉菜单中指定对应的字段类型："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:105
+msgid "**封装号** — 对应 CAD 中的封装名称（Package）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:106
+msgid "**料号** — 对应 CAD 中的料号（Part No.，可选）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:107
+msgid "**中心X坐标** / **中心Y坐标** — X/Y 坐标列（必选）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:108
+msgid "**旋转角度** — 元件旋转角度列。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:109
+msgid "**层** — 面别标识列（如已启用忽略底层，需指定此列）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:110
+msgid "**丝印/位号/标识** — 元件位号（Ref Designator）列（必选）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:111
+msgid "**忽略此列** — 对不需要的列选择此项。"
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst
 msgid "CAD 字段映射示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:49
+#: ../../source/complete_user_guide/features/auto_programming.rst:117
+msgid "**坐标单位** — 在\"坐标单位\"下拉菜单中选择 **毫米** 或 **密尔** (mil)，须与 CAD 文件一致。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:120
+msgid "若运行后提示坐标偏差过大，首先检查坐标单位（mil ↔ mm）是否选择正确。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:122
 msgid ""
-"系统会自动将视觉模型预测的结果和CAD中的元件匹配，但是有时相差过大时，会失败，这时会进入“对齐调整” 页面, 可以手动微调平移 / 旋转 / "
-"翻转， 大致对齐后 点击“重新分析” 即可。"
+"**使用元件模板**（可选）— 勾选 **使用元件模板** 后，系统会对匹配到已保存元件模板的 CAD 点使用模板定义的区域替代 AI "
+"检测结果。需 CAD 坐标先对齐方可生效。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst
-msgid "半自动编程失败"
+#: ../../source/complete_user_guide/features/auto_programming.rst:124
+msgid "**步骤三：运行半自动编程**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:55
-msgid "自动编程大约需要30秒完成，完成后即可进入产品编程页面。可以看到元件列表中，元件的标识、封装字段均已自动填写。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:126
+msgid "字段映射完成后，点击 **运行自动编程**："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:128
+msgid "系统结合视觉检测结果和 CAD 坐标，自动匹配每个元件并写入标识 / 封装 / 料号。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:130
+msgid "若自动匹配成功，约 30 秒后进入产品编程界面："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst
 msgid "完成自动编程示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:65
+#: ../../source/complete_user_guide/features/auto_programming.rst
+msgid "完成自动编程示意（元件列表）"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:140
 msgid "同类封装的元件会自动分组，方便后续批量调整与训练。更多详情请参见 :ref:`料号封装和分组` 。"
 msgstr ""
 
@@ -156,43 +316,176 @@ msgstr ""
 msgid "数据集分组后示意"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:72
-msgid "全自动编程（无 CAD）"
+#: ../../source/complete_user_guide/features/auto_programming.rst:146
+msgid "**步骤四（自动对齐失败时）：坐标对齐调整**"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:74
-msgid "未导入任何文件时，点击“自动编程”即可开始纯视觉检测编程："
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:80
-msgid "系统会基于创建产品时定义的自动检测类别，自动识别并分割所选类别器件，生成初始的检测框。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/auto_programming.rst:82
-msgid "自动编程约30秒完成。是否提供 CAD 文件不影响编程质量。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:148
+msgid "若 CAD 坐标与视觉识别结果偏差过大，系统会在匹配失败后自动跳转至 **对齐坐标** 界面："
 msgstr ""
 
 #: ../../source/complete_user_guide/features/auto_programming.rst
-msgid "全自动编程示意"
+msgid "半自动编程坐标对齐失败界面"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:89
-msgid "完成后会进入产品编程界面，从这一步开始，需要定义对齐标记，检测框的确认，和参数的微调，详见后续章节。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:154
+msgid "在该界面可使用以下工具手动调整对齐："
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:94
-msgid "常见问题与排查"
+#: ../../source/complete_user_guide/features/auto_programming.rst:156
+msgid "**平移（X / Y 方向）** — 拖动滑条或输入偏移量。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:96
-msgid "CAD 导入后失败：使用界面上的平移，旋转，翻转工具 微调大致对齐后，点击重新分析即可。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:157
+msgid "**旋转** — 输入角度（度）顺时针或逆时针旋转。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:97
-msgid "CAD 导入后失败，点位错乱无法对齐：检查单位（mil ↔ mm）。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:158
+msgid "**水平翻转 / 垂直翻转** — 按钮切换镜像方向。"
 msgstr ""
 
-#: ../../source/complete_user_guide/features/auto_programming.rst:98
-msgid "全自动漏检少量极小器件：手动补录并训练；或优化光照 / 清晰度后再次自动编程。"
+#: ../../source/complete_user_guide/features/auto_programming.rst:160
+msgid "大致对齐后，点击 **重新分析** 重新执行匹配。"
 msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:162
+msgid "**健康检查**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:164
+msgid "在 **基本信息** 步骤中，可配置自动编程时的 **健康检查** 选项（在运行自动编程前生效）："
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:166
+msgid "**数量检查** — 校验每个元件具有期望数量的焊点及 IC 引脚。有 CAD 封装信息时会按封装精确匹配引脚数。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:167
+msgid "**质量检查** — 校验焊点对称性、IC 引脚一致性及排阻引脚覆盖率。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:169
+msgid "两项检查的系统默认值由站点配置决定，可在 **基本信息** 步骤中手动调整。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:171
+msgid "**常见问题与排查**"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:173
+msgid "**CAD 导入后自动对齐失败**：进入坐标对齐界面，使用平移、旋转、翻转工具大致对齐后，点击 **重新分析** 即可。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:174
+msgid "**坐标点位错乱无法对齐**：检查坐标单位（mil ↔ mm），确认选择与 CAD 文件一致。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:175
+msgid "**全自动漏检少量极小器件**：手动补录并训练，或优化光照 / 清晰度后再次运行自动编程。"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/auto_programming.rst:176
+msgid "**文件上传失败**：确认文件为 UTF-8 编码（可用文本编辑器另存为 UTF-8 后重新上传）。"
+msgstr ""
+
+#~ msgid "本节说明两种自动编程模式："
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**半自动编程** （上传 CAD）：在视觉预测结果的基础上，将 CAD "
+#~ "行记录与模型识别的元件自动匹配，直接赋值 "
+#~ "标识(Designator)、封装(Package)、料号(PN)，并支持按封装/料号分组。"
+#~ msgstr ""
+
+#~ msgid "**全自动编程** （无 CAD）：完全依赖视觉 + AI 自动识别、分割与建模所有器件，初始仅包含图像与自动推断出的类别/位置。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "上传 CAD 不会改变自动编程的速度与基础质量；它提供的是“结构化属性 + 分组”增益，"
+#~ " 使数据集在后续训练/反馈阶段更快累积“同类多样本”，更容易较早获得稳定效果。"
+#~ msgstr ""
+
+#~ msgid "半自动编程（上传 CAD）"
+#~ msgstr ""
+
+#~ msgid "支持导入标准化的 `.csv` CAD 兼容文件。可以有以下字段："
+#~ msgstr ""
+
+#~ msgid "封装 / 封装名 (Package)"
+#~ msgstr ""
+
+#~ msgid "器件标识 / 丝印 (Designator / Ref)"
+#~ msgstr ""
+
+#~ msgid "X / Y 坐标"
+#~ msgstr ""
+
+#~ msgid "导入CAD的好处："
+#~ msgstr ""
+
+#~ msgid "自动匹配并写入 标识 / 封装 / 料号，避免后期逐个补录。"
+#~ msgstr ""
+
+#~ msgid "按封装 / 料号即时分组 → 初始数据集中“同一类”样本数量有效放大（同类共享特征建模基准）。"
+#~ msgstr ""
+
+#~ msgid "操作步骤："
+#~ msgstr ""
+
+#~ msgid "点击 ``上传 CAD`` ， 上传一个 `.csv` 文件。"
+#~ msgstr ""
+
+#~ msgid "上传 CAD 文件界面"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "点击 ``预览表格`` ，并在上方为各列指定字段：料号 (PN)、封装 "
+#~ "(Package)、标识/丝印 (Designator / Ref)、X 坐标 "
+#~ "(X)、Y 坐标 (Y)、旋转角度 (Rotation)、层 (Layer，可选)。"
+#~ msgstr ""
+
+#~ msgid "指定坐标单位（mm / mil）。"
+#~ msgstr ""
+
+#~ msgid "确认无误后，点击运行自动编程, 系统会基于创建产品时定义的自动检测类别，自动识别并分割所选类别器件，生成初始的检测框。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "系统会自动将视觉模型预测的结果和CAD中的元件匹配，但是有时相差过大时，会失败，这时会进入“对齐调整” 页面, "
+#~ "可以手动微调平移 / 旋转 / 翻转， 大致对齐后 点击“重新分析”"
+#~ " 即可。"
+#~ msgstr ""
+
+#~ msgid "半自动编程失败"
+#~ msgstr ""
+
+#~ msgid "自动编程大约需要30秒完成，完成后即可进入产品编程页面。可以看到元件列表中，元件的标识、封装字段均已自动填写。"
+#~ msgstr ""
+
+#~ msgid "全自动编程（无 CAD）"
+#~ msgstr ""
+
+#~ msgid "未导入任何文件时，点击“自动编程”即可开始纯视觉检测编程："
+#~ msgstr ""
+
+#~ msgid "系统会基于创建产品时定义的自动检测类别，自动识别并分割所选类别器件，生成初始的检测框。"
+#~ msgstr ""
+
+#~ msgid "自动编程约30秒完成。是否提供 CAD 文件不影响编程质量。"
+#~ msgstr ""
+
+#~ msgid "完成后会进入产品编程界面，从这一步开始，需要定义对齐标记，检测框的确认，和参数的微调，详见后续章节。"
+#~ msgstr ""
+
+#~ msgid "常见问题与排查"
+#~ msgstr ""
+
+#~ msgid "CAD 导入后失败：使用界面上的平移，旋转，翻转工具 微调大致对齐后，点击重新分析即可。"
+#~ msgstr ""
+
+#~ msgid "CAD 导入后失败，点位错乱无法对齐：检查单位（mil ↔ mm）。"
+#~ msgstr ""
+
+#~ msgid "全自动漏检少量极小器件：手动补录并训练；或优化光照 / 清晰度后再次自动编程。"
+#~ msgstr ""
 

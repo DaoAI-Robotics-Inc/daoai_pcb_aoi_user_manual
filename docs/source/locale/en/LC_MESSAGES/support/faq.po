@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -219,7 +219,7 @@ msgid "在模板编辑器中，选中目标元件（已分组）。"
 msgstr ""
 
 #: ../../source/support/faq.rst:119
-msgid "在右侧属性栏找到“在组中添加 ROI”按钮。"
+msgid "在右侧属性栏找到”在组中添加 ROI”按钮。"
 msgstr ""
 
 #: ../../source/support/faq.rst:120
@@ -233,4 +233,57 @@ msgstr ""
 #: ../../source/support/faq.rst:122
 msgid "然后保存并退出即可。"
 msgstr ""
+
+#: ../../source/support/faq.rst:125
+msgid "“以演示模式运行”是什么？"
+msgstr ""
+
+#: ../../source/support/faq.rst:127
+msgid "**以演示模式运行** 是新建检测任务弹窗中的一个勾选项。勾选后："
+msgstr ""
+
+#: ../../source/support/faq.rst:129
+msgid "检测任务自动运行，无需手动触发。"
+msgstr ""
+
+#: ../../source/support/faq.rst:130
+msgid "检测到缺陷时，系统在复检页面停留约 7 秒，随后自动返回实时检测页面并继续。"
+msgstr ""
+
+#: ../../source/support/faq.rst:131
+msgid "按 ``Esc`` 可随时退出演示模式。"
+msgstr ""
+
+#: ../../source/support/faq.rst:132
+msgid "演示模式下无法通过按钮手动触发检测。"
+msgstr ""
+
+#: ../../source/support/faq.rst:134
+msgid "详情请参见 :doc:`../complete_user_guide/inspection/index` 中的”新建检测任务”一节。"
+msgstr ""
+
+#: ../../source/support/faq.rst:137
+msgid "实时检测页面的”整板 / 子板”直通率切换是什么含义？"
+msgstr ""
+
+#: ../../source/support/faq.rst:139
+msgid "实时检测页面（Live）右侧统计面板上方提供 **整板 / 子板** 切换控件，用于选择直通率（FPY）的统计口径："
+msgstr ""
+
+#: ../../source/support/faq.rst:141
+msgid "**整板**：以整块 PCB 为单位计算直通率（合格板数 / 已检测板数），标签显示 **主板直通率**。"
+msgstr ""
+
+#: ../../source/support/faq.rst:142
+msgid "**子板**：以子板为单位计算，仅适用于拼板产品，标签显示 **子板直通率**；非拼板产品显示 **N/A**。"
+msgstr ""
+
+#: ../../source/support/faq.rst:144
+msgid ""
+"该设置会持久化保存，页面刷新后仍保留。子板判废逻辑（比例模式 / 坏板标记模式）在产品设置的 **检测设置** 子标签中配置，详情请参见 "
+":ref:`检测设置（子板判废逻辑）`。"
+msgstr ""
+
+#~ msgid "在右侧属性栏找到“在组中添加 ROI”按钮。"
+#~ msgstr ""
 

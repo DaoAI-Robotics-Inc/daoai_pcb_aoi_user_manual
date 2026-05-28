@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 23:11-0700\n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -25,6 +25,10 @@ msgid "主页"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:4
+msgid "**此页面的用途**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:6
 msgid "登录后进入 **主页**，这是系统的入口，集中提供三大功能入口、传送带状态、最近检测任务与产品（PCBA）管理。"
 msgstr ""
 
@@ -32,93 +36,243 @@ msgstr ""
 msgid "主页概览"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:11
-msgid "功能入口"
+#: ../../source/complete_user_guide/home/index.rst:12
+msgid "**如何进入**"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:13
-msgid "页面顶部为三个主要入口卡片："
+#: ../../source/complete_user_guide/home/index.rst:14
+msgid "登录系统后自动跳转至主页；在任意页面点击顶部导航栏的系统 Logo 或导航回首页也可返回此页面。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:15
-msgid "**新建检测任务**：选择一个 PCBA 开始检测（详见 :ref:`检测与反馈`）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/home/index.rst:16
-msgid "**训练PCBA**：注册新的 PCBA / 产品并进入自动编程向导（详见 :ref:`创建产品`）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/home/index.rst:17
-msgid "**工作列表**：查看过去的检测记录与数据分析报告（详见 :ref:`查看检测历史（数据分析报告）`）。"
+#: ../../source/complete_user_guide/home/index.rst:18
+msgid "**操作流程**"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:20
-msgid "传送带状态"
+msgid "**功能入口**"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:22
-msgid ""
-"**传送带状态** 区域显示每条传送带（如 Conveyor #A）的实时状态：**空闲**、**运行检测任务中**、**编程中** 或 **定义"
-" PCB 中**。常用操作："
+msgid "页面顶部为三个主要入口卡片（管理员/编程员角色可见全部三项；操作员仅可见第一项）："
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:24
-msgid "**重置轨道**：复位传送带 / 清除当前占用（当出现异常占用或需要中断时使用）。"
+msgid "**新建检测任务**：选择一个 PCBA 开始检测（详见 :ref:`检测与反馈`）。"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:25
-msgid "**刷新传送带状态**：手动刷新各传送带的最新状态。"
+msgid "**训练PCBA**：注册新的 PCBA / 产品并进入自动编程向导（仅管理员/编程员；详见 :ref:`创建产品`）。"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:26
-msgid "**传送带方向**：在 **正向** / **反向** 之间切换进板方向。"
+msgid "**工作列表**：查看过去的检测记录与数据分析报告（详见 :ref:`查看检测历史（数据分析报告）`）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:29
-msgid "最近的检测任务"
+#: ../../source/complete_user_guide/home/index.rst:28
+msgid "**传送带状态**"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:31
-msgid "列出最近执行的检测任务及其总产品数、合格率与开始时间，便于快速回看近期生产情况。点击可进入对应记录。"
+#: ../../source/complete_user_guide/home/index.rst:30
+msgid ""
+"**传送带状态** 区域显示每条传送带（如 Conveyor #A）的实时状态：**空闲**、**运行检测任务中** 或 "
+"**定义PCB中**。常用操作："
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:34
-msgid "产品（PCBA）管理"
+#: ../../source/complete_user_guide/home/index.rst:32
+msgid "**重置轨道**：复位传送带 / 清除当前占用。仅在传送带急停（Emergency Stop）激活时生效；当出现异常占用或需要中断时使用。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:36
-msgid "右侧 **管理 PCBA** 列表展示所有已创建的产品，包含 PCBA 类型、创建时间、最近更新时间等列。每行提供以下操作："
+#: ../../source/complete_user_guide/home/index.rst:33
+msgid "**刷新传送带状态**：手动刷新各传送带的最新状态。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:38
-msgid "**编辑**：进入该产品的编程页面（标记对齐、模板编辑器、拼板、整板检测等）。"
+#: ../../source/complete_user_guide/home/index.rst:35
+msgid "**最近的检测任务**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:37
+msgid ""
+"**最近的检测任务** "
+"列表列出最近执行的检测任务，包含以下列：任务（产品名称）、总产品数、合格率、开始时间。点击任意行可进入对应记录，便于快速回看近期生产情况。"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:39
-msgid "**复制**：基于现有产品创建一个副本。"
-msgstr ""
-
-#: ../../source/complete_user_guide/home/index.rst:40
-msgid "**重命名**：修改产品名称。"
+msgid "**产品（PCBA）管理**"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:41
-msgid "**删除**：删除该产品及其数据。"
+msgid "右侧 **管理PCBA** 列表展示所有已创建的产品，包含 PCBA类型、创建时间、最后更新等列。产品名称列同时显示该产品已附加的标签（Tag）。"
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:42
-msgid "**导出为文件**：将该产品导出为文件，便于备份或迁移到其它机台。"
+#: ../../source/complete_user_guide/home/index.rst:43
+msgid "每行提供以下操作："
 msgstr ""
 
-#: ../../source/complete_user_guide/home/index.rst:44
-msgid "其它："
+#: ../../source/complete_user_guide/home/index.rst:45
+msgid "**编辑**：进入该产品的编程页面（标记对齐、模板编辑器、拼板、整板检测等）。"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:46
-msgid "**上传 PCBA 文件 (.zip)**：从导出的 ``.zip`` 文件导入产品。"
+msgid "**复制**：基于现有产品创建一个副本。"
 msgstr ""
 
 #: ../../source/complete_user_guide/home/index.rst:47
-msgid "**搜索 / 标签过滤**：通过搜索栏按名称查找，或使用标签（tag）对产品分类与过滤。"
+msgid "**删除**：删除该产品及其数据（需在弹出确认框中确认）。"
 msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:48
+msgid "**编辑信息**：修改产品名称及标签（在弹出的编辑窗口中操作）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:49
+msgid "**导出为文件**：将该产品导出为 ``.zip`` 文件，便于备份或迁移到其它机台。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:51
+msgid "**批量操作**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:53
+msgid "产品表格左侧提供复选框，可多选产品后执行批量操作："
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:55
+msgid "**删除所选记录**：同时删除多个已选产品。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:56
+msgid "**添加标签…**：为所有已选产品批量添加一个标签。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:57
+msgid "**移除标签…**：从所有已选产品批量移除一个标签。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:59
+msgid "**标签过滤与搜索**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:61
+msgid "产品列表上方提供两种过滤方式："
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:63
+msgid "**按标签筛选** （多选下拉框）：同时选中多个标签时取交集过滤产品列表。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:64
+msgid "**搜索** （文本输入框）：按产品名称关键字过滤。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:66
+msgid "**上传 PCBA 文件**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:68
+msgid ""
+"**上传PCBA文件(.zip)**：点击此按钮选取由\"导出为文件\"生成的 ``.zip`` "
+"压缩包，将其导入为新产品；导入完成后产品列表自动刷新。若导入的产品名与系统中已有产品重名，则会提示冲突错误。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:70
+msgid "**磁盘使用情况**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:72
+msgid ""
+"顶部导航栏右侧（全局可见，非仅限主页）显示 **磁盘使用** 微件，以环形图展示 C: 盘已用与剩余空间比例，悬停可查看具体 GB "
+"数据。当可用空间低于 25% 时显示黄色警告，低于 10% 时显示红色严重警告并闪烁。点击刷新图标可立即重新查询。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:78
+msgid "**注意事项**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:80
+msgid "**急停状态下**：新建检测任务、编辑产品等按钮将被禁用，需先点击\"重置轨道\"恢复正常状态。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:81
+msgid "**编辑信息** 对应 UI 标签为\"编辑信息\"，用于修改产品名称和标签；与 **编辑** 不同，后者进入产品的完整编程页面。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:82
+msgid ""
+"**训练PCBA** 和产品管理区域仅对 **管理员** 与 **编程员** 角色显示；**操作员** "
+"角色只能看到新建检测任务入口和最近检测任务列表。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:83
+msgid "标签（Tag）在产品行内以小徽章形式显示，可通过\"编辑信息\"对单个产品修改标签，或通过批量操作同时为多个产品添加/移除标签。"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:85
+msgid "**相关页面**"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:87
+msgid ":ref:`检测与反馈` — 由\"新建检测任务\"进入"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:88
+msgid ":ref:`创建产品` — 由\"训练PCBA\"进入"
+msgstr ""
+
+#: ../../source/complete_user_guide/home/index.rst:89
+msgid ":ref:`查看检测历史（数据分析报告）` — 由\"工作列表\"进入"
+msgstr ""
+
+#~ msgid "功能入口"
+#~ msgstr ""
+
+#~ msgid "页面顶部为三个主要入口卡片："
+#~ msgstr ""
+
+#~ msgid "**训练PCBA**：注册新的 PCBA / 产品并进入自动编程向导（详见 :ref:`创建产品`）。"
+#~ msgstr ""
+
+#~ msgid "传送带状态"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**传送带状态** 区域显示每条传送带（如 Conveyor "
+#~ "#A）的实时状态：**空闲**、**运行检测任务中**、**编程中** 或 **定义 PCB "
+#~ "中**。常用操作："
+#~ msgstr ""
+
+#~ msgid "**重置轨道**：复位传送带 / 清除当前占用（当出现异常占用或需要中断时使用）。"
+#~ msgstr ""
+
+#~ msgid "**传送带方向**：在 **正向** / **反向** 之间切换进板方向。"
+#~ msgstr ""
+
+#~ msgid "最近的检测任务"
+#~ msgstr ""
+
+#~ msgid "列出最近执行的检测任务及其总产品数、合格率与开始时间，便于快速回看近期生产情况。点击可进入对应记录。"
+#~ msgstr ""
+
+#~ msgid "产品（PCBA）管理"
+#~ msgstr ""
+
+#~ msgid "右侧 **管理 PCBA** 列表展示所有已创建的产品，包含 PCBA 类型、创建时间、最近更新时间等列。每行提供以下操作："
+#~ msgstr ""
+
+#~ msgid "**重命名**：修改产品名称。"
+#~ msgstr ""
+
+#~ msgid "**删除**：删除该产品及其数据。"
+#~ msgstr ""
+
+#~ msgid "**导出为文件**：将该产品导出为文件，便于备份或迁移到其它机台。"
+#~ msgstr ""
+
+#~ msgid "其它："
+#~ msgstr ""
+
+#~ msgid "**上传 PCBA 文件 (.zip)**：从导出的 ``.zip`` 文件导入产品。"
+#~ msgstr ""
+
+#~ msgid "**搜索 / 标签过滤**：通过搜索栏按名称查找，或使用标签（tag）对产品分类与过滤。"
+#~ msgstr ""
 

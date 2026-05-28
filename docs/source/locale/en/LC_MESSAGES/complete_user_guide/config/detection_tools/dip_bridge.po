@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2024 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:2
+msgid "DIP 桥接检测（DIP Bridge）"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:4
+msgid "**此页面的用途**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:6
+msgid "检测 DIP 器件相邻引脚 / 焊点之间的连锡。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:8
+msgid "**如何进入**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:10
+msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:12
+msgid "**操作流程**"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:14
+msgid ""
+"**桥接颜色公式（Bridge Color Formula）**：选择用于识别连锡的颜色公式（如 ``2B-R-G``）；选择三色时配置 **三色"
+" X / Y / Z / A** 系数。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:15
+msgid "**灵敏度（Sensitivity）**：桥接颜色检测灵敏度（0–1），值越大检测范围越大。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:16
+msgid "**桥接有效比率范围（Bridge Valid Ratio Range）**：连锡有效比例 OK 区间。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:17
+msgid "**桥接宽度 (%)（Bridge Width）**：桥接检测带宽度。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:18
+msgid "**焊点数量（Solder Count）/ 焊点宽度 (mm)（Solder Width）**：焊点子框划分。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:19
+msgid "**启用可视化（Enable Visualization）**。"
+msgstr ""
+

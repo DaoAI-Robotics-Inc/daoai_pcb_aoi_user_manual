@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2024 DaoAI Robotics Inc.
+# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:2
+msgid "检测工具参考"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:4
+msgid "本章逐一介绍每种 2D 检测工具的参数与配置方法。每个工具单独成页。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:6
+msgid ""
+"本章节详细介绍 2D 检测工具（检测项）及其参数含义。每个元件可包含一个或多个检测项；在 **模板编辑器** "
+"中选中元件后，可在右侧面板查看并编辑各检测项的参数。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:-1
+msgid "检测参数总览"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:12
+msgid "在阅读各工具参数前，先了解几个贯穿全篇的通用概念："
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:14
+msgid ""
+"**AI 异常分数**：基于 AI 模型的检测会输出一个 0~1 的异常分数；接近 0 表示与正常样本相似，接近 1 "
+"表示差异大。可通过统计图表对比正常 / 异常样本的分数分布，选择合适的判定阈值。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:15
+msgid ""
+"**颜色范围与有效比例（Valid Ratio）**：基于颜色的检测在 ROI 内用 **HSV 颜色范围** "
+"将像素二值化为\"有效点\"，有效比例定义为 :math:`100 \\times "
+"\\dfrac{\\text{有效点数}}{\\text{ROI 面积}}`。判定时检查有效比例是否落入设定的 **有效比例范围**。一个 ROI"
+" 可配置多组颜色范围，分别独立判定。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:16
+msgid ""
+"**颜色公式（Color Formula）**：定义如何从像素计算颜色特征。可选 HSV（中心 / 起止色调 + "
+"明度范围），或三色公式（Tricolor，如 ``2B-R-G`` 线性组合，配合 X/Y/Z/A 系数与阈值）。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:17
+msgid "**对齐（Alignment）**：部分检测在判定前先将元件图像与标准样本自动对齐，以消除位置偏移带来的误判。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:18
+msgid ""
+"**启用可视化（Enable Visualization）**：评估后叠加显示二值化 / "
+"检测中间结果，便于调参；因有额外计算开销，建议仅在调试阶段开启。"
+msgstr ""
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:19
+msgid ""
+"**使用共享参数（Use Shared Parameters）**：元件加入封装 / "
+"料号分组后默认与组内共享参数；关闭后可对该实例单独调参，不再继承分组设置。"
+msgstr ""
+

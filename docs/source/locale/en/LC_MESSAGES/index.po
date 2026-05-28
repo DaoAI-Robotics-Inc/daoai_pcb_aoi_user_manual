@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -24,15 +24,34 @@ msgstr ""
 msgid "介绍"
 msgstr ""
 
-#: ../../source/index.rst:10
-msgid "使用指南"
+#: ../../source/index.rst:11
+msgid "主页"
+msgstr ""
+
+#: ../../source/index.rst:17
+msgid "创建与编程产品"
 msgstr ""
 
 #: ../../source/index.rst:31
+msgid "检测"
+msgstr ""
+
+#: ../../source/index.rst:37
+msgid "模型管理"
+msgstr ""
+
+#: ../../source/index.rst:43
+msgid "系统设置"
+msgstr ""
+
+#: ../../source/index.rst:49
 msgid "支持"
 msgstr ""
 
 #: ../../source/index.rst:2
 msgid "DaoAI PCBA AOI 用户手册"
 msgstr ""
+
+#~ msgid "使用指南"
+#~ msgstr ""
 
