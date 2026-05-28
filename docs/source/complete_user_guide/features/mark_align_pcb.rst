@@ -31,7 +31,9 @@
 
 至少需要 **2 个 mark 点**\ （推荐 2~4 个，分布在 PCB 的对角位置）才能进行二维定位。
 
-.. screenshot-todo: images/mark_point_example.png — 圆形 mark 点示例及定位结果
+.. image:: images/mark_point_example.png
+   :scale: 70%
+   :alt: 标记 / 对齐 PCB 画布上的 mark 点位置示意
 
 **独特标记（unique marker）**
 
