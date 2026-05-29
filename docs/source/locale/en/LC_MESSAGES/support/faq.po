@@ -4,25 +4,24 @@
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"POT-Creation-Date: 2026-05-28 15:58-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/support/faq.rst:2
 msgid "常见问题"
-msgstr ""
+msgstr "Frequently Asked Questions"
 
 #: ../../source/support/faq.rst:9
 msgid "如何避免 GPU 进入低功耗模式导致推理变慢？"
@@ -33,50 +32,58 @@ msgid ""
 "在某些设备上，如果连续使用模型推理，执行速度非常快（例如 10 毫秒以内）；但如果两个推理调用之间的间隔较长（例如超过 5 "
 "秒），则可能出现执行时间大幅变慢的情况（例如变成 100 毫秒以上 然后之后回到10ms以内）。"
 msgstr ""
+"On some machines, back-to-back model inference is very fast (under 10 ms), "
+"but when two inference calls are spaced apart (more than ~5 seconds), the "
+"second call can be significantly slower (over 100 ms) before returning to "
+"the normal ~10 ms."
 
 #: ../../source/support/faq.rst:13
 msgid "这是由于 GPU 进入低功耗状态导致的性能下降问题。"
 msgstr ""
+"The slowdown comes from the GPU dropping into a low-power state between "
+"calls."
 
 #: ../../source/support/faq.rst:15
 msgid "为了保证您的设备始终以高性能运行，建议您进行以下设置："
 msgstr ""
+"To keep the machine running at full performance, apply these settings:"
 
 #: ../../source/support/faq.rst:19
 msgid "在 NVIDIA 控制面板中设置："
-msgstr ""
+msgstr "In the NVIDIA Control Panel:"
 
 #: ../../source/support/faq.rst:18
 msgid "打开 NVIDIA Control Panel → Manage 3D Settings。"
-msgstr ""
+msgstr "Open **NVIDIA Control Panel → Manage 3D Settings**."
 
 #: ../../source/support/faq.rst:19
 msgid "找到 Power management mode，设置为 Prefer maximum performance。"
 msgstr ""
+"Find **Power management mode** and set it to **Prefer maximum performance**."
 
 #: ../../source/support/faq.rst:23
 msgid "在系统电源管理中设置："
-msgstr ""
+msgstr "In Windows Power Options:"
 
 #: ../../source/support/faq.rst:22
 msgid "打开 控制面板 → 电源选项。"
-msgstr ""
+msgstr "Open **Control Panel → Power Options**."
 
 #: ../../source/support/faq.rst:23
 msgid "选择 高性能 电源计划。"
-msgstr ""
+msgstr "Pick the **High performance** plan."
 
 #: ../../source/support/faq.rst:25
 msgid "设置示例如下图所示："
-msgstr ""
+msgstr "Example settings are shown below:"
 
 #: ../../source/support/faq.rst:-1
 msgid "GPU 设置示例"
-msgstr ""
+msgstr "GPU settings example"
 
 #: ../../source/support/faq.rst:-1
 msgid "控制面板电源选项"
-msgstr ""
+msgstr "Control Panel — Power Options"
 
 #: ../../source/support/faq.rst:36
 msgid "如何开启浏览器的硬件加速以避免浏览器卡顿？"
@@ -85,527 +92,613 @@ msgstr "How to enable hardware acceleration in the browser to avoid lag?"
 #: ../../source/support/faq.rst:38
 msgid "在编程一个元件数量较多的 PCB 模板时，浏览器可能会出现卡顿现象。建议开启浏览器的硬件加速功能以提升性能。"
 msgstr ""
+"Programming a PCB template with many components can make the browser "
+"stutter. Enable browser hardware acceleration for a smoother experience."
 
 #: ../../source/support/faq.rst:46
 msgid "启用硬件加速（Edge）："
-msgstr ""
+msgstr "Enable hardware acceleration in Edge:"
 
 #: ../../source/support/faq.rst:41
 msgid "打开 Microsoft Edge"
-msgstr ""
+msgstr "Open Microsoft Edge."
 
 #: ../../source/support/faq.rst:42
 msgid "点击右上角“...” → “设置”"
-msgstr ""
+msgstr "Click the *…* menu at the top right → **Settings**."
 
 #: ../../source/support/faq.rst:43
 msgid "左侧选择“系统和性能”"
-msgstr ""
+msgstr "Pick **System and performance** on the left."
 
 #: ../../source/support/faq.rst:44
 msgid "点击 “系统”"
-msgstr ""
+msgstr "Click **System**."
 
 #: ../../source/support/faq.rst:45
 msgid "找到“在可用时使用硬件加速”并勾选启用"
-msgstr ""
+msgstr "Find **Use hardware acceleration when available** and turn it on."
 
 #: ../../source/support/faq.rst:46
 msgid "若提示“重新启动”，点击以生效"
-msgstr ""
+msgstr "Click **Restart** when prompted so the change takes effect."
 
 #: ../../source/support/faq.rst:48
 msgid "确保您的显卡驱动程序是最新的。"
-msgstr ""
+msgstr "Make sure the graphics driver is up to date."
 
 #: ../../source/support/faq.rst:-1
 msgid "Edge 浏览器硬件加速设置示例"
-msgstr ""
+msgstr "Edge hardware acceleration — example"
 
 #: ../../source/support/faq.rst:64
 msgid "自动编程没有 CAD 可以吗？"
-msgstr ""
+msgstr "Can Auto-Programming run without CAD?"
 
 #: ../../source/support/faq.rst:66
 msgid "可以。未提供 CAD 时，系统会："
-msgstr ""
+msgstr "Yes. Without CAD, the system:"
 
 #: ../../source/support/faq.rst:68
 msgid "仅基于图像/AI 识别结果生成初始元件框集合。"
-msgstr ""
+msgstr "Generates the initial component-box set from vision and AI alone."
 
 #: ../../source/support/faq.rst:69
 msgid "不能自动补充料号、封装、丝印映射，需要人工后续补录。"
 msgstr ""
+"Cannot fill in part numbers, packages, or designators automatically — those "
+"need to be entered manually later."
 
 #: ../../source/support/faq.rst:70
 msgid "分组初期只能按“封装（推断/人工）”或“主体外形”进行粗分。"
 msgstr ""
+"Initial grouping is rough — by inferred / manual package, or by body shape."
 
 #: ../../source/support/faq.rst:72
-msgid "推荐做法： 1. 先执行自动编程获取基础框。 2. 手动补充关键元件的封装与料号（优先高价值器件）。 3. 统一封装命名后，再做参数调优与训练。"
+msgid ""
+"推荐做法： 1. 先执行自动编程获取基础框。 2. 手动补充关键元件的封装与料号（优先高价值器件）。 3. 统一封装命名后，再做参数调优与训练。"
 msgstr ""
+"Recommended approach: (1) run Auto-Programming to get the baseline boxes; "
+"(2) fill in package and part number on the key components (high-value "
+"first); (3) standardize the package names, then tune parameters and train."
 
 #: ../../source/support/faq.rst:78
 msgid "元件录入时只有封装，没有料号可以吗？"
-msgstr ""
+msgstr "Can I enter components with only the package, no part number?"
 
 #: ../../source/support/faq.rst:80
 msgid "可以。系统会先按封装分组："
-msgstr ""
+msgstr "Yes. The system groups by package first:"
 
 #: ../../source/support/faq.rst:82
 msgid "优点：仍可聚合样本、共享封装级参数。"
 msgstr ""
+"Upside: samples still aggregate and package-level parameters are shared."
 
 #: ../../source/support/faq.rst:83
 msgid "局限：无法区分同封装不同规格（如阻值/容值），统计维度较粗。"
 msgstr ""
+"Limitation: parts with the same package but different specs (different "
+"resistance or capacitance values) can't be distinguished; statistics stay "
+"coarse."
 
 #: ../../source/support/faq.rst:85
 msgid "后续补录料号后： * 自动进入封装下的二级料号节点。 * 已有参数继承保留，可再按料号覆盖特化（如亮度阈值）。"
 msgstr ""
+"Once part numbers are filled in later, the components automatically slot "
+"into the second-tier PN node under their package. Existing inherited "
+"parameters stay; you can then override at the PN level (for example, a "
+"different brightness threshold)."
 
 #: ../../source/support/faq.rst:90
 msgid "某一个元件频繁误检，是否应单独脱离分组？"
 msgstr ""
+"A single component fires false positives constantly — should I detach it "
+"from its group?"
 
 #: ../../source/support/faq.rst:92
 msgid ""
 "排查顺序建议： 1. 确认其标注是否正确（主体 / 焊料 / 引脚框是否偏移）。 2. 对比同封装其它样本是否共有问题：若多数异常 → "
 "说明封装级参数需调整。 3. 仅该件异常 → 检查是否器件瑕疵 / 光照阴影 / 翘脚。"
 msgstr ""
+"Diagnose in this order: (1) verify the annotations are correct (body / "
+"solder / lead boxes not shifted); (2) compare against other samples of the "
+"same package — if many show the issue, the package-level parameters need "
+"tuning; (3) if only this one shows it, look for a part defect, lighting "
+"shadow, or lifted lead."
 
 #: ../../source/support/faq.rst:97
 msgid ""
-"如果确认该元件与组内模式差异较大（颜色、焊料成形、几何高度）： * 可临时关闭“Link Package / Link PN”脱离继承，单独调整。"
-" * 若差异具有系统性（整批次都不同），应新建料号；若几何本质不同，应新建封装。"
+"如果确认该元件与组内模式差异较大（颜色、焊料成形、几何高度）： * 可临时关闭“Link Package / Link PN”脱离继承，单独调整。 * "
+"若差异具有系统性（整批次都不同），应新建料号；若几何本质不同，应新建封装。"
 msgstr ""
+"If the component genuinely differs from the rest of the group (color, solder"
+" shape, geometric height): turn off **Link Package / Link PN** temporarily "
+"and tune it independently. If the difference is systemic (the whole batch "
+"differs), create a new PN; if the geometry differs fundamentally, create a "
+"new package."
 
 #: ../../source/support/faq.rst:101
 msgid "注意：脱离分组后参数修改不会再反馈到组内。"
 msgstr ""
+"Note: once a component is unlinked, its parameter changes no longer flow "
+"back into the group."
 
 #: ../../source/support/faq.rst:104
 msgid "修改封装参数后需重新训练吗？"
-msgstr ""
+msgstr "Do I need to retrain after changing package parameters?"
 
 #: ../../source/support/faq.rst:106
 msgid "分情况："
-msgstr ""
+msgstr "It depends:"
 
 #: ../../source/support/faq.rst:108
 msgid "纯检测参数阈值（阈值、面积、距离、比率等）调整：无需重新训练，保存后即时生效。"
 msgstr ""
+"Adjusting only the inspection thresholds (threshold, area, distance, ratio):"
+" no retraining — the change takes effect on save."
 
 #: ../../source/support/faq.rst:109
 msgid "重绘/增删检测框（主体、焊料、引脚掩膜）导致样本几何变化：需要重新训练，以更新特征表示。"
 msgstr ""
+"Redrawing or adding / removing inspection boxes (body, solder, lead-mask) "
+"changes sample geometry: retrain so the feature representation is updated."
 
 #: ../../source/support/faq.rst:110
 msgid "批量合并/拆分组（封装或料号）后：若仅分组结构变化通常无需训练；若引入了大量新增样本，建议增量再训练一次提升稳定性。"
 msgstr ""
+"Bulk merging / splitting groups (by package or PN): if only the grouping "
+"structure changed, retraining is usually unnecessary; if a large batch of "
+"new samples was pulled in, run an incremental retrain for stability."
 
 #: ../../source/support/faq.rst:114
 msgid "如何在元件里新增检测项？"
-msgstr ""
+msgstr "How do I add a new inspection item to a component?"
 
 #: ../../source/support/faq.rst:116
 msgid "要在元件中新增检测项（ROI），请按以下步骤操作："
-msgstr ""
+msgstr "To add a new inspection item (ROI) to a component:"
 
 #: ../../source/support/faq.rst:118
 msgid "在模板编辑器中，选中目标元件（已分组）。"
 msgstr ""
+"In the Template Editor, select the target component (must be grouped)."
 
 #: ../../source/support/faq.rst:119
 msgid "在右侧属性栏找到”在组中添加 ROI”按钮。"
 msgstr ""
+"In the property panel on the right, find the **Add ROI to group** button."
 
 #: ../../source/support/faq.rst:120
 msgid "点击后，进入 ROI 编辑模式，可在图像上框选新的检测区域。"
 msgstr ""
+"Click it to enter ROI-editing mode and draw the new inspection region on the"
+" image."
 
 #: ../../source/support/faq.rst:121
 msgid "添加您需要的 ROI 类型（如焊料、引脚、文本、条码等）"
-msgstr ""
+msgstr "Add the ROI type you need — solder, lead, text, barcode, and so on."
 
 #: ../../source/support/faq.rst:122
 msgid "然后保存并退出即可。"
-msgstr ""
+msgstr "Save and exit."
 
 #: ../../source/support/faq.rst:125
 msgid "“以演示模式运行”是什么？"
-msgstr ""
+msgstr "What is *Run in demo mode*?"
 
 #: ../../source/support/faq.rst:127
 msgid "**以演示模式运行** 是新建检测任务弹窗中的一个勾选项。勾选后："
 msgstr ""
+"**Run in demo mode** is a checkbox on the New Inspection Task dialog. When "
+"checked:"
 
 #: ../../source/support/faq.rst:129
 msgid "检测任务自动运行，无需手动触发。"
-msgstr ""
+msgstr "The inspection task runs automatically — no manual trigger needed."
 
 #: ../../source/support/faq.rst:130
 msgid "检测到缺陷时，系统在复检页面停留约 7 秒，随后自动返回实时检测页面并继续。"
 msgstr ""
+"When a defect is detected, the system pauses on the Review page for about 7 "
+"seconds, then returns to Live and continues."
 
 #: ../../source/support/faq.rst:131
 msgid "按 ``Esc`` 可随时退出演示模式。"
-msgstr ""
+msgstr "Press ``Esc`` to exit demo mode at any time."
 
 #: ../../source/support/faq.rst:132
 msgid "演示模式下无法通过按钮手动触发检测。"
-msgstr ""
+msgstr "Manual button triggers are disabled in demo mode."
 
 #: ../../source/support/faq.rst:134
 msgid "详情请参见 :doc:`../complete_user_guide/inspection/index` 中的”新建检测任务”一节。"
 msgstr ""
+"For the full reference, see the *Starting a new inspection task* section in "
+":doc:`../complete_user_guide/inspection/index`."
 
 #: ../../source/support/faq.rst:137
 msgid "实时检测页面的”整板 / 子板”直通率切换是什么含义？"
-msgstr ""
+msgstr "What does the *Board / Sub-board* FPY toggle on the Live page mean?"
 
 #: ../../source/support/faq.rst:139
 msgid "实时检测页面（Live）右侧统计面板上方提供 **整板 / 子板** 切换控件，用于选择直通率（FPY）的统计口径："
 msgstr ""
+"Above the statistics panel on the Live page, a **Board / Sub-board** toggle "
+"picks the scope for First Pass Yield (FPY):"
 
 #: ../../source/support/faq.rst:141
 msgid "**整板**：以整块 PCB 为单位计算直通率（合格板数 / 已检测板数），标签显示 **主板直通率**。"
 msgstr ""
+"**Board**: FPY is computed per whole PCB (passed boards / inspected boards);"
+" the label reads **Board FPY**."
 
 #: ../../source/support/faq.rst:142
 msgid "**子板**：以子板为单位计算，仅适用于拼板产品，标签显示 **子板直通率**；非拼板产品显示 **N/A**。"
 msgstr ""
+"**Sub-board**: computed per sub-board, available only for panel products; "
+"the label reads **Sub-board FPY**. Non-panel products show **N/A**."
 
 #: ../../source/support/faq.rst:144
 msgid ""
 "该设置会持久化保存，页面刷新后仍保留。子板判废逻辑（比例模式 / 坏板标记模式）在产品设置的 **检测设置** 子标签中配置，详情请参见 "
 ":ref:`检测设置（子板判废逻辑）`。"
 msgstr ""
+"The setting persists across page reloads. The sub-board verdict logic (ratio"
+" mode / badmark mode) is configured under the **Inspection Settings** sub-"
+"tab in the product Recipe; see :ref:`检测设置（子板判废逻辑）`."
 
 #: ../../source/support/faq.rst:147
 msgid "软件升级与安装"
-msgstr ""
+msgstr "Software upgrade and installation"
 
 #: ../../source/support/faq.rst:150
 msgid "升级后软件无法启动或拍不了照片"
-msgstr ""
+msgstr "After an upgrade the software won't start or can't capture"
 
 #: ../../source/support/faq.rst:152
 msgid "升级前请先 **重启电脑**，避免后台残留进程导致旧版本卸载不干净。"
 msgstr ""
+"Before upgrading, **restart the PC** so the old version's background "
+"processes don't leave the install half-removed."
 
 #: ../../source/support/faq.rst:154
 msgid "重启电脑。"
-msgstr ""
+msgstr "Restart the PC."
 
 #: ../../source/support/faq.rst:155
 msgid "卸载旧软件（使用安装目录下的 ``unins000.exe``）。"
 msgstr ""
+"Uninstall the old version (use ``unins000.exe`` in the install directory)."
 
 #: ../../source/support/faq.rst:156
 msgid "安装新版本。"
-msgstr ""
+msgstr "Install the new version."
 
 #: ../../source/support/faq.rst:157
 msgid "参考随版本发布的更新说明文档完成升级后的额外操作（如校准、配置迁移等）。"
 msgstr ""
+"Follow the release notes that ship with the new version for any post-upgrade"
+" steps — calibration, configuration migration, and so on."
 
 #: ../../source/support/faq.rst:160
 msgid "更新软件后第一次启动很慢"
-msgstr ""
+msgstr "First boot after a software update is slow"
 
 #: ../../source/support/faq.rst:162
 msgid "i7-8 代工控机上首次启动大约需要 **2.5 分钟** 属正常现象；第二次及以后启动会显著加快。等待启动完成即可。"
 msgstr ""
+"On an 8th-gen i7 IPC, a first boot taking about **2.5 minutes** is normal; "
+"subsequent boots are noticeably faster. Just wait for it to finish."
 
 #: ../../source/support/faq.rst:165
 msgid "新版本功能不显示 / 设置里看不到"
-msgstr ""
+msgstr "New features don't show / are missing from Settings"
 
 #: ../../source/support/faq.rst:167
 msgid "浏览器缓存可能未刷新。按 ``Ctrl + R`` 或 ``Ctrl + Shift + R`` 强制刷新浏览器，让最新的前端代码加载进来。"
 msgstr ""
+"The browser cache may be stale. Hard-refresh with ``Ctrl + R`` or ``Ctrl + "
+"Shift + R`` so the latest frontend code loads."
 
 #: ../../source/support/faq.rst:168
 msgid "确认实际安装的软件版本正确（**设置 → 系统设置 → 关于** 页面查看版本号）。"
 msgstr ""
+"Confirm the actually-installed software version under **Settings → System "
+"Settings → About**."
 
 #: ../../source/support/faq.rst:171
 msgid "授权 / 加密狗过期，软件无法使用"
-msgstr ""
+msgstr "Licence / dongle expired — software won't run"
 
 #: ../../source/support/faq.rst:173
 msgid "检查加密狗是否插好、USB 接口是否松动。"
-msgstr ""
+msgstr "Check that the dongle is firmly seated and the USB port is not loose."
 
 #: ../../source/support/faq.rst:174
 msgid "在 **设置 → 系统设置 → 关于** 页面查看授权到期日期。"
 msgstr ""
+"Check the licence expiry date on **Settings → System Settings → About**."
 
 #: ../../source/support/faq.rst:175
 msgid "备用方案：若有备用加密狗，可临时替换使用。"
-msgstr ""
+msgstr "Workaround: if a spare dongle is available, swap it in temporarily."
 
 #: ../../source/support/faq.rst:178
 msgid "软件长时间启动失败（i.e. 与其他软件端口冲突）"
 msgstr ""
+"Software fails to start for a long time (e.g. port conflict with another "
+"app)"
 
 #: ../../source/support/faq.rst:180
-msgid "AOI 软件后端使用 **8000 端口**。若同设备上运行其他占用 8000 端口的程序（如个别音乐 / 通讯软件），AOI 软件无法正常启动。"
+msgid ""
+"AOI 软件后端使用 **8000 端口**。若同设备上运行其他占用 8000 端口的程序（如个别音乐 / 通讯软件），AOI 软件无法正常启动。"
 msgstr ""
+"The AOI backend uses **port 8000**. If another program on the same PC is "
+"holding that port (some music or messaging apps do), the AOI software won't "
+"start."
 
 #: ../../source/support/faq.rst:182
 msgid "关闭可能占用 8000 端口的其他程序后重新启动 AOI 软件。"
 msgstr ""
+"Close whichever program might be holding port 8000 and restart the AOI "
+"software."
 
 #: ../../source/support/faq.rst:183
 msgid "命令行可通过 ``netstat -ano | findstr :8000`` 查看 8000 端口当前被哪个进程占用。"
 msgstr ""
+"From the command line, ``netstat -ano | findstr :8000`` shows which process "
+"currently owns port 8000."
 
 #: ../../source/support/faq.rst:187
 msgid "软件启动 / 崩溃 / 卡顿"
-msgstr ""
+msgstr "Startup, crashes, and stutters"
 
 #: ../../source/support/faq.rst:190
 msgid "浏览器页面卡顿、不出图"
-msgstr ""
+msgstr "Browser stutters and images don't render"
 
 #: ../../source/support/faq.rst:192
 msgid ""
 "按 ``Ctrl + R`` 或 ``Ctrl + Shift + R`` 强制刷新浏览器缓存。如频繁出现，建议同时启用 "
 ":ref:`如何开启浏览器的硬件加速以避免浏览器卡顿？` 中介绍的浏览器硬件加速。"
 msgstr ""
+"Hard-refresh the browser with ``Ctrl + R`` or ``Ctrl + Shift + R``. If it "
+"happens often, also enable browser hardware acceleration as described in "
+":ref:`如何开启浏览器的硬件加速以避免浏览器卡顿？`."
 
 #: ../../source/support/faq.rst:195
 msgid "SSE 报错（后台模块崩溃）"
-msgstr ""
+msgstr "SSE errors (backend module crashed)"
 
 #: ../../source/support/faq.rst:197
 msgid "启动器面板上可看到各后端模块的状态指示。若有模块显示为红色（STOPPED），通常重启软件即可恢复。"
 msgstr ""
+"The launcher panel displays the status of each backend module. When a module"
+" shows red (STOPPED), restarting the software usually brings it back."
 
 #: ../../source/support/faq.rst:200
 msgid "检测记录积累过多导致卡顿"
-msgstr ""
+msgstr "Too many accumulated inspection records cause stutter"
 
 #: ../../source/support/faq.rst:202
-msgid ""
-"自 **v4.1-587** 起，软件支持自动清理旧检测数据。可在 **设置 → 系统设置 → 系统配置** 中设置保留天数 / "
-"磁盘阈值，过期数据会被自动清理。"
+msgid "软件支持自动清理旧检测数据。可在 **设置 → 系统设置 → 系统配置** 中设置保留天数 / 磁盘阈值，过期数据会被自动清理。"
 msgstr ""
+"The software can clean up old inspection data automatically. Under "
+"**Settings → System Settings → System Configuration**, set the retention "
+"days and the disk-usage threshold; expired data is cleaned up automatically."
 
 #: ../../source/support/faq.rst:203
 msgid "也可在 **数据分析报告 → 检测结果** 标签页中手动多选并删除指定时间段的检测记录。"
 msgstr ""
+"You can also manually multi-select and delete records for a given time "
+"window on the **Data Analysis Report → Inspection Results** tab."
 
 #: ../../source/support/faq.rst:207
 msgid ""
 "**请勿手动删除安装目录下的数据库文件夹**。手动删除可能误删程序数据，导致软件黑屏 / 无法启动。如需清理空间，请使用软件内置的自动 / "
 "手动清理功能。"
 msgstr ""
+"**Do not delete the database folder under the install directory by hand.** "
+"Doing so can wipe program state and leave the software unbootable or blank-"
+"screen. Free up space through the built-in automatic or manual cleanup "
+"features instead."
 
 #: ../../source/support/faq.rst:210
 msgid "软件更新后启动卡在 99%"
-msgstr ""
+msgstr "After an update, startup hangs at 99%"
 
 #: ../../source/support/faq.rst:212
 msgid "重启电脑后重新尝试。"
-msgstr ""
+msgstr "Restart the PC and try again."
 
 #: ../../source/support/faq.rst:213
 msgid "重新运行版本更新。"
-msgstr ""
+msgstr "Re-run the version update."
 
 #: ../../source/support/faq.rst:214
 msgid ""
 "检查启动器面板上各模块状态。如果 ``conveyor_server`` "
 "显示为红色（STOPPED），可能是设备处于急停状态或硬件初始化失败：先解除急停状态再重启软件；若是硬件初始化失败，请参见硬件相关章节。"
 msgstr ""
+"Check the per-module status on the launcher panel. If ``conveyor_server`` "
+"shows red (STOPPED), the equipment may be in emergency-stop or hardware init"
+" may have failed: release the emergency-stop and restart the software; if "
+"hardware init is the cause, see the hardware-related section."
 
 #: ../../source/support/faq.rst:218
 msgid "图像质量"
-msgstr ""
+msgstr "Image quality"
 
 #: ../../source/support/faq.rst:221
 msgid "编程拍照时拼接的大图上有重影"
-msgstr ""
+msgstr "Ghosting in the stitched full-board image during programming"
 
 #: ../../source/support/faq.rst:223
 msgid "换一块 PCB 重新拍摄。若依然有重影，说明轨道标定已偏，需要 **重新校准**\\ （相机标定 + 轨道标定）。"
 msgstr ""
+"Try a different PCB and re-capture. If ghosting persists, the conveyor "
+"calibration has drifted and a **re-calibration** is needed (camera "
+"calibration + conveyor calibration)."
 
 #: ../../source/support/faq.rst:224
 msgid ""
 "若重影是偶发现象，可进入 **设置 → 系统设置 → 捕获模块**，把 **图像拼接配置 → 最大偏移像素 X 与 Y** 调大（例如调到 "
 "30）；重启软件后再试。"
 msgstr ""
+"If the ghosting is intermittent, go to **Settings → System Settings → "
+"Capture Module** and increase **Image Stitching Configuration → Max offset "
+"pixels X / Y** (try 30); restart the software and try again."
 
 #: ../../source/support/faq.rst:227
-msgid "编程时元件显示正常，检测时元件表面泛红"
-msgstr ""
-
-#: ../../source/support/faq.rst:229
-msgid "原因：元件本身存在一定倾斜，编程时位于视野中部（光照均匀），但检测时智能路径规划可能让该元件落在视野边缘，被环形光源照得表面反光发红。"
-msgstr ""
-
-#: ../../source/support/faq.rst:231
-msgid ""
-"解决方法：在该元件 **周围** "
-"添加一个更大的占位元件（仅包含本体检测，阈值放到最宽松）。占位元件本身不会真正影响判定，但能改变路径规划，使原元件落在视野中部。"
-msgstr ""
-
-#: ../../source/support/faq.rst:235
 msgid "其他常见问题"
-msgstr ""
+msgstr "Other common issues"
 
-#: ../../source/support/faq.rst:238
-msgid "板子放反 / 全部被屏蔽时报错处理"
-msgstr ""
+#: ../../source/support/faq.rst:230
+msgid "板子放反时报错处理"
+msgstr "Reversed-board handling"
 
-#: ../../source/support/faq.rst:240
+#: ../../source/support/faq.rst:232
 msgid "**板子放反**：在新建检测任务前请再次确认 PCB 放置方向；若使用拼板，注意拼板基准位置。"
 msgstr ""
+"**Board loaded reversed**: confirm the PCB orientation before starting a new"
+" inspection task; on panel products, also check the panel reference "
+"position."
 
-#: ../../source/support/faq.rst:241
-msgid "**全部子板被判定为坏板时**：v4.0.1-561 起，复检页面会按 NG 处理，避免被误标记为 OK。"
-msgstr ""
-
-#: ../../source/support/faq.rst:244
+#: ../../source/support/faq.rst:235
 msgid "同名程序保留两个版本"
-msgstr ""
+msgstr "Keeping two versions of the same-named program"
 
-#: ../../source/support/faq.rst:246
+#: ../../source/support/faq.rst:237
 msgid "**临时解决**：先 **复制** 旧程序为另一名称，删除旧程序，再导入同名新程序。"
 msgstr ""
+"**Workaround**: first **duplicate** the old program under a different name, "
+"delete the old one, then import the new program with the original name."
 
-#: ../../source/support/faq.rst:247
+#: ../../source/support/faq.rst:238
 msgid "**注意**：删除旧程序后，相关检测记录的图像可能不可见。"
 msgstr ""
+"**Note**: once the old program is deleted, images for its historical "
+"inspection records may no longer be viewable."
 
-#: ../../source/support/faq.rst:248
-msgid "4.2 版本起会优化此处的程序命名 / 版本管理逻辑。"
-msgstr ""
-
-#: ../../source/support/faq.rst:251
+#: ../../source/support/faq.rst:241
 msgid "按料号跳过某些元件不检测"
-msgstr ""
+msgstr "Skip inspection by part number"
 
-#: ../../source/support/faq.rst:253
+#: ../../source/support/faq.rst:243
 msgid "在模板编辑器中找到对应料号的元件，关闭它们的所有检测项；或直接使用 :ref:`跳过此元件的检测` 开关进行整体跳过。"
 msgstr ""
-
-#: ../../source/support/faq.rst:256
-msgid "二次对齐如何启用"
-msgstr ""
-
-#: ../../source/support/faq.rst:258
-msgid ""
-"在 **PCB 拼板 → 拼板对齐设置** 中可启用 **二次对齐**。开启后，每块拼板在 mark "
-"点定位完成后会再做一次局部对齐，可补偿拼板间的微小累计偏移。多拼板大尺寸 PCB 经常需要启用此功能。"
-msgstr ""
-
-#: ../../source/support/faq.rst:261
-msgid "红胶板检测"
-msgstr ""
-
-#: ../../source/support/faq.rst:263
-msgid "红胶板专用的检测模型与算法尚在开发中；当前版本暂无可靠的红胶板检测方案。"
-msgstr ""
-
-#: ../../source/support/faq.rst:267
-msgid "版本升级影响矩阵"
-msgstr ""
-
-#: ../../source/support/faq.rst:269
-msgid "升级前请对照下表了解可能需要的额外操作。"
-msgstr ""
-
-#: ../../source/support/faq.rst:275
-msgid "版本"
-msgstr ""
-
-#: ../../source/support/faq.rst:276
-msgid "日期"
-msgstr ""
-
-#: ../../source/support/faq.rst:277
-msgid "升级注意事项"
-msgstr ""
-
-#: ../../source/support/faq.rst:278
-msgid "v4.0.1-565+"
-msgstr ""
-
-#: ../../source/support/faq.rst:279
-msgid "2026-03-05"
-msgstr ""
-
-#: ../../source/support/faq.rst:280
-msgid "完整安装包。v4.0-541 或更高版本可直接安装升级；早于 v3.9 的版本需先按升级流程操作。在线机版本 / 无商标版本有独立安装包。"
-msgstr ""
-
-#: ../../source/support/faq.rst:281
-msgid "v4.0.1-568"
-msgstr ""
-
-#: ../../source/support/faq.rst:282
-msgid "2026-03-06"
-msgstr ""
-
-#: ../../source/support/faq.rst:283
-msgid "修复 IC 引脚检测工具 *使用同步参数* 开关无法关闭的问题。"
-msgstr ""
-
-#: ../../source/support/faq.rst:284
-msgid "v4.0.1-561"
-msgstr ""
-
-#: ../../source/support/faq.rst:285
-msgid "2026-03-04"
-msgstr ""
-
-#: ../../source/support/faq.rst:286
-msgid "修复全部子板被判为坏板时复检页面错报 OK 的问题。"
-msgstr ""
-
-#: ../../source/support/faq.rst:287
-msgid "v4.1-587"
-msgstr ""
-
-#: ../../source/support/faq.rst:288
-msgid "2026-03-16"
-msgstr ""
-
-#: ../../source/support/faq.rst:289
-msgid "新增自动清理旧检测记录功能，可在 **系统配置** 中设置保留天数。"
-msgstr ""
-
-#: ../../source/support/faq.rst:290
-msgid "v3.9-503"
-msgstr ""
-
-#: ../../source/support/faq.rst:291
-msgid "2026-01-30"
-msgstr ""
-
-#: ../../source/support/faq.rst:292
-msgid "桥接检测工具支持独立放置（可手动添加到元件旁），增强电容 / 电阻连锡检测能力。"
-msgstr ""
-
-#: ../../source/support/faq.rst:293
-msgid "v3.8-473"
-msgstr ""
-
-#: ../../source/support/faq.rst:294
-msgid "2026-01-22"
-msgstr ""
-
-#: ../../source/support/faq.rst:295
-msgid "修复 OCR 识别到检测框外文字的问题。"
-msgstr ""
+"In the Template Editor, find the components with that part number and turn "
+"off all their inspection items; or use the :ref:`跳过此元件的检测` switch to skip "
+"them entirely."
 
 #~ msgid "在右侧属性栏找到“在组中添加 ROI”按钮。"
 #~ msgstr ""
 
+#~ msgid ""
+#~ "自 **v4.1-587** 起，软件支持自动清理旧检测数据。可在 **设置 → 系统设置 → 系统配置** 中设置保留天数 / "
+#~ "磁盘阈值，过期数据会被自动清理。"
+#~ msgstr ""
+
+#~ msgid "编程时元件显示正常，检测时元件表面泛红"
+#~ msgstr ""
+
+#~ msgid "原因：元件本身存在一定倾斜，编程时位于视野中部（光照均匀），但检测时智能路径规划可能让该元件落在视野边缘，被环形光源照得表面反光发红。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "解决方法：在该元件 **周围** "
+#~ "添加一个更大的占位元件（仅包含本体检测，阈值放到最宽松）。占位元件本身不会真正影响判定，但能改变路径规划，使原元件落在视野中部。"
+#~ msgstr ""
+
+#~ msgid "板子放反 / 全部被屏蔽时报错处理"
+#~ msgstr ""
+
+#~ msgid "**全部子板被判定为坏板时**：v4.0.1-561 起，复检页面会按 NG 处理，避免被误标记为 OK。"
+#~ msgstr ""
+
+#~ msgid "4.2 版本起会优化此处的程序命名 / 版本管理逻辑。"
+#~ msgstr ""
+
+#~ msgid "二次对齐如何启用"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "在 **PCB 拼板 → 拼板对齐设置** 中可启用 **二次对齐**。开启后，每块拼板在 mark "
+#~ "点定位完成后会再做一次局部对齐，可补偿拼板间的微小累计偏移。多拼板大尺寸 PCB 经常需要启用此功能。"
+#~ msgstr ""
+
+#~ msgid "红胶板检测"
+#~ msgstr ""
+
+#~ msgid "红胶板专用的检测模型与算法尚在开发中；当前版本暂无可靠的红胶板检测方案。"
+#~ msgstr ""
+
+#~ msgid "版本升级影响矩阵"
+#~ msgstr ""
+
+#~ msgid "升级前请对照下表了解可能需要的额外操作。"
+#~ msgstr ""
+
+#~ msgid "版本"
+#~ msgstr ""
+
+#~ msgid "日期"
+#~ msgstr ""
+
+#~ msgid "升级注意事项"
+#~ msgstr ""
+
+#~ msgid "v4.0.1-565+"
+#~ msgstr ""
+
+#~ msgid "2026-03-05"
+#~ msgstr ""
+
+#~ msgid "完整安装包。v4.0-541 或更高版本可直接安装升级；早于 v3.9 的版本需先按升级流程操作。在线机版本 / 无商标版本有独立安装包。"
+#~ msgstr ""
+
+#~ msgid "v4.0.1-568"
+#~ msgstr ""
+
+#~ msgid "2026-03-06"
+#~ msgstr ""
+
+#~ msgid "修复 IC 引脚检测工具 *使用同步参数* 开关无法关闭的问题。"
+#~ msgstr ""
+
+#~ msgid "v4.0.1-561"
+#~ msgstr ""
+
+#~ msgid "2026-03-04"
+#~ msgstr ""
+
+#~ msgid "修复全部子板被判为坏板时复检页面错报 OK 的问题。"
+#~ msgstr ""
+
+#~ msgid "v4.1-587"
+#~ msgstr ""
+
+#~ msgid "2026-03-16"
+#~ msgstr ""
+
+#~ msgid "新增自动清理旧检测记录功能，可在 **系统配置** 中设置保留天数。"
+#~ msgstr ""
+
+#~ msgid "v3.9-503"
+#~ msgstr ""
+
+#~ msgid "2026-01-30"
+#~ msgstr ""
+
+#~ msgid "桥接检测工具支持独立放置（可手动添加到元件旁），增强电容 / 电阻连锡检测能力。"
+#~ msgstr ""
+
+#~ msgid "v3.8-473"
+#~ msgstr ""
+
+#~ msgid "2026-01-22"
+#~ msgstr ""
+
+#~ msgid "修复 OCR 识别到检测框外文字的问题。"
+#~ msgstr ""

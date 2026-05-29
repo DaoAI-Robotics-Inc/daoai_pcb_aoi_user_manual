@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# PCBA AOI User Manual.
 # Copyright (C) 2021-2026
 # This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-28 14:17-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2026-05-28 14:17-0700\n"
+"Last-Translator: \n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -22,39 +20,32 @@ msgstr ""
 
 #: ../../source/index.rst:4
 msgid "介绍"
-msgstr ""
+msgstr "Introduction"
 
 #: ../../source/index.rst:11
 msgid "主页"
-msgstr ""
+msgstr "Home"
 
 #: ../../source/index.rst:17
 msgid "创建与编程产品"
-msgstr ""
+msgstr "Creating and Programming a Product"
 
 #: ../../source/index.rst:33
 msgid "检测"
-msgstr ""
+msgstr "Inspection"
 
 #: ../../source/index.rst:39
 msgid "模型管理"
-msgstr ""
+msgstr "Model Management"
 
 #: ../../source/index.rst:45
 msgid "系统设置"
-msgstr ""
+msgstr "System Settings"
 
 #: ../../source/index.rst:51
 msgid "支持"
-msgstr ""
+msgstr "Support"
 
 #: ../../source/index.rst:2
 msgid "PCBA AOI 用户手册"
-msgstr ""
-
-#~ msgid "使用指南"
-#~ msgstr ""
-
-#~ msgid " PCBA AOI 用户手册"
-#~ msgstr ""
-
+msgstr "PCBA AOI User Manual"

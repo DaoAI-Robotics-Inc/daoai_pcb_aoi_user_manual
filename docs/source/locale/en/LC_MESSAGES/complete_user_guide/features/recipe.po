@@ -4,7 +4,6 @@
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
@@ -12,261 +11,335 @@ msgstr ""
 "POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/features/recipe.rst:2
 msgid "产品设置（Recipe）"
-msgstr ""
+msgstr "Product Recipe"
 
 #: ../../source/complete_user_guide/features/recipe.rst:4
 msgid ""
 "产品设置区（**设置**，即 Recipe）位于编程页面（Teach）左侧标签栏的顶部区域。该区域包含五个子标签，用于配置产品的传送带、PCB "
 "物理参数及检测判废逻辑。子标签依次为："
 msgstr ""
+"The product setup area — **Recipe** — sits at the top of the left-hand tab "
+"strip on the Teach page. It contains five sub-tabs for configuring the "
+"conveyor, PCB physical parameters, and inspection verdict logic. The sub-"
+"tabs are, in order:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:6
 msgid "**PCB详情** （PCB Detail）"
-msgstr ""
+msgstr "**PCB Detail**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:7
 msgid "**传送带设置** （Conveyor Setup）"
-msgstr ""
+msgstr "**Conveyor Setup**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:8
 msgid "**PCB尺寸** （PCB Dimension）"
-msgstr ""
+msgstr "**PCB Dimension**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:9
 msgid "**全PCB拍摄** （Full PCB Capture）"
-msgstr ""
+msgstr "**Full PCB Capture**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:10
 msgid "**检测设置** （Inspection Settings）"
-msgstr ""
+msgstr "**Inspection Settings**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:12
 msgid "每个子标签完成后会显示蓝色对勾图标，表示该步骤已配置完成。后四个子标签在完成前置步骤之前处于禁用状态，须按顺序操作。"
 msgstr ""
+"A blue check icon appears next to a sub-tab once that step is complete. The "
+"last four sub-tabs are disabled until their prerequisite step is done — work"
+" through them in order."
 
 #: ../../source/complete_user_guide/features/recipe.rst:-1
 msgid "设置区五个子标签栏（PCB详情 / 传送带设置 / PCB尺寸 / 全PCB拍摄 / 检测设置）"
 msgstr ""
+"The Recipe area's five sub-tabs: PCB Detail / Conveyor Setup / PCB Dimension"
+" / Full PCB Capture / Inspection Settings"
 
 #: ../../source/complete_user_guide/features/recipe.rst:20
 msgid "**PCB详情（PCB Detail）**"
-msgstr ""
+msgstr "**PCB Detail**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:22
 msgid "PCB详情标签页包含两个区域："
-msgstr ""
+msgstr "The PCB Detail tab has two areas:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:24
 msgid ""
 "**产品名称（产品名称）**：可在此输入或修改产品名称。产品名称须唯一；若与已有产品重名，保存时会提示错误。点击 **保存** 提交修改，点击 "
 "**取消** 放弃编辑。"
 msgstr ""
+"**Product Name**: enter or rename the product here. The name must be unique;"
+" saving a duplicate name shows an error. Click **Save** to commit, "
+"**Cancel** to discard the edit."
 
 #: ../../source/complete_user_guide/features/recipe.rst:26
 msgid "**检测参数（Specs for Inspection）**：以列表形式显示四项产品参数的当前状态，每项均有操作按钮可跳转至对应子标签页："
 msgstr ""
+"**Specs for Inspection**: lists the current state of four product "
+"parameters; each row carries an action button that jumps to the "
+"corresponding sub-tab:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:28
 msgid ""
 "**传送带宽度（Conveyor Width）**：未设置时显示 ``(未定义)``，已设置时显示毫米数值。点击 **设置** 跳转至 "
 "**传送带设置** 子标签。"
 msgstr ""
+"**Conveyor Width**: shows ``(undefined)`` when unset, the value in "
+"millimeters when set. Click **Set** to jump to **Conveyor Setup**."
 
 #: ../../source/complete_user_guide/features/recipe.rst:29
 msgid ""
 "**PCB尺寸（PCB Dimension）**：未测量时显示 ``(未定义)``，已测量时显示宽 × 高（mm）。点击 **测量** 跳转至 "
 "**PCB尺寸** 子标签。"
 msgstr ""
+"**PCB Dimension**: shows ``(undefined)`` when unmeasured, width × height "
+"(mm) once measured. Click **Measure** to jump to **PCB Dimension**."
 
 #: ../../source/complete_user_guide/features/recipe.rst:30
 msgid ""
 "**全PCB拍摄（Full PCB Capture）**：未拍摄时显示 ``(未定义)``，已拍摄时显示已采集状态。点击 **拍摄** 跳转至 "
 "**全PCB拍摄** 子标签。"
 msgstr ""
+"**Full PCB Capture**: shows ``(undefined)`` when not yet captured, "
+"*captured* once acquired. Click **Capture** to jump to **Full PCB Capture**."
 
 #: ../../source/complete_user_guide/features/recipe.rst:31
 msgid ""
-"**检测设置（Inspection Settings）**：显示当前判废模式摘要（见下方说明）。点击 **配置** 跳转至 **检测设置** "
-"子标签。"
+"**检测设置（Inspection Settings）**：显示当前判废模式摘要（见下方说明）。点击 **配置** 跳转至 **检测设置** 子标签。"
 msgstr ""
+"**Inspection Settings**: shows a summary of the current verdict mode (see "
+"below). Click **Configure** to jump to **Inspection Settings**."
 
 #: ../../source/complete_user_guide/features/recipe.rst:-1
 msgid "PCB详情标签页：产品名称、检测参数四行（传送带宽度 / PCB尺寸 / 全PCB拍摄 / 检测设置）"
 msgstr ""
+"PCB Detail tab: Product Name plus four Specs-for-Inspection rows (Conveyor "
+"Width / PCB Dimension / Full PCB Capture / Inspection Settings)"
 
 #: ../../source/complete_user_guide/features/recipe.rst:39
 msgid "**传送带设置（Conveyor Setup）**"
-msgstr ""
+msgstr "**Conveyor Setup**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:41
 msgid "传送带设置用于在编程过程中锁定传送带并调整宽度，以便手动放板或使用 PCB 进入功能。"
 msgstr ""
+"Conveyor Setup locks the conveyor for the programming session and adjusts "
+"its width so you can load boards manually or use PCB In."
 
 #: ../../source/complete_user_guide/features/recipe.rst:43
 msgid "操作步骤："
-msgstr ""
+msgstr "Steps:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:45
 msgid "**选择一个传送带（Select a Conveyor）**：从下拉列表中选择当前可用的传送带槽位。"
 msgstr ""
+"**Select a Conveyor**: pick an available conveyor slot from the drop-down."
 
 #: ../../source/complete_user_guide/features/recipe.rst:46
 msgid "**锁定传送带（Lock Conveyor for this Task）**：点击此按钮锁定所选传送带供本次编程使用。"
 msgstr ""
+"**Lock Conveyor for this Task**: click to claim the selected conveyor for "
+"this programming session."
 
 #: ../../source/complete_user_guide/features/recipe.rst:47
 msgid ""
-"**设置传送带宽度（Set Conveyor Width）**：在输入框中输入目标宽度（mm），再点击 **移动到宽度（Move to "
-"Width）** 使传送带实际移动到该宽度。当前传送带宽度会显示在下方以供参考。"
+"**设置传送带宽度（Set Conveyor Width）**：在输入框中输入目标宽度（mm），再点击 **移动到宽度（Move to Width）**"
+" 使传送带实际移动到该宽度。当前传送带宽度会显示在下方以供参考。"
 msgstr ""
+"**Set Conveyor Width**: enter the target width (mm), then click **Move to "
+"Width** to drive the conveyor to that width. The current width is shown "
+"below for reference."
 
 #: ../../source/complete_user_guide/features/recipe.rst:48
 msgid ""
 "**保存并继续（Save and Continue）**：确认宽度后点击此按钮，将宽度写入产品并跳转至 **PCB尺寸** "
 "子标签。需已完成锁定方可启用。"
 msgstr ""
+"**Save and Continue**: after confirming the width, click to write it into "
+"the product and jump to **PCB Dimension**. Enabled only after the conveyor "
+"is locked."
 
 #: ../../source/complete_user_guide/features/recipe.rst:49
 msgid "**释放传送带（Release Conveyor）**：操作完成后点击此按钮，释放对传送带的独占控制权。"
 msgstr ""
+"**Release Conveyor**: when you're done, click to release the exclusive lock."
 
 #: ../../source/complete_user_guide/features/recipe.rst:-1
 msgid "传送带设置步骤：选择传送带 + 锁定 / 释放传送带按钮、进板 / 出板"
 msgstr ""
+"Conveyor Setup steps: Select a Conveyor + Lock / Release buttons + PCB In / "
+"PCB Out"
 
 #: ../../source/complete_user_guide/features/recipe.rst:57
 msgid "**PCB尺寸（PCB Dimension）**"
-msgstr ""
+msgstr "**PCB Dimension**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:59
 msgid ""
 "该标签页用于测量或输入 PCB 的物理尺寸（宽度与高度，单位 mm）。操作流程与创建产品向导中的 **输入或计算尺寸** 步骤一致，详见 "
 ":ref:`创建产品` 中的对应说明。"
 msgstr ""
+"This sub-tab measures or accepts the PCB's physical dimensions (width and "
+"height, in millimeters). The workflow is the same as the **Enter or "
+"Calculate Dimension** step in the Create-Product wizard; see :ref:`创建产品` for"
+" details."
 
 #: ../../source/complete_user_guide/features/recipe.rst:65
 msgid "**全PCB拍摄（Full PCB Capture）**"
-msgstr ""
+msgstr "**Full PCB Capture**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:67
 msgid ""
 "该标签页用于重新执行完整 PCB 拍摄，生成用于检测的黄金图像。操作流程与创建产品向导中的 **完整 PCB 拍摄** 步骤一致，详见 "
 ":ref:`创建产品` 中的对应说明。完成拍摄后可在此处更新相机参数（曝光、增益、白平衡等）并重新拍摄覆盖当前版本。"
 msgstr ""
+"This sub-tab re-captures the full PCB to produce the golden image used "
+"during inspection. The workflow is the same as the **Full PCB Capture** step"
+" in the Create-Product wizard; see :ref:`创建产品` for details. After capture, "
+"you can adjust camera parameters here (exposure, gain, white balance, and so"
+" on) and re-capture to overwrite the current version."
 
 #: ../../source/complete_user_guide/features/recipe.rst:73
 msgid "**检测设置（Inspection Settings）**"
-msgstr ""
+msgstr "**Inspection Settings**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:75
 msgid "检测设置标签页用于配置拼板产品中 **子板（sub-PCB）** 的自动判废逻辑，决定系统如何判断每块子板为好板或坏板。"
 msgstr ""
+"The Inspection Settings sub-tab configures automatic verdict logic for "
+"**sub-boards** in a PCB Array (panel) product — how the system decides each "
+"sub-board is good or bad."
 
 #: ../../source/complete_user_guide/features/recipe.rst:77
 msgid "可从 PCB详情 标签页点击 **检测设置** 行右侧的 **配置** 按钮进入此标签页。"
 msgstr ""
+"Reach this sub-tab from PCB Detail by clicking **Configure** on the "
+"Inspection Settings row."
 
 #: ../../source/complete_user_guide/features/recipe.rst:79
 msgid "该标签页包含以下四项参数："
-msgstr ""
+msgstr "Four parameters are exposed:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:81
 msgid "**使用NG元件比例（Use NG component ratio）**"
-msgstr ""
+msgstr "**Use NG component ratio**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:83
 msgid "Switch 开关，默认 **开启**。启用后，系统根据子板上 NG 元件的比例来自动判废。开启时，下方显示以下子项："
 msgstr ""
+"Switch; default **on**. When enabled, the system auto-fails a sub-board "
+"based on the proportion of NG components on it. Exposes:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:85
 msgid ""
 "**失败比例阈值（Failure ratio threshold）**：InputNumber 输入框，有效范围 ``0.0–1.0``，默认值 "
 "``0.5``。当子板的 NG 元件比例超过该阈值时，子板被判定为坏板。"
 msgstr ""
+"**Failure ratio threshold**: numeric input, range ``0.0–1.0``, default "
+"``0.5``. A sub-board is judged bad when its NG-component ratio exceeds this "
+"threshold."
 
 #: ../../source/complete_user_guide/features/recipe.rst:87
 msgid "**使用坏板标记元件（Use badmark elements）**"
-msgstr ""
+msgstr "**Use badmark elements**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:89
 msgid ""
 "Switch 开关，默认 **关闭**。启用后，系统依据产品中已定义的坏板标记元件（badmark）来判废子板（参见 "
 ":ref:`检测控制与特殊标记`）。开启时，下方显示以下子项："
 msgstr ""
+"Switch; default **off**. When enabled, the system uses the product's defined"
+" badmark components to decide each sub-board (see :ref:`检测控制与特殊标记`). "
+"Exposes:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:91
 msgid "**组合逻辑（Combine logic）**：Radio 单选，可选："
-msgstr ""
+msgstr "**Combine logic**: radio buttons; choose:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:93
 msgid "**任一NG**：只要有任意一个坏板标记元件判为 NG，子板即判为坏板。"
-msgstr ""
+msgstr "**Any NG**: the sub-board is bad if any badmark component is NG."
 
 #: ../../source/complete_user_guide/features/recipe.rst:94
 msgid "**全部NG**：所有坏板标记元件均判为 NG，子板才判为坏板。"
 msgstr ""
+"**All NG**: the sub-board is bad only when every badmark component is NG."
 
 #: ../../source/complete_user_guide/features/recipe.rst:96
 msgid "**已定义坏板标记元件数（Badmark elements defined）**：显示当前产品中已定义的坏板标记元件数量（只读）。"
 msgstr ""
+"**Badmark elements defined**: read-only count of badmark components "
+"currently defined in the product."
 
 #: ../../source/complete_user_guide/features/recipe.rst:98
 msgid "若启用了坏板标记模式但尚未定义任何坏板标记元件，页面会显示黄色警告提示，说明该模式不会生效。"
 msgstr ""
+"When the badmark mode is on but no badmark components are defined, a yellow "
+"warning explains that the mode will have no effect."
 
 #: ../../source/complete_user_guide/features/recipe.rst:100
 msgid "**两种模式均关闭时**"
-msgstr ""
+msgstr "**When both modes are off**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:102
 msgid "若 **使用NG元件比例** 和 **使用坏板标记元件** 均关闭，页面会显示提示信息：子板不会被自动判定，仅进行人工复检。"
 msgstr ""
+"If both **Use NG component ratio** and **Use badmark elements** are off, the"
+" page shows a notice: sub-boards will not be auto-judged — manual review "
+"only."
 
 #: ../../source/complete_user_guide/features/recipe.rst:104
 msgid "**保存与取消**"
-msgstr ""
+msgstr "**Save and Cancel**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:106
 msgid ""
-"编辑完成后点击 **保存** 提交修改；点击 **取消** 恢复为上次已保存的值。提交前系统会校验 **失败比例阈值** 是否在 ``[0, "
-"1]`` 范围内，超出范围将提示错误并阻止保存。"
+"编辑完成后点击 **保存** 提交修改；点击 **取消** 恢复为上次已保存的值。提交前系统会校验 **失败比例阈值** 是否在 ``[0, 1]`` "
+"范围内，超出范围将提示错误并阻止保存。"
 msgstr ""
+"Click **Save** to commit; click **Cancel** to revert to the last saved "
+"values. Before saving, the system checks that **Failure ratio threshold** is"
+" in ``[0, 1]`` and blocks the save with an error if it isn't."
 
 #: ../../source/complete_user_guide/features/recipe.rst:108
 msgid "**PCB详情中的检测设置状态摘要**"
-msgstr ""
+msgstr "**Inspection Settings status summary on PCB Detail**"
 
 #: ../../source/complete_user_guide/features/recipe.rst:110
 msgid "PCB详情标签页的 **检测设置** 行会根据当前配置显示以下摘要文字："
 msgstr ""
+"The Inspection Settings row on PCB Detail shows one of the following "
+"summaries:"
 
 #: ../../source/complete_user_guide/features/recipe.rst:112
 msgid "**比例 · 坏板标记**：两种模式均已启用。"
-msgstr ""
+msgstr "**Ratio · Badmark**: both modes are enabled."
 
 #: ../../source/complete_user_guide/features/recipe.rst:113
 msgid "**仅比例**：仅启用了NG元件比例模式。"
-msgstr ""
+msgstr "**Ratio only**: only the NG-component-ratio mode is enabled."
 
 #: ../../source/complete_user_guide/features/recipe.rst:114
 msgid "**仅坏板标记**：仅启用了坏板标记模式。"
-msgstr ""
+msgstr "**Badmark only**: only the badmark mode is enabled."
 
 #: ../../source/complete_user_guide/features/recipe.rst:115
 msgid "**仅人工复检**：两种模式均已关闭。"
-msgstr ""
+msgstr "**Manual review only**: both modes are disabled."
 
 #: ../../source/complete_user_guide/features/recipe.rst:-1
 msgid "检测设置标签页：使用NG元件比例开关、失败比例阈值、使用坏板标记元件开关"
 msgstr ""
-
+"Inspection Settings sub-tab: Use NG component ratio switch, Failure ratio "
+"threshold, Use badmark elements switch"

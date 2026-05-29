@@ -4,7 +4,6 @@
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
@@ -12,69 +11,82 @@ msgstr ""
 "POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:2
 msgid "DIP 桥接检测（DIP Bridge）"
-msgstr ""
+msgstr "DIP Bridge Inspection"
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:4
 msgid "**此页面的用途**"
-msgstr ""
+msgstr "**What this page covers**"
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:6
 msgid "检测 DIP 器件相邻引脚 / 焊点之间的连锡。"
 msgstr ""
+"Detects solder bridges between adjacent leads or solder joints on DIP "
+"components."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:8
 msgid "**如何进入**"
-msgstr ""
+msgstr "**How to open it**"
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:10
 msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
 msgstr ""
+"Draw the corresponding ROI in the Template Editor, then configure the tool's"
+" parameters in the parameter panel."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:12
 msgid "**操作流程**"
-msgstr ""
+msgstr "**Workflow**"
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:14
 msgid ""
-"**桥接颜色公式（Bridge Color Formula）**：选择用于识别连锡的颜色公式（如 ``2B-R-G``）；选择三色时配置 **三色"
-" X / Y / Z / A** 系数。"
+"**桥接颜色公式（Bridge Color Formula）**：选择用于识别连锡的颜色公式（如 ``2B-R-G``）；选择三色时配置 **三色 X "
+"/ Y / Z / A** 系数。"
 msgstr ""
+"**Bridge Color Formula**: choose the color formula used to detect solder "
+"bridges (e.g. ``2B-R-G``); when **Tricolor** is chosen, configure **Tricolor"
+" X / Y / Z / A**."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:15
 msgid "**灵敏度（Sensitivity）**：桥接颜色检测灵敏度（0–1），值越大检测范围越大。"
 msgstr ""
+"**Sensitivity**: sensitivity of the bridge color detection (0–1). Higher "
+"values widen the detection band."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:16
 msgid "**桥接有效比率范围（Bridge Valid Ratio Range）**：连锡有效比例 OK 区间。"
-msgstr ""
+msgstr "**Bridge Valid Ratio Range**: OK band for the bridge valid ratio."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:17
 msgid "**桥接宽度 (%)（Bridge Width）**：桥接检测带宽度。"
-msgstr ""
+msgstr "**Bridge Width (%)**: width of the bridge-detection band."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:18
 msgid "**焊点数量（Solder Count）/ 焊点宽度 (mm)（Solder Width）**：焊点子框划分。"
 msgstr ""
+"**Solder Count / Solder Width (mm)**: defines how the ROI is divided into "
+"solder-joint sub-frames."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:19
 msgid "**启用可视化（Enable Visualization）**。"
-msgstr ""
+msgstr "**Enable Visualization**."
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:22
 msgid "**常见问题与提示**"
-msgstr ""
+msgstr "**Common questions and tips**"
 
 #: ../../source/complete_user_guide/config/detection_tools/dip_bridge.rst:26
 msgid "**DIP 桥接敏感度怎么调**：与普通桥接相同 —— **灵敏度** 小时只抽蓝色，大时包含偏红像素。"
 msgstr ""
-
+"**How to tune DIP bridge sensitivity**: same advice as the standard Bridge "
+"tool — a low **Sensitivity** picks up only blue pixels, while a high value "
+"also includes reddish pixels."
