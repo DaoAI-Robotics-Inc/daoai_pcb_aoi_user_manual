@@ -1,0 +1,226 @@
+{
+  "2d_camera_settings.png": [
+    "complete_user_guide/features/images/2d_camera_settings.png"
+  ],
+  "add_from_library_dialog.png": [
+    "complete_user_guide/features/images/add_from_library_dialog.png"
+  ],
+  "aoi_pcb_blob_liner.png": [
+    "complete_user_guide/system_management/images/aoi_pcb_blob_liner.png"
+  ],
+  "archive_file_in_target_volume.png": [
+    "complete_user_guide/system_management/images/archive_file_in_target_volume.png"
+  ],
+  "change_host.png": [
+    "introduce/quick_start/images/change_host.png"
+  ],
+  "change_language.png": [
+    "introduce/quick_start/images/change_language.png"
+  ],
+  "collinearity.png": [
+    "complete_user_guide/features/images/collinearity.png"
+  ],
+  "component_list.png": [
+    "complete_user_guide/features/images/component_list.png"
+  ],
+  "component_list_view.png": [
+    "complete_user_guide/features/images/component_list_view.png"
+  ],
+  "component_settings.png": [
+    "complete_user_guide/config/images/component_settings.png"
+  ],
+  "create_product_1.png": [
+    "introduce/quick_start/images/create_product_1.png"
+  ],
+  "create_product_3.png": [
+    "complete_user_guide/features/images/create_product_3.png"
+  ],
+  "create_product_basic_info.png": [
+    "complete_user_guide/features/images/create_product_basic_info.png"
+  ],
+  "create_product_entry.png": [
+    "complete_user_guide/features/images/create_product_entry.png"
+  ],
+  "ctrlpanel_power.png": [
+    "support/images/ctrlpanel_power.png"
+  ],
+  "default_program_params.PNG": [
+    "complete_user_guide/system_management/images/default_program_params.PNG"
+  ],
+  "disk_usage_widget.png": [
+    "complete_user_guide/home/images/disk_usage_widget.png"
+  ],
+  "dual_conveyor.png": [
+    "complete_user_guide/inspection/images/dual_conveyor.png"
+  ],
+  "edge_hardware_acc.png": [
+    "support/images/edge_hardware_acc.png"
+  ],
+  "edge_hardware_acc2.png": [
+    "support/images/edge_hardware_acc2.png"
+  ],
+  "edge_hardware_acc3.png": [
+    "support/images/edge_hardware_acc3.png"
+  ],
+  "error_type_translation.png": [
+    "complete_user_guide/system_management/images/error_type_translation.png"
+  ],
+  "eval_result.png": [
+    "complete_user_guide/features/images/eval_result.png"
+  ],
+  "full_pcb_capture.png": [
+    "complete_user_guide/features/images/full_pcb_capture.png"
+  ],
+  "home.png": [
+    "complete_user_guide/home/images/home.png"
+  ],
+  "host_addr.png": [
+    "introduce/quick_start/images/host_addr.png"
+  ],
+  "infield_calibration.png": [
+    "complete_user_guide/system_management/images/infield_calibration.png"
+  ],
+  "inspect_page.png": [
+    "complete_user_guide/inspection/images/inspect_page.png",
+    "introduce/quick_start/images/inspect_page.png"
+  ],
+  "inspect_review_page.png": [
+    "complete_user_guide/inspection/images/inspect_review_page.png"
+  ],
+  "instance_manager.png": [
+    "introduce/quick_start/images/instance_manager.png"
+  ],
+  "login.png": [
+    "introduce/quick_start/images/login.png"
+  ],
+  "manage_models.png": [
+    "complete_user_guide/system_management/images/manage_models.png"
+  ],
+  "manage_user.png": [
+    "complete_user_guide/system_management/images/manage_user.png"
+  ],
+  "manage_user2.png": [
+    "complete_user_guide/system_management/images/manage_user2.png"
+  ],
+  "manual_tools.png": [
+    "complete_user_guide/features/images/manual_tools.png"
+  ],
+  "mark_align_pcb_overview.png": [
+    "complete_user_guide/features/images/mark_align_pcb_overview.png"
+  ],
+  "mark_alignment.png": [
+    "introduce/quick_start/images/mark_alignment.png"
+  ],
+  "mark_point_example.png": [
+    "complete_user_guide/features/images/mark_point_example.png"
+  ],
+  "models_dataset_page.png": [
+    "complete_user_guide/system_management/images/models_dataset_page.png"
+  ],
+  "models_page.png": [
+    "complete_user_guide/system_management/images/models_page.png"
+  ],
+  "models_train_page.png": [
+    "complete_user_guide/system_management/images/models_train_page.png"
+  ],
+  "nv_power.png": [
+    "support/images/nv_power.png"
+  ],
+  "params_overview.png": [
+    "complete_user_guide/config/images/params_overview.png"
+  ],
+  "pcb_array_1.png": [
+    "complete_user_guide/features/images/pcb_array_1.png"
+  ],
+  "recipe_conveyor_setup.png": [
+    "complete_user_guide/features/images/recipe_conveyor_setup.png"
+  ],
+  "recipe_inspection_settings.png": [
+    "complete_user_guide/features/images/recipe_inspection_settings.png"
+  ],
+  "recipe_pcb_detail.png": [
+    "complete_user_guide/features/images/recipe_pcb_detail.png"
+  ],
+  "recipe_tabs.png": [
+    "complete_user_guide/features/images/recipe_tabs.png"
+  ],
+  "review_page_overview.png": [
+    "complete_user_guide/inspection/images/review_page_overview.png"
+  ],
+  "search.png": [
+    "complete_user_guide/features/images/search.png"
+  ],
+  "settings.png": [
+    "introduce/quick_start/images/settings.png"
+  ],
+  "size_calculation.png": [
+    "complete_user_guide/features/images/size_calculation.png"
+  ],
+  "start_inspection.png": [
+    "complete_user_guide/inspection/images/start_inspection.png",
+    "introduce/quick_start/images/start_inspection.png"
+  ],
+  "system_log.PNG": [
+    "complete_user_guide/system_management/images/system_log.PNG"
+  ],
+  "system_setting.png": [
+    "complete_user_guide/system_management/images/system_setting.png"
+  ],
+  "template_editor.png": [
+    "introduce/quick_start/images/template_editor.png"
+  ],
+  "tool_bridge.png": [
+    "complete_user_guide/config/images/tool_bridge.png"
+  ],
+  "tool_color.png": [
+    "complete_user_guide/config/images/tool_color.png"
+  ],
+  "tool_dip.png": [
+    "complete_user_guide/config/images/tool_dip.png"
+  ],
+  "tool_glue.png": [
+    "complete_user_guide/config/images/tool_glue.png"
+  ],
+  "tool_opensolder.png": [
+    "complete_user_guide/config/images/tool_opensolder.png"
+  ],
+  "train.png": [
+    "complete_user_guide/features/images/train.png"
+  ],
+  "variation_chooser_keep_current.png": [
+    "complete_user_guide/features/images/variation_chooser_keep_current.png"
+  ],
+  "variation_chooser_pick.png": [
+    "complete_user_guide/features/images/variation_chooser_pick.png"
+  ],
+  "variation_draw_roi.png": [
+    "complete_user_guide/features/images/variation_draw_roi.png"
+  ],
+  "variation_entry_review.png": [
+    "complete_user_guide/features/images/variation_entry_review.png"
+  ],
+  "variation_overview.png": [
+    "complete_user_guide/features/images/variation_overview.png"
+  ],
+  "variation_template_editor.png": [
+    "complete_user_guide/features/images/variation_template_editor.png"
+  ],
+  "warning.png": [
+    "complete_user_guide/features/images/warning.png"
+  ],
+  "whole_board_inspection_overview.png": [
+    "complete_user_guide/features/images/whole_board_inspection_overview.png"
+  ],
+  "worklist.png": [
+    "complete_user_guide/inspection/images/worklist.png",
+    "introduce/quick_start/images/worklist.png"
+  ],
+  "worklist1.png": [
+    "complete_user_guide/inspection/images/worklist1.png",
+    "introduce/quick_start/images/worklist1.png"
+  ],
+  "worklist2.png": [
+    "complete_user_guide/inspection/images/worklist2.png",
+    "introduce/quick_start/images/worklist2.png"
+  ]
+}
