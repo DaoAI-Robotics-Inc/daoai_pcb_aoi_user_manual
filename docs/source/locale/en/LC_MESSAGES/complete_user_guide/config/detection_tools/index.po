@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:2
+msgid "检测工具参考"
+msgstr "Inspection Tool Reference"
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:4
+msgid "本章逐一介绍每种 2D 检测工具的参数与配置方法。每个工具单独成页。"
+msgstr ""
+"This chapter walks through the parameters and configuration of each 2D "
+"inspection tool, one page per tool."
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:6
+msgid ""
+"本章节详细介绍 2D 检测工具（检测项）及其参数含义。每个元件可包含一个或多个检测项；在 **模板编辑器** "
+"中选中元件后，可在右侧面板查看并编辑各检测项的参数。"
+msgstr ""
+"This chapter documents each 2D inspection tool (also called an *inspection "
+"item*) and the meaning of its parameters. A component can carry one or more "
+"inspection items; selecting the component in the **Template Editor** exposes"
+" their parameters in the right-hand panel."
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:-1
+msgid "检测参数总览"
+msgstr "Inspection parameters overview"
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:12
+msgid "在阅读各工具参数前，先了解几个贯穿全篇的通用概念："
+msgstr ""
+"Before reading the per-tool parameter pages, get familiar with a few "
+"concepts that recur throughout:"
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:14
+msgid ""
+"**AI 异常分数**：基于 AI 模型的检测会输出一个 0~1 的异常分数；接近 0 表示与正常样本相似，接近 1 表示差异大。可通过统计图表对比正常"
+" / 异常样本的分数分布，选择合适的判定阈值。"
+msgstr ""
+"**AI anomaly score**: AI-driven inspections output an anomaly score between "
+"0 and 1; values near 0 indicate the sample looks normal, values near 1 "
+"indicate a large deviation. Use the score-distribution histograms to compare"
+" OK vs. NG samples and pick a sensible threshold."
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:15
+msgid ""
+"**颜色范围与有效比例（Valid Ratio）**：基于颜色的检测在 ROI 内用 **HSV 颜色范围** "
+"将像素二值化为\"有效点\"，有效比例定义为 :math:`100 \\times \\dfrac{\\text{有效点数}}{\\text{ROI "
+"面积}}`。判定时检查有效比例是否落入设定的 **有效比例范围**。一个 ROI 可配置多组颜色范围，分别独立判定。"
+msgstr ""
+"**Color range and Valid Ratio**: color-based inspections binarize pixels "
+"inside the ROI using an **HSV color range**; pixels passing the range are "
+"counted as *valid pixels*, and the valid ratio is defined as :math:`100 "
+"\\times \\dfrac{\\text{valid pixel count}}{\\text{ROI area}}`. The decision "
+"checks whether the valid ratio falls inside the configured **Valid Ratio "
+"Range**. A single ROI can be configured with multiple color ranges, each "
+"evaluated independently."
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:16
+msgid ""
+"**颜色公式（Color Formula）**：定义如何从像素计算颜色特征。可选 HSV（中心 / 起止色调 + "
+"明度范围），或三色公式（Tricolor，如 ``2B-R-G`` 线性组合，配合 X/Y/Z/A 系数与阈值）。"
+msgstr ""
+"**Color Formula**: defines how the color feature is computed from each "
+"pixel. Choose **HSV** (center hue plus start/end hue, with a value range), "
+"or a **Tricolor** formula such as ``2B-R-G`` (a linear combination "
+"configured with X / Y / Z / A coefficients and a threshold)."
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:17
+msgid "**对齐（Alignment）**：部分检测在判定前先将元件图像与标准样本自动对齐，以消除位置偏移带来的误判。"
+msgstr ""
+"**Alignment**: some inspections automatically register the inspected "
+"component image against the golden reference before deciding, eliminating "
+"false positives caused by positional shift."
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:18
+msgid ""
+"**启用可视化（Enable Visualization）**：评估后叠加显示二值化 / "
+"检测中间结果，便于调参；因有额外计算开销，建议仅在调试阶段开启。"
+msgstr ""
+"**Enable Visualization**: after an evaluation run, overlays the binarized "
+"mask and intermediate detection results to help with tuning. Carries extra "
+"compute cost, so enable only while debugging."
+
+#: ../../source/complete_user_guide/config/detection_tools/index.rst:19
+msgid ""
+"**使用共享参数（Use Shared Parameters）**：元件加入封装 / "
+"料号分组后默认与组内共享参数；关闭后可对该实例单独调参，不再继承分组设置。"
+msgstr ""
+"**Use Shared Parameters**: once a component is placed in a package or part-"
+"number group, it shares parameters with the group by default. Turn the "
+"switch off to tune this specific instance independently — the component no "
+"longer inherits the group's settings."

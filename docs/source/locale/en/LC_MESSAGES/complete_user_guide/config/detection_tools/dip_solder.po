@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:2
+msgid "DIP 焊点检测（DIP Solder）"
+msgstr "DIP Solder Inspection"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:4
+msgid "**此页面的用途**"
+msgstr "**What this page covers**"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:6
+msgid "针对插装（DIP）器件的焊点检测，可结合颜色范围与自定义模型。"
+msgstr ""
+"Solder-joint inspection for DIP (through-hole) components. Combines color-"
+"range analysis with an optional custom-trained model."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:8
+msgid "**如何进入**"
+msgstr "**How to open it**"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:10
+msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
+msgstr ""
+"Draw the corresponding ROI in the Template Editor, then configure the tool's"
+" parameters in the parameter panel."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:12
+msgid "**操作流程**"
+msgstr "**Workflow**"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:-1
+msgid "模板编辑器中的 DIP 检测元件示例"
+msgstr "Example of a DIP inspection component in the Template Editor"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:18
+msgid "**参数说明**"
+msgstr "**Parameters**"
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:20
+msgid "**DIP 类型（DIP Type）/ 子类型（Sub Type）**：选择 DIP 焊点形态类别。"
+msgstr "**DIP Type / Sub Type**: pick the DIP solder-joint category."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:21
+msgid "**自定义模型（Custom Model）**：选用为该焊点类型训练的自定义分类模型。"
+msgstr ""
+"**Custom Model**: select a custom classifier trained for this solder-joint "
+"type."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:22
+msgid "**置信度阈值（Confidence Threshold）**：模型判定的置信度门限。"
+msgstr "**Confidence Threshold**: confidence cutoff used by the model."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:23
+msgid "**焊点数量（Solder Count）/ 焊点宽度 (mm)（Solder Width）**：在 ROI 内均分生成焊点子框。"
+msgstr ""
+"**Solder Count / Solder Width (mm)**: divide the ROI into equal solder-joint"
+" sub-frames."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:24
+msgid "**桥接宽度 (%)（Bridge Width）**：相邻焊点连锡检测带宽度。"
+msgstr ""
+"**Bridge Width (%)**: width of the bridge-detection band between adjacent "
+"solder joints."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:25
+msgid "**启用焊点颜色范围检测（Enable Solder Color Range Criteria）**：开启后按颜色范围辅助判定。"
+msgstr ""
+"**Enable Solder Color Range Criteria**: when on, the color range serves as a"
+" secondary decision input."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:26
+msgid ""
+"**焊点颜色公式（Solder Color Formula）**：选择 HSV 或三色（Tricolor）公式；选择三色时配置 **三色 X / Y /"
+" Z / A** 系数。"
+msgstr ""
+"**Solder Color Formula**: choose **HSV** or **Tricolor**; when **Tricolor** "
+"is chosen, configure **Tricolor X / Y / Z / A** coefficients."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:27
+msgid ""
+"**焊点颜色中心色调（Solder Color Center Hue）/ 焊点颜色中心饱和度（Solder Color Center "
+"Saturation）**：HSV 模式下色相基准点。"
+msgstr ""
+"**Solder Color Center Hue / Center Saturation**: HSV reference point (HSV "
+"mode only)."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:28
+msgid ""
+"**焊点颜色起始色调（Solder Color Start Hue）/ 焊点颜色结束色调（Solder Color End "
+"Hue）**：色相范围的起止角度。"
+msgstr ""
+"**Solder Color Start Hue / End Hue**: start and end angles of the hue range."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:29
+msgid ""
+"**焊点颜色起始明度（Solder Color Start Value）/ 焊点颜色结束明度（Solder Color End "
+"Value）**：限定有效像素的明度区间。"
+msgstr ""
+"**Solder Color Start Value / End Value**: brightness band that valid pixels "
+"must fall within."
+
+#: ../../source/complete_user_guide/config/detection_tools/dip_solder.rst:30
+msgid "**焊点颜色有效比率范围（Solder Color Valid Ratio Range）**：焊点颜色有效比例的 OK 区间。"
+msgstr ""
+"**Solder Color Valid Ratio Range**: the OK valid-ratio band for the solder "
+"color."

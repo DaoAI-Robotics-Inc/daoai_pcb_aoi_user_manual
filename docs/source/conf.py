@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'DaoAI PCBA AOI User Manual'
-copyright = '2021-2024 DaoAI Robotics Inc.'
-author = 'DaoAI'
+project = 'PCBA AOI User Manual'
+copyright = '2021-2026'
+author = ''
 
 release = '2025.2'
 version = '2025.2.0'

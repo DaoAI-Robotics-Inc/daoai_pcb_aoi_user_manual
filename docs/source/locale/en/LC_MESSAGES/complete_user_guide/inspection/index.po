@@ -1,356 +1,1270 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/inspection/index.rst:2
 msgid "检测与反馈"
-msgstr ""
+msgstr "Inspection and Feedback"
 
 #: ../../source/complete_user_guide/inspection/index.rst:4
-msgid "本章说明如何在系统中创建并执行检测任务、查看历史记录与反馈数据，以及通过反馈迭代模型的基本流程。"
+msgid "本章说明如何在系统中创建并执行检测任务、在实时检测页面中监控生产、通过复检页面审核缺陷并提交反馈，以及通过反馈迭代模型的基本流程。"
 msgstr ""
+"This chapter covers how to start an inspection task, monitor production from"
+" the Live page, review defects and submit feedback from the Review page, and"
+" iterate the model through that feedback."
 
-#: ../../source/complete_user_guide/inspection/index.rst
+#: ../../source/complete_user_guide/inspection/index.rst:-1
 #: ../../source/complete_user_guide/inspection/index.rst:11
 msgid "新建检测任务"
-msgstr ""
+msgstr "Starting a new inspection task"
 
 #: ../../source/complete_user_guide/inspection/index.rst:13
-msgid "完成 PCB 产品创建并训练后，返回主页开始检测任务："
+msgid "完成 PCB 产品创建并训练后，返回主页，点击 **新建检测任务**。弹窗标题为 **新检测任务**，在其中完成以下配置："
 msgstr ""
+"After creating and training a PCB product, return to Home and click **New "
+"Inspection Task**. The **New Inspection Task** dialog opens; configure:"
 
-#: ../../source/complete_user_guide/inspection/index.rst:18
-msgid "点击“新建检测任务”。"
-msgstr ""
+#: ../../source/complete_user_guide/inspection/index.rst:16
+msgid "**传送带**"
+msgstr "**Conveyor**"
 
-#: ../../source/complete_user_guide/inspection/index.rst:20
-msgid "在任务配置中选择目标 PCB 产品、对应的传送带（conveyor）以及启动模式：单次触发 / 自动连续。"
+#: ../../source/complete_user_guide/inspection/index.rst:16
+msgid "选择对应的传送带（Conveyor A / B 等）。下拉选项旁会显示绿色（可用）或红色（占用中）状态点。"
 msgstr ""
+"Pick the conveyor (Conveyor A / B / …). Each option is annotated with a "
+"green (available) or red (in use) status dot."
+
+#: ../../source/complete_user_guide/inspection/index.rst:19
+msgid "**选择一个 PCBA**"
+msgstr "**Select a PCBA**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:19
+msgid "从列表中选择目标 PCB 产品。可通过标签筛选缩小选项。点击 **刷新产品列表** 可拉取最新产品数据。"
+msgstr ""
+"Pick the target PCB product from the list. Filter the list by tag to narrow "
+"the options. Click **Refresh product list** to pull the latest data."
+
+#: ../../source/complete_user_guide/inspection/index.rst:26
+msgid "**选择任务模式**"
+msgstr "**Task mode**"
 
 #: ../../source/complete_user_guide/inspection/index.rst:22
-msgid "建议在调试阶段使用 **单次触发** 模式以便逐板查看；正式生产可以使用 **自动连续** 模式。"
-msgstr ""
+msgid "三种可选模式："
+msgstr "Three modes are available:"
 
-#: ../../source/complete_user_guide/inspection/index.rst
-msgid "启动模式选择"
+#: ../../source/complete_user_guide/inspection/index.rst:24
+msgid "**自动连续运行任务**：适用于正式产线，板件进板后自动触发检测并循环。"
 msgstr ""
+"**Continuous automatic**: for production lines — each board triggers an "
+"inspection automatically and loops."
+
+#: ../../source/complete_user_guide/inspection/index.rst:25
+msgid "**通过按钮触发运行任务**：每次检测须由操作员手动点击触发，适合调试阶段逐板查看。"
+msgstr ""
+"**Trigger via button**: every inspection requires an explicit operator click"
+" — useful for board-by-board debugging."
+
+#: ../../source/complete_user_guide/inspection/index.rst:26
+msgid ""
+"**当检测到缺陷时自动停止检测以进行手动检查**：（等同于 ``pause_when_ng=true``）检测到不合格时自动暂停并跳转至复检。"
+msgstr ""
+"**Auto-stop on defect for manual review**: equivalent to "
+"``pause_when_ng=true`` — the system pauses on NG and jumps straight to the "
+"Review page."
 
 #: ../../source/complete_user_guide/inspection/index.rst:29
-msgid "连续检测错误处理"
-msgstr ""
+msgid "**以演示模式运行**"
+msgstr "**Run in demo mode**"
 
-#: ../../source/complete_user_guide/inspection/index.rst:31
-msgid "在连续检测模式下，遇到错误时系统是否自动停止由 `pause_when_ng` 配置项控制（参考 :ref:`系统JSON配置`）。说明如下："
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:33
+#: ../../source/complete_user_guide/inspection/index.rst:29
 msgid ""
-"`true`：检测到 "
-"NG（不良）或发生异常时，系统会自动暂停当前任务并停留在出错的子板位置，便于现场人工查看、定位并处理该子板；同时该条记录会被标记为不良并写入任务数据。此选项适用于需要逐板确认或即时干预的生产场景。"
+"勾选后系统以演示模式启动。演示模式下，检测任务自动运行，当检测到缺陷时系统会在复检页面停留约 7 秒后自动返回实时检测页面并继续。按 ``Esc`` "
+"可退出演示模式；演示模式下无法通过按钮手动触发检测。演示模式无需实物或硬件，可用于培训或流程验证。"
 msgstr ""
+"When checked, the system starts in demo mode. In demo mode the inspection "
+"task runs by itself; when a defect is flagged the system lingers on the "
+"Review page for about 7 seconds, then returns to Live and continues. Press "
+"``Esc`` to exit demo mode; manual button triggers are disabled in demo mode."
+" Demo mode needs no physical boards or hardware — useful for training and "
+"flow validation."
+
+#: ../../source/complete_user_guide/inspection/index.rst:32
+msgid "**A/B 面检测（双产品模式）**"
+msgstr "**A/B-side inspection (mixed-product mode)**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:32
+msgid ""
+"若同时选择两个 PCBA，系统启用 A/B 面检测。此时每个产品均须在编程页面定义恰好一个 **独特标记** （unique "
+"marker），用于区分正面与反面。若两个产品的独特标记过于相似，系统将拒绝启动并提示错误。"
+msgstr ""
+"Selecting two PCBAs at once enables A/B-side mode. Each product must define "
+"**exactly one Unique Marker** on its programming page to distinguish A from "
+"B. If the two Unique Markers are too similar, the system rejects the start "
+"with an error."
 
 #: ../../source/complete_user_guide/inspection/index.rst:34
+msgid "完成配置后点击 **开始检测**，系统进行预检（模型状态检查、传送带权限获取）后自动跳转至实时检测页面。"
+msgstr ""
+"Click **Start Inspection** to start. The system runs preflight checks (model"
+" status, conveyor token acquisition) and then jumps to the Live page."
+
+#: ../../source/complete_user_guide/inspection/index.rst:42
+msgid "连续检测错误处理"
+msgstr "Error handling in continuous mode"
+
+#: ../../source/complete_user_guide/inspection/index.rst:44
 msgid ""
-"`false`：发生 NG "
+"在连续检测模式下，遇到错误时系统是否自动停止由 ``pause_when_ng`` 配置项控制（参考 :ref:`系统JSON配置`）。说明如下："
+msgstr ""
+"In continuous mode, whether the system auto-stops on error is controlled by "
+"the ``pause_when_ng`` setting (see :ref:`系统JSON配置`):"
+
+#: ../../source/complete_user_guide/inspection/index.rst:46
+msgid ""
+"``true``：检测到 "
+"NG（不良）或发生异常时，系统会自动暂停当前任务并停留在出错的子板位置，便于现场人工查看、定位并处理该子板；同时该条记录会被标记为不良并写入任务数据。此选项适用于需要逐板确认或即时干预的生产场景。"
+msgstr ""
+"``true``: on NG or any other error, the system pauses the running task and "
+"stays at the offending sub-board so the operator can inspect and handle it; "
+"the record is marked NG and written to the task data. Use when board-by-"
+"board confirmation or immediate intervention is required."
+
+#: ../../source/complete_user_guide/inspection/index.rst:47
+msgid ""
+"``false``：发生 NG "
 "时系统不会中断生产，会按既定节拍继续运行并记录该子板为不良（或按设定分拣策略处理）。此模式适用于对产线吞吐要求较高且容许事后抽查或自动分拣的场景。"
 msgstr ""
+"``false``: on NG the system does not interrupt production; it continues at "
+"the configured cadence and logs the sub-board as NG (or hands it to the "
+"configured sorting policy). Use when throughput matters and after-the-fact "
+"sampling or automated sorting is acceptable."
 
-#: ../../source/complete_user_guide/inspection/index.rst:37
-msgid "检测页面概览"
-msgstr ""
+#: ../../source/complete_user_guide/inspection/index.rst:51
+msgid "实时检测页面（Live）"
+msgstr "Live page"
 
-#: ../../source/complete_user_guide/inspection/index.rst:39
-msgid "进入检测页面后，界面元素与操作："
+#: ../../source/complete_user_guide/inspection/index.rst:53
+msgid "进入 ``/inspection/live`` 后，界面分为左侧传送带控制菜单、中央图像区和右侧统计信息栏三部分。"
 msgstr ""
+"``/inspection/live`` is split into three areas: the conveyor-control menu on"
+" the left, the image area in the center, and the statistics panel on the "
+"right."
 
 #: ../../source/complete_user_guide/inspection/index.rst:-1
 msgid "检测页面"
-msgstr ""
+msgstr "Live inspection page"
 
-#: ../../source/complete_user_guide/inspection/index.rst:45
-msgid "**空格**：进板并立即开始检测。"
-msgstr ""
+#: ../../source/complete_user_guide/inspection/index.rst:71
+msgid "**传送带控制菜单**"
+msgstr "**Conveyor control menu**"
 
-#: ../../source/complete_user_guide/inspection/index.rst:46
-msgid "**左侧控制按钮**：进板 | 出板 | 通过 | 复位，用于手动控制生产节拍。"
-msgstr ""
+#: ../../source/complete_user_guide/inspection/index.rst:60
+msgid "页面左侧的竖排图标菜单，提供以下操作按钮（从上到下）："
+msgstr "The vertical icon menu on the left exposes (top to bottom):"
 
-#: ../../source/complete_user_guide/inspection/index.rst:47
-msgid "**右侧信息栏**：实时显示检测计数、良率与缺陷统计信息。"
+#: ../../source/complete_user_guide/inspection/index.rst:62
+msgid "**进板并检测** （空格键）：进板后立即触发一次检测。"
 msgstr ""
+"**PCB In and Inspect** (Space): bring a board in and trigger one inspection "
+"immediately."
+
+#: ../../source/complete_user_guide/inspection/index.rst:63
+msgid "**连续** / **停止连续**：开启或关闭自动连续检测模式。"
+msgstr ""
+"**Continuous / Stop Continuous**: enable or disable automatic continuous "
+"inspection."
+
+#: ../../source/complete_user_guide/inspection/index.rst:64
+msgid "**检测**：仅触发一次检测，不进板。"
+msgstr "**Inspect**: trigger one inspection without loading a board."
+
+#: ../../source/complete_user_guide/inspection/index.rst:65
+msgid "**停止**：停止当前检测任务。"
+msgstr "**Stop**: stop the running task."
+
+#: ../../source/complete_user_guide/inspection/index.rst:66
+msgid "**进板**：仅让板件进入传送带，不触发检测。"
+msgstr ""
+"**PCB In**: load a board onto the conveyor without triggering inspection."
+
+#: ../../source/complete_user_guide/inspection/index.rst:67
+msgid "**出板**：将板件弹出传送带。"
+msgstr "**PCB Out**: eject the board."
+
+#: ../../source/complete_user_guide/inspection/index.rst:68
+msgid "**通过**：令板件直接通过（不检测）。"
+msgstr "**Pass-through**: send the board through without inspecting."
+
+#: ../../source/complete_user_guide/inspection/index.rst:69
+msgid "**重置** （当前不可用）：重置传送带状态。"
+msgstr "**Reset** (currently disabled): reset the conveyor state."
+
+#: ../../source/complete_user_guide/inspection/index.rst:71
+msgid "进板类操作（**进板并检测**、**进板**、**出板**、**通过**）需要传送带访问令牌，若令牌未获取则按钮置灰。"
+msgstr ""
+"The conveyor-loading actions (**PCB In and Inspect**, **PCB In**, **PCB "
+"Out**, **Pass-through**) need the conveyor access token; the buttons are "
+"greyed out without it."
+
+#: ../../source/complete_user_guide/inspection/index.rst:74
+msgid "**产品统计（产品统计）**"
+msgstr "**Product statistics**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:74
+msgid "右侧面板中部。显示当前任务内已检测板件的合格（**合格**）与不合格（**不合格**）计数，并附环形饼图。"
+msgstr ""
+"Middle of the right panel. Shows OK (**Pass**) and NG (**Fail**) counts for "
+"inspected boards in the current task, with a donut chart."
+
+#: ../../source/complete_user_guide/inspection/index.rst:77
+msgid "**元件统计（元件统计）**"
+msgstr "**Component statistics**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:77
+msgid ""
+"产品统计下方（由 ``Live.jsx`` 注入 ``InspectionStatsPanel`` 的子内容）。按元件维度显示 "
+"**检测数**、**良率**、**不良率**、**误报率** 等指标。"
+msgstr ""
+"Below product statistics (injected by ``Live.jsx`` into "
+"``InspectionStatsPanel`` as a child). Shows component-level metrics: "
+"**Inspected**, **Pass rate**, **Defect rate**, **False-positive rate**."
+
+#: ../../source/complete_user_guide/inspection/index.rst:80
+msgid "**检测时长（检测时长）**"
+msgstr "**Inspection time**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:80
+msgid "显示上一块板的检测耗时（秒）。未完成任何检测时显示 ``-``。"
+msgstr ""
+"Shows the elapsed time (seconds) for the most recent board. Displays ``-`` "
+"when no inspection has finished."
+
+#: ../../source/complete_user_guide/inspection/index.rst:88
+msgid "**FPY（直通率）切换**"
+msgstr "**FPY toggle**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:83
+msgid "统计面板上方有一个 Segmented 切换控件，选项为 **整板** 和 **子板**："
+msgstr ""
+"A Segmented control above the stats panel offers **Board** and **Sub-"
+"board**:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:85
+msgid "**整板**：以整块 PCB 为单位计算直通率（合格板 / 已检测板），标签显示 **主板直通率**。"
+msgstr ""
+"**Board**: First-pass yield is computed per whole PCB (passed boards / "
+"inspected boards); the label reads **Board FPY**."
+
+#: ../../source/complete_user_guide/inspection/index.rst:86
+msgid "**子板**：以子板为单位计算（仅适用于拼板产品），标签显示 **子板直通率**；非拼板产品显示 **N/A**。"
+msgstr ""
+"**Sub-board**: computed per sub-board, available only for panelized "
+"products; the label reads **Sub-board FPY**. Non-panelized products show "
+"**N/A**."
+
+#: ../../source/complete_user_guide/inspection/index.rst:88
+msgid ""
+"此设置通过 "
+"Redux（``state.setting.fpyMode``）持久化，切换后在页面刷新后仍保留。详见全局说明：:ref:`检测设置（子板判废逻辑）`。"
+msgstr ""
+"The choice persists via Redux (``state.setting.fpyMode``) and survives page "
+"reload. See :ref:`检测设置（子板判废逻辑）` for the full reference."
+
+#: ../../source/complete_user_guide/inspection/index.rst:91
+msgid "**合格覆盖层（Pass Overlay）**"
+msgstr "**Pass overlay**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:91
+msgid "检测结果为合格时，图像区上方会显示绿色全屏提示横幅，显示 **合格**。"
+msgstr ""
+"When the result is Pass, a full-width green banner reading **Pass** overlays"
+" the image area."
+
+#: ../../source/complete_user_guide/inspection/index.rst:100
+msgid "**报废子板提示（检测到不合格子版）**"
+msgstr "**Wasted sub-board alert (\"Defective sub-board detected\")**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:94
+msgid "拼板产品检测到有子板被判为废板时，界面会显示红色警告区域，包含以下信息："
+msgstr ""
+"When a panel product has a sub-board judged wasted, a red alert region "
+"appears with:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:96
+msgid "标题：**检测到不合格子版**"
+msgstr "Title: **Defective sub-board detected**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:97
+msgid "说明：**检测到的缺陷数量超出阈值。**"
+msgstr "Description: **Detected defect count exceeds the threshold.**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:98
+msgid "已启用比例模式时显示：**子版缺陷率阈值** 及当前阈值值。"
+msgstr ""
+"When ratio mode is on: **Sub-board defect-rate threshold** plus the current "
+"threshold value."
+
+#: ../../source/complete_user_guide/inspection/index.rst:99
+msgid "已启用坏板标记模式时额外显示斜体提示：**此产品已启用坏板标记模式 — 坏板判定可能由坏板标记检查决定，而非失败比例。**"
+msgstr ""
+"When badmark mode is on, an italic note is added: **This product has badmark"
+" mode enabled — the bad-board verdict may be driven by the badmark check "
+"rather than the failure ratio.**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:100
+msgid "表格列出废板子板的编号（``#``）和元件NG率（**元件NG率**）。"
+msgstr ""
+"A table lists each wasted sub-board's number (``#``) and **Component NG "
+"rate**."
 
 #: ../../source/complete_user_guide/inspection/index.rst:-1
 msgid "检测复审页面"
-msgstr ""
+msgstr "Defect review on the Live page"
 
-#: ../../source/complete_user_guide/inspection/index.rst:53
-msgid "检测到缺陷时，系统会自动跳转到缺陷详情视图，可查看放大图、定位框、缺陷类型和判定依据，并可立即进行人工反馈（判为良品/不良/忽略等）。"
+#: ../../source/complete_user_guide/inspection/index.rst:106
+msgid "检测到缺陷时，系统会自动跳转到缺陷详情视图，可查看放大图、定位框、缺陷类型和判定依据，并可立即进行人工反馈。"
 msgstr ""
+"When a defect is detected, the system jumps to the defect detail view. You "
+"can examine the zoomed image, the localization box, the defect type and the "
+"deciding feature, and submit feedback immediately."
 
-#: ../../source/complete_user_guide/inspection/index.rst:57
+#: ../../source/complete_user_guide/inspection/index.rst:110
 msgid "双轨检测系统"
-msgstr ""
+msgstr "Dual-conveyor systems"
 
 #: ../../source/complete_user_guide/inspection/index.rst:-1
 msgid "双轨检测示意"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:63
-msgid "对于配置了双轨检测的系统，检测页面会同时显示左右两条传送带的并行检测视图；操作与单轨系统类似，但在视图切换与记录检索上增加了分轨能力："
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:65
-msgid "按 `Enter` 会查询未读的检测记录，默认优先显示左轨，随后显示右轨（两轨独立计数与统计）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:66
-msgid "通过上方标签页在“左轨 / 右轨”间切换，分别查看各自的历史记录与缺陷详情。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:70
-msgid "快捷键"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:73
-msgid "检测页面快捷键 (缺陷详情视图)"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:79
-msgid ""
-"`1–0`（数字键）：在缺陷详情视图中快速反馈对应的预设类别；按住 `Ctrl` + 数字键 可访问扩展类别（例如 `Ctrl`+`1` 表示类别"
-" 11）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:80
-msgid "`上 / 下`（方向键）：切换上一条 / 下一条缺陷记录。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:81
-msgid "`左 / 右`（方向键）：在同一元件的不同缺陷类型之间切换（例如主体与引脚的缺陷视图）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:82
-msgid "`Enter`：返回上一个检测记录；若当前为最新记录，则返回检测概览页面。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:83
-msgid "`空格`：进板并开始检测。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:86
-msgid "编程页面快捷键"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:-1
-msgid "编程页面"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:92
-msgid "`Ctrl+C` / `Ctrl+V`：复制并粘贴当前元件（包含所有检测框与属性）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:93
-msgid "`W` / `A` / `S` / `D`：在选中检测框时微调框的位置；在选中移动工具时移动视图。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:94
-msgid "`V`：切换到选择工具。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:95
-msgid "`H`：切换到移动（拖拽）工具。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:96
-msgid "`1`：切换到主体工具。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:97
-msgid "`2`：切换到焊料工具。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:98
-msgid "`3`：切换到 IC 引脚工具。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:99
-msgid "`4`：切换到 OCR（文本）工具。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:100
-msgid "`5`：切换到条形码工具。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:103
-msgid "缺陷详情与快速反馈"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:105
-msgid "在缺陷详情页中："
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:107
-msgid "查看放大图与定位框，确认缺陷区域与具体判别依据。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:108
-msgid "使用快捷键或界面按钮进行快速反馈（例如标记为误报、确认不良、忽略等）。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:109
-msgid "反馈会写入该产品的数据集，供后续训练与参数调整使用。"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:128
-msgid "所有缺陷类别（界面显示）"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:112
-msgid "下面列举基于界面右侧缺陷反馈面板的缺陷类别（按显示顺序编号）："
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:114
-msgid "无错误"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:115
-msgid "缺件"
-msgstr ""
+msgstr "Dual-conveyor inspection"
 
 #: ../../source/complete_user_guide/inspection/index.rst:116
-msgid "错件"
+msgid "对于配置了双轨检测的系统，检测页面会同时显示左右两条传送带的并行检测视图；操作与单轨系统类似，但在视图切换与记录检索上增加了分轨能力："
 msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:117
-msgid "反件"
-msgstr ""
+"On systems with two conveyors, the Live page shows both lanes side by side. "
+"The operations are the same as for a single conveyor, with extra per-lane "
+"navigation:"
 
 #: ../../source/complete_user_guide/inspection/index.rst:118
-msgid "极性错误"
+msgid "按 ``Enter`` 会查询未读的检测记录，默认优先显示左轨，随后显示右轨（两轨独立计数与统计）。"
 msgstr ""
+"Press ``Enter`` to look up unreviewed records — the left lane is searched "
+"first, then the right (the lanes count and roll up independently)."
 
 #: ../../source/complete_user_guide/inspection/index.rst:119
-msgid "损件"
+msgid "通过上方标签页在\"左轨 / 右轨\"间切换，分别查看各自的历史记录与缺陷详情。"
 msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:120
-msgid "焊料倒角错误"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:121
-msgid "文本错误"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:122
-msgid "IC 偏移"
-msgstr ""
+"Use the tabs at the top to switch between *Left lane* and *Right lane* and "
+"inspect each lane's history and defects separately."
 
 #: ../../source/complete_user_guide/inspection/index.rst:123
-msgid "引脚翘起（快捷键：`Ctrl`+`1`）"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:124
-msgid "焊锡桥联（快捷键：`Ctrl`+`2`）"
-msgstr ""
+msgid "复检页面（Review）"
+msgstr "Review page"
 
 #: ../../source/complete_user_guide/inspection/index.rst:125
-msgid "IC 引脚焊锡倒角错误（快捷键：`Ctrl`+`3`）"
+msgid ""
+"复检页面（``/inspection/review``）用于审核检测结果、提交缺陷反馈和创建替代料。页面布局为：左侧不良元件列表、中央图像查看区、右侧反馈与特征错误面板。"
 msgstr ""
+"The Review page (``/inspection/review``) is where you audit results, submit "
+"defect feedback, and create variations. Layout: NG component list on the "
+"left, image viewer in the middle, feedback and feature-error panel on the "
+"right."
 
-#: ../../source/complete_user_guide/inspection/index.rst:126
-msgid "无错误（标记为代替料）"
+#: ../../source/complete_user_guide/inspection/index.rst:-1
+msgid "复检页面整体视图：左侧 NG 元件列表、中间检测视图与右侧基准视图"
 msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:127
-msgid "倾移 / 偏移（快捷键：`Ctrl`+`5`）"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:128
-msgid "未知错误类型（快捷键：`Ctrl`+`6`）"
-msgstr ""
-
-#: ../../source/complete_user_guide/inspection/index.rst:130
-msgid "说明："
-msgstr ""
+"Review page overall view: NG component list (left), inspection viewer "
+"(center), and golden viewer (right)."
 
 #: ../../source/complete_user_guide/inspection/index.rst:132
-msgid "列表序号对应界面上的反馈项顺序，具体项目及快捷键可由系统管理员在产品配置或前端界面中定制。"
-msgstr ""
+msgid "**左侧：不良元件列表（NG Component List）**"
+msgstr "**Left: NG component list**"
 
-#: ../../source/complete_user_guide/inspection/index.rst:133
+#: ../../source/complete_user_guide/inspection/index.rst:132
 msgid ""
-"在缺陷详情视图中，可使用数字键 `1–0` 快速反馈常用类别；对于扩展类别（界面上带有 `Ctrl+` 的项），可按 `Ctrl` + "
-"对应数字触发。"
+"滚动列表，显示当前检测记录中所有被判为不合格的元件（设计位号）及其错误数量。点击某行选中该元件，图像区随即跳转到该元件的缺陷视图。已标注\"已重新定义ROI\"的行会显示黄色左边框提示。"
 msgstr ""
+"Scrollable list of every NG component in the current record (by designator),"
+" with each row showing the error count. Clicking a row selects the "
+"component; the image area jumps to its defect view. Rows tagged as *ROI "
+"redefined* carry a yellow left-border indicator."
 
-#: ../../source/complete_user_guide/inspection/index.rst:-1
-#: ../../source/complete_user_guide/inspection/index.rst:136
-msgid "标注为替代料"
+#: ../../source/complete_user_guide/inspection/index.rst:135
+msgid "**中央：图像查看区**"
+msgstr "**Center: image viewer**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:135
+msgid ""
+"上半区显示整板缩略图（基准 + 检测结果叠加），下半区显示所选元件的放大缺陷图、定位框、基准图像。可通过 ``\\`` 键循环切换 "
+"**网格视图（上下平分）** / **聚焦下排** / **聚焦上排** 三种布局。"
 msgstr ""
+"The top half shows the whole-board thumbnail (golden + inspection-result "
+"overlay); the bottom half shows the selected component's enlarged defect "
+"image, localization box, and golden image. Press ``\\`` to cycle through "
+"**Grid (top & bottom)**, **Focus bottom**, and **Focus top** layouts."
 
 #: ../../source/complete_user_guide/inspection/index.rst:138
-msgid "当某些元件在外观或形态上与模板存在较大差异，但经工程确认仍属可接受时，可将该元件标记为“替代料”。系统会在反馈中记录此标注，并在后续的数据汇总与模型训练中将其作为独立类别纳入考虑，以便区分替代料与真实缺陷、降低误报并支持模型适配。"
-msgstr ""
+msgid "**右侧上方：元件级错误和缺陷反馈**"
+msgstr "**Upper right: component-level error and defect feedback**"
 
-#: ../../source/complete_user_guide/inspection/index.rst:146
-msgid "查看检测历史（工作列表）"
+#: ../../source/complete_user_guide/inspection/index.rst:138
+msgid ""
+"显示系统配置的所有反馈类别（由 ``systemMetadata.error_type_to_code`` "
+"决定），每张卡片右下角标注对应快捷键（见下方快捷键说明）。点击卡片或按快捷键即可提交元件级反馈。当前系统预测的错误类别高亮显示（红色背景）；已提交过反馈的条目会出现拇指图标。"
 msgstr ""
+"Shows every feedback category configured on the system (driven by "
+"``systemMetadata.error_type_to_code``); each card's lower-right corner shows"
+" its keyboard shortcut (see the shortcut table below). Click a card or press"
+" its shortcut to submit component-level feedback. The currently-predicted "
+"error category is highlighted (red background); already-submitted entries "
+"display a thumbs-up icon."
+
+#: ../../source/complete_user_guide/inspection/index.rst:141
+msgid "**右侧下方：特征错误（Feature Error）面板**"
+msgstr "**Lower right: Feature Error panel**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:141
+msgid "可折叠，显示所选元件各特征（本体、焊料、引脚等）的详细检测结果，并可分别提交特征级反馈、添加模糊匹配或添加替代料参考。"
+msgstr ""
+"Collapsible. Shows the detailed inspection result for each feature on the "
+"selected component (body, solder, leads, and so on) and lets you submit "
+"feature-level feedback, add a fuzzy match, or add a variation reference."
+
+#: ../../source/complete_user_guide/inspection/index.rst:144
+msgid "**子版信息（Array Info）**"
+msgstr "**Array info**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:144
+msgid "拼板产品时显示，列出当前板各子板的状态及元件NG率。使用 ``→`` 键可切换到下一个子板索引。"
+msgstr ""
+"Shown on panel products. Lists every sub-board's status and component NG "
+"rate. Press ``→`` to advance to the next sub-board index."
 
 #: ../../source/complete_user_guide/inspection/index.rst:148
-msgid "在主页点击“工作列表”进入历史任务页面，列表展示每个任务的创建时间、合格/不合格数量、良率与缺陷统计。点击任意任务可查看该任务的详情与单次检测记录。"
-msgstr ""
+msgid "**导航与反馈按钮**"
+msgstr "**Navigation and feedback buttons**"
 
-#: ../../source/complete_user_guide/inspection/index.rst:-1
-msgid "工作列表概览"
+#: ../../source/complete_user_guide/inspection/index.rst:147
+msgid "**返回实时检测**：回到 ``/inspection/live`` 页面。"
+msgstr "**Back to Live**: return to the ``/inspection/live`` page."
+
+#: ../../source/complete_user_guide/inspection/index.rst:148
+msgid "**返回工作列表**：回到数据分析报告页面。"
+msgstr "**Back to Worklist**: return to the Data Analysis Report."
+
+#: ../../source/complete_user_guide/inspection/index.rst:156
+msgid "**添加为替代料**"
+msgstr "**Set as Alternative**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:151
+msgid ""
+"当某元件外观与基准差异较大但属可接受情形（如封装变化、引脚形态变化等），可在右侧面板点击 **添加为替代料** 或按 ``F`` "
+"键。系统提供两种操作方式："
 msgstr ""
+"When a component's appearance differs significantly from the golden but is "
+"acceptable (package change, lead-shape variation, and so on), click **Set as"
+" Alternative** in the right panel or press ``F``. Two paths are available:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:153
+msgid "**沿用当前元件图像**：使用当前检测图像直接创建替代料。"
+msgstr ""
+"**Keep current component image**: use the current inspection image as the "
+"variation's reference and create it directly."
 
 #: ../../source/complete_user_guide/inspection/index.rst:154
-msgid "任务详情页会列出该次检测的所有条目；点击单次记录可进入缺陷详情：查看放大图、定位框、缺陷标签与判定依据，并可执行人工反馈，反馈结果将回写到数据集。"
+msgid "**在视野图上绘制 ROI**：在 FOV 图上重新圈定元件区域后再创建替代料。"
 msgstr ""
+"**Define new ROI on FOV**: re-box the component area on the FOV image, then "
+"create the variation."
 
-#: ../../source/complete_user_guide/inspection/index.rst:-1
-msgid "任务详情概览"
+#: ../../source/complete_user_guide/inspection/index.rst:156
+msgid ""
+"创建完成后系统提示是否停止正在运行的检测任务——新建替代料需在模板编辑页重新训练后方能生效。有关替代料的完整说明，请参见 "
+":doc:`../features/variations`。"
 msgstr ""
+"After creation, the system asks whether to stop the running task — a new "
+"variation only takes effect after retraining in the Template Editor. See "
+":doc:`../features/variations` for the full reference."
 
-#: ../../source/complete_user_guide/inspection/index.rst:-1
-msgid "缺陷记录与反馈"
-msgstr ""
+#: ../../source/complete_user_guide/inspection/index.rst:160
+msgid "**标注复检完成**"
+msgstr "**Mark as reviewed**"
 
-#: ../../source/complete_user_guide/inspection/index.rst:166
-msgid "反馈与模型迭代"
+#: ../../source/complete_user_guide/inspection/index.rst:159
+msgid "完成反馈后，可将当前检测记录标注为已复检，供后续数据分析使用。"
 msgstr ""
+"After submitting feedback, you can mark the current inspection record as "
+"reviewed so downstream analysis can pick it up."
 
-#: ../../source/complete_user_guide/inspection/index.rst:168
-msgid "提交的反馈会加入到产品的数据集中。推荐的迭代流程："
-msgstr ""
+#: ../../source/complete_user_guide/inspection/index.rst:165
+msgid "复检快捷键"
+msgstr "Review keyboard shortcuts"
 
-#: ../../source/complete_user_guide/inspection/index.rst:170
-msgid "进行一批次的检测， 在工作列表里查看 并提供反馈，反馈后的数据可以加到数据集中。"
+#: ../../source/complete_user_guide/inspection/index.rst:167
+msgid "复检页面底部的 **快捷键说明栏** 显示常用快捷键（不含上下文相关快捷键）："
 msgstr ""
+"The **keyboard help footer** at the bottom of the Review page shows the "
+"common shortcuts (context-specific ones aren't listed):"
 
-#: ../../source/complete_user_guide/inspection/index.rst:172
-msgid "回到产品编程页面，执行训练来更新模型（训练通常耗时约 1 分钟，视硬件而定）。"
-msgstr ""
+#: ../../source/complete_user_guide/inspection/index.rst:173
+msgid "按键"
+msgstr "Key"
 
 #: ../../source/complete_user_guide/inspection/index.rst:174
-msgid "执行“评估全部”以检查各元件状态并针对仍为不合格的项微调参数。参考 :ref:`检测参数` 章节以了解具体的调参方法。"
-msgstr ""
+msgid "功能"
+msgstr "Function"
 
+#: ../../source/complete_user_guide/inspection/index.rst:175
+msgid "``↑`` / ``↓``"
+msgstr "``↑`` / ``↓``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:176
+msgid "下一个/上一个不良元件"
+msgstr "Next / previous NG component"
+
+#: ../../source/complete_user_guide/inspection/index.rst:177
+msgid "``←``"
+msgstr "``←``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:178
+msgid "切换到下一个不良特征/元件视图"
+msgstr "Switch to the next defective feature / component view"
+
+#: ../../source/complete_user_guide/inspection/index.rst:179
+msgid "``→``"
+msgstr "``→``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:180
+msgid "切换子版索引"
+msgstr "Switch sub-board index"
+
+#: ../../source/complete_user_guide/inspection/index.rst:181
+msgid "``1``–``9``"
+msgstr "``1``–``9``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:182
+msgid "提供反馈（对应反馈列表第 1–9 项）"
+msgstr "Submit feedback (categories 1–9)"
+
+#: ../../source/complete_user_guide/inspection/index.rst:183
+msgid "``Ctrl`` + ``1``–``9``"
+msgstr "``Ctrl`` + ``1``–``9``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:184
+msgid "提供反馈（第 10–18 项）"
+msgstr "Submit feedback (categories 10–18)"
+
+#: ../../source/complete_user_guide/inspection/index.rst:185
+msgid "``Alt`` + ``1``–``9``"
+msgstr "``Alt`` + ``1``–``9``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:186
+msgid "提供反馈（第 19–27 项）"
+msgstr "Submit feedback (categories 19–27)"
+
+#: ../../source/complete_user_guide/inspection/index.rst:187
+msgid "``Ctrl+Alt`` + ``1``–``9``"
+msgstr "``Ctrl+Alt`` + ``1``–``9``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:188
+msgid "提供反馈（第 28–36 项）"
+msgstr "Submit feedback (categories 28–36)"
+
+#: ../../source/complete_user_guide/inspection/index.rst:189
+msgid "``M``"
+msgstr "``M``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:190
+msgid "显示标记图像"
+msgstr "Show marker image"
+
+#: ../../source/complete_user_guide/inspection/index.rst:191
+msgid "``[`` / ``]``"
+msgstr "``[`` / ``]``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:192
+msgid "展开/收起侧面板"
+msgstr "Expand / collapse the side panels"
+
+#: ../../source/complete_user_guide/inspection/index.rst:193
+msgid "``\\``"
+msgstr "``\\``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:194
+msgid "切换视图布局（网格 / 聚焦下排 / 聚焦上排）"
+msgstr "Cycle viewer layout (Grid / Focus bottom / Focus top)"
+
+#: ../../source/complete_user_guide/inspection/index.rst:195
+msgid "``Esc``"
+msgstr "``Esc``"
+
+#: ../../source/complete_user_guide/inspection/index.rst:196
+msgid "关闭标记窗口"
+msgstr "Close the marker window"
+
+#: ../../source/complete_user_guide/inspection/index.rst:199
+msgid ""
+"``F`` 键为上下文快捷键，**不在底部快捷键说明栏中显示**：选中 OCR/文字特征时，在右侧特征面板内按 ``F`` 可添加模糊匹配或替代料，仅当"
+" OCR/文字特征处于选中状态时有效。"
+msgstr ""
+"``F`` is a context-specific shortcut and **does not appear in the footer**: "
+"when an OCR / text feature is selected in the right-hand feature panel, "
+"pressing ``F`` adds a fuzzy match or a variation. Only effective while an "
+"OCR / text feature is selected."
+
+#: ../../source/complete_user_guide/inspection/index.rst:202
+msgid ""
+"反馈快捷键仅识别 ``1``–``9``，不识别 ``0``。对应关系如下：``1``–``9`` 选第 1–9 项；``Ctrl+1``–``9`` "
+"选第 10–18 项（偏移 +9）；``Alt+1``–``9`` 选第 19–27 项（偏移 +18）；``Ctrl+Alt+1``–``9`` 选第"
+" 28–36 项（偏移 +27）。键盘最多可寻址 36 "
+"项。具体对应的反馈类别由系统管理员在产品或系统配置中设定（``error_type_to_code``）。"
+msgstr ""
+"The feedback shortcuts use ``1``–``9`` only — ``0`` is not bound. Mapping: "
+"``1``–``9`` → categories 1–9; ``Ctrl+1``–``9`` → 10–18 (offset +9); "
+"``Alt+1``–``9`` → 19–27 (offset +18); ``Ctrl+Alt+1``–``9`` → 28–36 (offset "
+"+27). Up to 36 categories are addressable. The actual category bound to each"
+" slot is configured by the administrator under ``error_type_to_code``."
+
+#: ../../source/complete_user_guide/inspection/index.rst:206
+msgid "查看检测历史（数据分析报告）"
+msgstr "Inspection history (Data Analysis Report)"
+
+#: ../../source/complete_user_guide/inspection/index.rst:208
+msgid ""
+"在主页点击 **工作列表** 进入 **数据分析报告** （路由 "
+"``/worklist``）。页面顶部有四个标签页，下方为过滤栏，内容区随选中标签页切换。"
+msgstr ""
+"Click **Worklist** on Home to open the **Data Analysis Report** "
+"(``/worklist``). Four tabs sit at the top, with the filter bar below; the "
+"content area swaps with the selected tab."
+
+#: ../../source/complete_user_guide/inspection/index.rst:210
+msgid "**四个标签页**"
+msgstr "**Four tabs**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:212
+msgid "**总结**：总览统计指标、NG/OK 环形图及前十不良元件柱状图。"
+msgstr ""
+"**Summary**: overview metrics, the NG / OK donut chart, and the top-10 "
+"defective-components bar chart."
+
+#: ../../source/complete_user_guide/inspection/index.rst:213
+msgid "**检测结果**：逐条列出每次检测记录，支持进入复检。"
+msgstr ""
+"**Inspection Results**: lists every inspection record one by one; can jump "
+"into Review."
+
+#: ../../source/complete_user_guide/inspection/index.rst:214
+msgid "**不良元件**：按元件维度汇总不良结果，便于定位高发问题元件。"
+msgstr ""
+"**Defective Components**: aggregates defective results at the component "
+"level — highlights repeat offenders."
+
+#: ../../source/complete_user_guide/inspection/index.rst:215
+msgid "**误判元件**：按元件维度汇总误报结果，用于优化模型减少误报。"
+msgstr ""
+"**False-Positive Components**: aggregates false-positive results at the "
+"component level — used to tune the model and cut false positives."
+
+#: ../../source/complete_user_guide/inspection/index.rst:217
+msgid "**过滤栏**"
+msgstr "**Filter bar**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:219
+msgid "过滤栏位于标签页下方，所有标签页共用以下过滤项："
+msgstr ""
+"The filter bar sits under the tab strip and is shared across all tabs:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:221
+msgid "**按基准产品过滤**：下拉选择指定产品（仅限已训练的基准产品），不选则显示全部产品数据。"
+msgstr ""
+"**Filter by golden product**: drop-down to pick one product (trained golden "
+"products only). Leave empty to show all products."
+
+#: ../../source/complete_user_guide/inspection/index.rst:222
+msgid ""
+"**时间范围**：日期时间区间选择器（**从** / **到**）。可直接输入或点击以下快捷按钮自动填充：**今天** / **昨天** / "
+"**本周** / **本月** / **今年**。"
+msgstr ""
+"**Time range**: a date-time range picker (**From** / **To**). Type the "
+"values, or click the quick presets — **Today**, **Yesterday**, **This "
+"Week**, **This Month**, **This Year**."
+
+#: ../../source/complete_user_guide/inspection/index.rst:223
+msgid "**按序列号搜索**：按板件序列号（S/N）过滤。"
+msgstr "**Search by serial number**: filter by board serial number (S/N)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:224
+msgid "**最大显示数量**：限制列表最多显示的条目数（默认 1000），输入后点击应用生效（**总结** 标签页无此项）。"
+msgstr ""
+"**Max rows**: caps the number of rows displayed (default 1000); type a value"
+" and click Apply (not shown on the **Summary** tab)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:225
+msgid "在 **不良元件** 和 **误判元件** 标签页下，过滤栏额外显示 **按位号/料号搜索** 输入框，可按元件位号或料号过滤。"
+msgstr ""
+"On the **Defective Components** and **False-Positive Components** tabs, the "
+"filter bar also exposes a **Search by designator / part number** input."
+
+#: ../../source/complete_user_guide/inspection/index.rst:-1
+msgid "数据分析报告-总结"
+msgstr "Data Analysis Report — Summary tab"
+
+#: ../../source/complete_user_guide/inspection/index.rst:231
+msgid "**总结 标签页**"
+msgstr "**Summary tab**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:233
+msgid "**总结** 标签页由三个并列面板组成："
+msgstr "The **Summary** tab has three side-by-side panels:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:245
+msgid "**总览（Overview）面板**"
+msgstr "**Overview panel**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:236
+msgid "显示所选时间范围内的整体统计数据，分为两个区域："
+msgstr ""
+"Shows aggregate statistics for the selected time range, split into two "
+"sections:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:238
+msgid "**PCBA** （整板维度）：检测总数、良好 **良好** 板数及占比、不良 **不良** 板数及占比。"
+msgstr ""
+"**PCBA** (board-level): total inspected, **Good** board count and ratio, "
+"**Bad** board count and ratio."
+
+#: ../../source/complete_user_guide/inspection/index.rst:239
+msgid "**报警元件** （元件维度）：报警元件总数 （``defective_component_count``），以及："
+msgstr ""
+"**Alerted components** (component-level): total alerted component count "
+"(``defective_component_count``), plus:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:241
+msgid "**不良**：经反馈确认为不良的元件数及其 PPM 值；"
+msgstr ""
+"**Defective**: feedback-confirmed defective component count, with PPM."
+
+#: ../../source/complete_user_guide/inspection/index.rst:242
+msgid "**误判**：被误报（系统预测不良但反馈为良好）的元件数及其 PPM 值；"
+msgstr ""
+"**False positive**: component count of system-predicted defects that "
+"feedback marked good, with PPM."
+
+#: ../../source/complete_user_guide/inspection/index.rst:243
+msgid "**DPU**：每板平均缺陷数（Defects Per Unit）。"
+msgstr "**DPU**: defects per unit (average defects per board)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:245
+msgid "面板底部显示当前查询的时间范围（**从** … **到** …）。"
+msgstr ""
+"The bottom of the panel shows the current query range (**From** … **To** …)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:248
+msgid "**不良/良品比 面板**"
+msgstr "**Defective / Good ratio panel**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:248
+msgid ""
+"以环形图（Donut Chart）直观展示合格（**合格**）与不良（**不良**）板件的数量与百分比；图例显示绿色（合格）和红色（不良）色块。"
+msgstr ""
+"A donut chart visualizing the Pass (**Pass**) vs. NG (**NG**) board count "
+"and ratio; the legend uses green (Pass) and red (NG) swatches."
+
+#: ../../source/complete_user_guide/inspection/index.rst:251
+msgid "**前十不良元件 面板**"
+msgstr "**Top-10 defective components panel**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:251
+msgid ""
+"当选定了具体基准产品时，展示该产品下报警次数最多的前 10 个元件，以横向柱状图呈现（X 轴为元件数量，Y "
+"轴为元件位号）。未选择基准产品时显示提示文字，要求先选择产品。"
+msgstr ""
+"When a specific golden product is selected, shows the 10 most-frequently-"
+"alerted components as a horizontal bar chart (X = count, Y = designator). "
+"When no product is selected, a hint asks you to pick one first."
+
+#: ../../source/complete_user_guide/inspection/index.rst:253
+msgid "**检测结果 标签页**"
+msgstr "**Inspection Results tab**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:-1
+msgid "检测结果列表"
+msgstr "Inspection results list"
+
+#: ../../source/complete_user_guide/inspection/index.rst:259
+msgid "**检测结果** 标签页以列表形式列出每一条检测记录，各列含义如下："
+msgstr ""
+"The **Inspection Results** tab lists each inspection record with the "
+"following columns:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:261
+msgid "**PCBA名称**：本次检测所用基准产品名称。"
+msgstr "**PCBA Name**: the golden product used for this inspection."
+
+#: ../../source/complete_user_guide/inspection/index.rst:262
+msgid "**序列号（S/N）**：板件序列号（无序列号时为空）。"
+msgstr "**Serial Number (S/N)**: the board serial number (empty when none)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:263
+msgid "**总元件数量**：本次检测中参与检测的元件总数。"
+msgstr ""
+"**Total Component Count**: the total number of components inspected this "
+"run."
+
+#: ../../source/complete_user_guide/inspection/index.rst:264
+msgid "**不良元件数量**：经反馈确认为不良的元件数。"
+msgstr ""
+"**Defective Component Count**: feedback-confirmed defective component count."
+
+#: ../../source/complete_user_guide/inspection/index.rst:265
+msgid "**报警元件数量**：系统报警（含待复检）的元件总数。"
+msgstr ""
+"**Alerted Component Count**: total components alerted by the system "
+"(including pending review)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:266
+msgid "**检测开始时间** / **检测结束时间**：本次检测的开始和结束时间戳。"
+msgstr "**Inspection Start / End Time**: timestamps for the inspection."
+
+#: ../../source/complete_user_guide/inspection/index.rst:267
+msgid "**操作**：每行提供以下操作按钮："
+msgstr "**Actions**: each row provides the buttons:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:269
+msgid ""
+"**查看**：跳转至复检页面，在左侧查看该次检测的不良元件列表，在中部与右侧查看整板缩略图、缺陷放大图、定位框、缺陷类型与判定依据，并可直接提交反馈。"
+msgstr ""
+"**View**: opens the Review page — NG components on the left, whole-board "
+"thumbnail, zoomed defect image, localization box, defect type, and deciding "
+"feature in the center and right; feedback can be submitted directly."
+
+#: ../../source/complete_user_guide/inspection/index.rst:270
+msgid "**导出报告**：在新标签页打开该条记录的详细报告页面。"
+msgstr ""
+"**Export Report**: opens the record's detailed report page in a new tab."
+
+#: ../../source/complete_user_guide/inspection/index.rst:271
+msgid "**删除记录**：删除该条检测记录。"
+msgstr "**Delete Record**: delete the inspection record."
+
+#: ../../source/complete_user_guide/inspection/index.rst:273
+msgid "列表顶部提供 **导出 CSV** 和 **删除选中记录** 操作，支持多选后批量删除。"
+msgstr ""
+"The list header offers **Export CSV** and **Delete selected records**; "
+"multi-select for batch delete."
+
+#: ../../source/complete_user_guide/inspection/index.rst:-1
+msgid "复检详情与反馈"
+msgstr "Review detail and feedback"
+
+#: ../../source/complete_user_guide/inspection/index.rst:279
+msgid ""
+"在复检详情中，左侧列出该次检测的不良元件，中部与右侧展示整板及缺陷的放大图、定位框、缺陷类型与判定依据，并可直接反馈；反馈结果将回写到数据集。"
+msgstr ""
+"In the Review detail, defective components for this inspection are listed on"
+" the left; the center and right show the whole-board view plus the defect's "
+"enlarged image, localization box, defect type, and deciding feature. "
+"Feedback can be submitted directly and is written back to the dataset."
+
+#: ../../source/complete_user_guide/inspection/index.rst:281
+msgid "**不良元件 / 误判元件 标签页**"
+msgstr "**Defective Components / False-Positive Components tabs**"
+
+#: ../../source/complete_user_guide/inspection/index.rst:283
+msgid "**不良元件** 和 **误判元件** 标签页结构相同，均以列表形式展示元件级别的汇总结果，各列含义如下："
+msgstr ""
+"**Defective Components** and **False-Positive Components** share the same "
+"layout — a component-level summary list with these columns:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:285
+msgid "**图片**：元件的检测截图缩略图。"
+msgstr "**Image**: thumbnail of the component's inspection snapshot."
+
+#: ../../source/complete_user_guide/inspection/index.rst:286
+msgid "**位号**：元件设计位号（Designator）。"
+msgstr "**Designator**: the component's design designator."
+
+#: ../../source/complete_user_guide/inspection/index.rst:287
+msgid "**料号（Part No.）**：元件料号（未设置时显示 N/A）。"
+msgstr "**Part No.**: the component's part number (N/A when unset)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:288
+msgid "**拼版序列号**：子板序列号（非拼板产品显示 N/A）。"
+msgstr ""
+"**Panel Serial No.**: the sub-board's serial number (N/A on non-panel "
+"products)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:289
+msgid "**主序列号**：整板序列号（无时显示 N/A）。"
+msgstr "**Main Serial No.**: the whole-board serial number (N/A when none)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:290
+msgid "**拼版索引**：元件所属子板的序号（非拼板产品为空）。"
+msgstr ""
+"**Panel Index**: the index of the sub-board the component sits on (empty on "
+"non-panel products)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:291
+msgid "**状态**：**良品** （系统判定通过）或 **不良** （系统判定不良）。"
+msgstr "**Status**: **Good** (system pass) or **Defective** (system NG)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:292
+msgid "**不良类型**：经反馈确认的不良类型（未提供反馈时显示 N/A）。"
+msgstr ""
+"**Defect Type**: the defect type confirmed via feedback (N/A when no "
+"feedback yet)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:293
+msgid "**预测错误**：系统预测的错误类型（无预测时显示 N/A）。"
+msgstr ""
+"**Predicted Error**: the error type predicted by the system (N/A when none)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:295
+msgid "列表顶部显示元件总数并提供 **导出 CSV** 按钮。"
+msgstr ""
+"The list header shows the total component count and provides an **Export "
+"CSV** button."
+
+#: ../../source/complete_user_guide/inspection/index.rst:297
+msgid ""
+"两个标签页的区别：**不良元件** 显示系统预测不良且反馈确认为不良的元件；**误判元件** "
+"显示系统预测不良但反馈标记为良品（即误报）的元件，用于分析误报来源。"
+msgstr ""
+"The difference between the two tabs: **Defective Components** lists "
+"components the system predicted as defective and feedback confirmed; "
+"**False-Positive Components** lists components the system predicted as "
+"defective but feedback marked good — the false-positive set, useful when "
+"diagnosing false-positive sources."
+
+#: ../../source/complete_user_guide/inspection/index.rst:300
+msgid ""
+"**子板良率（FPY）与坏板标记**：对于拼板产品，良率可在 **整板** 与 **子板** "
+"口径间切换，按实际检测的子板数统计；非拼板产品的子板口径显示为 N/A。被标记为 **坏板标记** 的元件用于驱动子板好 / 坏判定，但 **不计入**"
+" 复检 NG 列表，也不计入数据分析报告的 总数 / 告警 / NG 统计。子板的自动判废逻辑（比例模式 / 坏板标记模式）在 "
+":ref:`检测设置（子板判废逻辑）` 中配置。"
+msgstr ""
+"**Sub-board FPY and badmarks**: on panel products, FPY can be switched "
+"between **Board** and **Sub-board** scopes, computed against the actual "
+"count of sub-boards inspected; non-panel products report **N/A** for the "
+"sub-board scope. Components marked as **badmark** drive the sub-board good /"
+" bad verdict but are **not counted** in the Review NG list nor in the Data "
+"Analysis Report's Total / Alerted / NG counts. The sub-board verdict logic "
+"(ratio mode / badmark mode) is configured under :ref:`检测设置（子板判废逻辑）`."
+
+#: ../../source/complete_user_guide/inspection/index.rst:304
+msgid "反馈与模型迭代"
+msgstr "Feedback and model iteration"
+
+#: ../../source/complete_user_guide/inspection/index.rst:306
+msgid "提交的反馈会加入到产品的数据集中。推荐的迭代流程："
+msgstr ""
+"Submitted feedback flows into the product's dataset. The recommended "
+"iteration loop:"
+
+#: ../../source/complete_user_guide/inspection/index.rst:308
+msgid "进行一批次的检测，在工作列表里查看并提供反馈，反馈后的数据可以加到数据集中。"
+msgstr ""
+"Run a batch of inspections, review them in the Worklist, and submit "
+"feedback; the feedback flows into the dataset."
+
+#: ../../source/complete_user_guide/inspection/index.rst:310
+msgid "回到产品编程页面，执行训练来更新模型（训练通常耗时约 1 分钟，视硬件而定）。"
+msgstr ""
+"Return to the product programming page and train to update the model "
+"(typically about 1 minute, depending on hardware)."
+
+#: ../../source/complete_user_guide/inspection/index.rst:312
+msgid "执行\"评估全部\"以检查各元件状态并针对仍为不合格的项微调参数。参考 :ref:`检测参数` 章节以了解具体的调参方法。"
+msgstr ""
+"Run **Evaluate All** to review each component's status and tune parameters "
+"for any still flagged. See :ref:`检测参数` for the tuning specifics."
+
+#~ msgid "完成 PCB 产品创建并训练后，返回主页开始检测任务："
+#~ msgstr ""
+
+#~ msgid "点击“新建检测任务”。"
+#~ msgstr ""
+
+#~ msgid "在任务配置中选择目标 PCB 产品、对应的传送带（conveyor）以及启动模式：单次触发 / 自动连续。"
+#~ msgstr ""
+
+#~ msgid "建议在调试阶段使用 **单次触发** 模式以便逐板查看；正式生产可以使用 **自动连续** 模式。"
+#~ msgstr ""
+
+#~ msgid "启动模式选择"
+#~ msgstr ""
+
+#~ msgid "**右侧信息栏**：实时显示检测计数、良率与缺陷统计信息。"
+#~ msgstr ""
+
+#~ msgid "`上 / 下`（方向键）：切换上一条 / 下一条缺陷记录。"
+#~ msgstr ""
+
+#~ msgid "`左 / 右`（方向键）：在同一元件的不同缺陷类型之间切换（例如主体与引脚的缺陷视图）。"
+#~ msgstr ""
+
+#~ msgid "编程页面"
+#~ msgstr ""
+
+#~ msgid "查看检测历史（工作列表）"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "在主页点击“工作列表”进入历史任务页面，列表展示每个任务的创建时间、合格/不合格数量、良率与缺陷统计。点击任意任务可查看该任务的详情与单次检测记录。"
+#~ msgstr ""
+
+#~ msgid "工作列表概览"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "任务详情页会列出该次检测的所有条目；点击单次记录可进入缺陷详情：查看放大图、定位框、缺陷标签与判定依据，并可执行人工反馈，反馈结果将回写到数据集。"
+#~ msgstr ""
+
+#~ msgid "任务详情概览"
+#~ msgstr ""
+
+#~ msgid "缺陷记录与反馈"
+#~ msgstr ""
+
+#~ msgid "本章说明如何在系统中创建并执行检测任务、查看历史记录与反馈数据，以及通过反馈迭代模型的基本流程。"
+#~ msgstr ""
+
+#~ msgid "完成 PCB 产品创建并训练后，返回主页，点击 **新建检测任务**。在弹窗中完成任务配置："
+#~ msgstr ""
+
+#~ msgid "**传送带**：选择对应的传送带（conveyor）。"
+#~ msgstr ""
+
+#~ msgid "**选择一个 PCBA**：选择目标 PCB 产品。"
+#~ msgstr ""
+
+#~ msgid "**选择任务模式**：如 **自动连续运行任务**，适用于正式生产；调试阶段可逐板查看。"
+#~ msgstr ""
+
+#~ msgid "**以演示模式运行**：在无实物 / 无硬件条件下回放演示数据，可用于培训或流程验证。"
+#~ msgstr ""
+
+#~ msgid "完成后点击 **开始检测**。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "在连续检测模式下，遇到错误时系统是否自动停止由 `pause_when_ng` 配置项控制（参考 :ref:`系统JSON配置`）。说明如下："
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`true`：检测到 "
+#~ "NG（不良）或发生异常时，系统会自动暂停当前任务并停留在出错的子板位置，便于现场人工查看、定位并处理该子板；同时该条记录会被标记为不良并写入任务数据。此选项适用于需要逐板确认或即时干预的生产场景。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`false`：发生 NG "
+#~ "时系统不会中断生产，会按既定节拍继续运行并记录该子板为不良（或按设定分拣策略处理）。此模式适用于对产线吞吐要求较高且容许事后抽查或自动分拣的场景。"
+#~ msgstr ""
+
+#~ msgid "检测页面概览"
+#~ msgstr ""
+
+#~ msgid "进入检测页面后，界面元素与操作："
+#~ msgstr ""
+
+#~ msgid "**空格**：进板并立即开始检测。"
+#~ msgstr ""
+
+#~ msgid "**左侧控制按钮**：进板 | 出板 | 通过 | 复位，用于手动控制生产节拍。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**右侧信息栏**：实时显示产品统计（合格 / 不合格数量）、元件统计（合格率 / 不良率 / 误报率）与检测时长；良率可在 **整板（Board）**"
+#~ " 与 **子板（Sub-board）** 口径之间切换（拼板产品按实际子板数统计）。"
+#~ msgstr ""
+
+#~ msgid "检测到缺陷时，系统会自动跳转到缺陷详情视图，可查看放大图、定位框、缺陷类型和判定依据，并可立即进行人工反馈（判为良品/不良/忽略等）。"
+#~ msgstr ""
+
+#~ msgid "按 `Enter` 会查询未读的检测记录，默认优先显示左轨，随后显示右轨（两轨独立计数与统计）。"
+#~ msgstr ""
+
+#~ msgid "通过上方标签页在“左轨 / 右轨”间切换，分别查看各自的历史记录与缺陷详情。"
+#~ msgstr ""
+
+#~ msgid "快捷键"
+#~ msgstr ""
+
+#~ msgid "检测页面快捷键 (缺陷详情视图)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`1–0`（数字键）：在缺陷详情视图中快速反馈对应的预设类别；按住 `Ctrl` + 数字键 可访问扩展类别（例如 `Ctrl`+`1` 表示类别 "
+#~ "11）。"
+#~ msgstr ""
+
+#~ msgid "方向键 `上` / `下`：切换上一条 / 下一条缺陷记录。"
+#~ msgstr ""
+
+#~ msgid "方向键 `左` / `右`：在同一元件的不同缺陷类型之间切换（例如主体与引脚的缺陷视图）。"
+#~ msgstr ""
+
+#~ msgid "`Enter`：返回上一个检测记录；若当前为最新记录，则返回检测概览页面。"
+#~ msgstr ""
+
+#~ msgid "`空格`：进板并开始检测。"
+#~ msgstr ""
+
+#~ msgid "编程页面快捷键"
+#~ msgstr ""
+
+#~ msgid "`Ctrl+C` / `Ctrl+V`：复制并粘贴当前元件（包含所有检测框与属性）。"
+#~ msgstr ""
+
+#~ msgid "`W` / `A` / `S` / `D`：在选中检测框时微调框的位置；在选中移动工具时移动视图。"
+#~ msgstr ""
+
+#~ msgid "`V`：切换到选择工具。"
+#~ msgstr ""
+
+#~ msgid "`H`：切换到移动（拖拽）工具。"
+#~ msgstr ""
+
+#~ msgid "`1`：切换到主体工具。"
+#~ msgstr ""
+
+#~ msgid "`2`：切换到焊料工具。"
+#~ msgstr ""
+
+#~ msgid "`3`：切换到 IC 引脚工具。"
+#~ msgstr ""
+
+#~ msgid "`4`：切换到 OCR（文本）工具。"
+#~ msgstr ""
+
+#~ msgid "`5`：切换到条形码工具。"
+#~ msgstr ""
+
+#~ msgid "缺陷详情与快速反馈"
+#~ msgstr ""
+
+#~ msgid "在缺陷详情页中："
+#~ msgstr ""
+
+#~ msgid "查看放大图与定位框，确认缺陷区域与具体判别依据。"
+#~ msgstr ""
+
+#~ msgid "使用快捷键或界面按钮进行快速反馈（例如标记为误报、确认不良、忽略等）。"
+#~ msgstr ""
+
+#~ msgid "反馈会写入该产品的数据集，供后续训练与参数调整使用。"
+#~ msgstr ""
+
+#~ msgid "所有缺陷类别（界面显示）"
+#~ msgstr ""
+
+#~ msgid "下面列举基于界面右侧缺陷反馈面板的缺陷类别（按显示顺序编号）："
+#~ msgstr ""
+
+#~ msgid "无错误"
+#~ msgstr ""
+
+#~ msgid "缺件"
+#~ msgstr ""
+
+#~ msgid "错件"
+#~ msgstr ""
+
+#~ msgid "反件"
+#~ msgstr ""
+
+#~ msgid "极性错误"
+#~ msgstr ""
+
+#~ msgid "损件"
+#~ msgstr ""
+
+#~ msgid "焊料倒角错误"
+#~ msgstr ""
+
+#~ msgid "文本错误"
+#~ msgstr ""
+
+#~ msgid "IC 偏移"
+#~ msgstr ""
+
+#~ msgid "引脚翘起（快捷键：`Ctrl`+`1`）"
+#~ msgstr ""
+
+#~ msgid "焊锡桥联（快捷键：`Ctrl`+`2`）"
+#~ msgstr ""
+
+#~ msgid "IC 引脚焊锡倒角错误（快捷键：`Ctrl`+`3`）"
+#~ msgstr ""
+
+#~ msgid "无错误（标记为代替料）"
+#~ msgstr ""
+
+#~ msgid "倾移 / 偏移（快捷键：`Ctrl`+`5`）"
+#~ msgstr ""
+
+#~ msgid "未知错误类型（快捷键：`Ctrl`+`6`）"
+#~ msgstr ""
+
+#~ msgid "说明："
+#~ msgstr ""
+
+#~ msgid "列表序号对应界面上的反馈项顺序，具体项目及快捷键可由系统管理员在产品配置或前端界面中定制。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "在缺陷详情视图中，可使用数字键 `1–0` 快速反馈常用类别；对于扩展类别（界面上带有 `Ctrl+` 的项），可按 `Ctrl` + 对应数字触发。"
+#~ msgstr ""
+
+#~ msgid "标注为替代料"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "当某些元件在外观或形态上与模板存在较大差异，但经工程确认仍属可接受时，可将该元件标记为“替代料”。系统会在反馈中记录此标注，并在后续的数据汇总与模型训练中将其作为独立类别纳入考虑，以便区分替代料与真实缺陷、降低误报并支持模型适配。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "在主页点击 **工作列表** 进入 **数据分析报告**。页面顶部提供多个标签页，并可按 今天 / 昨天 / 本周 / 本月 / 今年 等时间范围过滤："
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**总结**：展示 OK / NG 数量与比例、告警（Alerted）与误报（False Positive）的 PPM、DPU 等总览指标，以及 "
+#~ "NG/OK 比例图。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**检测结果**：逐条列出每次检测记录（PCBA 名称、序列号、元件数、不良 / 告警元件数、检测起止时间）。点击某条记录的 **查看** "
+#~ "进入复检详情。"
+#~ msgstr ""
+
+#~ msgid "**不良元件 / 误判元件**：分别按元件维度汇总不良与误报，便于定位高发问题元件。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**子板良率（FPY）与坏板标记**：对于拼板产品，良率可在 **整板（Board）** 与 **子板（Sub-board）** "
+#~ "口径间切换，按实际检测的子板数统计；非拼板产品的子板口径显示为 N/A。被标记为 **坏板标记** 的元件用于驱动子板好 / 坏判定，但 **不计入**"
+#~ " 复检 NG 列表，也不计入数据分析报告的 总数 / 告警 / NG 统计。子板的自动判废逻辑（比例模式 / 坏板标记模式）在 "
+#~ ":ref:`检测设置（子板判废逻辑）` 中配置。"
+#~ msgstr ""
+
+#~ msgid "进行一批次的检测， 在工作列表里查看 并提供反馈，反馈后的数据可以加到数据集中。"
+#~ msgstr ""
+
+#~ msgid "执行“评估全部”以检查各元件状态并针对仍为不合格的项微调参数。参考 :ref:`检测参数` 章节以了解具体的调参方法。"
+#~ msgstr ""

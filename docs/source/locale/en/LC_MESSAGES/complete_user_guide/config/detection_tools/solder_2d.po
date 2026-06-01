@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 15:58-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:2
+msgid "焊料检测 2D（Solder 2D，基于颜色比例）"
+msgstr "Solder Inspection 2D (Color-ratio Based)"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:4
+msgid "**此页面的用途**"
+msgstr "**What this page covers**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:6
+msgid "在焊料 ROI 内用 HSV 颜色范围对像素二值化，计算有效比例并与设定范围比较以判定 OK/NG，适用于 SMD 焊点的焊料检测。"
+msgstr ""
+"Binarizes pixels inside the solder ROI using an HSV color range, computes "
+"the valid ratio, and compares it against the configured band to decide "
+"OK/NG. Used for solder inspection on SMD joints."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:8
+msgid "**如何进入**"
+msgstr "**How to open it**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:10
+msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
+msgstr ""
+"Draw the corresponding ROI in the Template Editor, then configure the tool's"
+" parameters in the parameter panel."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:12
+msgid "**操作流程**"
+msgstr "**Workflow**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:14
+msgid ""
+"**核心思路**：在焊料 ROI 内用 **HSV 颜色范围** 对像素二值化，计算 **有效比例** 并与设定范围比较以判定 OK/NG。一个 ROI"
+" 可配置多组颜色范围（如蓝通道斜面焊料、红通道平面焊盘），分别独立设阈值。"
+msgstr ""
+"**Core idea**: inside the solder ROI, binarize pixels using an **HSV color "
+"range**, compute the **valid ratio**, and compare it with the configured "
+"range to decide OK/NG. A single ROI can carry multiple color ranges (for "
+"example, the blue channel for the sloped solder fillet plus the red channel "
+"for the flat pad), each with its own thresholds."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst
+msgid "焊料2D ROI"
+msgstr "Solder 2D ROI"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:20
+msgid "**参数说明**"
+msgstr "**Parameters**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:22
+msgid ""
+"**颜色公式（Color Formula）**：选择 HSV 或三色（Tricolor）公式；选择三色时配置 **三色 X / Y / Z / A** "
+"系数。"
+msgstr ""
+"**Color Formula**: choose between **HSV** and **Tricolor**; when "
+"**Tricolor** is chosen, configure the **Tricolor X / Y / Z / A** "
+"coefficients."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:23
+msgid "**中心色调（Center Hue）/ 中心饱和度（Center Saturation）**：HSV 模式下色相基准点（位于色盘内部）。"
+msgstr ""
+"**Center Hue / Center Saturation**: the reference point inside the HSV color"
+" wheel (HSV mode only)."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:24
+msgid "**起始色调（Start Hue）/ 终止色调（End Hue）**：色盘圆环边缘的两点，与中心点共同构成扇形有效色相范围。"
+msgstr ""
+"**Start Hue / End Hue**: two points on the color-wheel ring that, together "
+"with the center point, form the wedge-shaped valid hue range."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:25
+msgid "**起始明度（Start Value）/ 终止明度（End Value）**：限定有效像素的明度区间。"
+msgstr "**Start Value / End Value**: brightness band for valid pixels."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:26
+msgid "**有效比例范围（Valid Ratio Ranges）**：每组颜色范围对应的有效比例上下限；落入范围内判 OK。"
+msgstr ""
+"**Valid Ratio Ranges**: the lower and upper valid-ratio limits per color "
+"range; an inspection is OK when the ratio lands inside the band."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:27
+msgid "**有效比例列表（Valid Ratio List）**：评估样本得到的各 ROI 有效比例统计，辅助设定合理范围。"
+msgstr ""
+"**Valid Ratio List**: per-ROI valid-ratio statistics gathered from evaluated"
+" samples — useful when picking a sensible range."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:28
+msgid "**启用可视化（Enable Visualization）**：显示二值化 Mask 与比例统计（仅建议调试时开启）。"
+msgstr ""
+"**Enable Visualization**: displays the binarization mask and ratio "
+"statistics. Recommended only while tuning."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:29
+msgid ""
+"**使用共享参数（Use Shared Parameters）**：开启后，对同一组件下所有同类型特征共用一套参数；关闭后可对单个特征单独调参。"
+msgstr ""
+"**Use Shared Parameters**: when on, every feature of this type within the "
+"same component shares one parameter set; turn it off to tune a single "
+"feature independently."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst
+msgid "HSV颜色范围挑选"
+msgstr "Picking an HSV color range"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst
+msgid "多颜色范围示例（蓝/红）"
+msgstr "Multi-range example (blue + red)"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst
+msgid "颜色范围二值化与比例统计"
+msgstr "Color-range binarization and ratio statistics"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:41
+msgid "**三角形抽色（HSV 三角法）**"
+msgstr "**Triangular color picking (HSV triangle)**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:43
+msgid ""
+"颜色范围支持 **三角形抽色** 配置：在 HSV "
+"颜色空间中，用一个三角形圈出目标颜色簇。三角形由三个顶点定义，分别对应中心色、起始色与结束色，比传统的\"矩形\" HSV "
+"范围更紧凑、误抽其他颜色更少。可在 HSV 颜色块上直接拖动三个顶点调整范围。"
+msgstr ""
+"Color ranges support a **triangular picker** in HSV space — a triangle "
+"bounds the target color cluster. The three vertices correspond to the center"
+" color, the start color, and the end color. Compared with the classic "
+"*rectangular* HSV range, the triangle is tighter and picks up fewer "
+"unintended colors. Drag any of the three vertices directly on the HSV swatch"
+" to adjust the range."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:45
+msgid "**多范围间的逻辑关系**"
+msgstr "**How multiple ranges combine**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:47
+msgid "可同时配置多个颜色范围（例如：蓝色焊点 + 红色助焊剂）。系统对每个范围分别做二值化统计，最终判定时 **取所有范围的并集**："
+msgstr ""
+"Multiple color ranges can be configured at once (for example, blue solder + "
+"red flux). Each range is binarized and counted independently, and the final "
+"decision uses the **union** of all ranges:"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:49
+msgid "任一颜色范围匹配的像素都会被纳入\"焊锡有效像素\"统计。"
+msgstr "A pixel matching any range counts as a *valid solder pixel*."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:50
+msgid "颜色范围之间是 **OR** 关系，不会因为某一范围阈值过严而漏判其他颜色覆盖区域。"
+msgstr ""
+"The ranges are combined with **OR** logic, so an over-tight threshold on one"
+" range doesn't cause the other color-covered area to be missed."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:51
+msgid "各范围的统计比例可在右侧参数面板中独立查看。"
+msgstr ""
+"The per-range ratios are visible independently in the right parameter panel."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:53
+msgid "如果不需要某个范围，可将其 *阈值* 调至 0，或在颜色范围列表中删除该范围。"
+msgstr ""
+"To disable a range, set its *threshold* to 0 or delete it from the color-"
+"range list."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:55
+msgid "**抽色二值化预览**"
+msgstr "**Color-pick binarization preview**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:57
+msgid "参数面板顶部提供 **抽色二值化预览** 切换，开启后可在画布上实时叠加显示当前颜色范围抽到的像素分布，便于调参时直观确认抽色效果。"
+msgstr ""
+"The toggle at the top of the parameter panel — **color-pick binarization "
+"preview** — overlays the binarized pixel distribution of the current color "
+"range on the canvas in real time, giving immediate visual feedback while you"
+" tune."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:60
+msgid "**常见问题与提示**"
+msgstr "**Common questions and tips**"
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:64
+msgid ""
+"**焊锡阈值参数被 AI 更新拉飞**：避免把分数远超阈值的焊锡反馈为\"无错误\"——这会让 AI 学到错误的阈值。可在 **系统设置 → "
+"模型更新器** 关闭 **AI 更新覆盖**，关闭后 AI 更新最多调整到设定的比例上下限，不会大幅突破。"
+msgstr ""
+"**Solder threshold drifts after AI updates**: avoid annotating samples with "
+"a score well past the threshold as *no defect* — the AI will learn the wrong"
+" threshold. Under **System Settings → Model Updater**, turn off **AI update "
+"overrides**; once off, AI updates can only shift values toward the "
+"configured ratio limits and won't break past them."
+
+#: ../../source/complete_user_guide/config/detection_tools/solder_2d.rst:65
+msgid ""
+"**参数更新计算不准确**：检查训练集中是否有打分极端的反馈图片，移除明显错误或极端的反馈后重新训练。也可关闭 **更新颜色范围 / "
+"更新颜色比例**，关闭后编程页面\"参数更新\"按钮将不会改动对应参数。"
+msgstr ""
+"**Parameter updates seem wrong**: inspect the training set for feedback "
+"images with extreme scores; remove obviously incorrect or outlier "
+"annotations and retrain. Alternatively, turn off **Update Color Range / "
+"Update Color Ratio** — the *Update Parameters* button on the programming "
+"page will then leave those parameters untouched."
+
+#~ msgid ""
+#~ "颜色范围支持 **三角形抽色** 配置：在 HSV "
+#~ "颜色空间中，用一个三角形圈出目标颜色簇。三角形由三个顶点定义，分别对应中心色、起始色与结束色，比传统的\"矩形\" HSV "
+#~ "范围更紧凑、误抽其他颜色更少。可点击 HSV 颜色块拖动顶点；也可在画布上 **按住 Ctrl 并点击像素** 直接采集目标颜色作为三角形顶点。"
+#~ msgstr ""
+
+#~ msgid "**画布快捷键 — 提取颜色**"
+#~ msgstr ""
+
+#~ msgid "**Ctrl + 鼠标左键**：在画布上单击像素，把该像素颜色作为新的三角形抽色顶点。"
+#~ msgstr ""
+
+#~ msgid "**Ctrl + 拖动**：框选一块小区域，把区域内的平均颜色作为顶点。"
+#~ msgstr ""
+
+#~ msgid "切到 **抽色二值化预览** 视图（参数面板顶部 toggle），可实时查看当前颜色范围抽到的像素分布，便于调参。"
+#~ msgstr ""

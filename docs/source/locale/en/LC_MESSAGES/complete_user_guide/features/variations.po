@@ -1,0 +1,416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/features/variations.rst:2
+msgid "变体 / 替代元件（Variation / Alternative Components）"
+msgstr "Variations / Alternative Components"
+
+#: ../../source/complete_user_guide/features/variations.rst:4
+msgid "**此页面的用途**"
+msgstr "**What this page covers**"
+
+#: ../../source/complete_user_guide/features/variations.rst:6
+msgid ""
+"替代料（替代元件）是指同一元件位置上，被系统认可的多种合法外观形态。当检测流程将某一外观实际合格的元件误判为 NG "
+"时，操作员可在复检页面将其标记为替代料，从而让系统在今后的检测中接受该外观。典型场景：同一丝印位置更换了不同封装或不同供应商的物料，但旧训练图像尚未涵盖新外观。"
+msgstr ""
+"An **Alternative Component** (variation) is one of several acceptable "
+"physical appearances at the same component position. When the inspection "
+"misclassifies an appearance-OK component as NG, the operator can mark it as "
+"a variation on the review page so that the system accepts the same "
+"appearance on subsequent inspections. Typical scenario: the same designator "
+"now carries parts from a different package or a different vendor, but the "
+"existing training images don't yet cover the new appearance."
+
+#: ../../source/complete_user_guide/features/variations.rst:8
+msgid ""
+"替代料与主元件共享同一元件位置（designator），在模板编辑器中以独立行显示，可单独查看其特征。创建替代料后需重新训练模型，才能在后续检测任务中生效。"
+msgstr ""
+"Alternative components share the same designator as their primary component;"
+" they appear as separate rows in the Template Editor so their features can "
+"be inspected on their own. After creating a variation you must retrain the "
+"model before it takes effect in subsequent inspections."
+
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "复检页面左侧 NG 列表区域，列出已检测的元件"
+msgstr ""
+"The NG list on the left of the Review page shows the inspected components."
+
+#: ../../source/complete_user_guide/features/variations.rst:14
+msgid "**如何进入**"
+msgstr "**How to open it**"
+
+#: ../../source/complete_user_guide/features/variations.rst:16
+msgid "替代料功能有两个入口："
+msgstr "Alternative components are reached from two places:"
+
+#: ../../source/complete_user_guide/features/variations.rst:18
+msgid "**入口一：复检页面（创建替代料）**"
+msgstr "**Entry 1: Review page (create an Alternative)**"
+
+#: ../../source/complete_user_guide/features/variations.rst:20
+msgid "在离线复检页面（``/inspection/review``）中，当某元件被判定为 NG 时："
+msgstr ""
+"On the offline Review page (``/inspection/review``), when a component is "
+"flagged NG:"
+
+#: ../../source/complete_user_guide/features/variations.rst:22
+msgid "在右侧 NG 元件列表中选中该元件。"
+msgstr "Select the component in the NG list on the right."
+
+#: ../../source/complete_user_guide/features/variations.rst:23
+msgid "点击元件标题行右上角的 **...** 按钮，展开下拉菜单。"
+msgstr ""
+"Click the **...** button at the top right of the component header to open "
+"its drop-down menu."
+
+#: ../../source/complete_user_guide/features/variations.rst:24
+msgid "点击 **设置为替代料**，打开替代料选择器对话框。"
+msgstr "Click **Set as Alternative** to open the Alternative chooser dialog."
+
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "复检页面元件标题行展开「...」下拉菜单，显示「设置为替代料」选项"
+msgstr ""
+"Review page: the component header's *...* menu showing **Set as "
+"Alternative**."
+
+#: ../../source/complete_user_guide/features/variations.rst:30
+msgid "**入口二：模板编辑器（查看与管理替代料）**"
+msgstr "**Entry 2: Template Editor (view and manage Alternatives)**"
+
+#: ../../source/complete_user_guide/features/variations.rst:32
+msgid ""
+"进入产品编程页面 → **元件** 标签页，即可在元件列表中查看已存在的替代料。选中某替代料行后，右侧 **替代料** "
+"折叠面板将显示其料号和封装信息，并提供重命名与批量复制功能。"
+msgstr ""
+"On the Teach page → **Component** tab, existing alternative components "
+"appear in the component list. Selecting a variation row exposes a "
+"**Variation** collapsible panel on the right with its part number and "
+"package, plus rename and bulk-copy controls."
+
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "模板编辑器元件列表与右侧替代料面板"
+msgstr ""
+"Template Editor — component list and the Variation panel on the right."
+
+#: ../../source/complete_user_guide/features/variations.rst:38
+msgid "**操作流程**"
+msgstr "**Workflow**"
+
+#: ../../source/complete_user_guide/features/variations.rst:40
+msgid "**第一步：在复检页面触发替代料创建**"
+msgstr "**Step 1: Trigger Alternative creation from the Review page**"
+
+#: ../../source/complete_user_guide/features/variations.rst:42
+msgid ""
+"在复检页面选中误判为 NG 的元件后，点击 **...** → **设置为替代料**，弹出 **添加为替代料** "
+"对话框（``review.setAsAlternativeChoiceTitle``）。"
+msgstr ""
+"On the Review page, select the falsely-flagged NG component, then click "
+"**...** → **Set as Alternative** to open the **Add as Alternative** dialog "
+"(``review.setAsAlternativeChoiceTitle``)."
+
+#: ../../source/complete_user_guide/features/variations.rst:44
+msgid "对话框说明：请选择操作方式：在视野图像上重新定义元件 ROI，或使用当前元件图像作为替代料参考。"
+msgstr ""
+"Dialog copy: *Choose how to proceed: redraw the component ROI on the FOV "
+"image, or use the current component image as the variation's reference.*"
+
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "替代料选择器：「沿用当前元件图像」与「在视野图上绘制 ROI」两个操作选项"
+msgstr ""
+"Alternative chooser with two options: **Keep current component image** and "
+"**Define new ROI on FOV**."
+
+#: ../../source/complete_user_guide/features/variations.rst:50
+msgid "**第二步：选择创建方式**"
+msgstr "**Step 2: Pick a path**"
+
+#: ../../source/complete_user_guide/features/variations.rst:52
+msgid "对话框提供两种方式："
+msgstr "The dialog offers two paths:"
+
+#: ../../source/complete_user_guide/features/variations.rst:54
+msgid ""
+"**沿用当前元件图像** ：直接使用当前检测抓取的元件图像作为替代料的参考图像，进入下一步选择批量同步范围。适用于图像质量良好、无需调整取样区域的情况。"
+msgstr ""
+"**Keep current component image**: reuse the component image captured during "
+"this inspection as the variation's reference image, then choose a fan-out "
+"scope on the next step. Use this when the image quality is good and the "
+"sampling area needs no adjustment."
+
+#: ../../source/complete_user_guide/features/variations.rst:56
+msgid ""
+"**在视野图上绘制 ROI** "
+"：重新在视野图上框选元件范围，用于调整采样区域以获取更高质量的参考图像。该路径不会立即创建替代料，而是先更新基准元件形状，再要求重新检测。"
+msgstr ""
+"**Define new ROI on FOV**: re-box the component area on the FOV image to "
+"adjust the sampling region for a higher-quality reference image. This path "
+"does **not** create the variation immediately — it first updates the golden "
+"component shape, after which you re-inspect the board."
+
+#: ../../source/complete_user_guide/features/variations.rst:60
+msgid ""
+"如果该元件已在本轮复检中完成过\"绘制 ROI\"操作（系统会高亮显示相应行），则 **在视野图上绘制 ROI** "
+"按钮将被禁用，并提示：您已为该元件重新定义过 ROI，请选择\"沿用当前元件图像\"以基于重新检测的图像创建替代料。此时应直接选择 "
+"**沿用当前元件图像**。"
+msgstr ""
+"If you have already used **Define new ROI on FOV** for this component during"
+" the current review (the row is highlighted), that button is disabled with "
+"the hint *You have already redefined the ROI for this component — choose "
+"\"Keep current component image\" to create the variation against the "
+"freshly-inspected image.* Use **Keep current component image** in that case."
+
+#: ../../source/complete_user_guide/features/variations.rst:62
+msgid "**第三步A：沿用当前元件图像 — 选择批量同步范围**"
+msgstr "**Step 3A: Keep current component image — pick the fan-out scope**"
+
+#: ../../source/complete_user_guide/features/variations.rst:64
+msgid "选择 **沿用当前元件图像** 后，对话框进入第二步，显示批量同步（fan-out）选项。操作员可选择同步范围："
+msgstr ""
+"Selecting **Keep current component image** advances the dialog to its second"
+" step, which surfaces the fan-out (bulk-sync) options. Choose one:"
+
+#: ../../source/complete_user_guide/features/variations.rst:66
+msgid "**不批量生成（仅当前元件）** ：仅为当前元件创建替代料，不影响其他元件。"
+msgstr ""
+"**No fan-out (seed only)**: create the variation for this component only; "
+"nothing else changes."
+
+#: ../../source/complete_user_guide/features/variations.rst:68
+msgid "**按Part No同步** ：同时为所有与当前元件共享相同料号的其他元件批量生成此替代料。若当前元件无料号，则该选项禁用。"
+msgstr ""
+"**Sync by Part No.**: create the same variation on every other component "
+"sharing this part number. Disabled when this component has no part number."
+
+#: ../../source/complete_user_guide/features/variations.rst:70
+msgid "**按Package No同步** ：同时为所有与当前元件共享相同封装号的其他元件批量生成此替代料。若当前元件无封装号，则该选项禁用。"
+msgstr ""
+"**Sync by Package No.**: create the same variation on every other component "
+"sharing this package number. Disabled when this component has no package "
+"number."
+
+#: ../../source/complete_user_guide/features/variations.rst:72
+msgid "选择范围后，点击 **沿用当前元件图像** 按钮提交。替代料创建成功后，系统会弹出提示，告知需前往模板编辑页重新训练。"
+msgstr ""
+"After choosing the scope, click **Keep current component image** to submit. "
+"When the variation is created, a toast reminds you that retraining is "
+"required in the Template Editor."
+
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "替代料选择器第二步：批量同步单选按钮组（不批量生成 / 按 Part No 同步 / 按 Package No 同步）"
+msgstr ""
+"Alternative chooser step 2: the fan-out radio group — No fan-out / Sync by "
+"Part No. / Sync by Package No."
+
+#: ../../source/complete_user_guide/features/variations.rst:78
+msgid "**第三步B：在视野图上绘制 ROI — 更新基准元件形状**"
+msgstr ""
+"**Step 3B: Define new ROI on FOV — update the golden component shape**"
+
+#: ../../source/complete_user_guide/features/variations.rst:80
+msgid "选择 **在视野图上绘制 ROI** 后，打开 **添加为替代料** 对话框，显示该 NG 元件的视野图像。"
+msgstr ""
+"Selecting **Define new ROI on FOV** opens the **Add as Alternative** dialog,"
+" which displays the NG component's FOV image."
+
+#: ../../source/complete_user_guide/features/variations.rst:82
+msgid "操作说明："
+msgstr "How to use it:"
+
+#: ../../source/complete_user_guide/features/variations.rst:84
+msgid ""
+"视野图中已默认预选当前元件的矩形框（红色虚线）。拖动角点或边缘手柄，从中心向外放大矩形框，使其完全覆盖目标元件轮廓——矩形框只能扩大，不可缩小至原始尺寸以下。"
+msgstr ""
+"The component's existing rectangle is pre-selected on the FOV (red dashed "
+"outline). Drag the corner or edge handles outward from the center so the "
+"rectangle fully covers the target component — the rectangle can only grow; "
+"it can't shrink below the original size."
+
+#: ../../source/complete_user_guide/features/variations.rst:85
+msgid "如无需调整大小，可直接确认以沿用原始形状。"
+msgstr "If no resize is needed, confirm directly to keep the original shape."
+
+#: ../../source/complete_user_guide/features/variations.rst:86
+msgid "点击 **更新基准元件形状** 按钮提交。"
+msgstr "Click **Update Golden Shape** to submit."
+
+#: ../../source/complete_user_guide/features/variations.rst:-1
+msgid "绘制 ROI 对话框：视野图像、可调整的元件矩形框及红色虚线基准轮廓"
+msgstr ""
+"Draw-ROI dialog: FOV image, adjustable component rectangle, and red dashed "
+"golden outline."
+
+#: ../../source/complete_user_guide/features/variations.rst:92
+msgid ""
+"提交后，系统更新基准元件形状，并自动重载当前检测会话的产品定义。此时页面提示：基准元件形状已更新，请重新检测该板，再选择\"沿用当前元件图像\"以创建替代料。"
+msgstr ""
+"Once submitted, the system updates the golden component shape and reloads "
+"the running session's product definition. The page reads *Golden component "
+"shape updated — re-inspect this board, then use \"Keep current component "
+"image\" to create the variation.*"
+
+#: ../../source/complete_user_guide/features/variations.rst:94
+msgid "**重新检测后的后续步骤：**"
+msgstr "**Follow-up after re-inspection:**"
+
+#: ../../source/complete_user_guide/features/variations.rst:96
+msgid "重新触发该板的检测。"
+msgstr "Re-trigger inspection on the same board."
+
+#: ../../source/complete_user_guide/features/variations.rst:97
+msgid "复检时再次选中该元件，点击 **...** → **设置为替代料**，进入选择器对话框。"
+msgstr ""
+"On the new review, select the same component again, click **...** → **Set as"
+" Alternative**, and open the chooser."
+
+#: ../../source/complete_user_guide/features/variations.rst:98
+msgid "此时该元件行左侧会显示黄色标记，提示已在此前重新定义过 ROI。选择 **沿用当前元件图像**，继续按\"第三步 A\"流程完成替代料创建。"
+msgstr ""
+"The row now carries a yellow marker indicating the ROI was redefined "
+"earlier. Choose **Keep current component image** and finish creating the "
+"variation via the Step 3A flow."
+
+#: ../../source/complete_user_guide/features/variations.rst:100
+msgid "**第四步：在模板编辑器中管理替代料**"
+msgstr "**Step 4: Manage variations in the Template Editor**"
+
+#: ../../source/complete_user_guide/features/variations.rst:102
+msgid "替代料创建成功后，可在模板编辑器的元件列表中查看和管理："
+msgstr ""
+"After a variation is created, view and manage it from the Template Editor's "
+"component list:"
+
+#: ../../source/complete_user_guide/features/variations.rst:104
+msgid "选中某替代料行后，右侧展示 **替代料** 折叠面板，包含以下功能："
+msgstr ""
+"Selecting a variation row exposes the **Variation** collapsible panel on the"
+" right, with these controls:"
+
+#: ../../source/complete_user_guide/features/variations.rst:106
+msgid "**料号（Part No.）输入框 + 保存按钮** ：修改该替代料组的料号，点击保存后将更新所有共享该料号的相关元件。"
+msgstr ""
+"**Part No. input + Save**: change the variation group's part number. Saving "
+"updates every related component sharing that PN."
+
+#: ../../source/complete_user_guide/features/variations.rst:108
+msgid "**封装号（Package No.）输入框 + 保存按钮** ：修改该替代料组的封装号，点击保存后将更新所有共享该封装号的相关元件。"
+msgstr ""
+"**Package No. input + Save**: change the variation group's package number. "
+"Saving updates every related component sharing that package."
+
+#: ../../source/complete_user_guide/features/variations.rst:110
+msgid "**复制到相同料号** ：将当前替代料批量复制到所有共享相同料号的元件。料号为空时该按钮禁用。"
+msgstr ""
+"**Copy to same Part No.**: bulk-copy this variation to every component "
+"sharing the same PN. Disabled when the PN is empty."
+
+#: ../../source/complete_user_guide/features/variations.rst:112
+msgid "**复制到相同封装** ：将当前替代料批量复制到所有共享相同封装号的元件。封装号为空时该按钮禁用。"
+msgstr ""
+"**Copy to same Package No.**: bulk-copy this variation to every component "
+"sharing the same package. Disabled when the package is empty."
+
+#: ../../source/complete_user_guide/features/variations.rst:116
+msgid "**第五步：重新训练模型**"
+msgstr "**Step 5: Retrain the model**"
+
+#: ../../source/complete_user_guide/features/variations.rst:118
+msgid ""
+"替代料创建后，需在模板编辑器中触发重新训练，新建的替代料才能在后续检测任务中生效。替代料创建成功时，系统会弹出警告提示：替代料已创建。此替代料不会在当前检测任务中生效——请前往模板编辑页编辑特征并触发重新训练。"
+msgstr ""
+"After a variation is created you must trigger retraining in the Template "
+"Editor before it takes effect. When the variation is created the system "
+"surfaces the warning *Alternative created. This variation will not take "
+"effect in the current inspection task — go to the Template Editor to edit "
+"features and trigger retraining.*"
+
+#: ../../source/complete_user_guide/features/variations.rst:120
+msgid ""
+"同时，若当前有正在运行的检测任务，系统会弹出对话框，询问是否停止当前任务。建议在重新训练前停止运行中的检测会话，以确保新训练后的模型能在下次检测时正确生效。"
+msgstr ""
+"If an inspection session is running, the system also opens a dialog asking "
+"whether to stop it. Stopping the running session before retraining is "
+"recommended, so the newly-trained model is picked up cleanly on the next "
+"start."
+
+#: ../../source/complete_user_guide/features/variations.rst:122
+msgid "**注意事项**"
+msgstr "**Notes**"
+
+#: ../../source/complete_user_guide/features/variations.rst:126
+msgid ""
+"**替代料创建后不会自动触发重新训练。** "
+"必须前往模板编辑页手动触发重新训练，替代料才会对后续检测生效。运行中的检测任务需停止后再重新启动，方可使用新模型。"
+msgstr ""
+"**Creating a variation does not auto-trigger retraining.** You must trigger "
+"retraining manually from the Template Editor before the variation affects "
+"future inspections. A running session must be stopped and restarted to pick "
+"up the new model."
+
+#: ../../source/complete_user_guide/features/variations.rst:127
+msgid ""
+"**\"在视野图上绘制 ROI\"路径需两步完成：** "
+"绘制并提交时仅更新基准元件形状，不立即创建替代料；需重新检测该板后，再通过\"沿用当前元件图像\"完成替代料的创建。"
+msgstr ""
+"**The \"Define new ROI on FOV\" path takes two steps:** drawing and "
+"submitting only updates the golden component shape — it does not create the "
+"variation immediately. After re-inspecting the board, finish the variation "
+"creation via **Keep current component image**."
+
+#: ../../source/complete_user_guide/features/variations.rst:128
+msgid ""
+"**批量同步（fan-out）只能选择一种范围（料号或封装号，二选一或不选）。** 若同一元件的料号或封装号字段为空，对应的同步选项将被禁用。"
+msgstr ""
+"**Fan-out scope is single-select** — by part number, by package number, or "
+"none. If the matching field is empty on the component, the corresponding "
+"sync option is disabled."
+
+#: ../../source/complete_user_guide/features/variations.rst:129
+msgid "**替代料在模板编辑器中以独立行显示**，与原始主元件分开，不影响主元件的特征配置。"
+msgstr ""
+"**A variation shows as a separate row in the Template Editor**, distinct "
+"from the primary, and does not affect the primary's feature configuration."
+
+#: ../../source/complete_user_guide/features/variations.rst:130
+msgid "**本页面仅描述离线复检流程。** 联机多后端（ReviewOnline）场景及 MES 集成不在本页范围之内。"
+msgstr ""
+"**This page covers the offline review flow only.** Online multi-backend "
+"review and MES integration are out of scope."
+
+#: ../../source/complete_user_guide/features/variations.rst:134
+msgid ""
+"**拼板场景下的替代料默认作用于所有子板。** 添加一次替代料后，所有子板上同一位置的元件都会获得这条替代料；**无需也不应** "
+"重复在不同子板的相同位置上各添加一遍。重复添加会显著增加每次检测的耗时（每条替代料都是一组独立的推理参考），并可能拖累整体节拍。"
+msgstr ""
+"**In PCB Array (panel) products, an alternative applies to every sub-board "
+"by default.** Adding it once covers all sub-boards at the same position; "
+"**do not** add it again on a different sub-board at the same position. Each "
+"duplicate variation is its own inference reference, so duplicates noticeably"
+" slow down each inspection and drag the line throughput."
+
+#: ../../source/complete_user_guide/features/variations.rst:136
+msgid "**相关页面**"
+msgstr "**Related pages**"
+
+#: ../../source/complete_user_guide/features/variations.rst:138
+msgid ":doc:`manual_programming`"
+msgstr ":doc:`manual_programming`"

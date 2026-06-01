@@ -1,0 +1,58 @@
+# PCBA AOI User Manual.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
+# Manual package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"PO-Revision-Date: 2026-05-28 14:17-0700\n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:2
+msgid "颜色检测（Color）"
+msgstr "Color Inspection"
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:4
+msgid "**此页面的用途**"
+msgstr "**What this page covers**"
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:6
+msgid "基于颜色比例校验目标区域颜色特征（如带色标识、色环等）。"
+msgstr ""
+"Verifies the color profile of a target region (color markings, color bands, "
+"and so on) using color-ratio analysis."
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:8
+msgid "**如何进入**"
+msgstr "**How to open it**"
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:10
+msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
+msgstr ""
+"Draw the corresponding ROI in the Template Editor, then configure the tool's "
+"parameters in the parameter panel."
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:12
+msgid "**操作流程**"
+msgstr "**Workflow**"
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:-1
+msgid "模板编辑器中的颜色检测元件示例"
+msgstr "Example of a Color inspection component in the Template Editor"
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:18
+msgid "**颜色有效比例范围（Valid Color Ratio Ranges）**：配置一组或多组颜色范围及其有效比例区间，落入范围内判 OK。"
+msgstr ""
+"**Valid Color Ratio Ranges**: configure one or more color ranges along with "
+"their OK ratio bands; the region is judged OK when the ratio falls within "
+"the band."

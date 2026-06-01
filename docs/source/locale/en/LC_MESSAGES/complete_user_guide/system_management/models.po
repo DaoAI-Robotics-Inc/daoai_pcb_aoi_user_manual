@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/system_management/models.rst:2
+msgid "模型管理"
+msgstr "Model Management"
+
+#: ../../source/complete_user_guide/system_management/models.rst:4
+msgid ""
+"系统的检测能力由一组深度学习模型驱动。本章介绍如何管理这些模型与其训练数据集：包括查看 / 上传 / "
+"切换模型，以及导入导出数据集、查看训练分布并发起训练。"
+msgstr ""
+"The system's inspection capability is driven by a set of deep-learning "
+"models. This chapter covers managing those models and their training "
+"datasets — viewing, uploading, and switching models; importing and exporting"
+" datasets; reviewing training distributions; and starting training runs."
+
+#: ../../source/complete_user_guide/system_management/models.rst:6
+msgid "模型有两个入口："
+msgstr "Models are reached from two places:"
+
+#: ../../source/complete_user_guide/system_management/models.rst:8
+msgid "**设置 → 管理模型**：模型清单与生命周期操作（设为默认、重命名、导出、删除等）。"
+msgstr ""
+"**Settings → Manage Models**: the model inventory and its lifecycle actions "
+"(Set as Default, Rename, Export, Delete, and so on)."
+
+#: ../../source/complete_user_guide/system_management/models.rst:9
+msgid "**模型页面（Models）**：以数据集为中心的视图，用于标注训练样本、查看训练/测试分布并发起训练。"
+msgstr ""
+"**Models page**: a dataset-centric view for labelling training samples, "
+"reviewing the train / test distribution, and starting training."
+
+#: ../../source/complete_user_guide/system_management/models.rst:12
+msgid "模型清单（管理模型）"
+msgstr "Model inventory (Manage Models)"
+
+#: ../../source/complete_user_guide/system_management/models.rst:14
+msgid "在 **设置** 左侧点击 **管理模型**，可按 **全部 / 预训练 / 已训练** 筛选系统中的模型。"
+msgstr ""
+"Click **Manage Models** on the left of **Settings** and filter the inventory"
+" by **All / Pre-trained / Trained**."
+
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "管理模型界面示意"
+msgstr "Manage Models interface"
+
+#: ../../source/complete_user_guide/system_management/models.rst:20
+msgid "常用操作："
+msgstr "Common actions:"
+
+#: ../../source/complete_user_guide/system_management/models.rst:22
+msgid "**上传模型**：导入外部训练好的模型文件。"
+msgstr "**Upload Model**: import a model file trained elsewhere."
+
+#: ../../source/complete_user_guide/system_management/models.rst:23
+msgid "**训练模型**：跳转到模型页面，基于当前数据集发起一次训练。"
+msgstr ""
+"**Train Model**: jump to the Models page and start a training run against "
+"the current dataset."
+
+#: ../../source/complete_user_guide/system_management/models.rst:24
+msgid "**设为默认**：将某模型设为对应检测类型的默认推理模型。"
+msgstr ""
+"**Set as Default**: make a model the default inference model for its "
+"inspection type."
+
+#: ../../source/complete_user_guide/system_management/models.rst:25
+msgid "**重命名**：修改模型条目的显示名称。"
+msgstr "**Rename**: change the model entry's display name."
+
+#: ../../source/complete_user_guide/system_management/models.rst:26
+msgid "**导出...**：将模型文件导出到本地。"
+msgstr "**Export…**: export the model file to local storage."
+
+#: ../../source/complete_user_guide/system_management/models.rst:27
+msgid "**删除**：从系统中移除该模型。"
+msgstr "**Delete**: remove the model from the system."
+
+#: ../../source/complete_user_guide/system_management/models.rst:28
+msgid "**导入数据集 / 导出数据集**：在不同环境间迁移训练样本。"
+msgstr ""
+"**Import / Export Dataset**: move training samples between environments."
+
+#: ../../source/complete_user_guide/system_management/models.rst:29
+msgid "**重置初始图片**：将数据集恢复到初始样本集合。"
+msgstr ""
+"**Reset Initial Images**: restore the dataset to the initial sample set."
+
+#: ../../source/complete_user_guide/system_management/models.rst:32
+msgid "数据集与训练（模型页面）"
+msgstr "Datasets and training (Models page)"
+
+#: ../../source/complete_user_guide/system_management/models.rst:34
+msgid "模型页面位于导航栏 **Models**，左侧图标栏提供两个视图切换："
+msgstr ""
+"The Models page lives under the **Models** nav entry; the icon strip on the "
+"left switches between two views:"
+
+#: ../../source/complete_user_guide/system_management/models.rst:36
+msgid "**数据集**：查看、标注和管理训练样本。"
+msgstr "**Dataset**: view, label, and manage training samples."
+
+#: ../../source/complete_user_guide/system_management/models.rst:37
+msgid "**训练**：配置训练参数、发起训练并查看训练结果。"
+msgstr ""
+"**Training**: configure training parameters, start training, and review "
+"training results."
+
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "模型数据集与训练界面示意"
+msgstr "Models page — dataset and training views"
+
+#: ../../source/complete_user_guide/system_management/models.rst:44
+msgid "数据集视图"
+msgstr "Dataset view"
+
+#: ../../source/complete_user_guide/system_management/models.rst:46
+msgid "**数据集** 视图展示当前检测类型已积累的所有训练样本（来自自动编程、评估与现场反馈）。"
+msgstr ""
+"The **Dataset** view shows every training sample accumulated for the current"
+" inspection type — from Auto-Programming, from evaluation, and from on-line "
+"feedback."
+
+#: ../../source/complete_user_guide/system_management/models.rst:48
+msgid "顶部工具栏按钮："
+msgstr "Top toolbar buttons:"
+
+#: ../../source/complete_user_guide/system_management/models.rst:50
+msgid "**导出数据集**：将当前数据集打包导出为 .zip 文件，用于在不同环境间迁移或备份样本。"
+msgstr ""
+"**Export Dataset**: bundle the current dataset into a ``.zip`` for migration"
+" or backup."
+
+#: ../../source/complete_user_guide/system_management/models.rst:51
+msgid "**导入数据集**：从本地 .zip 文件导入样本，合并到当前数据集。"
+msgstr ""
+"**Import Dataset**: import samples from a local ``.zip`` and merge them into"
+" the current dataset."
+
+#: ../../source/complete_user_guide/system_management/models.rst:52
+msgid ""
+"**查看训练/测试分布**：切换右侧面板的显示，查看 **训练集** 与 **测试集** 的样本数量及占比。训练集包含 train 与 val "
+"样本；测试集包含 test 样本。数字旁的百分比反映当前已标注样本中各部分的比例。"
+msgstr ""
+"**View Train / Test Distribution**: switch the right panel to show the "
+"**Training set** and **Test set** sample counts and ratios. The training set"
+" includes train and val samples; the test set holds test samples. The "
+"percentage next to each number reflects the proportion among currently-"
+"labelled samples."
+
+#: ../../source/complete_user_guide/system_management/models.rst:53
+msgid "**训练模型**：跳转到训练视图，发起模型训练。"
+msgstr ""
+"**Train Model**: switch to the Training view and start a training run."
+
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "数据集视图：图像库、右侧训练 / 测试分布面板与顶部按钮"
+msgstr ""
+"Dataset view: image library, train / test distribution panel on the right, "
+"and the top toolbar."
+
+#: ../../source/complete_user_guide/system_management/models.rst:60
+msgid "训练视图"
+msgstr "Training view"
+
+#: ../../source/complete_user_guide/system_management/models.rst:62
+msgid ""
+"切换到 **训练** 视图后，界面分为左侧 **训练设置** 面板与右侧 **摘要** 面板，下方为可拖拽调整高度的 **数据集** 样本库。"
+msgstr ""
+"In the **Training** view, the layout splits into the **Training Settings** "
+"panel on the left and the **Summary** panel on the right, with the "
+"**Dataset** sample library at the bottom (its height is drag-resizable)."
+
+#: ../../source/complete_user_guide/system_management/models.rst:64
+msgid "**训练设置面板**"
+msgstr "**Training Settings panel**"
+
+#: ../../source/complete_user_guide/system_management/models.rst:66
+msgid ""
+"左侧面板顶部可在 **训练** 与 **测试** "
+"子标签之间切换（用于筛选下方标签统计表的展示范围），下方显示样本标签分布统计表，列出各标签在训练集、测试集及未分配中的数量："
+msgstr ""
+"The top of the left panel toggles between **Training** and **Test** sub-tabs"
+" (which filter the label-statistics table below). The table lists the count "
+"of each label in the training set, the test set, and the unassigned bucket:"
+
+#: ../../source/complete_user_guide/system_management/models.rst:68
+msgid "行标签：**正常（OK）** / **异常（NG）** / **无标签**"
+msgstr "Rows: **OK** / **NG** / **Unlabeled**"
+
+#: ../../source/complete_user_guide/system_management/models.rst:69
+msgid "列标签：**标签** / **训练** / **测试** / **未分配**"
+msgstr "Columns: **Label** / **Training** / **Test** / **Unassigned**"
+
+#: ../../source/complete_user_guide/system_management/models.rst:71
+msgid "**摘要面板**"
+msgstr "**Summary panel**"
+
+#: ../../source/complete_user_guide/system_management/models.rst:73
+msgid ""
+"右侧面板展示已选模型针对当前数据集的 **混淆矩阵** （Confusion "
+"Matrix）。矩阵行为实际标签（Actual），列为模型预测标签（Predicted），对角线格子（绿色背景）表示预测正确，非对角线格子（红色背景）表示预测错误。若尚未训练模型，面板显示提示信息。"
+msgstr ""
+"The right panel shows the **confusion matrix** for the selected model "
+"against the current dataset. Rows are actual labels and columns are model "
+"predictions; the diagonal cells (green) are correct predictions; off-"
+"diagonal cells (red) are mispredictions. If no model has been trained yet, "
+"the panel shows a hint."
+
+#: ../../source/complete_user_guide/system_management/models.rst:75
+msgid "面板底部的 **开始训练** 按钮用于发起训练（见下节训练流程）。"
+msgstr ""
+"The **Start Training** button at the bottom of the panel kicks off training "
+"(see *Training flow* below)."
+
+#: ../../source/complete_user_guide/system_management/models.rst:-1
+msgid "训练视图：训练设置面板（标签统计）、摘要面板（混淆矩阵）与开始训练按钮"
+msgstr ""
+"Training view: Training Settings panel (label stats), Summary panel "
+"(confusion matrix), and Start Training button."
+
+#: ../../source/complete_user_guide/system_management/models.rst:82
+msgid "训练流程"
+msgstr "Training flow"
+
+#: ../../source/complete_user_guide/system_management/models.rst:84
+msgid "在 **数据集** 视图或 **训练** 视图中确认已积累足够且类别均衡的样本。"
+msgstr ""
+"In the **Dataset** or **Training** view, confirm that enough samples have "
+"been accumulated and that the classes are reasonably balanced."
+
+#: ../../source/complete_user_guide/system_management/models.rst:85
+msgid "（可选）点击 **查看训练/测试分布**，确认各类别样本数量合理，避免某一类别样本过少导致过拟合。"
+msgstr ""
+"(Optional) Click **View Train / Test Distribution** and verify that each "
+"class has a reasonable sample count — overfitting follows when one class is "
+"very thin."
+
+#: ../../source/complete_user_guide/system_management/models.rst:86
+msgid "在训练视图底部点击 **开始训练** 按钮。系统弹出 **为模型命名** 对话框，输入模型名称后点击 **开始训练** 确认。"
+msgstr ""
+"Click **Start Training** at the bottom of the Training view. The **Name new "
+"model** dialog opens; enter a model name and click **Start Training** to "
+"confirm."
+
+#: ../../source/complete_user_guide/system_management/models.rst:87
+msgid "训练开始后，界面切换到 **训练进度** 视图，展示："
+msgstr ""
+"Once training begins, the UI switches to the **Training Progress** view, "
+"which shows:"
+
+#: ../../source/complete_user_guide/system_management/models.rst:89
+msgid "当前 Epoch 进度与预计剩余时间。"
+msgstr "Current epoch progress and the estimated time remaining."
+
+#: ../../source/complete_user_guide/system_management/models.rst:90
+msgid "实时 **准确率** 与 **最佳** （best）准确率及进度条。"
+msgstr "Live **accuracy** and **best** accuracy with progress bars."
+
+#: ../../source/complete_user_guide/system_management/models.rst:91
+msgid "**训练图表**：准确率曲线（Accuracy）与训练/验证损失曲线（Training / Validation Loss）。"
+msgstr ""
+"**Training charts**: the accuracy curve and the training / validation loss "
+"curves."
+
+#: ../../source/complete_user_guide/system_management/models.rst:92
+msgid "**停止训练** 按钮：点击后系统在当前 Epoch 完成评估后终止训练，并保留已达到最佳准确率的模型权重。"
+msgstr ""
+"**Stop Training** button: clicking it stops the run after the current "
+"epoch's evaluation completes; the system keeps the model weights from the "
+"best-accuracy epoch."
+
+#: ../../source/complete_user_guide/system_management/models.rst:93
+msgid "**返回模板** 按钮：退出训练进度视图，返回设置面板（训练仍在后台继续）。"
+msgstr ""
+"**Back to Template** button: exits the training-progress view and returns to"
+" the settings panel (training continues in the background)."
+
+#: ../../source/complete_user_guide/system_management/models.rst:95
+msgid "训练完成后，可在 **管理模型** 中将新模型 **设为默认**，使其在后续检测中生效。"
+msgstr ""
+"Once training finishes, head to **Manage Models** and click **Set as "
+"Default** on the new model to apply it to subsequent inspections."
+
+#: ../../source/complete_user_guide/system_management/models.rst:98
+msgid "反馈写入数据集后，建议在稳定的光照与工艺条件下积累一段时间样本再训练，避免短期波动导致模型过度拟合。"
+msgstr ""
+"After feedback is written to the dataset, let samples accumulate under "
+"stable lighting and process conditions for a while before retraining; "
+"otherwise short-term fluctuations can overfit the model."
+
+#: ../../source/complete_user_guide/system_management/models.rst:101
+msgid "训练完成后，当前运行的检测会话不会自动切换到新模型。需在 **管理模型** 中执行 **设为默认** 并重新启动检测会话，新模型方可生效。"
+msgstr ""
+"When training finishes, the running inspection session does NOT switch to "
+"the new model automatically. **Set as Default** on **Manage Models** and "
+"restart the session to pick the new model up."
+
+#~ msgid "**模型页面（Models）**：以数据集为中心的视图，用于查看训练样本、训练 / 测试分布并发起训练。"
+#~ msgstr ""
+
+#~ msgid "**训练模型**：基于当前数据集发起一次训练。"
+#~ msgstr ""
+
+#~ msgid "**重命名 / 导出 / 删除**：对模型条目进行管理。"
+#~ msgstr ""
+
+#~ msgid "**导出数据集 / 导入数据集**：在不同环境间迁移训练样本。"
+#~ msgstr ""
+
+#~ msgid "模型页面以 **数据集** 为中心，展示当前检测类型已积累的训练样本（来自自动编程、评估与现场反馈）。"
+#~ msgstr ""
+
+#~ msgid "顶部在 **数据集** 与 **训练** 视图间切换。"
+#~ msgstr ""
+
+#~ msgid "右侧显示 **训练集 / 测试集** 的样本数量与划分比例（训练 / 测试分布）。"
+#~ msgstr ""
+
+#~ msgid "**查看训练 / 测试分布**：检查样本在各类别上的分布是否均衡，避免某一类别样本过少。"
+#~ msgstr ""
+
+#~ msgid "**导入数据集 / 导出数据集**：在环境间迁移或备份样本。"
+#~ msgstr ""
+
+#~ msgid "确认数据集中已积累足够且类别均衡的样本（可先在产品编程页面通过反馈补充样本）。"
+#~ msgstr ""
+
+#~ msgid "（可选）点击 **查看训练 / 测试分布**，确认各类别样本数量合理。"
+#~ msgstr ""
+
+#~ msgid "点击 **训练模型**，系统基于当前数据集发起训练（耗时视数据量与硬件而定）。"
+#~ msgstr ""

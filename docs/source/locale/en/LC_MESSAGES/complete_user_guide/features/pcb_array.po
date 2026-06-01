@@ -1,168 +1,694 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
+"POT-Creation-Date: 2026-05-28 15:58-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:2
-msgid "PCB 拼版"
-msgstr ""
+msgid "PCB 拼板"
+msgstr "PCB Array (Panel)"
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:4
-msgid "本章介绍 PCB 拼版功能，包括拼版新建方式、参数继承与同步、条码检测工具、判废板阈值设置等。"
+msgid "本章介绍 PCB 拼板功能，包括管理子板模板、拼板列表管理、手动生成拼板、自动检测与自动调整、NG 子板标记等操作。"
 msgstr ""
+"This chapter covers the PCB Array (panel) feature — managing sub-board "
+"templates, the panel list, manual array generation, auto-detect and auto-"
+"adjust, and NG sub-board marking."
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:7
-msgid "拼版新建流程"
-msgstr ""
+msgid "界面结构"
+msgstr "Layout"
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:9
-msgid "切换至PCB拼版视图"
+msgid "在产品编程页面顶部点击 **PCB 拼板** 标签页，进入拼板管理界面。"
 msgstr ""
+"On the product programming page, click the **PCB Array** tab at the top to "
+"open the panel management view."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:11
-msgid "在产品详情页，点击右上角的“拼版”按钮，进入拼版管理界面。"
-msgstr ""
+#: ../../source/complete_user_guide/features/pcb_array.rst:-1
+msgid "PCB 拼板界面"
+msgstr "PCB Array view"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst
-msgid "拼版入口示意"
-msgstr ""
+#: ../../source/complete_user_guide/features/pcb_array.rst:15
+msgid "界面左侧为功能标签页，包含三个标签："
+msgstr "Three sub-tabs sit on the left:"
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:17
-msgid "点击创建拼版单元，然后鼠标框选绘制主板区域。"
+msgid "**管理子板模板** — 定义拼板基础单元的选择区域（Selection ROI），并支持自动检测子板位置。"
 msgstr ""
+"**Manage Base Panel** — define the **Selection ROI** that bounds a base sub-"
+"board template, with optional auto-detect for sibling sub-board positions."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst
-msgid "拼版主板绘制示意"
+#: ../../source/complete_user_guide/features/pcb_array.rst:18
+msgid "**拼板列表** — 查看与管理已注册的各子板模板及其所有子板实例。"
 msgstr ""
+"**Panel List** — view and manage every registered base-panel template and "
+"its sub-board instances."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:25
-msgid "手动新建："
+#: ../../source/complete_user_guide/features/pcb_array.rst:19
+msgid "**手动生成拼板** — 通过标记点辅助手动指定子板排列（高级功能）。"
 msgstr ""
+"**Manual Panel Generation** — marker-pair-assisted manual sub-board layout "
+"(advanced feature)."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:22
+msgid "管理子板模板"
+msgstr "Manage Base Panel"
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:24
-msgid "可以点击列表中的 “添加图标” 逐个添加子板，然后切换至选择工具，用鼠标拖拽调整位置。"
+msgid "**管理子板模板** 标签页用于定义子板的选择区域（Selection ROI）。选择区域决定哪些元件属于该子板，是拼板功能的基础。"
 msgstr ""
+"The **Manage Base Panel** sub-tab defines a sub-board's Selection ROI. The "
+"Selection ROI decides which components belong to the sub-board and is the "
+"foundation of the Array feature."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:25
-msgid "适用于不规则或特殊拼版场景。"
-msgstr ""
+#: ../../source/complete_user_guide/features/pcb_array.rst:26
+msgid "**创建初始拼板单元**"
+msgstr "**Create the initial base panel**"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:34
-msgid "智能工具辅助："
+#: ../../source/complete_user_guide/features/pcb_array.rst:28
+msgid "**绘制矩形或多边形区域以创建拼板单元模板，选择所有相关元件，然后使用\"自动识别\"检测剩余拼板单元，使用\"自动调整拼板\"将元件框对齐。**"
 msgstr ""
+"**Draw a rectangle or polygon to create the base-panel template that selects"
+" every related component, then use *Auto-Detect* to find the remaining sub-"
+"boards and *Auto-Adjust Panel* to align the component boxes.**"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:30
+msgid ""
+"点击 **矩形** 按钮，在右侧画布上框选第一个子板所在的区域；或点击 **多边形** "
+"按钮，在场景上绘制多边形（左键添加顶点，右键删除上一个顶点，双击左键完成绘制）。"
+msgstr ""
+"Click **Rectangle** and box the area covering the first sub-board on the "
+"right-hand canvas, or click **Polygon** and draw a polygon on the scene "
+"(left-click adds a vertex, right-click removes the last vertex, double-click"
+" finishes)."
 
 #: ../../source/complete_user_guide/features/pcb_array.rst
-msgid "拼版智能工具示意"
+msgid "管理子板模板标签页：拼板单元矩形 / 多边形绘制工具与已定义子板列表"
 msgstr ""
-
-#: ../../source/complete_user_guide/features/pcb_array.rst:32
-msgid "依次选择 3 个在子板中相对位置固定的圆形特征作为锚点，分别选取左上角、右上角和左下角子板上的锚点，以确保阵列自动生成时定位准确。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/pcb_array.rst:33
-msgid "输入子板尺寸、行列数、间距等参数，此时可以看到预览效果。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/pcb_array.rst:34
-msgid "点击创建拼版，即可完成创建，并回到模板编辑器视图。"
-msgstr ""
+"Manage Base Panel sub-tab: rectangle / polygon drawing tools and the list of"
+" defined sub-boards."
 
 #: ../../source/complete_user_guide/features/pcb_array.rst:36
-msgid "当需要删除一个拼版单元时，鼠标悬停至目标子板列表边的 ··· , 点击删除即可。"
+msgid "绘制完成后，系统弹出对话框 **请输入子版模版标签**，输入该子板模板的名称（默认为 ``b0``），点击 **确认** 保存。"
 msgstr ""
+"After drawing, the **Enter Sub-Board Template Label** dialog opens. Type the"
+" template name (default ``b0``) and click **Confirm** to save."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:38
+msgid "新定义的子板模板出现在 **已定义的子板** 列表中，显示标签名称与 **实例** 数量。"
+msgstr ""
+"The newly-defined template appears in the **Defined Sub-Boards** list with "
+"its label and **instance** count."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:40
+msgid "**已定义的子板** 列表中，每个条目旁有 **手动生成拼板** 按钮，点击后切换至 **手动生成拼板** 标签页以进一步操作该子板模板。"
+msgstr ""
+"Each row in **Defined Sub-Boards** carries a **Manual Panel Generation** "
+"button that switches to the **Manual Panel Generation** sub-tab for further "
+"work on that template."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:42
+msgid "**自动检测（自动识别子板位置）**"
+msgstr "**Auto-Detect (find sub-board positions automatically)**"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:44
+msgid "当至少存在一个已定义的子板模板后，页面下方显示 **自动检测** 按钮："
+msgstr ""
+"Once at least one base-panel template exists, the **Auto-Detect** button "
+"appears at the bottom of the page:"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:46
+msgid "点击 **自动检测** 按钮，展开配置区域。"
+msgstr "Click **Auto-Detect** to expand the configuration area."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:47
+msgid "调整 **接受度** 滑块（0–100，默认 70），数值越高表示匹配精度要求越严格。"
+msgstr ""
+"Move the **Acceptance** slider (0–100, default 70); higher values demand "
+"stricter matching."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:48
+msgid "点击 **预览** 查看检测到的子板位置预览效果。"
+msgstr "Click **Preview** to see the detected sub-board positions."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:49
+msgid "预览满意后，点击 **保存** 完成自动检测并注册所有检测到的子板位置；点击 **取消** 放弃本次检测。"
+msgstr ""
+"When the preview looks right, click **Save** to register every detected "
+"position; click **Cancel** to discard."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:52
+msgid "拼板列表"
+msgstr "Panel List"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:54
+msgid "**拼板列表** 标签页展示所有已注册的子板模板及其下属子板实例，支持对各子板进行管理操作。标签页仅在至少存在一个已注册子板时可用。"
+msgstr ""
+"The **Panel List** sub-tab shows every registered base-panel template and "
+"its sub-board instances, with management actions per row. The sub-tab is "
+"enabled only when at least one sub-board exists."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:56
+msgid "界面以树形结构显示：每个 **子板模板（BasePanelRow）** 下列出其所有子板实例。"
+msgstr ""
+"The list is a tree: each **Base Panel Row** carries its sub-board instances "
+"underneath."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:58
+msgid "**子板模板行操作**"
+msgstr "**Actions on a base-panel row**"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:60
+msgid "每个子板模板行显示标签名称与实例数量，提供以下操作："
+msgstr ""
+"Each base-panel row shows the template label and the instance count and "
+"exposes:"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:62
+msgid "**复制** — 在当前模板下新增一个子板实例（位置偏移约 15 像素）。"
+msgstr ""
+"**Duplicate** — add a sub-board instance under the same template (offset by "
+"about 15 pixels)."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:63
+msgid "**手动生成拼板** — 切换至 **手动生成拼板** 标签页，对该模板进行手动子板布局。"
+msgstr ""
+"**Manual Panel Generation** — switch to the **Manual Panel Generation** sub-"
+"tab for hand-tuned sub-board layout."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:64
+msgid "**···（菜单）** — 展开下拉菜单，选择 **删除** 可移除该子板模板及其全部子板实例。"
+msgstr ""
+"**··· (menu)** — opens a drop-down; **Delete** removes the template and "
+"every sub-board under it."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:66
+msgid "**子板实例行操作**"
+msgstr "**Actions on a sub-board instance row**"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:68
+msgid "每个子板实例行显示该子板的标签名称（如 ``b0-1``）。若子板已标记为 NG，标签以红色显示并附有 ``(NG)`` 后缀。操作包括："
+msgstr ""
+"Each row shows the sub-board's label (such as ``b0-1``). When the sub-board "
+"is marked NG, the label turns red and is suffixed with ``(NG)``. Actions:"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:70
+msgid "**铅笔图标** — 点击可内联编辑该子板的标签名称，编辑完成后按 Enter 或点击 **保存** 提交。"
+msgstr ""
+"**Pencil icon** — click to edit the sub-board label inline; press Enter or "
+"click **Save** to commit."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:71
+msgid "**···（菜单）** — 展开下拉菜单，提供："
+msgstr "**··· (menu)** — opens a drop-down with:"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:73
+msgid "**删除** — 移除该子板实例。"
+msgstr "**Delete** — remove the sub-board instance."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:74
+msgid "**标记为NG** / **取消NG标记** — 将该子板标记或取消标记为废板。标记后系统对该子板的所有元件设置 NG 状态。"
+msgstr ""
+"**Mark as NG / Clear NG mark** — mark or unmark the sub-board as wasted. "
+"Marking it NG sets NG status on every component within."
 
 #: ../../source/complete_user_guide/features/pcb_array.rst
-msgid "删除拼版单元示意"
-msgstr ""
+msgid "删除拼板单元示意"
+msgstr "Sub-board deletion illustration"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:43
+#: ../../source/complete_user_guide/features/pcb_array.rst
+msgid "拼板列表标签页：子板树形结构与 NG 标记入口"
+msgstr "Panel List sub-tab: sub-board tree and the NG marking entry point"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:84
+msgid "底部提供 **+ 添加子板模板** 按钮，点击后跳回 **管理子板模板** 标签页创建新的子板模板。"
+msgstr ""
+"The **+ Add Base Panel** button at the bottom jumps back to **Manage Base "
+"Panel** to create another template."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:87
+msgid "自动调整拼板"
+msgstr "Auto-Adjust Panel"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:89
+msgid "界面左侧底部的 **自动调整拼板** 按钮对已注册的所有子板执行图像对齐校正："
+msgstr ""
+"The **Auto-Adjust Panel** button at the bottom-left runs image-alignment "
+"correction on every registered sub-board:"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:91
+msgid "系统对每个子板实例的元件框进行图像对齐，重新估算各子板的变换参数。"
+msgstr ""
+"The system image-aligns each sub-board's components and re-estimates the "
+"per-sub-board transform."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:92
+msgid "调整完成后，各子板的元件框会更新为校正后的位置（同步状态被设为独立，即后续对基础子板的编辑不再自动同步至已校正的子板）。"
+msgstr ""
+"After adjustment, each sub-board's component boxes are updated to the "
+"corrected positions; sync state flips to independent, so later edits on the "
+"base sub-board no longer auto-propagate to the corrected sub-boards."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:95
 msgid "参数继承与同步原则"
-msgstr ""
+msgstr "Parameter inheritance and sync rules"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:45
-msgid "默认情况下，所有子板的检测参数（如 ROI、阈值、检测项）均继承主板设置，并且子板上的检测框不可编辑"
+#: ../../source/complete_user_guide/features/pcb_array.rst:97
+msgid "默认情况下，所有子板的检测参数（如 ROI、阈值、检测项）均继承基础子板的设置。"
 msgstr ""
+"By default, every sub-board inherits the base sub-board's inspection "
+"parameters — ROIs, thresholds, inspection items."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:53
-msgid "通过“同步 ROI”选项："
-msgstr ""
+#: ../../source/complete_user_guide/features/pcb_array.rst:99
+msgid "通过 **同步 ROI** 选项："
+msgstr "Via the **Sync ROI** option:"
 
 #: ../../source/complete_user_guide/features/pcb_array.rst
 msgid "同步 ROI 设置示意"
-msgstr ""
+msgstr "Sync ROI option illustration"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:52
-msgid "（默认开启）开启时，主板调整会同步到所有子板。"
+#: ../../source/complete_user_guide/features/pcb_array.rst:105
+msgid "（默认开启）开启时，对基础子板的调整会同步到同一模板下的所有子板实例。"
 msgstr ""
+"(On by default) When on, edits to the base sub-board propagate to every "
+"sibling instance under the same template."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:53
-msgid "关闭后，可在每个子板单独调整该元件的 ROI，适用于局部差异或特殊需求。"
+#: ../../source/complete_user_guide/features/pcb_array.rst:106
+msgid "关闭后，可对每个子板单独调整该元件的 ROI，适用于局部差异或特殊需求。"
 msgstr ""
+"When off, you can tune each sub-board's ROI independently — useful for local"
+" variation or special cases."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:56
-msgid "数据管理："
+#: ../../source/complete_user_guide/features/pcb_array.rst:108
+msgid "数据管理：数据集自动按元件分组，统计所有子板的检测结果。"
 msgstr ""
+"Data management: the dataset is automatically grouped by component and "
+"aggregates results across every sub-board."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:56
-msgid "数据集自动按元件分组，统计所有子板的检测结果。"
-msgstr ""
-
-#: ../../source/complete_user_guide/features/pcb_array.rst:59
+#: ../../source/complete_user_guide/features/pcb_array.rst:111
 msgid "条形码检测工具"
-msgstr ""
+msgstr "Barcode tool"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:61
-msgid "支持在拼版场景下识别每个子板的序列号、批次号等条码信息。"
+#: ../../source/complete_user_guide/features/pcb_array.rst:113
+msgid "支持在拼板场景下识别每个子板的序列号、批次号等条码信息。"
 msgstr ""
+"In panel mode, each sub-board's serial number, batch number, and other "
+"barcode data can be read independently."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:67
+#: ../../source/complete_user_guide/features/pcb_array.rst:115
 msgid "操作流程："
-msgstr ""
+msgstr "Workflow:"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:65
-msgid "在模板编辑器中，先为主板添加条形码检测框，并分组为新元件。"
+#: ../../source/complete_user_guide/features/pcb_array.rst:117
+msgid "在模板编辑器中，先为基础子板添加条形码检测框，并分组为新元件。"
 msgstr ""
+"In the Template Editor, add a barcode ROI to the base sub-board and group it"
+" as a new component."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:66
-msgid "创建拼版后，系统会自动将该条形码检测框复制到所有子板。"
+#: ../../source/complete_user_guide/features/pcb_array.rst:118
+msgid "创建拼板后，系统会自动将该条形码检测框复制到所有子板。"
 msgstr ""
+"Once the panel is created, the barcode ROI is copied automatically to every "
+"sub-board."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:67
+#: ../../source/complete_user_guide/features/pcb_array.rst:119
 msgid "检测时，系统可分别识别每个子板上的条码内容，并自动作为序列号归档。"
 msgstr ""
+"At inspection time, each sub-board's barcode is read separately and archived"
+" as that sub-board's serial number."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:69
+#: ../../source/complete_user_guide/features/pcb_array.rst:121
 msgid "应用场景：追溯生产批次、定位异常子板、自动分组统计。"
 msgstr ""
+"Use cases: production-batch traceability, isolating an abnormal sub-board, "
+"and automatic per-sub-board statistics."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:71
+#: ../../source/complete_user_guide/features/pcb_array.rst:124
 msgid "判废板阈值设置"
-msgstr ""
+msgstr "Wasted-board threshold"
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:73
+#: ../../source/complete_user_guide/features/pcb_array.rst:126
 msgid ""
-"可在系统配置中为拼版设置整体判废板阈值。参考 :ref:`系统JSON配置`，编辑 "
-"wasted_array_board_failure_ratio 参数并保存。"
+"可在系统配置中为拼板设置整体判废板阈值。参考 :ref:`系统JSON配置`，编辑 "
+"``wasted_array_board_failure_ratio`` 参数并保存。"
 msgstr ""
+"Configure the overall wasted-board threshold for arrays in the system "
+"configuration. See :ref:`系统JSON配置`, edit "
+"``wasted_array_board_failure_ratio``, and save."
 
-#: ../../source/complete_user_guide/features/pcb_array.rst:74
+#: ../../source/complete_user_guide/features/pcb_array.rst:127
 msgid "检测过程中，若任一子板的元件 NG 率超过该阈值，则该子板会被判定为废板并报出。"
 msgstr ""
+"During inspection, any sub-board whose component NG ratio exceeds this "
+"threshold is judged wasted and reported."
 
+#: ../../source/complete_user_guide/features/pcb_array.rst:130
+msgid "跳过此元件的检测"
+msgstr "Skip inspection on this component"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:132
+msgid ""
+"**元件配置（ComponentInfo）** 面板提供 **跳过此元件的检测** "
+"开关。开启后，该元件在检测时会被完全跳过：不参与推理、不出结果、也不计入 ``failure_ratio``\\ （包括子板判废逻辑）。"
+msgstr ""
+"The **Component Info** panel exposes a **Skip inspection on this component**"
+" switch. When on, the component is skipped entirely at inspection time — no "
+"inference, no result, not counted in ``failure_ratio`` (including the sub-"
+"board verdict logic)."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:134
+msgid "适用场景：操作员临时排除已知有问题的元件，或排除当前没必要检测的元件。"
+msgstr ""
+"Use cases: temporarily excluding a component known to be problematic, or "
+"excluding a component that doesn't need inspection right now."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:135
+msgid "拼板行为：跳过设置会自动传播到 **同一元件在所有子板上的副本**。无需在每个子板上重复操作。"
+msgstr ""
+"Panel behavior: the skip setting propagates automatically to **every sub-"
+"board copy of the same component**. No need to repeat it per sub-board."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:136
+msgid "与坏板标记互斥：若元件已设置为 **坏板标记元件**，跳过开关会被锁定为关闭、不可修改。需要先取消坏板标记设置才能开启跳过。"
+msgstr ""
+"Mutually exclusive with badmark: if the component is configured as a "
+"**badmark component**, the Skip switch is locked off. Clear the badmark "
+"setting first."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:138
+msgid "也可在模板编辑器中框选多个元件，使用右键菜单的 **跳过检测 / 清除跳过检测** 批量操作。"
+msgstr ""
+"You can also region-select multiple components in the Template Editor and "
+"use the right-click menu's **Skip inspection / Clear skip inspection** for "
+"batch operations."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:140
+msgid "判定为跳过的元件在画布上会以 **半透明灰色虚线框** 显示，便于一眼区分。"
+msgstr ""
+"Skipped components are rendered on the canvas with a **translucent gray "
+"dashed outline** so they're easy to spot."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:143
+msgid "二维码序列号与拼板关联逻辑"
+msgstr "QR-code serial-number assignment in panel mode"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:145
+msgid ""
+"序列号（MainSN / PanelSN）的生成与赋值规则取决于产品 **是否配置了拼板**，以及 **二维码识别框的位置**。下表覆盖 5 "
+"种常见场景；请按实际配置对照排查 MES 报告中 MainSN / PanelSN 的取值是否符合预期。"
+msgstr ""
+"Serial number (MainSN / PanelSN) assignment depends on **whether the product"
+" is panelized** and **where the QR-code ROI sits**. The table below covers 5"
+" common scenarios — match your actual configuration against it to verify the"
+" MainSN / PanelSN values in the MES report."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:147
+msgid "二维码与拼板组合的序列号取值"
+msgstr "Serial-number outcomes for QR-code × panel combinations"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:151
+msgid "场景"
+msgstr "Scenario"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:152
+msgid "是否有拼板"
+msgstr "Panelized?"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:153
+msgid "二维码位置"
+msgstr "QR-code location"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:154
+msgid "整板序列号 (MainSN)"
+msgstr "Main board SN (MainSN)"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:155
+msgid "拼板序列号 (PanelSN)"
+msgstr "Sub-board SN (PanelSN)"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:156
+msgid "①"
+msgstr "①"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:157
+#: ../../source/complete_user_guide/features/pcb_array.rst:162
+msgid "无拼板"
+msgstr "No"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:158
+msgid "无二维码"
+msgstr "No QR code"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:159
+#: ../../source/complete_user_guide/features/pcb_array.rst:170
+msgid "自动生成"
+msgstr "Auto-generated"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:160
+#: ../../source/complete_user_guide/features/pcb_array.rst:165
+msgid "—"
+msgstr "—"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:161
+msgid "②"
+msgstr "②"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:163
+msgid "≥1 个二维码框（取最后一个）"
+msgstr "≥1 QR-code ROI (last one wins)"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:164
+msgid "最后一个二维码"
+msgstr "Last QR code"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:166
+msgid "③"
+msgstr "③"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:167
+#: ../../source/complete_user_guide/features/pcb_array.rst:172
+#: ../../source/complete_user_guide/features/pcb_array.rst:177
+msgid "有拼板"
+msgstr "Yes"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:168
+msgid "二维码在拼板区域外"
+msgstr "QR code outside any panel area"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:169
+msgid "该二维码"
+msgstr "That QR code"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:171
+msgid "④"
+msgstr "④"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:173
+msgid "二维码在每个拼板内（每个拼板各一个）"
+msgstr "One QR code inside each panel"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:174
+msgid "任意拼板二维码"
+msgstr "Any of the panel QR codes"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:175
+#: ../../source/complete_user_guide/features/pcb_array.rst:180
+msgid "各拼板内二维码"
+msgstr "Each panel's own QR code"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:176
+msgid "⑤"
+msgstr "⑤"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:178
+msgid "拼板内各有二维码 + 拼板外还有一个"
+msgstr "One QR code per panel + one outside"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:179
+msgid "拼板外那个二维码"
+msgstr "The QR code outside the panels"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:184
+msgid "**二维码读取常见问题：**"
+msgstr "**Common QR-code issues:**"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:186
+msgid ""
+"**二维码读取失败，序列号变成自动生成值**：检查二维码识别框是否完整覆盖条码区域；二维码本身是否清晰、无遮挡、无污损；多拼板时若部分拼板失败，检查拼板对齐是否偏移。"
+msgstr ""
+"**QR read fails and the serial number falls back to auto-generated**: check "
+"that the QR ROI fully covers the barcode area; that the QR itself is sharp, "
+"unobstructed, and unmarred; for panels, if only some sub-boards fail, check "
+"whether the panel alignment has drifted."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:187
+msgid ""
+"**MES 报告中 MainSN / PanelSN 不符合预期**：对照上方场景表确认当前产品属于哪种场景。场景 ④ 中 MainSN "
+"会自动取任意拼板的 PanelSN。如需 MainSN 为固定值，请在拼板区域外额外添加一个整板级二维码框，使产品落到场景 ⑤。"
+msgstr ""
+"**MES report's MainSN / PanelSN don't match expectations**: match the "
+"product configuration against the scenario table above. In scenario ④, "
+"MainSN is set to whichever panel's PanelSN happened to be picked. To pin "
+"MainSN to a fixed value, add a board-level QR-code ROI outside the panel "
+"area so the product falls into scenario ⑤."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:188
+msgid "**阴阳板 / 鸳鸯板拼板**：智能拼板暂不支持此类布局，可使用 **手动复制粘贴拼板** 方式（旧拼板流程仍保留可用）。"
+msgstr ""
+"**Mixed-orientation / mirrored panels**: Smart PCB Array does not currently "
+"support these layouts; use the legacy **manual copy-paste panel** flow "
+"instead (still available)."
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:190
+msgid "**相关页面**"
+msgstr "**Related pages**"
+
+#: ../../source/complete_user_guide/features/pcb_array.rst:192
+msgid ":doc:`/complete_user_guide/inspection/index`"
+msgstr ":doc:`/complete_user_guide/inspection/index`"
+
+#~ msgid "切换至PCB拼版视图"
+#~ msgstr ""
+
+#~ msgid "在产品详情页，点击右上角的“拼版”按钮，进入拼版管理界面。"
+#~ msgstr ""
+
+#~ msgid "拼版入口示意"
+#~ msgstr ""
+
+#~ msgid "点击创建拼版单元，然后鼠标框选绘制主板区域。"
+#~ msgstr ""
+
+#~ msgid "拼版主板绘制示意"
+#~ msgstr ""
+
+#~ msgid "手动新建："
+#~ msgstr ""
+
+#~ msgid "可以点击列表中的 “添加图标” 逐个添加子板，然后切换至选择工具，用鼠标拖拽调整位置。"
+#~ msgstr ""
+
+#~ msgid "适用于不规则或特殊拼版场景。"
+#~ msgstr ""
+
+#~ msgid "智能工具辅助："
+#~ msgstr ""
+
+#~ msgid "拼版智能工具示意"
+#~ msgstr ""
+
+#~ msgid "PCB 拼版"
+#~ msgstr ""
+
+#~ msgid "本章介绍 PCB 拼版功能，包括拼版新建方式、参数继承与同步、条码检测工具、判废板阈值设置等。"
+#~ msgstr ""
+
+#~ msgid "拼版新建流程"
+#~ msgstr ""
+
+#~ msgid "切换至 **PCB 拼板** 标签页"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "在产品编程页面顶部点击 **PCB 拼板** 标签页，进入拼板管理界面。界面提供 **管理子板模板**、**拼板列表**、**手动生成拼板**（矩形 /"
+#~ " 多边形）与 **自动调整拼板** 等功能。"
+#~ msgstr ""
+
+#~ msgid "点击创建拼板单元，然后鼠标框选绘制主板区域。"
+#~ msgstr ""
+
+#~ msgid "拼板主板绘制示意"
+#~ msgstr ""
+
+#~ msgid "手动生成拼板（矩形 / 多边形）："
+#~ msgstr ""
+
+#~ msgid "在 **拼板列表** 中点击添加，使用 **矩形** 或 **多边形** 工具逐个框出子板，再切换至选择工具用鼠标拖拽调整位置。"
+#~ msgstr ""
+
+#~ msgid "适用于不规则或特殊拼板场景。"
+#~ msgstr ""
+
+#~ msgid "自动调整拼板（锚点辅助）："
+#~ msgstr ""
+
+#~ msgid "自动调整拼板示意"
+#~ msgstr ""
+
+#~ msgid "依次选择 3 个在子板中相对位置固定的圆形特征作为锚点，分别选取左上角、右上角和左下角子板上的锚点，以确保阵列自动生成时定位准确。"
+#~ msgstr ""
+
+#~ msgid "输入子板尺寸、行列数、间距等参数，此时可以看到预览效果。"
+#~ msgstr ""
+
+#~ msgid "点击创建拼版，即可完成创建，并回到模板编辑器视图。"
+#~ msgstr ""
+
+#~ msgid "当需要删除一个拼版单元时，鼠标悬停至目标子板列表边的 ··· , 点击删除即可。"
+#~ msgstr ""
+
+#~ msgid "删除拼版单元示意"
+#~ msgstr ""
+
+#~ msgid "默认情况下，所有子板的检测参数（如 ROI、阈值、检测项）均继承主板设置，并且子板上的检测框不可编辑"
+#~ msgstr ""
+
+#~ msgid "通过“同步 ROI”选项："
+#~ msgstr ""
+
+#~ msgid "（默认开启）开启时，主板调整会同步到所有子板。"
+#~ msgstr ""
+
+#~ msgid "关闭后，可在每个子板单独调整该元件的 ROI，适用于局部差异或特殊需求。"
+#~ msgstr ""
+
+#~ msgid "数据管理："
+#~ msgstr ""
+
+#~ msgid "数据集自动按元件分组，统计所有子板的检测结果。"
+#~ msgstr ""
+
+#~ msgid "支持在拼版场景下识别每个子板的序列号、批次号等条码信息。"
+#~ msgstr ""
+
+#~ msgid "在模板编辑器中，先为主板添加条形码检测框，并分组为新元件。"
+#~ msgstr ""
+
+#~ msgid "创建拼版后，系统会自动将该条形码检测框复制到所有子板。"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "可在系统配置中为拼版设置整体判废板阈值。参考 :ref:`系统JSON配置`，编辑 wasted_array_board_failure_ratio "
+#~ "参数并保存。"
+#~ msgstr ""
+
+#~ msgid "左侧底部始终显示 **自动调整拼板** 按钮，可对已注册子板的位置进行图像对齐校正。"
+#~ msgstr ""
+
+#~ msgid "拼板管理界面标签示意"
+#~ msgstr ""
+
+#~ msgid "自动生成（v4.1-652/653/654 之后改为任意拼板二维码）"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**MES 报告中 MainSN / PanelSN 不符合预期**：对照上方场景表确认当前产品属于哪种场景。场景 ④ 中 MainSN "
+#~ "为随机值属正常现象（v4.1-652 之后会自动取任意拼板的 PanelSN 作为 MainSN）。如需 MainSN "
+#~ "为固定值，请在拼板区域外额外添加一个整板级二维码框，使产品落到场景 ⑤。"
+#~ msgstr ""

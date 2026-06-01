@@ -1,0 +1,251 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/introduce/overview/index.rst:2
+msgid "系统概览与界面导航"
+msgstr "System Overview and Interface Navigation"
+
+#: ../../source/introduce/overview/index.rst:4
+msgid "**此页面的用途**"
+msgstr "**What this page covers**"
+
+#: ../../source/introduce/overview/index.rst:6
+msgid "本页面介绍 AOI 系统的整体架构、顶层界面导航逻辑，以及首次启动时的登录操作与启动画面。面向所有角色（管理员、操作员、编程人员）。"
+msgstr ""
+"This page introduces the AOI system's overall architecture, the top-level "
+"navigation, and the login flow and startup screens you'll see on first boot."
+" Written for every role — Administrator, Operator, and Programmer."
+
+#: ../../source/introduce/overview/index.rst:8
+msgid "**如何进入**"
+msgstr "**How to open it**"
+
+#: ../../source/introduce/overview/index.rst:10
+msgid ""
+"浏览器直接访问系统根路径（默认 ``http://localhost:3005/``），或在桌面点击启动器后浏览器自动打开。未登录时会自动跳转至登录页。"
+msgstr ""
+"Open the system root path in a browser (default ``http://localhost:3005/``),"
+" or click the desktop launcher and the browser opens automatically. If you "
+"are not logged in, you are redirected to the login page."
+
+#: ../../source/introduce/overview/index.rst:-1
+msgid "AOI 系统登录页"
+msgstr "AOI system login page"
+
+#: ../../source/introduce/overview/index.rst:16
+msgid "**操作流程**"
+msgstr "**Workflow**"
+
+#: ../../source/introduce/overview/index.rst:18
+msgid "**系统整体布局**"
+msgstr "**Overall layout**"
+
+#: ../../source/introduce/overview/index.rst:20
+msgid "登录后，所有页面共享一个固定的顶部导航栏（由 `ContainerLayout` 提供）。导航栏包含以下元素："
+msgstr ""
+"After login, every page shares a persistent top navigation bar (provided by "
+"`ContainerLayout`). The bar contains:"
+
+#: ../../source/introduce/overview/index.rst:22
+msgid ""
+"**左上角 Logo / 系统名称**（显示 **AOI系统**）：点击可随时从任何页面返回主页（``/home``）。在 **设置** 和 "
+"**工作列表** 页面，名称旁会额外显示当前页面的标签（如 **设置** 或 **工作列表**）；在产品编程页面，会在名称旁追加正在编程的产品名称。"
+msgstr ""
+"**Logo / system name on the top-left** (displays **AOI System**): clicking "
+"it returns to Home (``/home``) from any page. On **Settings** and "
+"**Worklist**, the page label (such as **Settings** or **Worklist**) appears "
+"next to the name; on the product programming page, the name is suffixed with"
+" the product being programmed."
+
+#: ../../source/introduce/overview/index.rst:23
+msgid "**右上角功能区**：从左到右依次为磁盘用量指示器、**齿轮图标**（进入 **设置** 页面）和当前登录的用户名。"
+msgstr ""
+"**Top-right utilities**: left to right — disk-usage indicator, **gear icon**"
+" (opens **Settings**), and the current logged-in user name."
+
+#: ../../source/introduce/overview/index.rst:27
+msgid "检测会话运行期间，点击齿轮图标会弹出提示，告知设置暂不可用；需先停止检测任务后再进入设置。"
+msgstr ""
+"While an inspection session is running, clicking the gear icon shows a "
+"notice that Settings is unavailable; stop the inspection first."
+
+#: ../../source/introduce/overview/index.rst:29
+msgid "**登录页面**"
+msgstr "**Login page**"
+
+#: ../../source/introduce/overview/index.rst:-1
+msgid "登录页面"
+msgstr "Login page"
+
+#: ../../source/introduce/overview/index.rst:35
+msgid "登录页包含以下控件："
+msgstr "The login page contains:"
+
+#: ../../source/introduce/overview/index.rst:37
+msgid "**用户名**：输入账户名称。"
+msgstr "**Username**: enter the account name."
+
+#: ../../source/introduce/overview/index.rst:38
+msgid "**密码**：输入账户密码，支持按回车键直接提交。"
+msgstr "**Password**: enter the password; Enter submits."
+
+#: ../../source/introduce/overview/index.rst:39
+msgid "**登录** 按钮：提交凭据，验证通过后跳转至主页（``/home``）。"
+msgstr ""
+"**Login** button: submits the credentials; on success the page redirects to "
+"Home (``/home``)."
+
+#: ../../source/introduce/overview/index.rst:40
+msgid ""
+"**更改主机地址** 按钮：打开主机地址配置弹窗，用于修改后端服务器地址（默认 "
+"``http://localhost:8000/``）。如需从其他设备访问，可在此将 ``localhost`` 替换为目标机器的 IP 地址。"
+msgstr ""
+"**Change Host Address** button: opens the host-address dialog to change the "
+"backend server address (default ``http://localhost:8000/``). To access from "
+"a different machine, replace ``localhost`` with that machine's IP."
+
+#: ../../source/introduce/overview/index.rst:42
+msgid "界面语言可在登录后于 系统设置 → 语言 中切换（中文 / 英文）。"
+msgstr ""
+"The UI language can be switched after login under **System Settings → "
+"Language** (Chinese / English)."
+
+#: ../../source/introduce/overview/index.rst:-1
+msgid "更改主机地址弹窗"
+msgstr "Change Host Address dialog"
+
+#: ../../source/introduce/overview/index.rst:48
+msgid "**用户角色**"
+msgstr "**User roles**"
+
+#: ../../source/introduce/overview/index.rst:50
+msgid "系统内置三种用户角色，每种角色对应不同的操作权限："
+msgstr ""
+"Three built-in roles ship with the system; each role carries different "
+"permissions:"
+
+#: ../../source/introduce/overview/index.rst:52
+msgid ""
+"**管理员（ADMIN）**：拥有全部权限，包括 **团队** "
+"管理（创建/删除账户、分配角色）、所有系统设置项（系统配置、捕获模块、模型更新器、编程默认参数、语言、主机、校准、关于、日志）以及主页上的全部功能区（包括产品编程入口"
+" **训练PCBA** 和 **工作列表**）。"
+msgstr ""
+"**Administrator (ADMIN)**: every permission — **Team** management (create / "
+"delete accounts, assign roles), every System Settings item (System "
+"Configuration, Capture Module, Model Updater, Programming Default "
+"Parameters, Language, Host, Calibration, About, Log), and every action on "
+"Home (including the **Train PCBA** programming entry and the **Worklist**)."
+
+#: ../../source/introduce/overview/index.rst:53
+msgid ""
+"**编程人员（PROGRAMMER）**：可使用产品编程（**训练PCBA**）和检测相关功能，并访问大多数系统设置（系统配置、捕获模块、模型更新器、编程默认参数、语言、主机、校准、关于、日志），但无法访问"
+" **团队** 管理页面。"
+msgstr ""
+"**Programmer (PROGRAMMER)**: access to product programming (**Train PCBA**) "
+"and inspection features, plus most of System Settings (System Configuration,"
+" Capture Module, Model Updater, Programming Default Parameters, Language, "
+"Host, Calibration, About, Log). The **Team** management page is not "
+"accessible."
+
+#: ../../source/introduce/overview/index.rst:54
+msgid ""
+"**操作员（OPERATOR）**：仅可执行检测操作（启动/停止检测任务、查看工作列表），不可访问产品编程入口，且系统设置中多数高级选项（系统配置、捕获模块、模型更新器、编程默认参数等）对操作员不可用。"
+msgstr ""
+"**Operator (OPERATOR)**: can only run inspection (start / stop inspection "
+"tasks, view the Worklist). The product programming entry is hidden, and most"
+" advanced System Settings options (System Configuration, Capture Module, "
+"Model Updater, Programming Default Parameters, and so on) are unavailable."
+
+#: ../../source/introduce/overview/index.rst:56
+msgid "管理员账户在系统部署时提供，默认用户名为 **admin**。账户管理请进入设置页的 **团队** 分组（仅管理员可见）。"
+msgstr ""
+"An administrator account is provided at deployment time; the default "
+"username is **admin**. Account management lives under **Settings → Team** "
+"(Administrator only)."
+
+#: ../../source/introduce/overview/index.rst:58
+msgid "**系统初始化页面**"
+msgstr "**System initialization page**"
+
+#: ../../source/introduce/overview/index.rst:60
+msgid ""
+"系统首次启动或后端服务尚未就绪时，浏览器会进入 **系统初始化中…** 等待页面（路由 ``/system-"
+"initializing``）。页面显示初始化进度或连接状态，并提供两个操作按钮："
+msgstr ""
+"On the first boot, or while the backend is not yet ready, the browser lands "
+"on the **System initializing…** waiting page (route ``/system-"
+"initializing``). The page shows initialization progress / connection status "
+"and offers two actions:"
+
+#: ../../source/introduce/overview/index.rst:62
+msgid "**刷新（Refresh）**：重新加载页面，重新尝试连接后端。"
+msgstr "**Refresh**: reload the page and retry the backend connection."
+
+#: ../../source/introduce/overview/index.rst:63
+msgid "**更改主机地址（Change Host Address）**：在后端地址填写有误时，可打开主机地址弹窗重新配置。"
+msgstr ""
+"**Change Host Address**: opens the host-address dialog to reconfigure when "
+"the backend address is wrong."
+
+#: ../../source/introduce/overview/index.rst:65
+msgid "当后端初始化完成后，系统将自动根据登录状态跳转：令牌有效则直接进入主页，令牌已过期则跳转至登录页。"
+msgstr ""
+"Once the backend finishes initializing, the system redirects automatically "
+"based on auth state — a valid token routes to Home; an expired token routes "
+"to the login page."
+
+#: ../../source/introduce/overview/index.rst:67
+msgid "**注意事项**"
+msgstr "**Notes**"
+
+#: ../../source/introduce/overview/index.rst:71
+msgid ""
+"检测会话进行中，点击顶部导航栏的 "
+"Logo（返回主页）或齿轮图标（进入设置）时，若当前正在复检页面且有未完成的确认操作（`require_manual_inspection_result`），系统会先弹出确认弹窗，待操作员确认后再执行导航，以防止意外丢失检测数据。"
+msgstr ""
+"While an inspection session is running, clicking the top-bar logo (Home) or "
+"the gear icon (Settings) — and you are currently on the Review page with an "
+"outstanding manual confirmation (`require_manual_inspection_result`) — "
+"surfaces a confirmation dialog first, so accidental navigation can't lose "
+"inspection data."
+
+#: ../../source/introduce/overview/index.rst:72
+msgid "角色权限在登录时由服务器签发的 JWT 令牌确定，切换权限需重新以对应账户登录。"
+msgstr ""
+"Role permissions are stamped into the JWT token issued by the server at "
+"login; switching permissions requires logging back in as the appropriate "
+"account."
+
+#: ../../source/introduce/overview/index.rst:74
+msgid "**相关页面**"
+msgstr "**Related pages**"
+
+#: ../../source/introduce/overview/index.rst:76
+msgid ":ref:`快速开始`"
+msgstr ":ref:`快速开始`"
+
+#~ msgid "**启动视频页面**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "系统在某些部署配置下启动时，会先播放一段品牌介绍视频（路由 ``/landing-video``，视频文件 "
+#~ "``/video/landing.mp4``）。视频全屏播放，禁用暂停、快进和右键菜单，播放完毕后自动跳转至系统初始化页面。用户无需任何操作。"
+#~ msgstr ""

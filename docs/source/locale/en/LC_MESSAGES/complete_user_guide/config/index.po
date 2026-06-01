@@ -1,17 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021-2024 DaoAI Robotics Inc.
-# This file is distributed under the same license as the DaoAI PCBA AOI User
+# PCBA AOI User Manual.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the  PCBA AOI User
 # Manual package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DaoAI PCBA AOI User Manual 2025.2.0\n"
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-26 17:16-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"PO-Revision-Date: 2026-05-28 14:17-0700\n"
+"Last-Translator: \n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -22,9 +20,10 @@ msgstr ""
 
 #: ../../source/complete_user_guide/config/index.rst:2
 msgid "检测参数"
-msgstr ""
+msgstr "Inspection Parameters"
 
 #: ../../source/complete_user_guide/config/index.rst:4
-msgid "本章介绍 PCB 检测系统中元件配置项，以及各类检测项的参数配置方法。通过合理设置参数，可提升自动检测的准确性与稳定性。"
+msgid "本章介绍 PCB 检测系统中元件配置项，以及各类检测工具的参数配置方法。"
 msgstr ""
-
+"This chapter covers the component-level configuration in the PCB inspection "
+"system, along with how to configure parameters for each inspection tool."
