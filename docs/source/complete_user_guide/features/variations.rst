@@ -7,9 +7,7 @@
 
 替代料与主元件共享同一元件位置（designator），在模板编辑器中以独立行显示，可单独查看其特征。创建替代料后需重新训练模型，才能在后续检测任务中生效。
 
-.. image:: images/variation_overview.png
-   :scale: 70%
-   :alt: 复检页面左侧 NG 列表区域，列出已检测的元件
+.. screenshot-todo: images/variation_overview.png — 复检页面左侧 NG 列表区域，列出已检测的元件
 
 **如何进入**
 

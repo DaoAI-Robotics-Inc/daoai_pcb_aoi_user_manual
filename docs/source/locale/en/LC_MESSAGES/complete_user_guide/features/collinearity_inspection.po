@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"POT-Creation-Date: 2026-06-03 14:35-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -302,10 +302,68 @@ msgid "黄色数字标注 — **残差大小（mm）**。"
 msgstr "Yellow numeric label — **Residual magnitude (mm)**."
 
 #: ../../source/complete_user_guide/features/collinearity_inspection.rst:81
+msgid "**检测结果的呈现（复检页面）**"
+msgstr "**How Results Appear (Review Page)**"
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:83
+msgid ""
+"检测运行后，共线性组的判定结果会出现在 :ref:`检测与反馈` 的复检页面中。共线性相关的不良以错误类型 **共线性检测** "
+"列出，特征错误面板逐条展示该组每个成员的以下信息："
+msgstr ""
+"After an inspection runs, each collinearity group's verdict appears on the "
+"Review page of :ref:`检测与反馈`. Collinearity defects are listed under the "
+"**Collinearity Check** error type, and the Feature Error panel shows the "
+"following for every member of the group:"
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:85
+msgid "**组判定** — 该共线性组的整体判定，取值为 **通过**、**失败** 或 **无法判定**。"
+msgstr ""
+"**Group verdict** — the overall verdict for this collinearity group: "
+"**PASS**, **FAIL**, or **INDETERMINATE**."
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:86
+msgid "**位置（行 X, 列 Y）** — 当前成员在网格中的行列坐标。"
+msgstr ""
+"**Position (row X, col Y)** — the member's row and column coordinates within"
+" the grid."
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:87
+msgid ""
+"**列方向偏差** / **行方向偏差** / **角度偏差** — 成员实测位置相对拟合点阵预测位置的偏差；任一项超出组设定的对应阈值即判为失败。"
+msgstr ""
+"**Column offset** / **Row offset** / **Angle offset** — each member's "
+"deviation from the position predicted by the fitted lattice; the member "
+"fails if any one exceeds the group's corresponding threshold."
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:88
+msgid "**成员已丢弃（无对齐）** — 某成员在本次检测中未能完成对齐时，该成员被排除在拟合之外并如此标注。"
+msgstr ""
+"**Member dropped (no alignment)** — when a member could not be aligned "
+"during this inspection, it is excluded from the fit and marked accordingly."
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:90
+msgid "当组判定为 **无法判定** 时，面板会一并显示 **原因**，可能为："
+msgstr ""
+"When the group verdict is **INDETERMINATE**, the panel also shows a "
+"**Reason**, which may be:"
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:92
+msgid "**组尚未拟合 — 请在示教页运行拟合。**"
+msgstr "**Group not fitted yet — run Fit on the Teach page.**"
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:93
+msgid "**可对齐的成员数不足。**"
+msgstr "**Too few alignable members for fit.**"
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:94
+msgid "**存储的拟合数据格式异常。**"
+msgstr "**Stored fit data is malformed.**"
+
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:98
 msgid "**注意事项**"
 msgstr "**Notes**"
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:85
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:102
 msgid ""
 "组创建后必须单独执行 **运行共线性拟合** 操作，拟合结果才会写入后端。未完成拟合的组在检测时结果显示为\"无法判定：组尚未拟合 — "
 "请在示教页运行拟合\"。"
@@ -315,47 +373,47 @@ msgstr ""
 "*Cannot judge: group not yet fit — run the fit on the Teach page* at "
 "inspection time."
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:86
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:103
 msgid "**网格宽度（列数）× 网格长度（行数）** 必须精确等于所选元件数，否则保存时提示\"网格宽度×高度必须等于所选元件数量\"。"
 msgstr ""
 "**Grid width × grid length** must exactly equal the selected-component "
 "count; otherwise the save shows *Grid width × height must equal the selected"
 " component count.*"
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:87
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:104
 msgid "**拟合所需最小成员数** 默认为 3。若运行拟合时可对齐的成员数不足，则检测结果显示为\"无法判定：可对齐的成员数不足\"。"
 msgstr ""
 "**Minimum members for fit** defaults to 3. If fewer alignable members are "
 "present when the fit runs, the result reads *Cannot judge: not enough "
 "alignable members*."
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:88
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:105
 msgid "修改现有组的网格参数或偏差阈值后，需重新运行 **运行共线性拟合** 才能使更新后的判定阈值生效。"
 msgstr ""
 "After changing an existing group's grid parameters or deviation thresholds, "
 "re-run **Run Collinearity Fit** so the new thresholds take effect."
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:89
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:106
 msgid "共线性检测仅适用于 2D 贴装检测场景，不涉及 3D 或在线多传送带模式。"
 msgstr ""
 "Collinearity Inspection is for 2D mounting inspection only — it doesn't "
 "cover 3D or online multi-conveyor modes."
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:90
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:107
 msgid "正在查看某个分组（已高亮）时，**绘制选择区域** 按钮不可用；需先在列表中点击该组以取消高亮，方可开始创建新组。"
 msgstr ""
 "While a group is highlighted, **Draw Selection Area** is disabled; click the"
 " highlighted group in the list to clear the highlight before starting a new "
 "group."
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:92
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:109
 msgid "**相关页面**"
 msgstr "**Related pages**"
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:94
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:111
 msgid ":ref:`手动编程与编辑工具`"
 msgstr ":ref:`手动编程与编辑工具`"
 
-#: ../../source/complete_user_guide/features/collinearity_inspection.rst:95
+#: ../../source/complete_user_guide/features/collinearity_inspection.rst:112
 msgid ":ref:`料号封装和分组`"
 msgstr ":ref:`料号封装和分组`"

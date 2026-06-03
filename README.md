@@ -66,6 +66,35 @@ On Windows you can also run `\.i18n_build.ps1` (in `docs/`) to refresh catalogs 
 build every language in one step; add `-Serve en` to preview the English site on
 `http://127.0.0.1:8001`.
 
+### View the manual inside the PCB AOI software (local dev)
+
+The web client's top-bar manual button opens the built HTML at
+`/manual/<lang>/index.html` (`zh_CN` when the UI language is Chinese, otherwise
+`en`). **The frontend build does not bundle the manual**, and
+`aoi_pcb_web_client/public/manual/` is gitignored — so after building you must
+copy the per-language output into that folder yourself. Vite (and Nginx in
+`dev:full`) then serve it at `/manual/en/` and `/manual/zh_CN/`.
+
+After building both languages, run the copy script (Windows):
+
+```bat
+docs\copy_manual_to_fe.bat
+```
+
+It mirrors `docs/_build/html/{en,zh_CN}` into `aoi_pcb_web_client/public/manual/`
+(refusing to run if the build is missing). To do it by hand instead — e.g. on a
+non-Windows box — from this repo's `docs/` folder:
+
+```sh
+# wipe any stale copy, then copy the fresh per-language builds in
+rm -rf ../../aoi_pcb_web_client/public/manual/en ../../aoi_pcb_web_client/public/manual/zh_CN
+cp -r _build/html/en _build/html/zh_CN ../../aoi_pcb_web_client/public/manual/
+```
+
+> In a **release** build this copy is performed by the Jenkins pipeline into the
+> shipped `dist/manual/` (served by Nginx) — not by the frontend build — so this
+> manual step is only needed for local development.
+
 ### Versions vs. languages
 
 Versions (latest/stable/tags) are managed by git branches/tags + `sphinx-multiversion`.
