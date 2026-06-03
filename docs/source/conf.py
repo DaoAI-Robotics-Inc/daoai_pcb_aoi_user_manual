@@ -57,6 +57,11 @@ html_theme = 'sphinx_rtd_theme'
 html_show_copyright = False
 html_show_sphinx = False
 
+# Don't ship raw reST sources or "view source" links in the customer manual.
+# Also keeps online-only `.. only:: online` source text out of the OFFLINE bundle.
+html_copy_source = False
+html_show_sourcelink = False
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
