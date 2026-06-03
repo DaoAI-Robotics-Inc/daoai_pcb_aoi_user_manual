@@ -19,6 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
+#: ../../source/complete_user_guide/inspection/index.rst:150
+msgid "**AI 更新（从反馈更新参数与模型）**"
+msgstr "AI Update (update parameters and model from feedback)"
+
+#: ../../source/complete_user_guide/inspection/index.rst:151
+msgid "提交反馈后，编程员或管理员可在复检页点击 **AI 更新（AI Update）**，系统会根据本次反馈重新生成检测参数并重训相关模型，无需返回模板编辑页。完成后旁边出现 **应用参数更新（Apply Param Updates）** 按钮；点击后提示 **检测参数已更新**，可选 **立即重新加载（Reload Now）** 或 **稍后（Later）**，让当前检测会话加载更新后的参数与模型。操作员（Operator）角色不显示此按钮。"
+msgstr "After submitting feedback, a programmer or admin can click **AI Update** on the review page. The system regenerates the detection parameters from your feedback and retrains the relevant model — without returning to the Template Editor. When it finishes, an **Apply Param Updates** button appears; clicking it shows **Agent Parameters Updated**, where you choose **Reload Now** or **Later** so the running inspection session loads the updated parameters and model. This button is hidden for the Operator role."
+
 #: ../../source/complete_user_guide/inspection/index.rst:2
 msgid "检测与反馈"
 msgstr "Inspection and Feedback"
