@@ -52,6 +52,11 @@ gettext_compact = False
 
 html_theme = 'sphinx_rtd_theme'
 
+# Hide footer "watermarks": the copyright line and the
+# "Built with Sphinx using a theme provided by Read the Docs" line.
+html_show_copyright = False
+html_show_sphinx = False
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
