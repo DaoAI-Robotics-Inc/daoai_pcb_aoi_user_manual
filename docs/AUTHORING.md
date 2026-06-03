@@ -12,5 +12,10 @@
   placeholder** so the build stays clean and the later capture pass can find it:
   `.. screenshot-todo: images/<name>.png — <中文说明>` (single colon = a comment, not a directive).
 - Cross-references: `:ref:`<目标页面中文标题>`` (autosectionlabel keys off the Chinese heading).
-- Scope: NO online/multi-backend, NO MES, NO 3D.
+- Scope: online / multi-backend content IS in scope — wrap online-only **sections** in
+  ``.. only:: online`` and put online-only **whole pages** under a ``.../online/`` directory
+  (``conf.py`` excludes them from offline builds). MES is **common** content (no tag). 3D
+  (``VITE_AOI_VERSION=3d_smt``) is still out of scope.
+- Cross-references: common (untagged) content must **never** ``:ref:`` an online-only heading
+  (the offline build drops the target and warns). Online → common refs are fine.
 - Build check (from `docs/`): `sphinx-build -E -a -b html -D language=zh_CN source _build/html/zh_CN 2>&1 | grep -E "WARNING|ERROR"` must print nothing.
