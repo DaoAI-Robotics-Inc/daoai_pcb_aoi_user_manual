@@ -7,6 +7,7 @@ PCBA AOI 用户手册
 
    introduce/quick_start/index
    introduce/overview/index
+   introduce/annotation_basics/index
 
 .. toctree::
    :maxdepth: 1
