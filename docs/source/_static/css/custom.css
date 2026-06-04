@@ -22,3 +22,24 @@ img {
     max-width: 100%;
     height: auto !important;
 }
+
+/* Inline color labels: tri-color lighting (red/green/blue) and
+   IC-lead box colors (orange/purple/pink/blue). */
+.clr-red    { color: #E53935; font-weight: bold; }
+.clr-green  { color: #2E9E40; font-weight: bold; }
+.clr-blue   { color: #1E7FE0; font-weight: bold; }
+.clr-orange { color: #F4511E; font-weight: bold; }
+.clr-purple { color: #8E24AA; font-weight: bold; }
+.clr-pink   { color: #E91E63; font-weight: bold; }
+
+/* UI element labels (buttons, tabs, menu items) marked with :guilabel:. */
+.rst-content .guilabel {
+    border: 1px solid #aac6e3;
+    background: #eef4fb;
+    border-radius: 4px;
+    padding: 0 5px;
+    color: #21618c;
+    font-size: 90%;
+    font-weight: 600;
+    white-space: nowrap;
+}

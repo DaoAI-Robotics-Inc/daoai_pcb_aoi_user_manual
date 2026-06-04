@@ -1,0 +1,151 @@
+# English translation for the PCBA AOI User Manual.
+# Copyright (C) 2021-2026
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-04 10:25-0700\n"
+"PO-Revision-Date: 2026-06-04 10:30-0700\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "标注与成像基础"
+msgstr "Imaging and Annotation Basics"
+
+msgid "在开始标注与检测之前，先理解 AOI 的 2D 成像原理，以及各类检测框分别检测元件的哪个部位。读懂“图像里的颜色代表什么”，是后续看懂标注、调参与判读结果的基础。"
+msgstr "Before you start annotating and inspecting, it helps to understand how the AOI 2D image is formed and which part of a component each type of inspection box checks. Understanding what the colors in the image mean is the foundation for reading annotations, tuning parameters, and interpreting results later on."
+
+msgid "2D 彩色图像的成色原理（三色角度光）"
+msgstr "How the 2D color image is formed (tri-color, multi-angle lighting)"
+
+msgid "AOI 的 2D 相机采用彩色多角度光源：相机正下方的环形光罩上分布着红、绿、蓝三组 LED，分别从高、中、低三个入射角照射 PCB；相机在正上方垂直俯视。"
+msgstr "The AOI 2D camera uses tri-color, multi-angle illumination: a dome of red, green, and blue LEDs around the lens lights the PCB from high, medium, and low incidence angles respectively, while the camera looks straight down from directly above."
+
+msgid "三色角度光源结构示意"
+msgstr "Structure of the tri-color, multi-angle light source"
+
+msgid "成像基于镜面反射——某个区域只有把对应角度的光反射进正上方相机时，才会呈现该颜色。因此图像颜色直接反映表面的倾斜程度："
+msgstr "Imaging relies on specular reflection: a region shows a given color only when it reflects that angle of light up into the camera overhead. The color therefore directly reflects how steeply the surface is tilted:"
+
+msgid ":clr-red:`红色`：平坦、近水平的表面（阻焊面、焊盘顶面）。"
+msgstr ":clr-red:`Red`: flat, near-horizontal surfaces (solder mask, pad tops)."
+
+msgid ":clr-green:`绿色`：中等坡度的表面。"
+msgstr ":clr-green:`Green`: moderately sloped surfaces."
+
+msgid ":clr-blue:`蓝色`：较陡坡度的表面。"
+msgstr ":clr-blue:`Blue`: steeply sloped surfaces."
+
+msgid "所以焊锡的爬锡坡面会随坡度由绿渐变到蓝，平坦区域呈红。"
+msgstr "So a solder fillet shades from green to blue as it gets steeper, while flat areas appear red."
+
+msgid "为什么“颜色 = 坡度”很重要"
+msgstr "Why \"color = slope\" matters"
+
+msgid "普通白光只能拍出平面照片，而焊接质量几乎都写在三维形貌里：焊点有没有漂亮的爬锡坡、引脚有没有翘起、元件有没有立碑或偏移。这些高度与坡度信息在普通 2D 图像中基本丢失。三色光通过“角度对应颜色”的映射，把看不见的表面坡度直接编码进了 2D 图像。"
+msgstr "Plain white light only produces a flat photo, yet solder quality lives almost entirely in the 3-D shape: whether a joint has a clean fillet, whether a lead is lifted, whether a component is tombstoned or shifted. That height and slope information is largely lost in an ordinary 2-D image. Tri-color lighting maps angle to color, encoding the otherwise invisible surface slope directly into the 2-D image."
+
+msgid "需要特别记住的是：图像里的颜色不代表物体本来的颜色，而代表这块表面朝哪个方向倾斜。同一块银白色焊锡，平的地方呈红、斜的地方呈蓝——颜色是形状的指纹，不是材料的本色。"
+msgstr "Keep this firmly in mind: the colors in the image do not represent the object's own color, but rather which way that patch of surface is tilted. On one and the same piece of silver-white solder, flat areas appear red and sloped areas appear blue — the color is a fingerprint of shape, not of the material."
+
+msgid "三色光下的真实 PCB：引脚爬锡呈蓝色坡面，平面呈橙红"
+msgstr "A real PCB under tri-color lighting: lead fillets appear as blue slopes, flat areas appear orange-red."
+
+msgid "坡度恰好是焊接质量的命门。一个合格焊点有固定的立体形态：从平的焊盘（红）平滑上爬到锡坡（绿到蓝）再接到引脚。坡度对，说明焊锡量足、润湿良好。于是常见缺陷都会表现为颜色分布异常："
+msgstr "Slope happens to be the crux of solder quality. A good joint has a fixed 3-D form: from the flat pad (red) it climbs smoothly up the fillet (green to blue) to the lead. Correct slope means sufficient solder and good wetting. Common defects therefore show up as an abnormal color distribution:"
+
+msgid "**少锡或不润湿**：应有的爬锡坡缺失，缺少绿、蓝过渡，或一片发红。"
+msgstr "**Insufficient solder or poor wetting**: the expected fillet slope is missing, with little green-to-blue transition, or the area is mostly red."
+
+msgid "**多锡或锡球**：坡度过陡或形状杂乱，颜色分布异常。"
+msgstr "**Excess solder or solder balls**: the slope is too steep or the shape is irregular, giving an abnormal color distribution."
+
+msgid "**引脚翘起或虚焊**：引脚未贴到焊盘、缺少爬锡，对应区域颜色不对。"
+msgstr "**Lifted lead or cold joint**: the lead is not seated on the pad and lacks a fillet, so the color in that region is wrong."
+
+msgid "**立碑或偏移**：本体朝向改变，颜色块的位置与形状随之改变。"
+msgstr "**Tombstoning or shift**: the body's orientation changes, so the position and shape of the color regions change accordingly."
+
+msgid "原本这些缺陷在白光下是微弱、难以分辨的几何差异，三色光把它们放大成醒目的红、绿、蓝色块，人与 AI 都更容易判读。软件中的颜色公式（如 2B-R-G）正是用“2 倍蓝减红减绿”把陡坡从平面中量化提取为一个可设阈值的分数，本质就是在量化坡度。"
+msgstr "Under white light these defects are faint, hard-to-see geometric differences; tri-color lighting amplifies them into vivid red, green, and blue regions that both people and AI can read more easily. The color formulas in the software (such as 2B-R-G) use \"twice blue minus red minus green\" to quantify steep slopes against flat areas as a thresholdable score — in essence, they quantify slope."
+
+msgid "检测框的类型与含义"
+msgstr "Inspection box types and what they mean"
+
+msgid "一个元件的标注由若干检测框（特征框）组成，每种框负责检测元件的不同部位："
+msgstr "A component's annotation is made up of several inspection boxes (feature boxes), each checking a different part of the component:"
+
+msgid "**本体框（Body）**：框住元件主体，几乎所有元件都有的基础框，用于检测元件是否存在、是否偏移、是否错件或反向。"
+msgstr "**Body box**: encloses the component body. The base box found on nearly every component, it checks whether the part is present, shifted, wrong, or reversed."
+
+msgid "**焊锡框（Solder）**：框住引脚根部的焊点与爬锡区域，检测焊锡量与形态（少锡、多锡、虚焊等）；结合光源原理，爬锡坡面在 2D 图中通常呈蓝到绿。"
+msgstr "**Solder box**: encloses the joint and fillet at the lead root, checking solder amount and shape (insufficient, excess, cold joint, etc.); by the lighting principle, the fillet slope usually appears blue-to-green in 2-D."
+
+msgid "**IC 引脚框（IC Lead）**：用于带引脚的 IC，由四个子区域框组成，各代表引脚的一段，如下表所示。"
+msgstr "**IC Lead box**: used for leaded ICs. It consists of four sub-region boxes, each representing one part of the lead, as shown in the table below."
+
+msgid "**文本框 / OCR 框（Text）**：框住需要识别的字符区域（丝印、料号、批次或日期码），用于 OCR 文本检测与比对。"
+msgstr "**Text / OCR box**: encloses the characters to be read (silkscreen, part number, lot or date code) for OCR text detection and comparison."
+
+msgid "**极性检测框（Polarity）**：框住元件上的极性标识（电容极性条、二极管色环、LED 缺角或标记等）；在“本体检测（2D）”中启用极性检测后，系统据此判断元件是否装反。"
+msgstr "**Polarity box**: encloses the polarity marking on the component (capacitor polarity stripe, diode band, LED notch or mark, etc.); once Polarity is enabled in Mounting Inspection (2D), the system uses it to judge whether the part is installed backwards."
+
+msgid "IC 引脚框的四个子区域："
+msgstr "The four sub-regions of the IC Lead box:"
+
+msgid "子框颜色"
+msgstr "Sub-box color"
+
+msgid "区域"
+msgstr "Region"
+
+msgid "在 2D 图中的典型表现"
+msgstr "Typical appearance in 2-D"
+
+msgid ":clr-orange:`橙`"
+msgstr ":clr-orange:`Orange`"
+
+msgid "焊盘区（Pad）"
+msgstr "Pad"
+
+msgid "引脚下方的焊盘"
+msgstr "The pad beneath the lead"
+
+msgid ":clr-purple:`紫`"
+msgstr ":clr-purple:`Purple`"
+
+msgid "焊料区（Solder）"
+msgstr "Solder"
+
+msgid "引脚根部爬锡，呈蓝到绿（坡面）"
+msgstr "Fillet at the lead root; blue-to-green (sloped)"
+
+msgid ":clr-pink:`粉`"
+msgstr ":clr-pink:`Pink`"
+
+msgid "引脚末端（Tip）"
+msgstr "Tip"
+
+msgid "引脚尖端，呈黄色高亮"
+msgstr "Lead tip; bright yellow"
+
+msgid ":clr-blue:`蓝`"
+msgstr ":clr-blue:`Blue`"
+
+msgid "引脚区（Pin/Area）"
+msgstr "Pin / Area"
+
+msgid "覆盖整段引脚（蓝框加粉框即完整引脚）"
+msgstr "Covers the whole lead (blue box plus pink box = the complete lead)"
+
+msgid "引脚四色框示例：橙为焊盘、紫为焊料、粉为引脚末端、蓝为引脚区"
+msgstr "Lead four-box example: orange = pad, purple = solder, pink = lead tip, blue = lead area."
+
+msgid "此外，软件还支持 DIP 焊点框、桥接框、焊盘沾胶框、颜色检测框、条形码框等；各类框的检测参数详见 :ref:`检测工具参考`。"
+msgstr "The software also provides DIP solder, bridge, glue-on-pad, color, and barcode boxes, among others; for each box's detection parameters, see :ref:`检测工具参考`."
