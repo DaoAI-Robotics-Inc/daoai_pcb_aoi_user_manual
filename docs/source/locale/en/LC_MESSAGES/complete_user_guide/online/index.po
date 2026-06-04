@@ -25,7 +25,7 @@ msgstr "Online System"
 
 #: ../../source/complete_user_guide/online/index.rst:4
 msgid "**此页面的用途**"
-msgstr ""
+msgstr "**What this page covers**"
 
 #: ../../source/complete_user_guide/online/index.rst:6
 msgid "在线系统（多传送带 / 联机产线）相比离线系统提供额外的产线协同功能。本节内容仅在在线版本中显示。"

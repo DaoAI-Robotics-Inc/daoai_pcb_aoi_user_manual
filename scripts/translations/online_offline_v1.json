@@ -8,6 +8,7 @@
   },
   "complete_user_guide/online/index.po": {
     "在线系统功能（Online System）": "Online System",
+    "**此页面的用途**": "**What this page covers**",
     "在线系统（多传送带 / 联机产线）相比离线系统提供额外的产线协同功能。本节内容仅在在线版本中显示。": "An online system (multi-conveyor / inline production) provides extra line-coordination features beyond an offline system. This section is shown only in the online edition.",
     "**包含的功能**": "**What's included**",
     "多传送带并行检测与切换。": "Parallel inspection across multiple conveyors, with switching.",
