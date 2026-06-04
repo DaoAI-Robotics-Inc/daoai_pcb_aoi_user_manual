@@ -1,4 +1,7 @@
 {
+  "index.po": {
+    "在线系统": "Online System"
+  },
   "complete_user_guide/features/recipe.po": {
     "**挡停模式（Blocking mode）**": "**Blocking mode**",
     "在线系统中，可为该产品单独设置传送带的挡停方式。锁定传送带后，**挡停模式** 下拉框可选：": "In an online system you can set this product's conveyor blocking method individually. After locking the conveyor, the **Blocking mode** dropdown offers:",
