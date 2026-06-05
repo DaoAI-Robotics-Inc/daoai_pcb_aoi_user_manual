@@ -43,3 +43,34 @@ img {
     font-weight: 600;
     white-space: nowrap;
 }
+
+/* Semantic UI-term labels: button / tab&page / parameter / option-value / feature-box. */
+.rst-content .ui-btn,
+.rst-content .ui-tab,
+.rst-content .ui-param,
+.rst-content .ui-opt,
+.rst-content .ui-feature {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 0 5px;
+    font-size: 90%;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.rst-content .ui-btn     { border-color: #F4511E; background: #FFF3E0; color: #D84315; }
+.rst-content .ui-tab     { border-color: #1E88E5; background: #E3F2FD; color: #1565C0; }
+.rst-content .ui-param   { border-color: #2E9E40; background: #E8F5E9; color: #1B5E20; }
+.rst-content .ui-opt     { border-color: #B0BEC5; background: #ECEFF1; color: #546E7A; }
+.rst-content .ui-feature { border-color: #00897B; background: #E0F2F1; color: #00695C; }
+
+/* Inside tables, render the labels as plain colored text (drop the pill box,
+   the table cells already separate them). */
+.rst-content table .ui-btn,
+.rst-content table .ui-tab,
+.rst-content table .ui-param,
+.rst-content table .ui-opt,
+.rst-content table .ui-feature {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
