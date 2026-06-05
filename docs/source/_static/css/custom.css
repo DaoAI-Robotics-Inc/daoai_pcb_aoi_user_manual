@@ -54,7 +54,7 @@ img {
     border-radius: 4px;
     padding: 0 5px;
     font-size: 90%;
-    font-weight: 600;
+    font-weight: normal;
     white-space: nowrap;
 }
 .rst-content .ui-btn     { border-color: #F4511E; background: #FFF3E0; color: #D84315; }
