@@ -81,20 +81,20 @@ msgstr "Inspection box types and what they mean"
 msgid "一个元件的标注由若干检测框（特征框）组成，每种框负责检测元件的不同部位："
 msgstr "A component's annotation is made up of several inspection boxes (feature boxes), each checking a different part of the component:"
 
-msgid "**本体框（Body）**：框住元件主体，几乎所有元件都有的基础框，用于检测元件是否存在、是否偏移、是否错件或反向。"
-msgstr "**Body box**: encloses the component body. The base box found on nearly every component, it checks whether the part is present, shifted, wrong, or reversed."
+msgid ":ui-feature:`本体框（Body）`：框住元件主体，几乎所有元件都有的基础框，用于检测元件是否存在、是否偏移、是否错件或反向。"
+msgstr ":ui-feature:`Body box`: encloses the component body. The base box found on nearly every component, it checks whether the part is present, shifted, wrong, or reversed."
 
-msgid "**焊锡框（Solder）**：框住引脚根部的焊点与爬锡区域，检测焊锡量与形态（少锡、多锡、虚焊等）；结合光源原理，爬锡坡面在 2D 图中通常呈蓝到绿。"
-msgstr "**Solder box**: encloses the joint and fillet at the lead root, checking solder amount and shape (insufficient, excess, cold joint, etc.); by the lighting principle, the fillet slope usually appears blue-to-green in 2-D."
+msgid ":ui-feature:`焊锡框（Solder）`：框住引脚根部的焊点与爬锡区域，检测焊锡量与形态（少锡、多锡、虚焊等）；结合光源原理，爬锡坡面在 2D 图中通常呈蓝到绿。"
+msgstr ":ui-feature:`Solder box`: encloses the joint and fillet at the lead root, checking solder amount and shape (insufficient, excess, cold joint, etc.); by the lighting principle, the fillet slope usually appears blue-to-green in 2-D."
 
-msgid "**IC 引脚框（IC Lead）**：用于带引脚的 IC，由四个子区域框组成，各代表引脚的一段，如下表所示。"
-msgstr "**IC Lead box**: used for leaded ICs. It consists of four sub-region boxes, each representing one part of the lead, as shown in the table below."
+msgid ":ui-feature:`IC 引脚框（IC Lead）`：用于带引脚的 IC，由四个子区域框组成，各代表引脚的一段，如下表所示。"
+msgstr ":ui-feature:`IC Lead box`: used for leaded ICs. It consists of four sub-region boxes, each representing one part of the lead, as shown in the table below."
 
-msgid "**文本框 / OCR 框（Text）**：框住需要识别的字符区域（丝印、料号、批次或日期码），用于 OCR 文本检测与比对。"
-msgstr "**Text / OCR box**: encloses the characters to be read (silkscreen, part number, lot or date code) for OCR text detection and comparison."
+msgid ":ui-feature:`文本框 / OCR 框（Text）`：框住需要识别的字符区域（丝印、料号、批次或日期码），用于 OCR 文本检测与比对。"
+msgstr ":ui-feature:`Text / OCR box`: encloses the characters to be read (silkscreen, part number, lot or date code) for OCR text detection and comparison."
 
-msgid "**极性检测框（Polarity）**：框住元件上的极性标识（电容极性条、二极管色环、LED 缺角或标记等）；在“本体检测（2D）”中启用极性检测后，系统据此判断元件是否装反。"
-msgstr "**Polarity box**: encloses the polarity marking on the component (capacitor polarity stripe, diode band, LED notch or mark, etc.); once Polarity is enabled in Mounting Inspection (2D), the system uses it to judge whether the part is installed backwards."
+msgid ":ui-feature:`极性检测框（Polarity）`：框住元件上的极性标识（电容极性条、二极管色环、LED 缺角或标记等）；在“本体检测（2D）”中启用极性检测后，系统据此判断元件是否装反。"
+msgstr ":ui-feature:`Polarity box`: encloses the polarity marking on the component (capacitor polarity stripe, diode band, LED notch or mark, etc.); once Polarity is enabled in Mounting Inspection (2D), the system uses it to judge whether the part is installed backwards."
 
 msgid "IC 引脚框的四个子区域："
 msgstr "The four sub-regions of the IC Lead box:"
