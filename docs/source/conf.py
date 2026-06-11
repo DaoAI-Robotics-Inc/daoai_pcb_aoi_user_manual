@@ -57,6 +57,11 @@ html_theme = 'sphinx_rtd_theme'
 html_show_copyright = False
 html_show_sphinx = False
 
+# Don't ship raw reST sources or "view source" links in the customer manual.
+# Also keeps online-only `.. only:: online` source text out of the OFFLINE bundle.
+html_copy_source = False
+html_show_sourcelink = False
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
@@ -82,3 +87,18 @@ templates_path = [
 # sphinx-multiversion
 # All branches except 'master'
 smv_branch_whitelist = r'^(?!chinese).*$'
+
+# Online-only pages live under .../online/ and are excluded from OFFLINE builds
+# (no `-t online`) so they don't trip "document isn't included in any toctree".
+# Inline online-only sections use `.. only:: online`; whole pages use this dir
+# convention + the exclusion below.
+exclude_patterns = globals().get('exclude_patterns', [])
+if not tags.has('online'):
+    exclude_patterns += ['**/online/**']
+    # The online-only toctree in index.rst is wrapped in `.. only:: online`,
+    # but Sphinx's toctree directive registers its entries at read time
+    # (before `only` is evaluated), so an offline build still sees a toctree
+    # entry pointing at the now-excluded online page and emits a
+    # `toc.excluded` warning. That reference is intentional, so silence just
+    # that one warning subtype during offline builds.
+    suppress_warnings = globals().get('suppress_warnings', []) + ['toc.excluded']

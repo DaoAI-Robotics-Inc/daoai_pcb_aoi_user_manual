@@ -12,7 +12,7 @@ BUILDDIR      = _build
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile gettext intl-update html-cn html-en html-all
+.PHONY: help Makefile gettext intl-update html-cn html-en html-cn-online html-en-online html-all
 
 # --- i18n / multi-language targets ---
 # zh_CN is the canonical SOURCE language; en is a translation (see PLAN.md).
@@ -23,12 +23,18 @@ intl-update: gettext
 	sphinx-intl update -p "$(BUILDDIR)/gettext" -l en -d "$(SOURCEDIR)/locale"
 
 html-cn:
-	$(SPHINXBUILD) -b html -D language=zh_CN "$(SOURCEDIR)" "$(BUILDDIR)/html/zh_CN" $(SPHINXOPTS)
+	$(SPHINXBUILD) -b html -d "$(BUILDDIR)/doctrees/offline/zh_CN" -D language=zh_CN "$(SOURCEDIR)" "$(BUILDDIR)/html/offline/zh_CN" $(SPHINXOPTS)
 
 html-en:
-	$(SPHINXBUILD) -b html -D language=en "$(SOURCEDIR)" "$(BUILDDIR)/html/en" $(SPHINXOPTS)
+	$(SPHINXBUILD) -b html -d "$(BUILDDIR)/doctrees/offline/en" -D language=en "$(SOURCEDIR)" "$(BUILDDIR)/html/offline/en" $(SPHINXOPTS)
 
-html-all: html-cn html-en
+html-cn-online:
+	$(SPHINXBUILD) -b html -t online -d "$(BUILDDIR)/doctrees/online/zh_CN" -D language=zh_CN "$(SOURCEDIR)" "$(BUILDDIR)/html/online/zh_CN" $(SPHINXOPTS)
+
+html-en-online:
+	$(SPHINXBUILD) -b html -t online -d "$(BUILDDIR)/doctrees/online/en" -D language=en "$(SOURCEDIR)" "$(BUILDDIR)/html/online/en" $(SPHINXOPTS)
+
+html-all: html-cn html-en html-cn-online html-en-online
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

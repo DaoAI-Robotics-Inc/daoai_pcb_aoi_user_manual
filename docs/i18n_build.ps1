@@ -10,13 +10,18 @@ $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 python -m sphinx -b gettext "$root/source" "$root/_build/gettext"
 sphinx-intl update -p "$root/_build/gettext" -l en -d "$root/source/locale"
 
-# 2. build each language into its own subfolder
-foreach ($lang in @('zh_CN','en')) {
-    python -m sphinx -b html -D language=$lang "$root/source" "$root/_build/html/$lang"
+# 2. build each variant × language into its own subfolder.
+#    -d writes doctrees OUTSIDE the html dir so .doctrees never ships.
+$variants = @{ 'offline' = @(); 'online' = @('-t','online') }
+foreach ($variant in $variants.Keys) {
+    foreach ($lang in @('zh_CN','en')) {
+        python -m sphinx -b html @($variants[$variant]) -d "$root/_build/doctrees/$variant/$lang" `
+            -D language=$lang "$root/source" "$root/_build/html/$variant/$lang"
+    }
 }
 
 # 3. optional preview
 if ($Serve) {
-    Set-Location "$root/_build/html/$Serve"
+    Set-Location "$root/_build/html/offline/$Serve"
     python -m http.server 8001 --bind 127.0.0.1
 }

@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-03 17:04-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/online/index.rst:2
+msgid "在线系统功能（Online System）"
+msgstr "Online System"
+
+#: ../../source/complete_user_guide/online/index.rst:4
+msgid "**此页面的用途**"
+msgstr "**What this page covers**"
+
+#: ../../source/complete_user_guide/online/index.rst:6
+msgid "在线系统（多传送带 / 联机产线）相比离线系统提供额外的产线协同功能。本节内容仅在在线版本中显示。"
+msgstr ""
+"An online system (multi-conveyor / inline production) provides extra line-"
+"coordination features beyond an offline system. This section is shown only "
+"in the online edition."
+
+#: ../../source/complete_user_guide/online/index.rst:8
+msgid "**包含的功能**"
+msgstr "**What's included**"
+
+#: ../../source/complete_user_guide/online/index.rst:10
+msgid "多传送带并行检测与切换。"
+msgstr "Parallel inspection across multiple conveyors, with switching."
+
+#: ../../source/complete_user_guide/online/index.rst:11
+msgid "复检设备（review device）与主控设备分工。"
+msgstr "Division of work between review devices and the main device."
+
+#: ../../source/complete_user_guide/online/index.rst:12
+msgid "在线复检模式（检测到 NG 时暂停巡检、非阻塞模式）。"
+msgstr "Online review modes (pause-on-NG patrol, non-blocking mode)."
+
+#: ../../source/complete_user_guide/online/index.rst:13
+msgid "工位间信号（上游 / 下游工位）。"
+msgstr "Inter-station signaling (upstream / downstream stations)."
+
+#: ../../source/complete_user_guide/online/index.rst:17
+msgid "本节仅适用于在线版本。离线版本不包含上述功能。"
+msgstr ""
+"This section applies only to the online edition. The offline edition does "
+"not include these features."

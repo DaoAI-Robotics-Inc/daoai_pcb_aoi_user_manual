@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"POT-Creation-Date: 2026-06-03 17:03-0700\n"
 "PO-Revision-Date: 2026-05-28 14:17-0700\n"
 "Last-Translator: \n"
-"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/index.rst:4
@@ -34,15 +34,19 @@ msgstr "Creating and Programming a Product"
 msgid "检测"
 msgstr "Inspection"
 
-#: ../../source/index.rst:39
+#: ../../source/index.rst:41
+msgid "在线系统"
+msgstr "Online System"
+
+#: ../../source/index.rst:47
 msgid "模型管理"
 msgstr "Model Management"
 
-#: ../../source/index.rst:45
+#: ../../source/index.rst:53
 msgid "系统设置"
 msgstr "System Settings"
 
-#: ../../source/index.rst:51
+#: ../../source/index.rst:59
 msgid "支持"
 msgstr "Support"
 

@@ -36,11 +36,19 @@ if "%1" == "intl-update" (
 	goto end
 )
 if "%1" == "html-cn" (
-	%SPHINXBUILD% -b html -D language=zh_CN %SOURCEDIR% %BUILDDIR%\html\zh_CN %SPHINXOPTS%
+	%SPHINXBUILD% -b html -d %BUILDDIR%\doctrees\offline\zh_CN -D language=zh_CN %SOURCEDIR% %BUILDDIR%\html\offline\zh_CN %SPHINXOPTS%
 	goto end
 )
 if "%1" == "html-en" (
-	%SPHINXBUILD% -b html -D language=en %SOURCEDIR% %BUILDDIR%\html\en %SPHINXOPTS%
+	%SPHINXBUILD% -b html -d %BUILDDIR%\doctrees\offline\en -D language=en %SOURCEDIR% %BUILDDIR%\html\offline\en %SPHINXOPTS%
+	goto end
+)
+if "%1" == "html-cn-online" (
+	%SPHINXBUILD% -b html -t online -d %BUILDDIR%\doctrees\online\zh_CN -D language=zh_CN %SOURCEDIR% %BUILDDIR%\html\online\zh_CN %SPHINXOPTS%
+	goto end
+)
+if "%1" == "html-en-online" (
+	%SPHINXBUILD% -b html -t online -d %BUILDDIR%\doctrees\online\en -D language=en %SOURCEDIR% %BUILDDIR%\html\online\en %SPHINXOPTS%
 	goto end
 )
 

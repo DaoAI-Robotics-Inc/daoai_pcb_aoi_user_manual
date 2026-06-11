@@ -37,6 +37,14 @@ PCBA AOI 用户手册
 
    complete_user_guide/inspection/index
 
+.. only:: online
+
+   .. toctree::
+      :maxdepth: 1
+      :caption: 在线系统
+
+      complete_user_guide/online/index
+
 .. toctree::
    :maxdepth: 1
    :caption: 模型管理

@@ -1,0 +1,23 @@
+{
+  "index.po": {
+    "在线系统": "Online System"
+  },
+  "complete_user_guide/features/recipe.po": {
+    "**挡停模式（Blocking mode）**": "**Blocking mode**",
+    "在线系统中，可为该产品单独设置传送带的挡停方式。锁定传送带后，**挡停模式** 下拉框可选：": "In an online system you can set this product's conveyor blocking method individually. After locking the conveyor, the **Blocking mode** dropdown offers:",
+    "**气缸（Cylinder）**：使用气缸挡停板件。": "**Cylinder**: stop the board with a cylinder.",
+    "**传感器（Sensor）**：使用传感器挡停板件。": "**Sensor**: stop the board with a sensor.",
+    "选择后立即下发到当前锁定的传送带，并随产品一同保存；下次检测该产品时自动应用。": "The choice is pushed to the locked conveyor immediately and saved with the product; it is applied automatically the next time this product is inspected."
+  },
+  "complete_user_guide/online/index.po": {
+    "在线系统功能（Online System）": "Online System",
+    "**此页面的用途**": "**What this page covers**",
+    "在线系统（多传送带 / 联机产线）相比离线系统提供额外的产线协同功能。本节内容仅在在线版本中显示。": "An online system (multi-conveyor / inline production) provides extra line-coordination features beyond an offline system. This section is shown only in the online edition.",
+    "**包含的功能**": "**What's included**",
+    "多传送带并行检测与切换。": "Parallel inspection across multiple conveyors, with switching.",
+    "复检设备（review device）与主控设备分工。": "Division of work between review devices and the main device.",
+    "在线复检模式（检测到 NG 时暂停巡检、非阻塞模式）。": "Online review modes (pause-on-NG patrol, non-blocking mode).",
+    "工位间信号（上游 / 下游工位）。": "Inter-station signaling (upstream / downstream stations).",
+    "本节仅适用于在线版本。离线版本不包含上述功能。": "This section applies only to the online edition. The offline edition does not include these features."
+  }
+}
