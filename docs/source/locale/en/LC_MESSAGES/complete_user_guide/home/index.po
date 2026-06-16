@@ -5,153 +5,274 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-05 13:45-0700\n"
+"POT-Creation-Date: 2026-06-15 12:26-0700\n"
 "PO-Revision-Date: 2026-06-05 13:50-0700\n"
 "Last-Translator: \n"
-"Language-Team: English\n"
 "Language: en\n"
+"Language-Team: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
+#: ../../source/complete_user_guide/home/index.rst:2
 msgid "主页"
 msgstr "Home"
 
+#: ../../source/complete_user_guide/home/index.rst:4
 msgid "登录后进入主页，这是系统的入口，集中提供三大功能入口、传送带状态、最近检测任务与产品（PCBA）管理。"
-msgstr "After login you land on the Home page — the system's entry point. It gathers the three main entries, conveyor status, recent inspection tasks, and product (PCBA) management."
+msgstr ""
+"After login you land on the Home page — the system's entry point. It "
+"gathers the three main entries, conveyor status, recent inspection tasks,"
+" and product (PCBA) management."
 
+#: ../../source/complete_user_guide/home/index.rst:-1
 msgid "主页概览"
 msgstr "Home overview"
 
+#: ../../source/complete_user_guide/home/index.rst:20
 msgid "进入主页"
 msgstr "Opening the Home Page"
 
+#: ../../source/complete_user_guide/home/index.rst:22
 msgid "登录系统后自动跳转至主页；在任意页面点击顶部导航栏的系统 Logo 也可返回此页面。"
-msgstr "After logging in you are taken to the home page automatically; from any page you can also click the system logo in the top navigation bar to return here."
+msgstr ""
+"After logging in you are taken to the home page automatically; from any "
+"page you can also click the system logo in the top navigation bar to "
+"return here."
 
+#: ../../source/complete_user_guide/home/index.rst:25
 msgid "功能入口"
 msgstr "Main Entries"
 
+#: ../../source/complete_user_guide/home/index.rst:27
 msgid "页面顶部为三个主要入口卡片（管理员/编程员角色可见全部三项；操作员仅可见第一项）："
-msgstr "The top of the page has three main entry cards (administrators/programmers see all three; operators see only the first):"
+msgstr ""
+"The top of the page has three main entry cards "
+"(administrators/programmers see all three; operators see only the first):"
 
+#: ../../source/complete_user_guide/home/index.rst:29
 msgid ":ui-btn:`新建检测任务`：选择一个 PCBA 开始检测（详见 :ref:`检测与反馈`）。"
-msgstr ":ui-btn:`New Inspection Task`: pick a PCBA and start inspecting (see :ref:`检测与反馈`)."
+msgstr ""
+":ui-btn:`New Inspection Task`: pick a PCBA and start inspecting (see "
+":ref:`检测与反馈`)."
 
+#: ../../source/complete_user_guide/home/index.rst:30
 msgid ":ui-btn:`训练PCBA`：注册新的 PCBA / 产品并进入自动编程向导（仅管理员/编程员；详见 :ref:`创建产品`）。"
-msgstr ":ui-btn:`Teach PCBA`: register a new PCBA / product and open the auto-programming wizard (administrators/programmers only; see :ref:`创建产品`)."
+msgstr ""
+":ui-btn:`Teach PCBA`: register a new PCBA / product and open the auto-"
+"programming wizard (administrators/programmers only; see :ref:`创建产品`)."
 
+#: ../../source/complete_user_guide/home/index.rst:31
 msgid ":ui-btn:`工作列表`：查看过去的检测记录与数据分析报告（详见 :ref:`查看检测历史（数据分析报告）`）。"
-msgstr ":ui-btn:`Work List`: view past inspection records and the data analysis report (see :ref:`查看检测历史（数据分析报告）`)."
+msgstr ""
+":ui-btn:`Work List`: view past inspection records and the data analysis "
+"report (see :ref:`查看检测历史（数据分析报告）`)."
 
+#: ../../source/complete_user_guide/home/index.rst:34
 msgid "传送带状态"
 msgstr "Conveyor Status"
 
-msgid "**传送带状态** 区域显示每条传送带（如 Conveyor #A）的实时状态：:ui-opt:`空闲`、:ui-opt:`运行检测任务中` 或 :ui-opt:`定义PCB中`。常用操作："
-msgstr "The **Conveyor Status** area shows each conveyor's live status (e.g. Conveyor #A): :ui-opt:`Idle`, :ui-opt:`Running Inspection`, or :ui-opt:`Defining PCB`. Common actions:"
+#: ../../source/complete_user_guide/home/index.rst:36
+msgid ""
+"**传送带状态** 区域显示每条传送带（如 Conveyor #A）的实时状态：:ui-opt:`空闲`、:ui-opt:`运行检测任务中` 或 "
+":ui-opt:`定义PCB中`。常用操作："
+msgstr ""
+"The **Conveyor Status** area shows each conveyor's live status (e.g. "
+"Conveyor #A): :ui-opt:`Idle`, :ui-opt:`Running Inspection`, or :ui-"
+"opt:`Defining PCB`. Common actions:"
 
-msgid ":ui-btn:`重置轨道`：复位传送带 / 清除当前占用。仅在传送带急停（Emergency Stop）激活时生效；当出现异常占用或需要中断时使用。"
-msgstr ":ui-btn:`Reset Track`: resets the conveyor / clears the current occupancy. Effective only when the conveyor's Emergency Stop is active; use it on abnormal occupancy or to interrupt."
+#: ../../source/complete_user_guide/home/index.rst:38
+msgid ""
+":ui-btn:`重置轨道`：复位传送带 / 清除当前占用。仅在传送带急停（Emergency "
+"Stop）激活时生效；当出现异常占用或需要中断时使用。"
+msgstr ""
+":ui-btn:`Reset Track`: resets the conveyor / clears the current "
+"occupancy. Effective only when the conveyor's Emergency Stop is active; "
+"use it on abnormal occupancy or to interrupt."
 
+#: ../../source/complete_user_guide/home/index.rst:39
 msgid ":ui-btn:`刷新传送带状态`：手动刷新各传送带的最新状态。"
-msgstr ":ui-btn:`Refresh Conveyor Status`: manually refresh each conveyor's latest status."
+msgstr ""
+":ui-btn:`Refresh Conveyor Status`: manually refresh each conveyor's "
+"latest status."
 
+#: ../../source/complete_user_guide/home/index.rst:42
 msgid "最近的检测任务"
 msgstr "Recent Inspection Tasks"
 
-msgid "**最近的检测任务** 列表列出最近执行的检测任务，包含以下列：任务（产品名称）、总产品数、合格率、开始时间。点击任意行可进入对应记录，便于快速回看近期生产情况。"
-msgstr "The **Recent Inspection Tasks** list shows recently run inspection tasks with these columns: Task (product name), total products, pass rate, and start time. Click any row to open that record for a quick look at recent production."
+#: ../../source/complete_user_guide/home/index.rst:44
+msgid ""
+"**最近的检测任务** "
+"列表列出最近执行的检测任务，包含以下列：任务（产品名称）、总产品数、合格率、开始时间。点击任意行可进入对应记录，便于快速回看近期生产情况。"
+msgstr ""
+"The **Recent Inspection Tasks** list shows recently run inspection tasks "
+"with these columns: Task (product name), total products, pass rate, and "
+"start time. Click any row to open that record for a quick look at recent "
+"production."
 
+#: ../../source/complete_user_guide/home/index.rst:47
 msgid "产品（PCBA）管理"
 msgstr "Product (PCBA) Management"
 
+#: ../../source/complete_user_guide/home/index.rst:49
 msgid "右侧 **管理PCBA** 列表展示所有已创建的产品，包含 PCBA类型、创建时间、最后更新等列。产品名称列同时显示该产品已附加的标签（Tag）。"
-msgstr "The **Manage PCBA** list on the right shows all created products, with columns such as PCBA type, created time, and last updated. The product-name column also shows the tags attached to the product."
+msgstr ""
+"The **Manage PCBA** list on the right shows all created products, with "
+"columns such as PCBA type, created time, and last updated. The product-"
+"name column also shows the tags attached to the product."
 
+#: ../../source/complete_user_guide/home/index.rst:51
 msgid "每行提供以下操作："
 msgstr "Each row offers these actions:"
 
+#: ../../source/complete_user_guide/home/index.rst:53
 msgid ":ui-btn:`编辑`：进入该产品的编程页面（标记对齐、模板编辑器、拼板、整板检测等）。"
-msgstr ":ui-btn:`Edit`: open the product's programming page (mark/align, template editor, array, whole-board inspection, etc.)."
+msgstr ""
+":ui-btn:`Edit`: open the product's programming page (mark/align, template"
+" editor, array, whole-board inspection, etc.)."
 
+#: ../../source/complete_user_guide/home/index.rst:54
 msgid ":ui-btn:`复制`：基于现有产品创建一个副本。"
 msgstr ":ui-btn:`Duplicate`: create a copy from an existing product."
 
+#: ../../source/complete_user_guide/home/index.rst:55
 msgid ":ui-btn:`删除`：删除该产品及其数据（需在弹出确认框中确认）。"
 msgstr ":ui-btn:`Delete`: delete the product and its data (confirm in the dialog)."
 
+#: ../../source/complete_user_guide/home/index.rst:56
 msgid ":ui-btn:`编辑信息`：修改产品名称及标签（在弹出的编辑窗口中操作）。"
-msgstr ":ui-btn:`Edit Info`: change the product name and tags (in the pop-up edit window)."
+msgstr ""
+":ui-btn:`Edit Info`: change the product name and tags (in the pop-up edit"
+" window)."
 
+#: ../../source/complete_user_guide/home/index.rst:57
 msgid ":ui-btn:`导出为文件`：将该产品导出为 ``.zip`` 文件，便于备份或迁移到其它机台。"
-msgstr ":ui-btn:`Export to File`: export the product as a ``.zip`` file for backup or migration to another machine."
+msgstr ""
+":ui-btn:`Export to File`: export the product as a ``.zip`` file for "
+"backup or migration to another machine."
 
+#: ../../source/complete_user_guide/home/index.rst:60
 msgid "批量操作"
 msgstr "Bulk Actions"
 
+#: ../../source/complete_user_guide/home/index.rst:62
 msgid "产品表格左侧提供复选框，可多选产品后执行批量操作："
-msgstr "Checkboxes on the left of the product table let you select multiple products and run bulk actions:"
+msgstr ""
+"Checkboxes on the left of the product table let you select multiple "
+"products and run bulk actions:"
 
+#: ../../source/complete_user_guide/home/index.rst:64
 msgid ":ui-btn:`删除所选记录`：同时删除多个已选产品。"
 msgstr ":ui-btn:`Delete Selected`: delete several selected products at once."
 
+#: ../../source/complete_user_guide/home/index.rst:65
 msgid ":ui-btn:`添加标签…`：为所有已选产品批量添加一个标签。"
 msgstr ":ui-btn:`Add Tag…`: add one tag to all selected products at once."
 
+#: ../../source/complete_user_guide/home/index.rst:66
 msgid ":ui-btn:`移除标签…`：从所有已选产品批量移除一个标签。"
 msgstr ":ui-btn:`Remove Tag…`: remove one tag from all selected products at once."
 
+#: ../../source/complete_user_guide/home/index.rst:69
 msgid "标签过滤与搜索"
 msgstr "Tag Filter and Search"
 
+#: ../../source/complete_user_guide/home/index.rst:71
 msgid "产品列表上方提供两种过滤方式："
 msgstr "Two filters are available above the product list:"
 
+#: ../../source/complete_user_guide/home/index.rst:73
 msgid ":ui-param:`按标签筛选` （多选下拉框）：同时选中多个标签时取交集过滤产品列表。"
-msgstr ":ui-param:`Filter by Tag` (multi-select dropdown): selecting several tags filters the list by their intersection."
+msgstr ""
+":ui-param:`Filter by Tag` (multi-select dropdown): selecting several tags"
+" filters the list by their intersection."
 
+#: ../../source/complete_user_guide/home/index.rst:74
 msgid ":ui-param:`搜索` （文本输入框）：按产品名称关键字过滤。"
 msgstr ":ui-param:`Search` (text box): filter by a product-name keyword."
 
+#: ../../source/complete_user_guide/home/index.rst:77
 msgid "上传 PCBA 文件"
 msgstr "Upload PCBA File"
 
-msgid ":ui-btn:`上传PCBA文件(.zip)`：点击此按钮选取由“导出为文件”生成的 ``.zip`` 压缩包，将其导入为新产品；导入完成后产品列表自动刷新。若导入的产品名与系统中已有产品重名，则会提示冲突错误。"
-msgstr ":ui-btn:`Upload PCBA File (.zip)`: click this button to pick a ``.zip`` produced by Export to File and import it as a new product; the list refreshes automatically when done. If the imported product name clashes with an existing one, a conflict error is shown."
+#: ../../source/complete_user_guide/home/index.rst:79
+msgid ""
+":ui-btn:`上传PCBA文件(.zip)`：点击此按钮选取由“导出为文件”生成的 ``.zip`` "
+"压缩包，将其导入为新产品；导入完成后产品列表自动刷新。若导入的产品名与系统中已有产品重名，则会提示冲突错误。"
+msgstr ""
+":ui-btn:`Upload PCBA File (.zip)`: click this button to pick a ``.zip`` "
+"produced by Export to File and import it as a new product; the list "
+"refreshes automatically when done. If the imported product name clashes "
+"with an existing one, a conflict error is shown."
 
+#: ../../source/complete_user_guide/home/index.rst:82
 msgid "磁盘使用情况"
 msgstr "Disk Usage"
 
-msgid "顶部导航栏右侧（全局可见，非仅限主页）显示 **磁盘使用** 微件，以环形图展示 C: 盘已用与剩余空间比例，悬停可查看具体 GB 数据。当可用空间低于 25% 时显示黄色警告，低于 10% 时显示红色严重警告并闪烁。点击刷新图标可立即重新查询。"
-msgstr "The top-right of the navigation bar (visible everywhere, not just on Home) shows a **Disk Usage** widget — a ring chart of used vs. free space on C:. Hover to see the exact GB. Below 25% free it turns yellow (warning); below 10% it turns red and blinks (critical). Click the refresh icon to re-query immediately."
+#: ../../source/complete_user_guide/home/index.rst:84
+msgid ""
+"顶部导航栏右侧（全局可见，非仅限主页）显示 **磁盘使用** 微件，以环形图展示 C: 盘已用与剩余空间比例，悬停可查看具体 GB "
+"数据。当可用空间低于 25% 时显示黄色警告，低于 10% 时显示红色严重警告并闪烁。点击刷新图标可立即重新查询。"
+msgstr ""
+"The top-right of the navigation bar (visible everywhere, not just on "
+"Home) shows a **Disk Usage** widget — a ring chart of used vs. free space"
+" on C:. Hover to see the exact GB. Below 25% free it turns yellow "
+"(warning); below 10% it turns red and blinks (critical). Click the "
+"refresh icon to re-query immediately."
 
+#: ../../source/complete_user_guide/home/index.rst:-1
 msgid "磁盘使用情况微件，显示 C: 容量、警示图标与刷新按钮"
 msgstr "Disk Usage widget showing C: capacity, warning icon, and refresh button"
 
+#: ../../source/complete_user_guide/home/index.rst:91
 msgid "使用提示"
 msgstr "Tips"
 
-msgid "**急停状态下**：:ui-btn:`新建检测任务`、:ui-btn:`编辑` 等按钮将被禁用，需先点击 :ui-btn:`重置轨道` 恢复正常状态。"
-msgstr "**Under Emergency Stop**: buttons such as :ui-btn:`New Inspection Task` and :ui-btn:`Edit` are disabled; click :ui-btn:`Reset Track` first to restore the normal state."
+#: ../../source/complete_user_guide/home/index.rst:95
+msgid ""
+"**急停状态下**：:ui-btn:`新建检测任务`、:ui-btn:`编辑` 等按钮将被禁用，需先点击 :ui-btn:`重置轨道` "
+"恢复正常状态。"
+msgstr ""
+"**Under Emergency Stop**: buttons such as :ui-btn:`New Inspection Task` "
+"and :ui-btn:`Edit` are disabled; click :ui-btn:`Reset Track` first to "
+"restore the normal state."
 
+#: ../../source/complete_user_guide/home/index.rst:96
 msgid ":ui-btn:`编辑信息` 用于修改产品名称和标签；与 :ui-btn:`编辑` 不同，后者进入产品的完整编程页面。"
-msgstr ":ui-btn:`Edit Info` changes the product name and tags; unlike :ui-btn:`Edit`, which opens the product's full programming page."
+msgstr ""
+":ui-btn:`Edit Info` changes the product name and tags; unlike :ui-"
+"btn:`Edit`, which opens the product's full programming page."
 
-msgid ":ui-btn:`训练PCBA` 和产品管理区域仅对 **管理员** 与 **编程员** 角色显示；**操作员** 角色只能看到新建检测任务入口与最近检测任务列表。"
-msgstr ":ui-btn:`Teach PCBA` and the product-management area are shown only to **administrator** and **programmer** roles; the **operator** role sees only the new-inspection-task entry and the recent-tasks list."
+#: ../../source/complete_user_guide/home/index.rst:97
+msgid ""
+":ui-btn:`训练PCBA` 和产品管理区域仅对 **管理员** 与 **编程员** 角色显示；**操作员** "
+"角色只能看到新建检测任务入口与最近检测任务列表。"
+msgstr ""
+":ui-btn:`Teach PCBA` and the product-management area are shown only to "
+"**administrator** and **programmer** roles; the **operator** role sees "
+"only the new-inspection-task entry and the recent-tasks list."
 
+#: ../../source/complete_user_guide/home/index.rst:98
 msgid "标签（Tag）在产品行内以小徽章形式显示，可通过 :ui-btn:`编辑信息` 对单个产品修改标签，或通过批量操作同时为多个产品添加/移除标签。"
-msgstr "Tags appear as small badges in the product row; change a single product's tags via :ui-btn:`Edit Info`, or add/remove tags for several products at once via bulk actions."
+msgstr ""
+"Tags appear as small badges in the product row; change a single product's"
+" tags via :ui-btn:`Edit Info`, or add/remove tags for several products at"
+" once via bulk actions."
 
-msgid "相关章节"
-msgstr "Related chapters"
-
+#: ../../source/complete_user_guide/home/index.rst:102
 msgid ":ref:`检测与反馈` — 由 :ui-btn:`新建检测任务` 进入"
 msgstr ":ref:`检测与反馈` — opened from :ui-btn:`New Inspection Task`"
 
+#: ../../source/complete_user_guide/home/index.rst:103
 msgid ":ref:`创建产品` — 由 :ui-btn:`训练PCBA` 进入"
 msgstr ":ref:`创建产品` — opened from :ui-btn:`Teach PCBA`"
 
+#: ../../source/complete_user_guide/home/index.rst:104
 msgid ":ref:`查看检测历史（数据分析报告）` — 由 :ui-btn:`工作列表` 进入"
 msgstr ":ref:`查看检测历史（数据分析报告）` — opened from :ui-btn:`Work List`"
+
+#~ msgid "相关章节"
+#~ msgstr "Related chapters"
+
