@@ -1,0 +1,19 @@
+{
+  "complete_user_guide/features/mark_align_pcb.po": {
+    ":ui-opt:`TM`": ":ui-opt:`TM`",
+    "模板匹配：无需加载模型，将实时图像与各产品的参考图比对，选最相似的": "Template matching: no model is loaded; the live image is compared against each product's reference image and the most similar one is chosen",
+    "产品有独特印刷 / 丝印图案、但无可读文字、且不希望加载模型": "Products with a distinctive printed / silkscreen pattern but no readable text, where loading a model is undesirable"
+  },
+  "complete_user_guide/features/part_library_and_grouping.po": {
+    "导出 / 导入私有库": "Export / Import the Private Library",
+    "**私有** 分区底部提供 **私有库导出** 与 **导入私有库** 按钮，用于在不同 AOI 设备之间备份或迁移整个私有模板库。": "At the bottom of the **Private** section, the **Export private library** and **Import private library** buttons let you back up or migrate the entire private template library between AOI machines.",
+    "**导出私有库** — 点击 **私有库导出**，系统将全部私有模板打包为一个 ``.zip`` 文件下载。该包不仅包含模板记录，还附带模板所引用的自定义分类器模型文件与可训练的颜色 / 深度图，因此可在另一台设备上完整还原，分类器模型仍可正常加载。": "**Export the private library** — click **Export private library**, and the system packages all private templates into a single ``.zip`` file for download. The package carries not only the template records but also the custom-classifier model files the templates reference and their trainable color / depth maps, so the library can be restored in full on another machine with its classifier models still loadable.",
+    "**导入私有库** — 点击 **导入私有库**，选择一个 ``.zip`` 包（不再支持旧版 ``.csv`` 文件）。导入前系统会先预检本包与现有库的冲突：": "**Import the private library** — click **Import private library** and select a ``.zip`` package (the old ``.csv`` files are no longer supported). Before importing, the system previews any conflicts between the package and the existing library:",
+    "若无冲突，直接导入。": "If there are no conflicts, it imports directly.",
+    "若存在冲突，弹出 **发现现有模板** 对话框，提示本包中有多少模板已存在于库中，并提供两种处理方式：": "If conflicts exist, an **Existing Templates Found** dialog appears, indicating how many templates in the package already exist in the library and offering two ways to proceed:",
+    "**跳过现有模板** — 仅导入新模板，保留库中已有模板。": "**Skip existing** — import only the new templates and keep the existing ones.",
+    "**覆盖现有模板** — 用包中模板替换按料号匹配的现有模板。": "**Overwrite existing** — replace existing templates matched by part number with the ones from the package.",
+    "仅按封装匹配的模板和内置模板始终保留，不会被覆盖。": "Templates matched only by package number, and built-in templates, are always kept and never overwritten.",
+    "导入完成后，系统以提示消息汇总结果，例如\"导入完成 — 新增 X 个，覆盖 Y 个，跳过 Z 个\"。": "When the import finishes, a message summarizes the result, for example \"Import complete — X added, Y overwritten, Z skipped\"."
+  }
+}

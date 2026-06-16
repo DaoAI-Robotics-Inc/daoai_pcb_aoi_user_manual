@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"POT-Creation-Date: 2026-06-15 17:12-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: en <LL@li.org>\n"
 "Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:2
@@ -29,10 +29,10 @@ msgid ""
 "建立结构化的元件分组与复用体系：当多个元件具有相同封装或同时共享封装+料号时，可自动归入同一分组；其检测参数、训练样本与评估结果可在组内聚合。"
 msgstr ""
 "This chapter shows how to build structured component grouping and reuse "
-"through **Package + Part Number (PN)**: when multiple components share the "
-"same package — or share both package and part number — they can be auto-"
-"bucketed into one group, and their inspection parameters, training samples, "
-"and evaluation results aggregate at the group level."
+"through **Package + Part Number (PN)**: when multiple components share "
+"the same package — or share both package and part number — they can be "
+"auto-bucketed into one group, and their inspection parameters, training "
+"samples, and evaluation results aggregate at the group level."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:7
 msgid "核心概念"
@@ -41,8 +41,8 @@ msgstr "Core concepts"
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:9
 msgid "**封装 (Package)** ：几何/焊盘布局形态。是分组的第一层级（顶层）。"
 msgstr ""
-"**Package**: the geometric / pad-layout form factor. The top-level grouping "
-"key."
+"**Package**: the geometric / pad-layout form factor. The top-level "
+"grouping key."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:10
 msgid "**料号 (PN)** ：同一封装下的具体物料型号（可包含品牌/规格差异）。"
@@ -53,15 +53,15 @@ msgstr ""
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:11
 msgid "**分组 (Grouping)** ：系统按照”封装 → 料号 → 单个元件”建立层级，支持按料号、封装、单个元件进行查看。"
 msgstr ""
-"**Grouping**: the system organizes components into the hierarchy **Package →"
-" Part Number → Component**, with views that can be switched among Part "
-"Number, Package, and individual Component."
+"**Grouping**: the system organizes components into the hierarchy "
+"**Package → Part Number → Component**, with views that can be switched "
+"among Part Number, Package, and individual Component."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:12
 msgid "**共享参数** ：同组的检测参数（如检测阈值）可一次设置，所有成员继承。"
 msgstr ""
-"**Shared parameters**: inspection parameters (thresholds, ratio bands, etc.)"
-" can be set once at the group level; every member inherits them."
+"**Shared parameters**: inspection parameters (thresholds, ratio bands, "
+"etc.) can be set once at the group level; every member inherits them."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:15
 msgid "添加封装与料号"
@@ -84,15 +84,15 @@ msgstr ""
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:20
 msgid "在自动编程向导中导入后：创建封装条目 → 关联料号 → 建立封装/料号层级 → 将元件挂接。"
 msgstr ""
-"after importing in the Auto-Programming wizard, the system creates package "
-"entries, links them to part numbers, builds the package/PN hierarchy, and "
-"attaches components."
+"after importing in the Auto-Programming wizard, the system creates "
+"package entries, links them to part numbers, builds the package/PN "
+"hierarchy, and attaches components."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:21
 msgid "缺失字段（如料号）时会按封装先分组，可后续手动补录。"
 msgstr ""
-"When a field is missing (e.g. part number), components are first grouped by "
-"package; fill the rest in manually later."
+"When a field is missing (e.g. part number), components are first grouped "
+"by package; fill the rest in manually later."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:31
 msgid "手动添加："
@@ -115,9 +115,9 @@ msgstr "Edit the package and part-number fields as needed, then click Save."
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:31
 msgid "可选：将该标准化元件 **保存到私有库**，便于下次复用。或者可以从私有库的元件替换当前产品的元件（见”从库中添加”一节）。"
 msgstr ""
-"Optional: **Save to Private Library** so the standardized component can be "
-"reused later, or replace the current product's component from a private-"
-"library entry (see *Add from Library* below)."
+"Optional: **Save to Private Library** so the standardized component can "
+"be reused later, or replace the current product's component from a "
+"private-library entry (see *Add from Library* below)."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:34
 msgid "启用或关闭分组参与"
@@ -132,14 +132,14 @@ msgstr ""
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:42
 msgid "**连接封装**：决定该元件是否加入其封装分组的统计与参数继承。"
 msgstr ""
-"**Link Package**: whether the component joins its package group's statistics"
-" and parameter inheritance."
+"**Link Package**: whether the component joins its package group's "
+"statistics and parameter inheritance."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:43
 msgid "**连接料号**：决定该元件是否参与对应料号的二级分组汇总。"
 msgstr ""
-"**Link Part No.**: whether the component joins the second-tier roll-up for "
-"its part number."
+"**Link Part No.**: whether the component joins the second-tier roll-up "
+"for its part number."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:45
 msgid "典型使用场景："
@@ -154,8 +154,9 @@ msgstr ""
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:48
 msgid "关闭链接分组：当发现某个元件与当前分组内的元件区别较大时，如颜色不同、几何不同时，可以选择取消其链接。"
 msgstr ""
-"Drop a member out of the group — if a component differs substantially from "
-"the rest of the group (different color, different geometry), unlink it."
+"Drop a member out of the group — if a component differs substantially "
+"from the rest of the group (different color, different geometry), unlink "
+"it."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:51
 msgid "分组层级与视图"
@@ -168,8 +169,8 @@ msgstr "System hierarchy: **Package → Part Number → Component**."
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:55
 msgid "左侧元件列表支持三种视图，通过顶部选项卡切换："
 msgstr ""
-"The component list on the left supports three views, switched from the tab "
-"strip at the top:"
+"The component list on the left supports three views, switched from the "
+"tab strip at the top:"
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:-1
 msgid "元件列表视图切换示意"
@@ -178,22 +179,24 @@ msgstr "Component-list view switcher"
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:61
 msgid "**元件**：平铺所有单体，适合逐件核对。展开某行后，可查看该元件的各检测类型。"
 msgstr ""
-"**Component**: flat list of every component — best for one-by-one review. "
-"Expand a row to see the component's inspection types."
+"**Component**: flat list of every component — best for one-by-one review."
+" Expand a row to see the component's inspection types."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:62
 msgid "**料号**：列表显示所有料号，将共享同一料号且已连接的元件折叠为一组；展开后可操作组内的所有检测类型。料号未填写的元件显示为”未知料号”。"
 msgstr ""
-"**Part Number**: lists all part numbers; components sharing the same PN that"
-" are linked collapse into one group. Expand a group to manage its inspection"
-" types. Components with no PN appear under *Unknown Part Number*."
+"**Part Number**: lists all part numbers; components sharing the same PN "
+"that are linked collapse into one group. Expand a group to manage its "
+"inspection types. Components with no PN appear under *Unknown Part "
+"Number*."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:63
 msgid "**封装**：列表显示所有封装，将共享同一封装且已连接的元件折叠为一组；展开后可操作组内的所有检测类型。封装未填写的元件显示为”未知封装”。"
 msgstr ""
-"**Package**: lists all packages; components sharing the same package that "
-"are linked collapse into one group. Expand a group to manage its inspection "
-"types. Components with no package appear under *Unknown Package*."
+"**Package**: lists all packages; components sharing the same package that"
+" are linked collapse into one group. Expand a group to manage its "
+"inspection types. Components with no package appear under *Unknown "
+"Package*."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:65
 msgid "在封装/料号视图下："
@@ -207,14 +210,14 @@ msgstr "Example: result chart"
 msgid "选中某封装或料号 → 右侧可汇总显示该组全部成员的统计（训练集数据的数量、评估结果和图表）。"
 msgstr ""
 "Select a package or part number and the right panel shows aggregated "
-"statistics for every member — training-set counts, evaluation results, and "
-"charts."
+"statistics for every member — training-set counts, evaluation results, "
+"and charts."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:76
 msgid "训练/评估后，可切换”封装”视图查看整体质量；定位某封装异常集中度。"
 msgstr ""
-"After training/evaluation, switch to the **Package** view to see the overall"
-" quality and pinpoint packages with concentrated NGs."
+"After training/evaluation, switch to the **Package** view to see the "
+"overall quality and pinpoint packages with concentrated NGs."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:77
 msgid "进入数据集浏览时，可过滤”当前封装”快速聚焦样本一致性（如焊料外形、引脚偏移模式）。"
@@ -235,8 +238,8 @@ msgstr ""
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:-1
 msgid "查找模板对话框：元件库（公共 / 私有）面板、模板列表与右侧元件信息预览"
 msgstr ""
-"Find Template dialog: library navigator (Public / Private), template list, "
-"and the component-info preview on the right."
+"Find Template dialog: library navigator (Public / Private), template "
+"list, and the component-info preview on the right."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:88
 msgid "对话框左侧为 **元件库** 导航栏，包含两个折叠分区："
@@ -247,7 +250,8 @@ msgstr ""
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:90
 msgid "**公共**：系统内置的封装模板，按类别浏览或搜索。"
 msgstr ""
-"**Public**: built-in package templates, browsable or searchable by category."
+"**Public**: built-in package templates, browsable or searchable by "
+"category."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:91
 msgid "**私有**：用户自行保存的模板，按封装编号列出。可通过 **私有库导出** 和 **导入私有库** 按钮备份或迁移私有库。"
@@ -258,8 +262,7 @@ msgstr ""
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:93
 msgid "中间区域为模板搜索结果列表，列出匹配的模板条目，显示以下列："
-msgstr ""
-"The middle column lists matching templates with the following columns:"
+msgstr "The middle column lists matching templates with the following columns:"
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:95
 msgid "**封装**：模板的封装编号。"
@@ -282,36 +285,123 @@ msgstr ""
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:100
 msgid "点击列表中某行可在右侧预览区查看 **元件信息**，包括封装、料号、描述、元件宽度（mm）和元件长度（mm），同时显示该模板的图形预览。"
 msgstr ""
-"Click a row to see the **Component Info** preview on the right — package, "
-"part number, description, width (mm), and length (mm) — alongside a "
+"Click a row to see the **Component Info** preview on the right — package,"
+" part number, description, width (mm), and length (mm) — alongside a "
 "graphical preview of the template."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:102
 msgid "确认后点击 **使用此模板**，将模板应用到当前选中位置的元件。"
 msgstr ""
-"Click **Use this template** to apply the template to the currently-selected "
-"component position."
+"Click **Use this template** to apply the template to the currently-"
+"selected component position."
 
 #: ../../source/complete_user_guide/features/part_library_and_grouping.rst:105
+msgid "导出 / 导入私有库"
+msgstr "Export / Import the Private Library"
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:107
+msgid "**私有** 分区底部提供 **私有库导出** 与 **导入私有库** 按钮，用于在不同 AOI 设备之间备份或迁移整个私有模板库。"
+msgstr ""
+"At the bottom of the **Private** section, the **Export private library** "
+"and **Import private library** buttons let you back up or migrate the "
+"entire private template library between AOI machines."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:109
+msgid ""
+"**导出私有库** — 点击 **私有库导出**，系统将全部私有模板打包为一个 ``.zip`` "
+"文件下载。该包不仅包含模板记录，还附带模板所引用的自定义分类器模型文件与可训练的颜色 / "
+"深度图，因此可在另一台设备上完整还原，分类器模型仍可正常加载。"
+msgstr ""
+"**Export the private library** — click **Export private library**, and "
+"the system packages all private templates into a single ``.zip`` file for"
+" download. The package carries not only the template records but also the"
+" custom-classifier model files the templates reference and their "
+"trainable color / depth maps, so the library can be restored in full on "
+"another machine with its classifier models still loadable."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:111
+msgid ""
+"**导入私有库** — 点击 **导入私有库**，选择一个 ``.zip`` 包（不再支持旧版 ``.csv`` "
+"文件）。导入前系统会先预检本包与现有库的冲突："
+msgstr ""
+"**Import the private library** — click **Import private library** and "
+"select a ``.zip`` package (the old ``.csv`` files are no longer "
+"supported). Before importing, the system previews any conflicts between "
+"the package and the existing library:"
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:113
+msgid "若无冲突，直接导入。"
+msgstr "If there are no conflicts, it imports directly."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:114
+msgid "若存在冲突，弹出 **发现现有模板** 对话框，提示本包中有多少模板已存在于库中，并提供两种处理方式："
+msgstr ""
+"If conflicts exist, an **Existing Templates Found** dialog appears, "
+"indicating how many templates in the package already exist in the library"
+" and offering two ways to proceed:"
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:116
+msgid "**跳过现有模板** — 仅导入新模板，保留库中已有模板。"
+msgstr ""
+"**Skip existing** — import only the new templates and keep the existing "
+"ones."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:117
+msgid "**覆盖现有模板** — 用包中模板替换按料号匹配的现有模板。"
+msgstr ""
+"**Overwrite existing** — replace existing templates matched by part "
+"number with the ones from the package."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:119
+msgid "仅按封装匹配的模板和内置模板始终保留，不会被覆盖。"
+msgstr ""
+"Templates matched only by package number, and built-in templates, are "
+"always kept and never overwritten."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:121
+msgid "导入完成后，系统以提示消息汇总结果，例如\"导入完成 — 新增 X 个，覆盖 Y 个，跳过 Z 个\"。"
+msgstr ""
+"When the import finishes, a message summarizes the result, for example "
+"\"Import complete — X added, Y overwritten, Z skipped\"."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:-1
+msgid "导入私有库检测到冲突时弹出的\"发现现有模板\"对话框：冲突数量提示、跳过现有模板 / 覆盖现有模板 按钮"
+msgstr ""
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:128
 msgid "保存到私有库"
 msgstr "Save to Private Library"
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:107
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:130
 msgid "在模板编辑器中完成元件的封装、料号配置后，可将其保存至私有库以供后续产品复用："
 msgstr ""
-"Once a component's package and part-number configuration is complete in the "
-"Template Editor, you can save it to the private library for future product "
-"reuse:"
+"Once a component's package and part-number configuration is complete in "
+"the Template Editor, you can save it to the private library for future "
+"product reuse:"
 
-#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:109
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:132
 msgid ""
 "在右侧元件属性面板中，找到 **保存到私有库** "
 "按钮并点击，系统将当前元件的封装定义（包括检测区域及参数）保存为私有模板，下次可通过”从库中添加”检索并应用。"
 msgstr ""
 "In the component-properties panel on the right, find **Save to Private "
 "Library** and click it. The current component's package definition — "
-"including inspection regions and parameters — is saved as a private template"
-" that can later be retrieved through **Add from Library**."
+"including inspection regions and parameters — is saved as a private "
+"template that can later be retrieved through **Add from Library**."
+
+#: ../../source/complete_user_guide/features/part_library_and_grouping.rst:135
+msgid ""
+"保存到私有库前，请先确认该元件 **编辑框的角度** 与该元件在当前 CAD "
+"文件中的角度一致（可通过编辑框的控制柄方向判断）。模板会按此方向被复用，角度不一致会导致后续套用该模板时元件朝向不正确。例如：CAD 中该元件为 "
+"180° 时，元件框方向应朝下。"
+msgstr ""
+"Before saving to the private library, confirm that the **angle of the "
+"component's editing box** matches the component's angle in the current "
+"CAD file (you can tell from the direction of the editing box's control "
+"handles). The template is reused at this orientation, so a mismatched "
+"angle leaves the component facing the wrong way when the template is "
+"later applied. For example, when the component is 180° in CAD, the "
+"component box should point downward."
 
 #~ msgid ""
 #~ "本章介绍如何通过“封装 (Package) + 料号 (PN)” "
@@ -356,3 +446,4 @@ msgstr ""
 
 #~ msgid "进入数据集浏览时，可过滤“当前封装”快速聚焦样本一致性（如焊料外形、引脚偏移模式）。"
 #~ msgstr ""
+

@@ -1,0 +1,5 @@
+{
+  "complete_user_guide/features/part_library_and_grouping.po": {
+    "保存到私有库前，请先确认该元件 **编辑框的角度** 与该元件在当前 CAD 文件中的角度一致（可通过编辑框的控制柄方向判断）。模板会按此方向被复用，角度不一致会导致后续套用该模板时元件朝向不正确。例如：CAD 中该元件为 180° 时，元件框方向应朝下。": "Before saving to the private library, confirm that the **angle of the component's editing box** matches the component's angle in the current CAD file (you can tell from the direction of the editing box's control handles). The template is reused at this orientation, so a mismatched angle leaves the component facing the wrong way when the template is later applied. For example, when the component is 180° in CAD, the component box should point downward."
+  }
+}

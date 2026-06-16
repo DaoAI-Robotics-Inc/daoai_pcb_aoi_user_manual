@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"POT-Creation-Date: 2026-06-15 17:12-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -29,11 +29,13 @@ msgstr "**What this page covers**"
 
 #: ../../source/complete_user_guide/features/create_product.rst:6
 msgid ""
-"本页说明如何通过 **自动编程向导** 完整创建一个新的 PCBA 产品，涵盖基本信息录入、传送带放置、PCB 尺寸确认、完整图像采集等步骤。"
+"本页说明如何通过 **自动编程向导** 完整创建一个新的 PCBA 产品。向导共四步：基本信息、上板与拍摄、配置自动编程、添加CAD（最后一步见 "
+":doc:`auto_programming`）。"
 msgstr ""
-"This page walks through creating a new PCBA product end-to-end using the "
-"**Auto-Programming wizard** — basic info, conveyor placement, PCB "
-"dimensions, and the full-board capture."
+"This page explains how to create a new PCBA product end-to-end with the "
+"**Auto-Programming Wizard**. The wizard has four steps: Basic Info, Conveyor"
+" & Capture, Configure Auto-Program, and Add CAD (the last step is covered in"
+" :doc:`auto_programming`)."
 
 #: ../../source/complete_user_guide/features/create_product.rst:8
 msgid "**如何进入**"
@@ -65,230 +67,100 @@ msgid "**第一步：填写基本信息**"
 msgstr "**Step 1: Fill in Basic Info**"
 
 #: ../../source/complete_user_guide/features/create_product.rst:23
-msgid "在 **基本信息** 步骤中完成以下内容："
-msgstr "On the **Basic Info** step, complete:"
+msgid "在 **基本信息** 步骤中填写以下内容，完成后点击 **下一步**："
+msgstr ""
+"On the **Basic Info** step, fill in the following, then click **Next**:"
 
 #: ../../source/complete_user_guide/features/create_product.rst:25
-msgid "**产品名称** — 在输入框中输入唯一的产品名称。若名称已存在，系统将提示\"名称重复\"错误，需重新输入。"
+msgid "**产品名称** — 输入唯一的产品名称。若名称已存在，系统将提示\"名称重复\"错误，需重新输入。"
 msgstr ""
 "**Product Name** — enter a unique product name. If the name already exists, "
-"the system returns *Name duplicated* and you must change it."
+"the system returns a \"Name duplicated\" error and you must re-enter it."
 
 #: ../../source/complete_user_guide/features/create_product.rst:27
-msgid "**标签** — 在下拉选择框中选择或输入标签，可用于对产品分类管理；多个标签以逗号分隔。"
+msgid "**标签** — 在下拉框中选择或输入标签，可用于对产品分类管理；多个标签以逗号分隔。"
 msgstr ""
 "**Tags** — pick or type tags from the drop-down to categorize the product; "
 "comma-separated for multiple tags."
 
 #: ../../source/complete_user_guide/features/create_product.rst:29
-msgid "**自动编程检测类型：** — 勾选需要 AI 自动生成 ROI 的检测类型。每种类型下可展开选择具体的封装子类。"
+msgid ""
+"**板长 / 板宽** — 直接输入已知的 PCB 尺寸，单位毫米，通常来自产品图纸或 SMT 工单。尺寸在产品创建后固定，向导不再通过相机测量尺寸。"
 msgstr ""
-"**Auto-Programming inspection types** — check the inspection types you want "
-"the AI to auto-generate ROIs for. Each type can be expanded to pick specific"
-" package sub-classes."
+"**Board Length / Board Width** — type in the known PCB dimensions in "
+"millimeters, usually taken from the product drawing or the SMT work order. "
+"The dimensions are fixed once the product is created; the wizard no longer "
+"measures them with the camera."
 
-#: ../../source/complete_user_guide/features/create_product.rst:31
-msgid "支持的检测类型如下："
-msgstr "Supported inspection types:"
-
-#: ../../source/complete_user_guide/features/create_product.rst:33
-msgid "**本体** — 检测元件是否贴装在位（本体检测）。"
+#: ../../source/complete_user_guide/features/create_product.rst:32
+msgid "检测类型、自动编程参数与健康检查不再在本步骤设置，已移至第三步 **配置自动编程**，在拼接出的完整图像前完成配置。"
 msgstr ""
-"**Body** — detects whether the component is mounted in place (body "
-"inspection)."
+"Inspection types, auto-programming parameters, and health checks are no "
+"longer set on this step — they have moved to Step 3, **Configure Auto-"
+"Program**, where they are configured in front of the stitched full image."
 
-#: ../../source/complete_user_guide/features/create_product.rst:34
-msgid "**极性** — 检测极性方向是否正确。"
-msgstr "**Polarity** — verifies the polarity orientation."
-
-#: ../../source/complete_user_guide/features/create_product.rst:35
-msgid "**焊点** — 检测焊点质量（润湿、偏移等）。"
+#: ../../source/complete_user_guide/features/create_product.rst:-1
+msgid "自动编程向导第一步 基本信息：产品名称、标签、PCB 尺寸（板长度 / 板宽度）输入"
 msgstr ""
-"**Solder Joint** — assesses solder-joint quality (wetting, offset, and so "
-"on)."
-
-#: ../../source/complete_user_guide/features/create_product.rst:36
-msgid "**IC引脚** — 检测 IC 引脚状态（翘脚、桥连、缺失等），适用于 SOIC / SOP / QFP 等细间距器件。"
-msgstr ""
-"**IC Lead** — inspects IC lead condition (lifted leads, bridges, missing "
-"leads, and so on); used for fine-pitch packages such as SOIC / SOP / QFP."
-
-#: ../../source/complete_user_guide/features/create_product.rst:37
-msgid "**文字** — 检测元件丝印文字（OCR）。"
-msgstr "**Text** — reads the component silkscreen text (OCR)."
+"Auto-Programming Wizard Step 1, Basic Info: product name, labels, and PCB "
+"dimensions (board length / width) input"
 
 #: ../../source/complete_user_guide/features/create_product.rst:38
-msgid "**焊盘沾胶** — 检测焊盘上的红胶污染。"
-msgstr "**Glue on Pad** — detects red-glue contamination on solder pads."
-
-#: ../../source/complete_user_guide/features/create_product.rst:39
-msgid "**元件本体颜色** — 检测元件本体颜色，适用于 CRM、LED 等有颜色要求的元件。"
-msgstr ""
-"**Body Color** — checks the component body color; used for parts with color "
-"requirements such as CRM and LED."
+msgid "**第二步：上板与拍摄**"
+msgstr "**Step 2: Conveyor & Capture**"
 
 #: ../../source/complete_user_guide/features/create_product.rst:40
-msgid "**DIP** — 检测波峰焊后的 DIP 焊点，包含炉后（dip_solder）和炉前（dip_pin）两种封装子类。"
+msgid "本步骤将\"上板\"与\"完整拍摄\"合并为一个连续动作："
 msgstr ""
-"**DIP** — inspects DIP solder joints after wave soldering; covers both post-"
-"wave (``dip_solder``) and pre-wave (``dip_pin``) sub-classes."
+"This step merges loading the board and full capture into one continuous "
+"action:"
 
-#: ../../source/complete_user_guide/features/create_product.rst:43
-msgid "不同类型的封装可展开勾选，例如\"本体\"类型下包含 Capacitor、Resistor、LED、QFP 等。DIP 类型默认不选中，需手动启用。"
-msgstr ""
-"Each type expands to package-level checkboxes — for example, **Body** covers"
-" Capacitor, Resistor, LED, QFP, and others. **DIP** is off by default and "
-"must be enabled explicitly."
-
-#: ../../source/complete_user_guide/features/create_product.rst:45
-msgid "**自动编程参数** — 根据已勾选的检测类型，展开对应的参数配置（仅当对应类型启用时显示）："
-msgstr ""
-"**Auto-Programming parameters** — show the parameter block for each enabled "
-"type (only visible when the corresponding type is on):"
-
-#: ../../source/complete_user_guide/features/create_product.rst:47
-msgid "**DIP 参数** （DIP 检测启用时显示）："
-msgstr "**DIP parameters** (shown when DIP inspection is enabled):"
-
-#: ../../source/complete_user_guide/features/create_product.rst:49
-msgid "**邻近距离 (像素)** — DIP 焊点间邻近距离阈值（像素），用于判断相邻焊点归属。"
-msgstr ""
-"**Adjacency distance (pixels)** — adjacency threshold between DIP joints (in"
-" pixels), used to decide which joints group together."
-
-#: ../../source/complete_user_guide/features/create_product.rst:50
-msgid "**ROI 扩展 (%)** — DIP ROI 的边缘向外扩展比例。"
-msgstr "**ROI expansion (%)** — outward edge expansion ratio for the DIP ROI."
-
-#: ../../source/complete_user_guide/features/create_product.rst:52
-msgid "**桥接** — 勾选复选框以启用桥接检测；取消勾选则禁用。"
-msgstr ""
-"**Bridge** — check the box to enable bridge inspection; uncheck to disable."
-
-#: ../../source/complete_user_guide/features/create_product.rst:54
-msgid "**邻近距离 (像素)** — 桥接检测的邻近距离阈值（像素）；禁用时不可编辑。"
-msgstr ""
-"**Adjacency distance (pixels)** — adjacency threshold for bridge detection "
-"(in pixels); not editable when disabled."
-
-#: ../../source/complete_user_guide/features/create_product.rst:56
-msgid "**焊盘沾胶参数** （焊盘沾胶检测启用时显示）："
-msgstr ""
-"**Glue-on-Pad parameters** (shown when Glue-on-Pad inspection is enabled):"
-
-#: ../../source/complete_user_guide/features/create_product.rst:58
-msgid "**ROI 扩展 (%)** — 焊盘沾胶 ROI 的边缘扩展比例，支持负值（缩小 ROI）。"
-msgstr ""
-"**ROI expansion (%)** — edge expansion ratio for the Glue-on-Pad ROI; "
-"negative values shrink the ROI."
-
-#: ../../source/complete_user_guide/features/create_product.rst:60
-msgid "**元件本体颜色参数** （元件本体颜色检测启用时显示）："
-msgstr ""
-"**Body Color parameters** (shown when Body Color inspection is enabled):"
-
-#: ../../source/complete_user_guide/features/create_product.rst:62
-msgid "**本体 ROI 面积 (%)** — 元件本体颜色 ROI 占本体区域的面积比例。"
-msgstr ""
-"**Body ROI area (%)** — proportion of the body region used by the Body Color"
-" ROI."
-
-#: ../../source/complete_user_guide/features/create_product.rst:64
-msgid "**健康检查** — 设置自动编程完成后的质量验证选项："
-msgstr ""
-"**Health checks** — quality-verification options that run after Auto-"
-"Programming finishes:"
-
-#: ../../source/complete_user_guide/features/create_product.rst:66
-msgid "**数量检查** — 校验每个元件是否具有期望数量的焊点及 IC 引脚；有 CAD 封装信息时按封装精确匹配引脚数。"
-msgstr ""
-"**Count check** — verifies that every component carries the expected number "
-"of solder joints and IC leads. When CAD package data is available, lead "
-"counts are matched per package."
-
-#: ../../source/complete_user_guide/features/create_product.rst:67
-msgid "**质量检查** — 校验焊点对称性、IC 引脚一致性及排阻引脚覆盖率。"
-msgstr ""
-"**Quality check** — verifies solder-joint symmetry, IC lead consistency, and"
-" resistor-array lead coverage."
-
-#: ../../source/complete_user_guide/features/create_product.rst:69
-msgid "完成 **基本信息** 步骤后，点击 **下一步** 继续以下步骤。"
-msgstr "Once **Basic Info** is complete, click **Next** to continue."
-
-#: ../../source/complete_user_guide/features/create_product.rst:-1
-msgid "自动编程向导基本信息步骤：产品名称、标签、检测类型、自动编程参数、健康检查"
-msgstr ""
-"Auto-Programming wizard Basic Info step: product name, tags, inspection "
-"types, Auto-Programming parameters, and health checks."
-
-#: ../../source/complete_user_guide/features/create_product.rst:75
-msgid "**第二步：放置 PCB 与锁定传送带**"
-msgstr "**Step 2: Place the PCB and lock the conveyor**"
-
-#: ../../source/complete_user_guide/features/create_product.rst:77
-msgid "将 PCB 平整放置于传送带中央，选择传送带并点击\"锁定\"。确认或输入传送带宽度后点击\"进板\"，等待 PCB 自动输送至拍摄区域，再点击\"下一步\"。"
+#: ../../source/complete_user_guide/features/create_product.rst:42
+msgid "将 PCB 平整放置于传送带中央，选择传送带并点击 **锁定**。"
 msgstr ""
 "Place the PCB flat in the center of the conveyor, select the conveyor, and "
-"click **Lock**. Confirm or enter the conveyor width, click **PCB In**, wait "
-"for the board to advance into the capture area, then click **Next**."
+"click **Lock**."
 
-#: ../../source/complete_user_guide/features/create_product.rst:-1
-msgid "将 PCB 放在传送带上示意"
-msgstr "Placing the PCB on the conveyor"
+#: ../../source/complete_user_guide/features/create_product.rst:43
+msgid "在线版本中确认或调整 **传送带宽度**。"
+msgstr "On the online version, confirm or adjust the **Conveyor Width**."
 
-#: ../../source/complete_user_guide/features/create_product.rst:83
-msgid "**第三步：输入或计算尺寸**"
-msgstr "**Step 3: Enter or calculate the dimensions**"
-
-#: ../../source/complete_user_guide/features/create_product.rst:85
-msgid "若已知 PCB 尺寸，直接输入宽、高（mm）。"
-msgstr "If you know the PCB dimensions, enter width and height (mm) directly."
-
-#: ../../source/complete_user_guide/features/create_product.rst:87
-msgid ""
-"若未知：仅调整相机 X/Y（Z 保持不变）分别拍摄左下与右上；点击\"选择像素\"依次点 PCB 左下角与右上角像素后，点 "
-"**自动计算**，系统推算尺寸供后续完整拍摄。"
+#: ../../source/complete_user_guide/features/create_product.rst:44
+msgid "点击 **进板**，等待 PCB 自动输送至拍摄区域。"
 msgstr ""
-"If unknown, move the camera only in X and Y (leave Z unchanged) and capture "
-"the bottom-left and top-right corners separately. Click **Select Pixel**, "
-"click the PCB's bottom-left and top-right pixels in turn, then click **Auto-"
-"calculate**; the system infers the dimensions for the subsequent full "
-"capture."
+"Click **Load Board** and wait for the PCB to be conveyed to the capture "
+"area."
 
-#: ../../source/complete_user_guide/features/create_product.rst:-1
-msgid "自动尺寸计算示意"
-msgstr "Auto dimension calculation"
-
-#: ../../source/complete_user_guide/features/create_product.rst:93
-msgid "**第四步：完整 PCB 拍摄**"
-msgstr "**Step 4: Full PCB Capture**"
-
-#: ../../source/complete_user_guide/features/create_product.rst:95
-msgid ""
-"点击\"拍摄\"后系统联动相机与传送带分区采集并拼接生成完整 PCB "
-"图像。随后点击\"定义区域\"框选有效区域（通常为整板；若需排除治具边缘，可适当收缩）。请务必使用洁净、无缺陷的良品板（Golden "
-"board）。必要时可在该界面调整 **曝光时间**、**增益**、**gamma** 等相机参数并重新拍摄。"
+#: ../../source/complete_user_guide/features/create_product.rst:45
+msgid "点击 **拍摄2D图像**，系统联动相机与传送带分区采集并拼接生成完整 PCB 图像，拼接结果直接显示在本步骤的画布中。"
 msgstr ""
-"Click **Capture**; the system coordinates the camera and conveyor to acquire"
-" the board in tiles and stitch the full PCB image. Then click **Define "
-"Region** to box the effective area (usually the entire board; shrink the box"
-" if fixture edges should be excluded). Always use a clean, defect-free "
-"**Golden board**. Camera parameters — **Exposure**, **Gain**, **gamma** — "
-"can be tuned on this screen and the capture re-run if needed."
+"Click **Capture 2D Image**; the system coordinates the camera and conveyor "
+"to acquire the board in tiles and stitch the full PCB image, which is shown "
+"directly on this step's canvas."
+
+#: ../../source/complete_user_guide/features/create_product.rst:47
+msgid ""
+"请务必使用洁净、无缺陷的良品板（Golden board）。必要时可在该界面调整 **曝光时间**、**增益**、**gamma** "
+"等相机参数后重新拍摄。拼接图像满意后点击 **下一步**。"
+msgstr ""
+"Always use a clean, defect-free **Golden board**. If needed, tune camera "
+"parameters such as **Exposure**, **Gain**, and **gamma** on this screen and "
+"re-capture. Once the stitched image looks right, click **Next**."
 
 #: ../../source/complete_user_guide/features/create_product.rst:-1
-msgid "完整 PCB 拍摄"
-msgstr "Full PCB Capture"
+msgid "上板与拍摄步骤：右侧传送带控制（锁定 / 进板 / 拍摄2D）与相机参数，左侧拼接出的完整 PCB 图像"
+msgstr ""
+"Conveyor & Capture step: conveyor controls (Lock / PCB In / Capture 2D) and "
+"camera parameters on the right, the stitched full PCB image on the left"
 
-#: ../../source/complete_user_guide/features/create_product.rst:101
+#: ../../source/complete_user_guide/features/create_product.rst:53
 msgid "相机参数会随产品一同创建，并在检测时沿用同一组参数采集，确保编程图像与检测图像一致。如效果不佳，可重新拍摄覆盖上一版本。"
 msgstr ""
 "Camera parameters are saved with the product and reused at inspection time, "
 "so the programming image and the inspection image stay consistent. If the "
 "result isn't acceptable, re-capture to overwrite the prior version."
 
-#: ../../source/complete_user_guide/features/create_product.rst:103
+#: ../../source/complete_user_guide/features/create_product.rst:55
 msgid "**相机参数**"
 msgstr "**Camera parameters**"
 
@@ -296,247 +168,441 @@ msgstr "**Camera parameters**"
 msgid "相机参数示意"
 msgstr "Camera parameters"
 
-#: ../../source/complete_user_guide/features/create_product.rst:109
+#: ../../source/complete_user_guide/features/create_product.rst:61
 msgid "绝大多数情况下，只需调整 **曝光时间** 让图像亮度合适即可；**增益** 与 **gamma** 用于色彩或暗部细节微调，非必要不修改。"
 msgstr ""
 "In most cases just tune **Exposure** to set image brightness. **Gain** and "
 "**gamma** are reserved for fine-tuning color or shadow detail — leave them "
 "alone unless you have to."
 
-#: ../../source/complete_user_guide/features/create_product.rst:111
-msgid "完成后会进入产品编程选项界面，从这一步开始，可以分为全自动编程、半自动编程和手动编程，详见 :doc:`auto_programming`。"
-msgstr ""
-"Once complete, the wizard hands off to the programming options page; from "
-"there you can choose Full Auto-Programming, Semi-Auto Programming, or Manual"
-" Programming. See :doc:`auto_programming`."
+#: ../../source/complete_user_guide/features/create_product.rst:63
+msgid "**第三步：配置自动编程**"
+msgstr "**Step 3: Configure Auto-Program**"
 
-#: ../../source/complete_user_guide/features/create_product.rst:113
+#: ../../source/complete_user_guide/features/create_product.rst:65
+msgid ""
+"在 **配置自动编程** 步骤中，系统显示上一步拼接出的完整图像（只读）。在此定义检测区域、拼板信息、检测类型与参数、健康检查，完成后点击 "
+"**下一步**。"
+msgstr ""
+"On the **Configure Auto-Program** step, the system shows the full image "
+"stitched in the previous step (read-only). Here you define the inspection "
+"region, panelization, inspection types and parameters, and health checks; "
+"then click **Next**."
+
+#: ../../source/complete_user_guide/features/create_product.rst:67
+msgid "**定义检测区域** — 点击 **定义区域**，支持两种方式："
+msgstr ""
+"**Define the inspection region** — click **Define Region**; two ways are "
+"supported:"
+
+#: ../../source/complete_user_guide/features/create_product.rst:69
+msgid "**设置矩形检测区域** — 在图像上拖动框选矩形范围。"
+msgstr ""
+"**Set Rect Inspection Region** — drag to box a rectangular area on the "
+"image."
+
+#: ../../source/complete_user_guide/features/create_product.rst:70
+msgid "**设置多边形检测区域** — 在图像上 **按顺时针方向** 依次点击多个顶点，**最后双击鼠标** 完成多边形区域。"
+msgstr ""
+"**Set Polygon Inspection Region** — click vertices in **clockwise** order on"
+" the image, then **double-click** to finish the polygon."
+
+#: ../../source/complete_user_guide/features/create_product.rst:72
+msgid ""
+"检测区域决定自动编程 AI 识别和生成检测框的范围，通常框选整板；若需排除治具边缘，可适当收缩。必须在进入下一步前完成定义，否则系统会提示错误。"
+msgstr ""
+"The inspection region defines the area within which auto-programming detects"
+" and generates inspection boxes — usually the whole board; shrink it if "
+"fixture edges should be excluded. It must be defined before you advance, "
+"otherwise the system reports an error."
+
+#: ../../source/complete_user_guide/features/create_product.rst:74
+msgid ""
+"**拼板** — 若产品为拼板，开启 **启用拼板** 开关并填写 **行数** / **列数**。启用拼板时，上方检测区域必须绘制在 "
+"**单个代表性子板** 周围，而非整块拼板；自动编程结束后系统会据此自动构建拼板阵列，详见 :doc:`auto_programming` "
+"中的\"编程后的自动处理\"一节。"
+msgstr ""
+"**Panelization** — if the product is panelized, turn on the **Enable "
+"panelization** switch and enter **Num of Rows** / **Num of Cols**. When "
+"panelization is on, the inspection region above must be drawn around **a "
+"single representative sub-board**, not the whole panel; after auto-"
+"programming the system builds the panel array accordingly. See the \"Post-"
+"programming automation\" section in :doc:`auto_programming`."
+
+#: ../../source/complete_user_guide/features/create_product.rst:76
+msgid "**自动编程检测类型：** — 勾选需要 AI 自动生成 ROI 的检测类型。每种类型下可展开选择具体的封装子类："
+msgstr ""
+"**AI-modelled inspection types:** — check the inspection types you want the "
+"AI to auto-generate ROIs for. Each type can be expanded to pick specific "
+"package sub-classes:"
+
+#: ../../source/complete_user_guide/features/create_product.rst:78
+msgid "**本体** — 检测元件是否贴装在位（本体检测）。"
+msgstr ""
+"**Body** — detects whether the component is mounted in place (body "
+"inspection)."
+
+#: ../../source/complete_user_guide/features/create_product.rst:79
+msgid "**极性** — 检测极性方向是否正确。"
+msgstr "**Polarity** — verifies the polarity orientation."
+
+#: ../../source/complete_user_guide/features/create_product.rst:80
+msgid "**焊点** — 检测焊点质量（润湿、偏移等）。"
+msgstr ""
+"**Solder Joint** — assesses solder-joint quality (wetting, offset, and so "
+"on)."
+
+#: ../../source/complete_user_guide/features/create_product.rst:81
+msgid "**IC引脚** — 检测 IC 引脚状态（翘脚、桥连、缺失等），适用于 SOIC / SOP / QFP 等细间距器件。"
+msgstr ""
+"**IC Lead** — inspects IC lead condition (lifted leads, bridges, missing "
+"leads, and so on); used for fine-pitch packages such as SOIC / SOP / QFP."
+
+#: ../../source/complete_user_guide/features/create_product.rst:82
+msgid "**文字** — 检测元件丝印文字（OCR）。"
+msgstr "**Text** — reads the component silkscreen text (OCR)."
+
+#: ../../source/complete_user_guide/features/create_product.rst:83
+msgid "**焊盘沾胶** — 检测焊盘上的红胶污染。"
+msgstr "**Glue on Pad** — detects red-glue contamination on solder pads."
+
+#: ../../source/complete_user_guide/features/create_product.rst:84
+msgid "**元件本体颜色** — 检测元件本体颜色，适用于 CRM、LED 等有颜色要求的元件。"
+msgstr ""
+"**Body Color** — checks the component body color; used for parts with color "
+"requirements such as CRM and LED."
+
+#: ../../source/complete_user_guide/features/create_product.rst:85
+msgid "**DIP** — 检测波峰焊后的 DIP 焊点，包含炉后（dip_solder）和炉前（dip_pin）两种封装子类。"
+msgstr ""
+"**DIP** — inspects DIP solder joints after wave soldering; covers both post-"
+"wave (``dip_solder``) and pre-wave (``dip_pin``) sub-classes."
+
+#: ../../source/complete_user_guide/features/create_product.rst:88
+msgid "不同类型的封装可展开勾选，例如\"本体\"类型下包含 Capacitor、Resistor、LED、QFP 等。DIP 类型默认不选中，需手动启用。"
+msgstr ""
+"Each type expands to package-level checkboxes — for example, **Body** covers"
+" Capacitor, Resistor, LED, QFP, and others. **DIP** is off by default and "
+"must be enabled explicitly."
+
+#: ../../source/complete_user_guide/features/create_product.rst:90
+msgid "**自动编程参数** — 根据已勾选的检测类型，展开对应的参数配置，仅当对应类型启用时显示："
+msgstr ""
+"**Auto Programming Parameters** — expand the parameter block for the "
+"inspection types you checked; each block is shown only when its type is "
+"enabled:"
+
+#: ../../source/complete_user_guide/features/create_product.rst:92
+msgid "**DIP 参数** — DIP 检测启用时显示："
+msgstr "**DIP parameters** — shown when DIP inspection is enabled:"
+
+#: ../../source/complete_user_guide/features/create_product.rst:94
+msgid "**邻近距离 (像素)** — DIP 焊点间邻近距离阈值（像素），用于判断相邻焊点归属。"
+msgstr ""
+"**Adjacency distance (pixels)** — adjacency threshold between DIP joints (in"
+" pixels), used to decide which joints group together."
+
+#: ../../source/complete_user_guide/features/create_product.rst:95
+msgid "**ROI 扩展 (%)** — DIP ROI 的边缘向外扩展比例。"
+msgstr "**ROI expansion (%)** — outward edge expansion ratio for the DIP ROI."
+
+#: ../../source/complete_user_guide/features/create_product.rst:97
+msgid "**桥接** — 勾选复选框以启用桥接检测；取消勾选则禁用。"
+msgstr ""
+"**Bridge** — check the box to enable bridge inspection; uncheck to disable."
+
+#: ../../source/complete_user_guide/features/create_product.rst:99
+msgid "**邻近距离 (像素)** — 桥接检测的邻近距离阈值（像素）；禁用时不可编辑。"
+msgstr ""
+"**Adjacency distance (pixels)** — adjacency threshold for bridge detection "
+"(in pixels); not editable when disabled."
+
+#: ../../source/complete_user_guide/features/create_product.rst:101
+msgid "**焊盘沾胶参数** — 焊盘沾胶检测启用时显示："
+msgstr ""
+"**Glue on Pad parameters** — shown when Glue on Pad inspection is enabled:"
+
+#: ../../source/complete_user_guide/features/create_product.rst:103
+msgid "**ROI 扩展 (%)** — 焊盘沾胶 ROI 的边缘扩展比例，支持负值（缩小 ROI）。"
+msgstr ""
+"**ROI expansion (%)** — edge expansion ratio for the Glue-on-Pad ROI; "
+"negative values shrink the ROI."
+
+#: ../../source/complete_user_guide/features/create_product.rst:105
+msgid "**元件本体颜色参数** — 元件本体颜色检测启用时显示："
+msgstr ""
+"**Component Body Color parameters** — shown when Component Body Color "
+"inspection is enabled:"
+
+#: ../../source/complete_user_guide/features/create_product.rst:107
+msgid "**本体 ROI 面积 (%)** — 元件本体颜色 ROI 占本体区域的面积比例。"
+msgstr ""
+"**Body ROI area (%)** — proportion of the body region used by the Body Color"
+" ROI."
+
+#: ../../source/complete_user_guide/features/create_product.rst:109
+msgid "**健康检查** — 设置自动编程完成后的质量验证选项："
+msgstr ""
+"**Health checks** — quality-verification options that run after Auto-"
+"Programming finishes:"
+
+#: ../../source/complete_user_guide/features/create_product.rst:111
+msgid "**数量检查** — 校验每个元件是否具有期望数量的焊点及 IC 引脚；有 CAD 封装信息时按封装精确匹配引脚数。"
+msgstr ""
+"**Count check** — verifies that every component carries the expected number "
+"of solder joints and IC leads. When CAD package data is available, lead "
+"counts are matched per package."
+
+#: ../../source/complete_user_guide/features/create_product.rst:112
+msgid "**质量检查** — 校验焊点对称性、IC 引脚一致性及排阻引脚覆盖率。"
+msgstr ""
+"**Quality check** — verifies solder-joint symmetry, IC lead consistency, and"
+" resistor-array lead coverage."
+
+#: ../../source/complete_user_guide/features/create_product.rst:-1
+msgid "配置自动编程步骤：左侧检测区域绘制工具与拼接图像，右侧拼板 / 检测类型 / 检测参数 / 健康检查折叠面板"
+msgstr ""
+"Configure Auto-Program step: region-drawing tools and the stitched image on "
+"the left, the Panelization / Inspection Types / Auto Programming Parameters "
+"/ Health Checks collapse panels on the right"
+
+#: ../../source/complete_user_guide/features/create_product.rst:118
+msgid ""
+"完成 **配置自动编程** 步骤后点击 **下一步**，进入 **添加CAD (可选)** 步骤；可选择全自动编程、半自动编程或手动编程，详见 "
+":doc:`auto_programming`。"
+msgstr ""
+"After finishing the **Configure Auto-Program** step, click **Next** to reach"
+" the **Add CAD (Optional)** step; from there you can choose full auto-"
+"programming, semi-auto programming, or manual programming. See "
+":doc:`auto_programming`."
+
+#: ../../source/complete_user_guide/features/create_product.rst:120
 msgid "**自动检测支持类型总览**"
 msgstr "**Auto-detection support overview**"
 
-#: ../../source/complete_user_guide/features/create_product.rst:119
+#: ../../source/complete_user_guide/features/create_product.rst:126
 msgid "本体"
 msgstr "Body"
 
-#: ../../source/complete_user_guide/features/create_product.rst:120
+#: ../../source/complete_user_guide/features/create_product.rst:127
 msgid "极性"
 msgstr "Polarity"
 
-#: ../../source/complete_user_guide/features/create_product.rst:121
+#: ../../source/complete_user_guide/features/create_product.rst:128
 msgid "焊点"
 msgstr "Solder Joint"
 
-#: ../../source/complete_user_guide/features/create_product.rst:122
+#: ../../source/complete_user_guide/features/create_product.rst:129
 msgid "IC 引脚"
 msgstr "IC Lead"
 
-#: ../../source/complete_user_guide/features/create_product.rst:123
+#: ../../source/complete_user_guide/features/create_product.rst:130
 msgid "文字"
 msgstr "Text"
 
-#: ../../source/complete_user_guide/features/create_product.rst:124
+#: ../../source/complete_user_guide/features/create_product.rst:131
 msgid "电容器（片式电容）"
 msgstr "Chip capacitor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:125
-#: ../../source/complete_user_guide/features/create_product.rst:149
+#: ../../source/complete_user_guide/features/create_product.rst:132
+#: ../../source/complete_user_guide/features/create_product.rst:156
 msgid "铝电解电容"
 msgstr "Aluminum electrolytic capacitor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:126
 #: ../../source/complete_user_guide/features/create_product.rst:133
+#: ../../source/complete_user_guide/features/create_product.rst:140
 msgid "电阻器（片式）"
 msgstr "Chip resistor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:127
+#: ../../source/complete_user_guide/features/create_product.rst:134
 msgid "SOIC / SOP / TSOP / TSSOP / MSOP（细间距：检测翘脚、短少、桥连、形变）"
 msgstr ""
 "SOIC / SOP / TSOP / TSSOP / MSOP (fine pitch: lifted leads, missing or short"
 " leads, bridges, deformation)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:128
-#: ../../source/complete_user_guide/features/create_product.rst:131
+#: ../../source/complete_user_guide/features/create_product.rst:135
+#: ../../source/complete_user_guide/features/create_product.rst:138
 msgid "电容器（片式）"
 msgstr "Chip capacitor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:129
+#: ../../source/complete_user_guide/features/create_product.rst:136
 msgid "电阻器（片式电阻）"
 msgstr "Chip resistor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:130
-#: ../../source/complete_user_guide/features/create_product.rst:141
-#: ../../source/complete_user_guide/features/create_product.rst:154
+#: ../../source/complete_user_guide/features/create_product.rst:137
+#: ../../source/complete_user_guide/features/create_product.rst:148
+#: ../../source/complete_user_guide/features/create_product.rst:161
 msgid "钽电容"
 msgstr "Tantalum capacitor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:132
+#: ../../source/complete_user_guide/features/create_product.rst:139
 msgid "QFP（四边引脚：翘起、桥连、缺失、偏移、脚形不规则）"
 msgstr ""
 "QFP (four-sided leads: lifted leads, bridges, missing leads, offset, "
 "irregular lead shape)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:134
-#: ../../source/complete_user_guide/features/create_product.rst:138
-#: ../../source/complete_user_guide/features/create_product.rst:146
+#: ../../source/complete_user_guide/features/create_product.rst:141
+#: ../../source/complete_user_guide/features/create_product.rst:145
+#: ../../source/complete_user_guide/features/create_product.rst:153
 msgid "多层片式电感器"
 msgstr "Multilayer chip inductor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:135
-#: ../../source/complete_user_guide/features/create_product.rst:139
+#: ../../source/complete_user_guide/features/create_product.rst:142
+#: ../../source/complete_user_guide/features/create_product.rst:146
 msgid "LED"
 msgstr "LED"
 
-#: ../../source/complete_user_guide/features/create_product.rst:136
+#: ../../source/complete_user_guide/features/create_product.rst:143
 msgid "铝电解电容（焊脚 / 焊盘润湿）"
 msgstr "Aluminum electrolytic capacitor (lead / pad wetting)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:140
-#: ../../source/complete_user_guide/features/create_product.rst:169
+#: ../../source/complete_user_guide/features/create_product.rst:147
+#: ../../source/complete_user_guide/features/create_product.rst:176
 msgid "SOT / SOD"
 msgstr "SOT / SOD"
 
-#: ../../source/complete_user_guide/features/create_product.rst:143
+#: ../../source/complete_user_guide/features/create_product.rst:150
 msgid "LED（部分带极性标识）"
 msgstr "LED (some with polarity marking)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:144
+#: ../../source/complete_user_guide/features/create_product.rst:151
 msgid "排阻（电阻网络）"
 msgstr "Resistor network array"
 
-#: ../../source/complete_user_guide/features/create_product.rst:145
-#: ../../source/complete_user_guide/features/create_product.rst:153
-#: ../../source/complete_user_guide/features/create_product.rst:174
+#: ../../source/complete_user_guide/features/create_product.rst:152
+#: ../../source/complete_user_guide/features/create_product.rst:160
+#: ../../source/complete_user_guide/features/create_product.rst:181
 msgid "SOIC / SOP / TSOP / TSSOP / MSOP"
 msgstr "SOIC / SOP / TSOP / TSSOP / MSOP"
 
-#: ../../source/complete_user_guide/features/create_product.rst:148
+#: ../../source/complete_user_guide/features/create_product.rst:155
 msgid "SOT / SOD（型号/极性字符）"
 msgstr "SOT / SOD (model / polarity character)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:150
-#: ../../source/complete_user_guide/features/create_product.rst:179
+#: ../../source/complete_user_guide/features/create_product.rst:157
+#: ../../source/complete_user_guide/features/create_product.rst:186
 msgid "QFP"
 msgstr "QFP"
 
-#: ../../source/complete_user_guide/features/create_product.rst:151
+#: ../../source/complete_user_guide/features/create_product.rst:158
 msgid "SOT / SOD（小型引脚/贴片焊点）"
 msgstr "SOT / SOD (small leads / SMD joint)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:155
+#: ../../source/complete_user_guide/features/create_product.rst:162
 msgid "QFN / DFN"
 msgstr "QFN / DFN"
 
-#: ../../source/complete_user_guide/features/create_product.rst:156
+#: ../../source/complete_user_guide/features/create_product.rst:163
 msgid "LED（两端焊盘）"
 msgstr "LED (two-end pad)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:158
+#: ../../source/complete_user_guide/features/create_product.rst:165
 msgid "排阻（网络标识 / 阵列编号）"
 msgstr "Resistor network (network ID / array number)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:159
+#: ../../source/complete_user_guide/features/create_product.rst:166
 msgid "功率电感"
 msgstr "Power inductor"
 
-#: ../../source/complete_user_guide/features/create_product.rst:160
+#: ../../source/complete_user_guide/features/create_product.rst:167
 msgid "DFN（含无锡外露型）"
 msgstr "DFN (including no-lead exposed type)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:161
+#: ../../source/complete_user_guide/features/create_product.rst:168
 msgid "TO-263 / TO-252（大功率引脚与散热焊盘）"
 msgstr "TO-263 / TO-252 (high-power leads and thermal pad)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:163
+#: ../../source/complete_user_guide/features/create_product.rst:170
 msgid "铝电解电容（容量/电压标识）"
 msgstr "Aluminum electrolytic capacitor (capacitance / voltage marking)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:164
+#: ../../source/complete_user_guide/features/create_product.rst:171
 msgid "Fuse（保险丝）"
 msgstr "Fuse"
 
-#: ../../source/complete_user_guide/features/create_product.rst:165
-#: ../../source/complete_user_guide/features/create_product.rst:194
+#: ../../source/complete_user_guide/features/create_product.rst:172
+#: ../../source/complete_user_guide/features/create_product.rst:201
 msgid "TO-263 / TO-252"
 msgstr "TO-263 / TO-252"
 
-#: ../../source/complete_user_guide/features/create_product.rst:166
+#: ../../source/complete_user_guide/features/create_product.rst:173
 msgid "Fuse（端部焊盘）"
 msgstr "Fuse (end pad)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:168
+#: ../../source/complete_user_guide/features/create_product.rst:175
 msgid "钽电容（容量/极性）"
 msgstr "Tantalum capacitor (capacitance / polarity)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:170
+#: ../../source/complete_user_guide/features/create_product.rst:177
 msgid "Fuse（多数无极性）"
 msgstr "Fuse (mostly non-polar)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:173
+#: ../../source/complete_user_guide/features/create_product.rst:180
 msgid "功率电感（电感值标识）"
 msgstr "Power inductor (inductance marking)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:178
+#: ../../source/complete_user_guide/features/create_product.rst:185
 msgid "QFP（型号/批次丝印）"
 msgstr "QFP (model / batch silkscreen)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:183
+#: ../../source/complete_user_guide/features/create_product.rst:190
 msgid "QFN（型号/批次丝印，低对比度需适当增亮）"
 msgstr "QFN (model / batch silkscreen; brighten when contrast is low)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:184
+#: ../../source/complete_user_guide/features/create_product.rst:191
 msgid "QFN"
 msgstr "QFN"
 
-#: ../../source/complete_user_guide/features/create_product.rst:188
+#: ../../source/complete_user_guide/features/create_product.rst:195
 msgid "TO-263 / TO-252（型号/批次）"
 msgstr "TO-263 / TO-252 (model / batch)"
 
-#: ../../source/complete_user_guide/features/create_product.rst:189
+#: ../../source/complete_user_guide/features/create_product.rst:196
 msgid "DFN"
 msgstr "DFN"
 
-#: ../../source/complete_user_guide/features/create_product.rst:200
+#: ../../source/complete_user_guide/features/create_product.rst:207
 msgid "**注意事项**"
 msgstr "**Notes**"
 
-#: ../../source/complete_user_guide/features/create_product.rst:202
+#: ../../source/complete_user_guide/features/create_product.rst:209
 msgid "**产品名称必须唯一**：重复名称将导致创建失败，需修改后重试。"
 msgstr ""
 "**Product name must be unique**: a duplicate name fails creation; change it "
 "and retry."
 
-#: ../../source/complete_user_guide/features/create_product.rst:203
+#: ../../source/complete_user_guide/features/create_product.rst:210
 msgid "**向导不支持断点续建**：若中途退出向导，无法返回之前的步骤。请删除未完成的产品后重新创建。"
 msgstr ""
 "**The wizard does not support resume-from-checkpoint**: exiting partway "
 "through means you cannot return to earlier steps. Delete the half-finished "
 "product and start again."
 
-#: ../../source/complete_user_guide/features/create_product.rst:204
+#: ../../source/complete_user_guide/features/create_product.rst:211
 msgid "**DIP 检测默认关闭**：需手动在 **自动编程检测类型：** 中展开并勾选 DIP 子类（炉前或炉后）才会激活 DIP 参数区域。"
 msgstr ""
 "**DIP inspection is off by default**: expand **Auto-Programming inspection "
 "types**, check a DIP sub-class (pre-wave or post-wave) and the DIP parameter"
 " block activates."
 
-#: ../../source/complete_user_guide/features/create_product.rst:205
+#: ../../source/complete_user_guide/features/create_product.rst:212
 msgid "**桥接检测默认关闭**：勾选 **桥接** 复选框后，**邻近距离 (像素)** 参数方可编辑；默认值为 0（禁用）。"
 msgstr ""
 "**Bridge inspection is off by default**: once you check **Bridge**, "
 "**Adjacency distance (pixels)** becomes editable. The default is 0 "
 "(disabled)."
 
-#: ../../source/complete_user_guide/features/create_product.rst:206
+#: ../../source/complete_user_guide/features/create_product.rst:213
 msgid "**健康检查建议保持开启**：两项健康检查（数量检查、质量检查）默认开启，可帮助在自动编程完成后验证 ROI 质量。"
 msgstr ""
 "**Keep health checks on**: both Count check and Quality check are on by "
 "default and help verify ROI quality after Auto-Programming."
 
-#: ../../source/complete_user_guide/features/create_product.rst:208
+#: ../../source/complete_user_guide/features/create_product.rst:215
 msgid "**创建产品常见问题与排查**"
 msgstr "**Common questions and troubleshooting when creating a product**"
 
-#: ../../source/complete_user_guide/features/create_product.rst:210
+#: ../../source/complete_user_guide/features/create_product.rst:217
 msgid ""
 "**完整拍摄图像拼接异常**：检查 PCB 在采集过程中是否发生移动/震动；若确认无移动，可能为相机标定失准，请执行 :ref:`相机现场校准` "
 "后重拍。"
@@ -545,7 +611,7 @@ msgstr ""
 "shifted or vibrated during capture. If the board was stable, the camera "
 "calibration may have drifted — run :ref:`相机现场校准` and re-capture."
 
-#: ../../source/complete_user_guide/features/create_product.rst:211
+#: ../../source/complete_user_guide/features/create_product.rst:218
 msgid "**创建产品提示\"传送带占用\"**：确认是否有正在运行的检测任务或未释放的产品锁；若无任务仍显示占用，可重启软件刷新状态。"
 msgstr ""
 "**Create-Product reports \"conveyor in use\"**: check for a running "
@@ -553,18 +619,18 @@ msgstr ""
 "running and it still reports the conveyor as in use, restart the software to"
 " refresh state."
 
-#: ../../source/complete_user_guide/features/create_product.rst:212
+#: ../../source/complete_user_guide/features/create_product.rst:219
 msgid "**退出向导后无法回到中途步骤**：当前版本不支持断点续建，只能删除该未完成产品后重新创建。"
 msgstr ""
 "**Exiting the wizard leaves no way back to an intermediate step**: resume is"
 " not supported in this release — delete the half-finished product and start "
 "over."
 
-#: ../../source/complete_user_guide/features/create_product.rst:214
+#: ../../source/complete_user_guide/features/create_product.rst:221
 msgid "**相关页面**"
 msgstr "**Related pages**"
 
-#: ../../source/complete_user_guide/features/create_product.rst:216
+#: ../../source/complete_user_guide/features/create_product.rst:223
 msgid ":doc:`auto_programming` — CAD 上传与自动编程步骤（全自动/半自动/手动编程）"
 msgstr ""
 ":doc:`auto_programming` — CAD upload and Auto-Programming steps (Full Auto /"
@@ -738,3 +804,55 @@ msgstr ""
 
 #~ msgid "只需要调整曝光时间，达到合适的亮度即可。"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "本页说明如何通过 **自动编程向导** 完整创建一个新的 PCBA 产品，涵盖基本信息录入、传送带放置、PCB 尺寸确认、完整图像采集等步骤。"
+#~ msgstr ""
+#~ "This page walks through creating a new PCBA product end-to-end using the "
+#~ "**Auto-Programming wizard** — basic info, conveyor placement, PCB "
+#~ "dimensions, and the full-board capture."
+
+#~ msgid "支持的检测类型如下："
+#~ msgstr "Supported inspection types:"
+
+#~ msgid "完成 **基本信息** 步骤后，点击 **下一步** 继续以下步骤。"
+#~ msgstr "Once **Basic Info** is complete, click **Next** to continue."
+
+#~ msgid "自动编程向导基本信息步骤：产品名称、标签、检测类型、自动编程参数、健康检查"
+#~ msgstr ""
+#~ "Auto-Programming wizard Basic Info step: product name, tags, inspection "
+#~ "types, Auto-Programming parameters, and health checks."
+
+#~ msgid "**第二步：放置 PCB 与锁定传送带**"
+#~ msgstr "**Step 2: Place the PCB and lock the conveyor**"
+
+#~ msgid "将 PCB 平整放置于传送带中央，选择传送带并点击\"锁定\"。确认或输入传送带宽度后点击\"进板\"，等待 PCB 自动输送至拍摄区域，再点击\"下一步\"。"
+#~ msgstr ""
+#~ "Place the PCB flat in the center of the conveyor, select the conveyor, and "
+#~ "click **Lock**. Confirm or enter the conveyor width, click **PCB In**, wait "
+#~ "for the board to advance into the capture area, then click **Next**."
+
+#~ msgid "**第三步：输入或计算尺寸**"
+#~ msgstr "**Step 3: Enter or calculate the dimensions**"
+
+#~ msgid "若已知 PCB 尺寸，直接输入宽、高（mm）。"
+#~ msgstr "If you know the PCB dimensions, enter width and height (mm) directly."
+
+#~ msgid ""
+#~ "若未知：仅调整相机 X/Y（Z 保持不变）分别拍摄左下与右上；点击\"选择像素\"依次点 PCB 左下角与右上角像素后，点 "
+#~ "**自动计算**，系统推算尺寸供后续完整拍摄。"
+#~ msgstr ""
+#~ "If unknown, move the camera only in X and Y (leave Z unchanged) and capture "
+#~ "the bottom-left and top-right corners separately. Click **Select Pixel**, "
+#~ "click the PCB's bottom-left and top-right pixels in turn, then click **Auto-"
+#~ "calculate**; the system infers the dimensions for the subsequent full "
+#~ "capture."
+
+#~ msgid "自动尺寸计算示意"
+#~ msgstr "Auto dimension calculation"
+
+#~ msgid "将 PCB 放在传送带上示意"
+#~ msgstr "Placing the PCB on the conveyor"
+
+#~ msgid "完整 PCB 拍摄"
+#~ msgstr "Full PCB Capture"

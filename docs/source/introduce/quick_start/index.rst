@@ -66,45 +66,33 @@ PCBA AOI 软件是一款面向电子制造的智能光学检测系统。
 注册产品
 -----------------
 
-在主页点击 :ui-btn:`训练PCBA`，注册新的 PCBA/产品，进入 :ui-tab:`自动编程向导`。向导分为 5 个步骤：**基本信息**、**将 PCB 放置在传送带上**、**获取尺寸**、**拍摄**、**添加 CAD（可选）**。
-
-.. image:: images/create_product_0.png
-   :scale: 50%
-   :alt: 创建产品-自动编程向导
+在主页点击 :ui-btn:`训练PCBA`，注册新的 PCBA/产品，进入 :ui-tab:`自动编程向导`。向导分为 4 个步骤：**基本信息**、**上板与拍摄**、**配置自动编程**、**添加 CAD（可选）**。
 
 **1. 基本信息**
 
-输入 :ui-param:`产品名称`；在 :ui-param:`自动编程检测类型` 中按需勾选关注的检测项（如 :ui-opt:`本体`、:ui-opt:`极性`、:ui-opt:`焊点`、:ui-opt:`焊盘沾胶`、:ui-opt:`IC 引脚`、:ui-opt:`文字` 等）；如有需要，可在 :ui-param:`自动编程参数` 中开启 :ui-opt:`桥接` 检测并设置 :ui-param:`邻近距离（像素）` 阈值。完成后点击 :ui-btn:`下一步`。
+输入 :ui-param:`产品名称`，按需添加 :ui-param:`标签`，并填写已知的 PCB :ui-param:`板长度` 与 :ui-param:`板宽度` 等尺寸，单位为 mm，通常来自产品图纸或 SMT 工单；尺寸在产品创建后不可修改。完成后点击 :ui-btn:`下一步`。检测类型、参数与健康检查不在此步设置，已移至第三步 **配置自动编程**。
 
-.. image:: images/create_product_1.png
+.. image:: ../../complete_user_guide/features/images/create_product_basic_info.png
    :scale: 50%
    :alt: 创建产品-基本信息
 
-**2. 将 PCB 放置在传送带上**
+**2. 上板与拍摄**
 
-选择对应传送带并点击 :ui-btn:`锁定传送带`，确认或输入传送带宽度后点击 :ui-btn:`进板`，PCB 将自动输送至相机下方的拍摄/定位区域；到位后点击 :ui-btn:`下一步`。
+选择对应传送带并点击 :ui-btn:`锁定`；在线版本中确认或调整传送带宽度；点击 :ui-btn:`进板` 将 PCB 输送至拍摄区域，然后点击 :ui-btn:`拍摄2D图像`。系统联动相机与传送带分区采集并自动拼接生成完整 PCB 图像，结果直接显示在本步骤中。请尽量使用洁净、无缺陷的 **Golden board（良品板）**；必要时可调整相机参数（如 :ui-param:`曝光时间`、:ui-param:`增益`、:ui-param:`gamma` 等）后重新拍摄。拼接图像满意后点击 :ui-btn:`下一步`。
 
-.. image:: images/create_product_2.png
+.. image:: ../../complete_user_guide/features/images/create_product_conveyor_capture.png
    :scale: 50%
-   :alt: 创建产品-将 PCB 放置在传送带上
+   :alt: 创建产品-上板与拍摄
 
-**3. 获取尺寸**
+**3. 配置自动编程**
 
-若已知 PCB 尺寸，直接输入其宽度与高度（单位：mm）。若尺寸不确定，可移动相机分别拍摄 PCB 左下角与右上角，在图像上依次点击这两个位置并选择 :ui-btn:`自动计算`，系统将自动推算尺寸。
+系统显示上一步拼接出的完整图像（只读）。点击 :ui-btn:`定义区域` 框选用于自动编程的有效区域（通常为整板；若需排除治具/夹具边缘，可适当收缩）。在 :ui-param:`自动编程检测类型` 中勾选关注的检测项（如 :ui-opt:`本体`、:ui-opt:`极性`、:ui-opt:`焊点`、:ui-opt:`焊盘沾胶`、:ui-opt:`IC引脚`、:ui-opt:`文字` 等），并按需在 :ui-param:`自动编程参数` 中调整参数、设置 :ui-param:`健康检查`。若产品为拼板，开启 :ui-opt:`启用拼板` 并填写行 / 列。完成后点击 :ui-btn:`下一步`。
 
-.. image:: images/create_product_3.png
+.. image:: ../../complete_user_guide/features/images/configure_auto_program_step.png
    :scale: 50%
-   :alt: 创建产品-获取尺寸
+   :alt: 创建产品-配置自动编程
 
-**4. 拍摄**
-
-点击 :ui-btn:`拍摄`，系统将联动相机与传送带分区采集并自动拼接生成完整 PCB 图像；随后框选用于自动编程的有效区域（通常为整板；若需排除治具/夹具边缘，可适当收缩）。该基准图像将作为后续自动编程、对齐与检测的参考，尽量使用洁净、无缺陷的 **Golden board（良品板）** 拍摄。此界面可实时调整相机参数（:ui-param:`曝光时间`、:ui-param:`增益`、:ui-param:`gamma` 等）；如效果不佳，可重新拍摄覆盖上一版本。
-
-.. image:: images/create_product_4.png
-   :scale: 50%
-   :alt: 创建产品-拍摄
-
-**5. 添加 CAD（可选）**
+**4. 添加 CAD（可选）**
 
 提供 CAD（``.csv``）文件后，系统可自动读取封装(Package)、丝印/标识、料号(PN)、X/Y 坐标与旋转角度，并按封装或料号聚类，使同类元件一次建模、加速训练，同时减少后续人工分组与命名工作。
 
@@ -112,7 +100,7 @@ PCBA AOI 软件是一款面向电子制造的智能光学检测系统。
 
 若不提供 CAD，后续自动编程仍可执行；检测质量不受影响，仅失去基于封装/料号的聚类加速，系统将对元件逐一建模。自动编程耗时约 30 秒。
 
-.. image:: images/full_auto_program.png
+.. image:: ../../complete_user_guide/features/images/auto_program_auto_train_checkbox.png
    :scale: 50%
    :alt: 创建产品-添加 CAD
 
