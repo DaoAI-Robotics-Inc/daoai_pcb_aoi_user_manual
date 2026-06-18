@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"POT-Creation-Date: 2026-06-17 12:15-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -275,17 +275,17 @@ msgid "MES 导出选项说明"
 msgstr "MES export options"
 
 #: ../../source/complete_user_guide/system_management/index.rst:111
-#: ../../source/complete_user_guide/system_management/index.rst:141
+#: ../../source/complete_user_guide/system_management/index.rst:144
 msgid "选项"
 msgstr "Option"
 
 #: ../../source/complete_user_guide/system_management/index.rst:112
-#: ../../source/complete_user_guide/system_management/index.rst:142
-#: ../../source/complete_user_guide/system_management/index.rst:182
-#: ../../source/complete_user_guide/system_management/index.rst:203
-#: ../../source/complete_user_guide/system_management/index.rst:228
-#: ../../source/complete_user_guide/system_management/index.rst:259
-#: ../../source/complete_user_guide/system_management/index.rst:302
+#: ../../source/complete_user_guide/system_management/index.rst:145
+#: ../../source/complete_user_guide/system_management/index.rst:185
+#: ../../source/complete_user_guide/system_management/index.rst:206
+#: ../../source/complete_user_guide/system_management/index.rst:231
+#: ../../source/complete_user_guide/system_management/index.rst:262
+#: ../../source/complete_user_guide/system_management/index.rst:305
 msgid "说明"
 msgstr "Description"
 
@@ -320,13 +320,13 @@ msgstr ""
 #: ../../source/complete_user_guide/system_management/index.rst:119
 #: ../../source/complete_user_guide/system_management/index.rst:122
 #: ../../source/complete_user_guide/system_management/index.rst:125
-#: ../../source/complete_user_guide/system_management/index.rst:155
-#: ../../source/complete_user_guide/system_management/index.rst:232
+#: ../../source/complete_user_guide/system_management/index.rst:158
 #: ../../source/complete_user_guide/system_management/index.rst:235
 #: ../../source/complete_user_guide/system_management/index.rst:238
-#: ../../source/complete_user_guide/system_management/index.rst:263
+#: ../../source/complete_user_guide/system_management/index.rst:241
 #: ../../source/complete_user_guide/system_management/index.rst:266
 #: ../../source/complete_user_guide/system_management/index.rst:269
+#: ../../source/complete_user_guide/system_management/index.rst:272
 msgid "开启/关闭"
 msgstr "On / Off"
 
@@ -378,127 +378,133 @@ msgstr ""
 msgid "1–30 天"
 msgstr "1–30 days"
 
-#: ../../source/complete_user_guide/system_management/index.rst:133
+#: ../../source/complete_user_guide/system_management/index.rst:134
+msgid "导出配置文件的选择、默认 ``default_csv`` 配置的存图路径与报告字段说明，详见 :ref:`MES 结果导出`。"
+msgstr ""
+"For choosing an export profile and the image storage paths and report fields"
+" of the default ``default_csv`` profile, see :ref:`MES 结果导出`."
+
+#: ../../source/complete_user_guide/system_management/index.rst:136
 msgid "**检测记录**"
 msgstr "**Inspection records**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:135
+#: ../../source/complete_user_guide/system_management/index.rst:138
 msgid "管理检测结果数据的保留与清理策略。"
 msgstr "Manages the retention and cleanup policy for inspection-result data."
 
-#: ../../source/complete_user_guide/system_management/index.rst:137
+#: ../../source/complete_user_guide/system_management/index.rst:140
 msgid "检测记录选项说明"
 msgstr "Inspection-record options"
 
-#: ../../source/complete_user_guide/system_management/index.rst:143
+#: ../../source/complete_user_guide/system_management/index.rst:146
 msgid "值/示例"
 msgstr "Value / example"
 
-#: ../../source/complete_user_guide/system_management/index.rst:144
+#: ../../source/complete_user_guide/system_management/index.rst:147
 msgid "检测结果保留天数"
 msgstr "Inspection-result retention days"
 
-#: ../../source/complete_user_guide/system_management/index.rst:145
+#: ../../source/complete_user_guide/system_management/index.rst:148
 msgid "超过此天数的历史检测结果将在定时清理时被删除。"
 msgstr ""
 "Historical inspection results older than this are deleted by the scheduled "
 "cleanup."
 
-#: ../../source/complete_user_guide/system_management/index.rst:146
+#: ../../source/complete_user_guide/system_management/index.rst:149
 msgid "天数（默认 90）"
 msgstr "Days (default 90)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:147
+#: ../../source/complete_user_guide/system_management/index.rst:150
 msgid "磁盘空间不足警告阈值（GiB）"
 msgstr "Disk-space warning threshold (GiB)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:148
+#: ../../source/complete_user_guide/system_management/index.rst:151
 msgid "剩余磁盘空间低于此值时系统启动警告；设为 0 可禁用。"
 msgstr ""
 "The system warns when free disk space drops below this value; set to 0 to "
 "disable."
 
-#: ../../source/complete_user_guide/system_management/index.rst:149
+#: ../../source/complete_user_guide/system_management/index.rst:152
 msgid "GiB（默认 30）"
 msgstr "GiB (default 30)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:150
+#: ../../source/complete_user_guide/system_management/index.rst:153
 msgid "大文件存储位置"
 msgstr "Large-file storage location"
 
-#: ../../source/complete_user_guide/system_management/index.rst:151
+#: ../../source/complete_user_guide/system_management/index.rst:154
 msgid "检测图像等大文件的存储卷；若默认盘空间不足可切换至其他卷，修改后需重启生效。"
 msgstr ""
 "The volume that stores large files such as inspection images. Switch to "
 "another volume if the default drive is short on space; restart for the "
 "change to take effect."
 
-#: ../../source/complete_user_guide/system_management/index.rst:152
+#: ../../source/complete_user_guide/system_management/index.rst:155
 msgid "目录路径（留空为默认）"
 msgstr "Directory path (empty = default)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:153
+#: ../../source/complete_user_guide/system_management/index.rst:156
 msgid "定时清理"
 msgstr "Scheduled cleanup"
 
-#: ../../source/complete_user_guide/system_management/index.rst:154
+#: ../../source/complete_user_guide/system_management/index.rst:157
 msgid "启用后，系统将在指定时间自动清理超期检测记录。"
 msgstr ""
 "When enabled, the system runs the cleanup at the configured time and removes"
 " expired records."
 
-#: ../../source/complete_user_guide/system_management/index.rst:156
+#: ../../source/complete_user_guide/system_management/index.rst:159
 msgid "定时清理时间"
 msgstr "Scheduled cleanup time"
 
-#: ../../source/complete_user_guide/system_management/index.rst:157
+#: ../../source/complete_user_guide/system_management/index.rst:160
 msgid "定时清理任务的执行时刻（格式 HH:MM，24 小时制）。"
 msgstr "Time the scheduled cleanup runs (HH:MM, 24-hour)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:158
+#: ../../source/complete_user_guide/system_management/index.rst:161
 msgid "如 ``01:00``"
 msgstr "e.g. ``01:00``"
 
-#: ../../source/complete_user_guide/system_management/index.rst:159
+#: ../../source/complete_user_guide/system_management/index.rst:162
 msgid "立即清除检测记录"
 msgstr "Cleanup Records Now"
 
-#: ../../source/complete_user_guide/system_management/index.rst:160
+#: ../../source/complete_user_guide/system_management/index.rst:163
 msgid "点击后立即触发清理任务，将超过保留天数的检测记录删除。适用于需要快速释放磁盘空间的场景。"
 msgstr ""
 "Clicking it kicks off the cleanup immediately, deleting records past the "
 "retention period — useful when you need to free disk space quickly."
 
-#: ../../source/complete_user_guide/system_management/index.rst:161
+#: ../../source/complete_user_guide/system_management/index.rst:164
 msgid "按钮"
 msgstr "Button"
 
-#: ../../source/complete_user_guide/system_management/index.rst:163
+#: ../../source/complete_user_guide/system_management/index.rst:166
 msgid "**合格结果二次确认**"
 msgstr "**Pass-result secondary confirmation**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:165
+#: ../../source/complete_user_guide/system_management/index.rst:168
 msgid "启用后，实时检测页面检测到合格（OK）时弹出确认窗口，由操作员手动判定合格或不合格。"
 msgstr ""
 "When enabled, every Pass (OK) verdict on the Live page surfaces a "
 "confirmation dialog so the operator can confirm Pass or override to NG."
 
-#: ../../source/complete_user_guide/system_management/index.rst:169
+#: ../../source/complete_user_guide/system_management/index.rst:172
 msgid "捕获模块"
 msgstr "Capture Module"
 
-#: ../../source/complete_user_guide/system_management/index.rst:171
+#: ../../source/complete_user_guide/system_management/index.rst:174
 msgid "进入路径：右上角齿轮 → **设置** → **系统设置** → **捕获模块**。"
 msgstr "Open: gear icon → **Settings → System Settings → Capture Module**."
 
-#: ../../source/complete_user_guide/system_management/index.rst:173
+#: ../../source/complete_user_guide/system_management/index.rst:176
 msgid "页面标题为\"捕获模块\"（Admin / 编程员 可见），提供采集与传感器的关键参数编辑，修改后保存并自动重载页面。"
 msgstr ""
 "The page is titled *Capture Module* (visible to Admin and Programmer) and "
 "exposes the key capture and sensor parameters; saving reloads the page "
 "automatically."
 
-#: ../../source/complete_user_guide/system_management/index.rst:175
+#: ../../source/complete_user_guide/system_management/index.rst:178
 msgid ""
 "**图像拼接配置** \\ （对应 ``capture_agent/capture_agent_config.json`` 中的 "
 "``image_stitching_config``）"
@@ -506,49 +512,49 @@ msgstr ""
 "**Image Stitching Configuration** (maps to ``image_stitching_config`` in "
 "``capture_agent/capture_agent_config.json``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:177
+#: ../../source/complete_user_guide/system_management/index.rst:180
 msgid "图像拼接配置字段"
 msgstr "Image-stitching fields"
 
-#: ../../source/complete_user_guide/system_management/index.rst:181
-#: ../../source/complete_user_guide/system_management/index.rst:202
+#: ../../source/complete_user_guide/system_management/index.rst:184
+#: ../../source/complete_user_guide/system_management/index.rst:205
 msgid "字段（界面标签）"
 msgstr "Field (UI label)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:183
+#: ../../source/complete_user_guide/system_management/index.rst:186
 msgid "最大偏移像素 X（max_offset_pixel_x）"
 msgstr "Max Offset Pixels X (``max_offset_pixel_x``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:184
+#: ../../source/complete_user_guide/system_management/index.rst:187
 msgid "图像拼接时水平方向允许的最大像素偏移量。"
 msgstr "Maximum horizontal pixel offset allowed during stitching."
 
-#: ../../source/complete_user_guide/system_management/index.rst:185
+#: ../../source/complete_user_guide/system_management/index.rst:188
 msgid "最大偏移像素 Y（max_offset_pixel_y）"
 msgstr "Max Offset Pixels Y (``max_offset_pixel_y``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:186
+#: ../../source/complete_user_guide/system_management/index.rst:189
 msgid "图像拼接时垂直方向允许的最大像素偏移量。"
 msgstr "Maximum vertical pixel offset allowed during stitching."
 
-#: ../../source/complete_user_guide/system_management/index.rst:187
+#: ../../source/complete_user_guide/system_management/index.rst:190
 msgid "重叠（overlap）"
 msgstr "Overlap (``overlap``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:188
+#: ../../source/complete_user_guide/system_management/index.rst:191
 msgid "相邻采集帧之间的重叠区域大小。"
 msgstr "Size of the overlap region between adjacent capture frames."
 
-#: ../../source/complete_user_guide/system_management/index.rst:189
+#: ../../source/complete_user_guide/system_management/index.rst:192
 msgid "使用可变重叠（use_variable_overlap）"
 msgstr "Use Variable Overlap (``use_variable_overlap``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:190
+#: ../../source/complete_user_guide/system_management/index.rst:193
 msgid "开关。启用后拼接算法将动态调整重叠区域大小。"
 msgstr ""
 "Switch; when on, the stitching algorithm adapts the overlap dynamically."
 
-#: ../../source/complete_user_guide/system_management/index.rst:192
+#: ../../source/complete_user_guide/system_management/index.rst:195
 msgid ""
 "**捕获路径** \\ （dev only）（对应 ``capture_agent/capture_agent_config.json`` 中的 "
 "``steps[0].path``）"
@@ -556,13 +562,13 @@ msgstr ""
 "**Capture Path** (dev only; maps to ``steps[0].path`` in "
 "``capture_agent/capture_agent_config.json``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:194
+#: ../../source/complete_user_guide/system_management/index.rst:197
 msgid "**步骤路径（steps path）**：采集输出目录；虚拟相机模式下系统从此目录读取图像。仅开发调试使用。"
 msgstr ""
 "**Steps path**: the capture output directory. Under virtual-camera mode, the"
 " system reads images from this directory. Development / debugging only."
 
-#: ../../source/complete_user_guide/system_management/index.rst:196
+#: ../../source/complete_user_guide/system_management/index.rst:199
 msgid ""
 "**传感器配置（2D）** \\ （对应 ``capture_agent/sensor_config.json`` 中 "
 "``sensors[0].camera_configs[0].config_2d``）"
@@ -571,45 +577,45 @@ msgstr ""
 "``sensors[0].camera_configs[0].config_2d`` in "
 "``capture_agent/sensor_config.json``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:198
+#: ../../source/complete_user_guide/system_management/index.rst:201
 msgid "传感器 2D 配置字段"
 msgstr "Sensor 2D fields"
 
-#: ../../source/complete_user_guide/system_management/index.rst:204
+#: ../../source/complete_user_guide/system_management/index.rst:207
 msgid "增益（gain）"
 msgstr "Gain (``gain``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:205
+#: ../../source/complete_user_guide/system_management/index.rst:208
 msgid "传感器增益值；过高会引入噪声，过低则图像偏暗。"
 msgstr "Sensor gain. Too high introduces noise; too low darkens the image."
 
-#: ../../source/complete_user_guide/system_management/index.rst:206
+#: ../../source/complete_user_guide/system_management/index.rst:209
 msgid "伽马（gamma）"
 msgstr "Gamma (``gamma``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:207
+#: ../../source/complete_user_guide/system_management/index.rst:210
 msgid "传感器伽马校正值。"
 msgstr "Sensor gamma correction."
 
-#: ../../source/complete_user_guide/system_management/index.rst:208
+#: ../../source/complete_user_guide/system_management/index.rst:211
 msgid "曝光时间（exposure_time）"
 msgstr "Exposure Time (``exposure_time``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:209
+#: ../../source/complete_user_guide/system_management/index.rst:212
 msgid "基线曝光时间（单位因硬件而异）；现场光照稳定后再调整。"
 msgstr ""
 "Baseline exposure time (units depend on the hardware). Tune only after on-"
 "site lighting is stable."
 
-#: ../../source/complete_user_guide/system_management/index.rst:213
+#: ../../source/complete_user_guide/system_management/index.rst:216
 msgid "模型更新器"
 msgstr "Model Updater"
 
-#: ../../source/complete_user_guide/system_management/index.rst:215
+#: ../../source/complete_user_guide/system_management/index.rst:218
 msgid "进入路径：右上角齿轮 → **设置** → **系统设置** → **模型更新器**。"
 msgstr "Open: gear icon → **Settings → System Settings → Model Updater**."
 
-#: ../../source/complete_user_guide/system_management/index.rst:217
+#: ../../source/complete_user_guide/system_management/index.rst:220
 msgid ""
 "页面标题为\"模型更新器配置\"（Admin / 编程员 可见），用于在运行过程中根据现场图像统计自动或半自动更新各检测模块的颜色阈值与比例参数，以提升"
 " 2D 焊点 / 引脚等检测的稳健性。修改后保存并自动重载页面。"
@@ -620,150 +626,150 @@ msgstr ""
 "image statistics, to improve robustness on 2D solder / lead inspections. "
 "Saving reloads the page automatically."
 
-#: ../../source/complete_user_guide/system_management/index.rst:219
+#: ../../source/complete_user_guide/system_management/index.rst:222
 msgid "配置存储在 ``model_updater_config.json``。"
 msgstr "The configuration is persisted to ``model_updater_config.json``."
 
-#: ../../source/complete_user_guide/system_management/index.rst:221
+#: ../../source/complete_user_guide/system_management/index.rst:224
 msgid "**焊接 2D（solder_2d）**"
 msgstr "**Solder 2D (``solder_2d``)**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:223
+#: ../../source/complete_user_guide/system_management/index.rst:226
 msgid "solder_2d 关键字段"
 msgstr "``solder_2d`` key fields"
 
-#: ../../source/complete_user_guide/system_management/index.rst:227
-#: ../../source/complete_user_guide/system_management/index.rst:258
+#: ../../source/complete_user_guide/system_management/index.rst:230
+#: ../../source/complete_user_guide/system_management/index.rst:261
 msgid "字段"
 msgstr "Field"
 
-#: ../../source/complete_user_guide/system_management/index.rst:229
-#: ../../source/complete_user_guide/system_management/index.rst:260
+#: ../../source/complete_user_guide/system_management/index.rst:232
+#: ../../source/complete_user_guide/system_management/index.rst:263
 msgid "示例/范围"
 msgstr "Example / range"
 
-#: ../../source/complete_user_guide/system_management/index.rst:230
-#: ../../source/complete_user_guide/system_management/index.rst:261
+#: ../../source/complete_user_guide/system_management/index.rst:233
+#: ../../source/complete_user_guide/system_management/index.rst:264
 msgid "更新颜色范围（update_color_range）"
 msgstr "Update Color Range (``update_color_range``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:231
+#: ../../source/complete_user_guide/system_management/index.rst:234
 msgid "是否允许在更新周期内自动调整颜色范围阈值区间。"
 msgstr ""
 "Whether the color-range threshold can be auto-adjusted during the update "
 "cycle."
 
-#: ../../source/complete_user_guide/system_management/index.rst:233
-#: ../../source/complete_user_guide/system_management/index.rst:264
+#: ../../source/complete_user_guide/system_management/index.rst:236
+#: ../../source/complete_user_guide/system_management/index.rst:267
 msgid "更新颜色比例（update_color_ratio）"
 msgstr "Update Color Ratio (``update_color_ratio``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:234
+#: ../../source/complete_user_guide/system_management/index.rst:237
 msgid "是否允许根据统计结果更新颜色比例阈值，提高分割与缺陷筛选可靠性。"
 msgstr ""
 "Whether the color-ratio threshold can be updated from statistics, improving "
 "segmentation and defect-filter reliability."
 
-#: ../../source/complete_user_guide/system_management/index.rst:236
-#: ../../source/complete_user_guide/system_management/index.rst:267
+#: ../../source/complete_user_guide/system_management/index.rst:239
+#: ../../source/complete_user_guide/system_management/index.rst:270
 msgid "AI更新覆盖（ai_update_override）"
 msgstr "AI Update Override (``ai_update_override``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:237
-#: ../../source/complete_user_guide/system_management/index.rst:268
+#: ../../source/complete_user_guide/system_management/index.rst:240
+#: ../../source/complete_user_guide/system_management/index.rst:271
 msgid "是否允许 AI 模型的更新结果覆盖本地统计参数。"
 msgstr ""
 "Whether AI-model update results can override the local statistical "
 "parameters."
 
-#: ../../source/complete_user_guide/system_management/index.rst:239
+#: ../../source/complete_user_guide/system_management/index.rst:242
 msgid "红色比例最小值（red_ratio_min）"
 msgstr "Red Ratio Min (``red_ratio_min``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:240
+#: ../../source/complete_user_guide/system_management/index.rst:243
 msgid "红色通道占比下限，用于限定有效焊点颜色特征范围。"
 msgstr ""
 "Lower bound for the red-channel ratio, used to constrain the valid solder-"
 "joint color range."
 
-#: ../../source/complete_user_guide/system_management/index.rst:241
+#: ../../source/complete_user_guide/system_management/index.rst:244
 msgid "0–100（默认 0）"
 msgstr "0–100 (default 0)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:242
+#: ../../source/complete_user_guide/system_management/index.rst:245
 msgid "红色比例最大值（red_ratio_max）"
 msgstr "Red Ratio Max (``red_ratio_max``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:243
+#: ../../source/complete_user_guide/system_management/index.rst:246
 msgid "红色通道占比上限。"
 msgstr "Upper bound for the red-channel ratio."
 
-#: ../../source/complete_user_guide/system_management/index.rst:244
+#: ../../source/complete_user_guide/system_management/index.rst:247
 msgid "0–100（默认 50）"
 msgstr "0–100 (default 50)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:245
+#: ../../source/complete_user_guide/system_management/index.rst:248
 msgid "非红色比例最小值（non_red_ratio_min）"
 msgstr "Non-Red Ratio Min (``non_red_ratio_min``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:246
+#: ../../source/complete_user_guide/system_management/index.rst:249
 msgid "非红色通道占比下限；与红色比例共同约束目标的颜色分布，避免误检。"
 msgstr ""
 "Lower bound for the non-red ratio; together with the red ratio, constrains "
 "the target color distribution and reduces false positives."
 
-#: ../../source/complete_user_guide/system_management/index.rst:247
-#: ../../source/complete_user_guide/system_management/index.rst:272
+#: ../../source/complete_user_guide/system_management/index.rst:250
+#: ../../source/complete_user_guide/system_management/index.rst:275
 msgid "0–100（默认 20）"
 msgstr "0–100 (default 20)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:248
+#: ../../source/complete_user_guide/system_management/index.rst:251
 msgid "非红色比例最大值（non_red_ratio_max）"
 msgstr "Non-Red Ratio Max (``non_red_ratio_max``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:249
+#: ../../source/complete_user_guide/system_management/index.rst:252
 msgid "非红色通道占比上限。"
 msgstr "Upper bound for the non-red ratio."
 
-#: ../../source/complete_user_guide/system_management/index.rst:250
-#: ../../source/complete_user_guide/system_management/index.rst:275
+#: ../../source/complete_user_guide/system_management/index.rst:253
+#: ../../source/complete_user_guide/system_management/index.rst:278
 msgid "0–100（默认 100）"
 msgstr "0–100 (default 100)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:252
+#: ../../source/complete_user_guide/system_management/index.rst:255
 msgid "**引脚 2D V2（lead_2d_v2）**"
 msgstr "**Lead 2D V2 (``lead_2d_v2``)**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:254
+#: ../../source/complete_user_guide/system_management/index.rst:257
 msgid "lead_2d_v2 关键字段"
 msgstr "``lead_2d_v2`` key fields"
 
-#: ../../source/complete_user_guide/system_management/index.rst:262
+#: ../../source/complete_user_guide/system_management/index.rst:265
 msgid "是否允许自动调整引脚区域的颜色范围阈值。"
 msgstr ""
 "Whether the color-range threshold for the lead region can be auto-adjusted."
 
-#: ../../source/complete_user_guide/system_management/index.rst:265
+#: ../../source/complete_user_guide/system_management/index.rst:268
 msgid "是否允许更新引脚颜色比例阈值。"
 msgstr "Whether the lead color-ratio threshold can be updated."
 
-#: ../../source/complete_user_guide/system_management/index.rst:270
+#: ../../source/complete_user_guide/system_management/index.rst:273
 msgid "焊接比例最小值（solder_ratio_min）"
 msgstr "Solder Ratio Min (``solder_ratio_min``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:271
+#: ../../source/complete_user_guide/system_management/index.rst:274
 msgid "引脚焊接区域颜色比例下限。"
 msgstr "Lower bound for the lead solder region's color ratio."
 
-#: ../../source/complete_user_guide/system_management/index.rst:273
+#: ../../source/complete_user_guide/system_management/index.rst:276
 msgid "焊接比例最大值（solder_ratio_max）"
 msgstr "Solder Ratio Max (``solder_ratio_max``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:274
+#: ../../source/complete_user_guide/system_management/index.rst:277
 msgid "引脚焊接区域颜色比例上限。"
 msgstr "Upper bound for the lead solder region's color ratio."
 
-#: ../../source/complete_user_guide/system_management/index.rst:278
+#: ../../source/complete_user_guide/system_management/index.rst:281
 msgid "开启自动更新（更新颜色范围 / 更新颜色比例）后，请在稳定的光照与工艺条件下运行一段时间以收集统计，避免短期波动导致参数过度调整。"
 msgstr ""
 "After enabling auto-update (**Update Color Range** / **Update Color "
@@ -771,17 +777,17 @@ msgstr ""
 "statistics can accumulate; otherwise short-term fluctuations may swing the "
 "parameters too far."
 
-#: ../../source/complete_user_guide/system_management/index.rst:279
+#: ../../source/complete_user_guide/system_management/index.rst:282
 msgid "建议结合版本管理或备份原始配置文件，必要时可回滚到上一版本参数集。"
 msgstr ""
 "Pair this with version control or back up the original configuration file so"
 " you can roll back to an earlier parameter set if needed."
 
-#: ../../source/complete_user_guide/system_management/index.rst:283
+#: ../../source/complete_user_guide/system_management/index.rst:286
 msgid "编程默认参数"
 msgstr "Programming Default Parameters"
 
-#: ../../source/complete_user_guide/system_management/index.rst:285
+#: ../../source/complete_user_guide/system_management/index.rst:288
 msgid "进入路径：右上角齿轮 → **设置** → **系统设置** → **编程默认参数** \\ （Admin / 编程员 可见）。"
 msgstr ""
 "Open: gear icon → **Settings → System Settings → Programming Default "
@@ -791,81 +797,81 @@ msgstr ""
 msgid "编程默认参数界面示意"
 msgstr "Programming Default Parameters view"
 
-#: ../../source/complete_user_guide/system_management/index.rst:291
+#: ../../source/complete_user_guide/system_management/index.rst:294
 msgid "用途：为新建 PCB 产品或新增检测项提供一套\"起始参数模板\"。保存后，这些默认值将作为各模块的初始阈值与颜色范围。"
 msgstr ""
 "Purpose: provides a *starter parameter template* for new PCB products and "
 "new inspection items. Once saved, these defaults seed each module's initial "
 "thresholds and color ranges."
 
-#: ../../source/complete_user_guide/system_management/index.rst:293
+#: ../../source/complete_user_guide/system_management/index.rst:296
 msgid "页面以标签页方式呈现各检测模块（如 焊接检测 2D、引脚检测 2D、DIP 焊点检测等），以及一个 **其他参数** 全局配置页。"
 msgstr ""
 "The page exposes per-module tabs (Solder Inspection 2D, Lead Inspection 2D, "
 "DIP Solder Inspection, and so on), plus an **Other Parameters** global tab."
 
-#: ../../source/complete_user_guide/system_management/index.rst:295
+#: ../../source/complete_user_guide/system_management/index.rst:298
 msgid "**其他参数（全局配置）**"
 msgstr "**Other Parameters (global configuration)**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:297
+#: ../../source/complete_user_guide/system_management/index.rst:300
 msgid "其他参数说明"
 msgstr "Other Parameters"
 
-#: ../../source/complete_user_guide/system_management/index.rst:301
+#: ../../source/complete_user_guide/system_management/index.rst:304
 msgid "参数（界面标签）"
 msgstr "Parameter (UI label)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:303
+#: ../../source/complete_user_guide/system_management/index.rst:306
 msgid "检测允许旋转 (°)（allowed_rotation_degree）"
 msgstr "Allowed rotation (°) (``allowed_rotation_degree``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:304
+#: ../../source/complete_user_guide/system_management/index.rst:307
 msgid "元件允许的最大旋转偏差（度，0–360）。"
 msgstr ""
 "Maximum allowed rotational deviation for a component (degrees, 0–360)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:305
+#: ../../source/complete_user_guide/system_management/index.rst:308
 msgid "检测允许偏移 (mm)（allowed_shift_mm）"
 msgstr "Allowed shift (mm) (``allowed_shift_mm``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:306
+#: ../../source/complete_user_guide/system_management/index.rst:309
 msgid "元件允许的最大位置偏移（毫米）。"
 msgstr "Maximum allowed positional shift for a component (millimeters)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:307
+#: ../../source/complete_user_guide/system_management/index.rst:310
 msgid "检测时是否拍摄整板"
 msgstr "Capture whole board on inspection"
 
-#: ../../source/complete_user_guide/system_management/index.rst:308
+#: ../../source/complete_user_guide/system_management/index.rst:311
 msgid "启用后检测时将拍摄完整板面而非仅分区拍摄。"
 msgstr "When on, inspection captures the full board instead of tile-by-tile."
 
-#: ../../source/complete_user_guide/system_management/index.rst:309
+#: ../../source/complete_user_guide/system_management/index.rst:312
 msgid "最大FOV对齐偏移（像素）"
 msgstr "Max FOV alignment offset (pixels)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:310
+#: ../../source/complete_user_guide/system_management/index.rst:313
 msgid "视野对齐时允许的最大像素偏移（0–100）。"
 msgstr "Maximum pixel offset allowed during FOV alignment (0–100)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:311
+#: ../../source/complete_user_guide/system_management/index.rst:314
 msgid "最大Mark点对齐偏移（像素）"
 msgstr "Max Mark Point alignment offset (pixels)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:312
+#: ../../source/complete_user_guide/system_management/index.rst:315
 msgid "标记点对齐时允许的最大像素偏移（1–5000）。"
 msgstr "Maximum pixel offset allowed during Mark Point alignment (1–5000)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:313
+#: ../../source/complete_user_guide/system_management/index.rst:316
 msgid "默认反馈类型（default_feedback_type）"
 msgstr "Default Feedback Type (``default_feedback_type``)"
 
-#: ../../source/complete_user_guide/system_management/index.rst:314
+#: ../../source/complete_user_guide/system_management/index.rst:317
 msgid "检测复核时的默认反馈选项：OK（合格）或 NG（不合格）。"
 msgstr "Default feedback option used during review: OK (pass) or NG (fail)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:317
+#: ../../source/complete_user_guide/system_management/index.rst:320
 msgid ""
 "拼版判废比例（wasted_array_board_failure_ratio）已改为按产品配置，入口在 **编程页面 → 设置 → "
 "检测设置**，此处不再显示。"
@@ -874,11 +880,11 @@ msgstr ""
 "is now configured per product under **Teach → Recipe → Inspection Settings**"
 " and is no longer shown here."
 
-#: ../../source/complete_user_guide/system_management/index.rst:321
+#: ../../source/complete_user_guide/system_management/index.rst:324
 msgid "错误类型翻译"
 msgstr "Error Type Translation"
 
-#: ../../source/complete_user_guide/system_management/index.rst:323
+#: ../../source/complete_user_guide/system_management/index.rst:326
 msgid "进入路径：右上角齿轮 → **设置** → **系统设置** → **错误类型翻译** \\ （Admin / 编程员 可见）。"
 msgstr ""
 "Open: gear icon → **Settings → System Settings → Error Type Translation** "
@@ -888,70 +894,70 @@ msgstr ""
 msgid "错误类型翻译界面示意"
 msgstr "Error Type Translation view"
 
-#: ../../source/complete_user_guide/system_management/index.rst:329
+#: ../../source/complete_user_guide/system_management/index.rst:332
 msgid "用于自定义元件级缺陷 / 错误类型的中英文显示标签，以及对应的 MES 厂商代码。保存后同步到所有已连接设备。"
 msgstr ""
 "Lets you customize the Chinese and English display labels for each "
 "component-level defect / error type, plus the corresponding MES vendor code."
 " Changes propagate to every connected device on save."
 
-#: ../../source/complete_user_guide/system_management/index.rst:331
+#: ../../source/complete_user_guide/system_management/index.rst:334
 msgid "**错误类型中英文标签**"
 msgstr "**Error type — Chinese / English labels**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:333
+#: ../../source/complete_user_guide/system_management/index.rst:336
 msgid "表格包含以下三列："
 msgstr "The table has three columns:"
 
-#: ../../source/complete_user_guide/system_management/index.rst:335
-#: ../../source/complete_user_guide/system_management/index.rst:345
+#: ../../source/complete_user_guide/system_management/index.rst:338
+#: ../../source/complete_user_guide/system_management/index.rst:348
 msgid "**错误类型**：系统内置的错误类型标识（只读）。"
 msgstr ""
 "**Error Type**: the system's built-in error-type identifier (read-only)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:336
+#: ../../source/complete_user_guide/system_management/index.rst:339
 msgid "**英文标签**：在界面与报告中显示的英文名称，可按需自定义。"
 msgstr ""
 "**English Label**: the English name shown in the UI and in reports; "
 "customizable."
 
-#: ../../source/complete_user_guide/system_management/index.rst:337
+#: ../../source/complete_user_guide/system_management/index.rst:340
 msgid "**中文标签**：在界面与报告中显示的中文名称，可按需自定义。"
 msgstr ""
 "**Chinese Label**: the Chinese name shown in the UI and in reports; "
 "customizable."
 
-#: ../../source/complete_user_guide/system_management/index.rst:339
+#: ../../source/complete_user_guide/system_management/index.rst:342
 msgid "编辑后点击 **保存** 生效。"
 msgstr "Click **Save** to apply the edits."
 
-#: ../../source/complete_user_guide/system_management/index.rst:341
+#: ../../source/complete_user_guide/system_management/index.rst:344
 msgid "**MES 错误码翻译**"
 msgstr "**MES error-code translation**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:343
+#: ../../source/complete_user_guide/system_management/index.rst:346
 msgid "将内部错误类型映射到 MES 系统的外发错误代码。留空则按原样传递内部错误类型。"
 msgstr ""
 "Maps internal error types to outbound MES error codes. An empty mapping "
 "passes the internal type through unchanged."
 
-#: ../../source/complete_user_guide/system_management/index.rst:346
+#: ../../source/complete_user_guide/system_management/index.rst:349
 msgid "**MES 厂商代码**：导出 MES 结果时使用的错误代码映射；留空表示原样传递。"
 msgstr ""
 "**MES vendor code**: the error-code mapping used when exporting to MES; "
 "leave blank to pass through as-is."
 
-#: ../../source/complete_user_guide/system_management/index.rst:350
+#: ../../source/complete_user_guide/system_management/index.rst:353
 msgid "标签管理"
 msgstr "Tag Management"
 
-#: ../../source/complete_user_guide/system_management/index.rst:352
+#: ../../source/complete_user_guide/system_management/index.rst:355
 msgid "进入路径：右上角齿轮 → **设置** → **系统设置** → **标签** \\ （Admin / 编程员 可见）。"
 msgstr ""
 "Open: gear icon → **Settings → System Settings → Tags** (visible to Admin "
 "and Programmer)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:354
+#: ../../source/complete_user_guide/system_management/index.rst:357
 msgid ""
 "标签（Tags）是附加到 PCB 产品程序上的自定义分类标记，用于在产品列表和检测任务启动时快速筛选产品。标签一旦绑定到至少一个程序后即出现在此页面。"
 msgstr ""
@@ -959,111 +965,111 @@ msgstr ""
 " filtering on the product list and during inspection-task setup. A tag "
 "appears on this page once it is bound to at least one program."
 
-#: ../../source/complete_user_guide/system_management/index.rst:356
+#: ../../source/complete_user_guide/system_management/index.rst:359
 msgid "页面包含以下列："
 msgstr "Columns:"
 
-#: ../../source/complete_user_guide/system_management/index.rst:358
+#: ../../source/complete_user_guide/system_management/index.rst:361
 msgid "**名称**：标签的文本内容。"
 msgstr "**Name**: the tag's text."
 
-#: ../../source/complete_user_guide/system_management/index.rst:359
+#: ../../source/complete_user_guide/system_management/index.rst:362
 msgid "**产品数**：使用该标签的产品数量（只读）。"
 msgstr "**Product count**: number of products using this tag (read-only)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:360
+#: ../../source/complete_user_guide/system_management/index.rst:363
 msgid "**操作**：**重命名** / **删除** 按钮。"
 msgstr "**Actions**: **Rename** / **Delete** buttons."
 
-#: ../../source/complete_user_guide/system_management/index.rst:362
+#: ../../source/complete_user_guide/system_management/index.rst:365
 msgid "操作说明："
 msgstr "How to use:"
 
-#: ../../source/complete_user_guide/system_management/index.rst:364
+#: ../../source/complete_user_guide/system_management/index.rst:367
 msgid "**重命名**：点击\"重命名\"按钮，在弹窗中输入新名称后确认；重命名将同步应用到该标签下的所有产品。若新名称与已有标签冲突将提示错误。"
 msgstr ""
 "**Rename**: click *Rename*, type the new name in the dialog, and confirm; "
 "the rename applies to every product carrying the tag. A collision with an "
 "existing tag triggers an error."
 
-#: ../../source/complete_user_guide/system_management/index.rst:365
+#: ../../source/complete_user_guide/system_management/index.rst:368
 msgid "**删除**：点击\"删除\"按钮，确认后该标签将从所有已绑定产品中移除。"
 msgstr ""
 "**Delete**: click *Delete* and confirm; the tag is removed from every "
 "product currently carrying it."
 
-#: ../../source/complete_user_guide/system_management/index.rst:368
+#: ../../source/complete_user_guide/system_management/index.rst:371
 msgid "在产品列表（首页）选中产品后可批量添加或移除标签；在编辑产品信息时也可为单个产品管理标签。"
 msgstr ""
 "From the product list on the home page, select products to batch-add or "
 "batch-remove tags; tags can also be managed per product via *Edit Info*."
 
-#: ../../source/complete_user_guide/system_management/index.rst:372
+#: ../../source/complete_user_guide/system_management/index.rst:375
 msgid "相机现场校准"
 msgstr "On-site camera calibration"
 
-#: ../../source/complete_user_guide/system_management/index.rst:374
+#: ../../source/complete_user_guide/system_management/index.rst:377
 msgid "用于在线更新相机的内参 / 畸变参数，确保尺寸测量及对齐精度。当出现以下任一情况，建议执行一次现场校准："
 msgstr ""
 "Updates the camera's intrinsic and distortion parameters in the field to "
 "keep dimensional measurement and alignment accurate. Run an on-site "
 "calibration when any of the following apply:"
 
-#: ../../source/complete_user_guide/system_management/index.rst:376
+#: ../../source/complete_user_guide/system_management/index.rst:379
 msgid "更换或重新安装相机 / 镜头；"
 msgstr "The camera or lens was replaced or reinstalled."
 
-#: ../../source/complete_user_guide/system_management/index.rst:377
+#: ../../source/complete_user_guide/system_management/index.rst:380
 msgid "调整过镜头焦距或光圈，导致成像比例明显变化；"
 msgstr ""
 "The lens focal length or aperture was changed, producing a visibly different"
 " imaging scale."
 
-#: ../../source/complete_user_guide/system_management/index.rst:378
+#: ../../source/complete_user_guide/system_management/index.rst:381
 msgid "相机支撑结构被移动、震动或维护后位置可能偏移；"
 msgstr ""
 "The camera mount was moved, knocked, or serviced and may have shifted."
 
-#: ../../source/complete_user_guide/system_management/index.rst:379
+#: ../../source/complete_user_guide/system_management/index.rst:382
 msgid "图像边缘出现明显拉伸 / 弯曲，或测量尺寸偏差增大；"
 msgstr ""
 "The image edges show visible stretch or curvature, or measured dimensions "
 "drift more than usual."
 
-#: ../../source/complete_user_guide/system_management/index.rst:380
+#: ../../source/complete_user_guide/system_management/index.rst:383
 msgid "模板匹配稳定性下降（需先排除光照与污渍因素）。"
 msgstr ""
 "Template-matching stability has dropped (rule out lighting and contamination"
 " first)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:383
+#: ../../source/complete_user_guide/system_management/index.rst:386
 msgid "校准操作会更新当前使用的标定文件（`certificate.bin`）。若需保留旧版本，可在执行前手动备份原文件。"
 msgstr ""
 "Calibration updates the active calibration file (`certificate.bin`). Back up"
 " the original by hand before running it if you want to keep the previous "
 "version."
 
-#: ../../source/complete_user_guide/system_management/index.rst:385
+#: ../../source/complete_user_guide/system_management/index.rst:388
 msgid "前提准备："
 msgstr "Prerequisites:"
 
-#: ../../source/complete_user_guide/system_management/index.rst:387
+#: ../../source/complete_user_guide/system_management/index.rst:390
 msgid "使用官方提供的标定板（保持清洁、无划痕、无强反光）；"
 msgstr ""
 "Use the official calibration target (keep it clean, scratch-free, and free "
 "of strong reflections)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:388
+#: ../../source/complete_user_guide/system_management/index.rst:391
 msgid "确保现场光照稳定，避免强烈局部反射；"
 msgstr ""
 "Ensure on-site lighting is stable and free of strong local reflections."
 
-#: ../../source/complete_user_guide/system_management/index.rst:389
+#: ../../source/complete_user_guide/system_management/index.rst:392
 msgid "传送带参数（宽度 / 速度）已正确配置。"
 msgstr "Conveyor parameters (width / speed) are configured correctly."
 
-#: ../../source/complete_user_guide/system_management/index.rst:391
-#: ../../source/complete_user_guide/system_management/index.rst:468
+#: ../../source/complete_user_guide/system_management/index.rst:394
+#: ../../source/complete_user_guide/system_management/index.rst:471
 msgid "操作步骤："
 msgstr "Steps:"
 
@@ -1071,72 +1077,72 @@ msgstr "Steps:"
 msgid "相机现场校准示意"
 msgstr "On-site camera calibration"
 
-#: ../../source/complete_user_guide/system_management/index.rst:397
+#: ../../source/complete_user_guide/system_management/index.rst:400
 msgid "打开：右上角齿轮 → **设置** → **系统设置** → **校准**。"
 msgstr "Open: gear icon → **Settings → System Settings → Calibration**."
 
-#: ../../source/complete_user_guide/system_management/index.rst:398
+#: ../../source/complete_user_guide/system_management/index.rst:401
 msgid "将标定板放置在传送带中央，棋盘格（或圆点阵）面朝上，整体尽量覆盖相机主要视野；保持平整、不倾斜。"
 msgstr ""
 "Place the calibration target flat in the center of the conveyor, "
 "checkerboard (or dot pattern) facing up, covering as much of the camera's "
 "primary field of view as possible; keep it level — no tilt."
 
-#: ../../source/complete_user_guide/system_management/index.rst:399
+#: ../../source/complete_user_guide/system_management/index.rst:402
 msgid "点击\"开始校准\"。系统将自动执行：进板 → 拍照采集 → 出板。"
 msgstr ""
 "Click **Start Calibration**. The system automatically runs PCB In → capture "
 "→ PCB Out."
 
-#: ../../source/complete_user_guide/system_management/index.rst:400
+#: ../../source/complete_user_guide/system_management/index.rst:403
 msgid "采集完成后前端显示进度与结果状态；成功时出现\"校准成功\"提示。"
 msgstr ""
 "When capture finishes, the frontend shows progress and result status; a "
 "*Calibration successful* prompt appears on success."
 
-#: ../../source/complete_user_guide/system_management/index.rst:401
+#: ../../source/complete_user_guide/system_management/index.rst:404
 msgid "校准文件 `certificate.bin` 自动更新；可记录时间戳以便追溯。"
 msgstr ""
 "The calibration file `certificate.bin` is updated automatically; record the "
 "timestamp for traceability if you want."
 
-#: ../../source/complete_user_guide/system_management/index.rst:405
+#: ../../source/complete_user_guide/system_management/index.rst:408
 msgid "校准过程中勿触碰标定板或传送带，避免产生运动模糊导致参数偏差。"
 msgstr ""
 "Do not touch the target or the conveyor during calibration — motion blur "
 "will throw off the parameters."
 
-#: ../../source/complete_user_guide/system_management/index.rst:409
+#: ../../source/complete_user_guide/system_management/index.rst:412
 msgid "关于"
 msgstr "About"
 
-#: ../../source/complete_user_guide/system_management/index.rst:411
+#: ../../source/complete_user_guide/system_management/index.rst:414
 msgid "进入路径：右上角齿轮 → **设置** → **系统设置** → **关于**。"
 msgstr "Open: gear icon → **Settings → System Settings → About**."
 
-#: ../../source/complete_user_guide/system_management/index.rst:413
+#: ../../source/complete_user_guide/system_management/index.rst:416
 msgid "在该页面可以查询以下信息："
 msgstr "This page lists:"
 
-#: ../../source/complete_user_guide/system_management/index.rst:415
+#: ../../source/complete_user_guide/system_management/index.rst:418
 msgid "**版本**：当前后端系统版本号。"
 msgstr "**Version**: the current backend system version."
 
-#: ../../source/complete_user_guide/system_management/index.rst:416
+#: ../../source/complete_user_guide/system_management/index.rst:419
 msgid "**加密密钥ID**：系统授权加密密钥标识符。"
 msgstr "**Dongle ID**: the system's licence-dongle identifier."
 
-#: ../../source/complete_user_guide/system_management/index.rst:417
+#: ../../source/complete_user_guide/system_management/index.rst:420
 msgid "**加密有效期至** \\ （若存在）：授权到期日期；若已过期请联系技术支持更新授权。"
 msgstr ""
 "**Licence expiry** (when present): the licence end date. If it has expired, "
 "contact technical support to renew."
 
-#: ../../source/complete_user_guide/system_management/index.rst:421
+#: ../../source/complete_user_guide/system_management/index.rst:424
 msgid "日志"
 msgstr "Log"
 
-#: ../../source/complete_user_guide/system_management/index.rst:423
+#: ../../source/complete_user_guide/system_management/index.rst:426
 msgid "进入路径：右上角齿轮 → **设置** → **系统设置** → **日志**。"
 msgstr "Open: gear icon → **Settings → System Settings → Log**."
 
@@ -1144,38 +1150,38 @@ msgstr "Open: gear icon → **Settings → System Settings → Log**."
 msgid "系统日志界面示意"
 msgstr "System Log view"
 
-#: ../../source/complete_user_guide/system_management/index.rst:429
+#: ../../source/complete_user_guide/system_management/index.rst:432
 msgid "**输出日志详细程度（log verbosity）**"
 msgstr "**Log verbosity**"
 
-#: ../../source/complete_user_guide/system_management/index.rst:431
+#: ../../source/complete_user_guide/system_management/index.rst:434
 msgid "页面提供一个数字输入框，取值范围 **0–10 的整数**："
 msgstr "The page offers a numeric input that accepts **integers 0–10**:"
 
-#: ../../source/complete_user_guide/system_management/index.rst:433
+#: ../../source/complete_user_guide/system_management/index.rst:436
 msgid "**0**：仅输出错误与启动 / 关闭信息（最简）。"
 msgstr "**0**: errors plus start / stop messages only — quietest."
 
-#: ../../source/complete_user_guide/system_management/index.rst:434
+#: ../../source/complete_user_guide/system_management/index.rst:437
 msgid "**3–5**：常规生产环境推荐值，仅记录关键流程与必要诊断信息。"
 msgstr ""
 "**3–5**: recommended for production — logs the critical flow and the "
 "diagnostics actually needed."
 
-#: ../../source/complete_user_guide/system_management/index.rst:435
+#: ../../source/complete_user_guide/system_management/index.rst:438
 msgid "**8–10**：调试 / 排查问题时使用；记录每次检测的详细推理过程与中间数据。"
 msgstr ""
 "**8–10**: for debugging and troubleshooting — logs every inspection's "
 "detailed inference flow and intermediate data."
 
-#: ../../source/complete_user_guide/system_management/index.rst:437
+#: ../../source/complete_user_guide/system_management/index.rst:440
 msgid "调整后点击 **应用** 按钮立即生效，无需重启后端服务；当前值由后端持久保存，重启后保留。"
 msgstr ""
 "Click **Apply** after editing; the change takes effect immediately, no "
 "backend restart required. The current value is persisted on the backend and "
 "survives a restart."
 
-#: ../../source/complete_user_guide/system_management/index.rst:441
+#: ../../source/complete_user_guide/system_management/index.rst:444
 msgid ""
 "将日志详细程度调到较高值（约 8–10）会显著增加每次检测的耗时（约 100–200 "
 "毫秒每板），并占用更多磁盘空间。建议平时保持较低值，仅在排查问题时临时调高，问题定位完成后再调回。"
@@ -1185,11 +1191,11 @@ msgstr ""
 "Keep verbosity low day-to-day and only raise it temporarily for "
 "troubleshooting, then drop it back."
 
-#: ../../source/complete_user_guide/system_management/index.rst:445
+#: ../../source/complete_user_guide/system_management/index.rst:448
 msgid "管理模型"
 msgstr "Manage Models"
 
-#: ../../source/complete_user_guide/system_management/index.rst:447
+#: ../../source/complete_user_guide/system_management/index.rst:450
 msgid ""
 "**设置** 左侧的 **管理模型** 用于查看系统中的检测模型（按 全部 / 预训练 / 已训练 "
 "筛选），并支持上传模型、训练模型、设为默认、重命名、导出与删除，以及数据集的导出 / 导入和训练预热重置等操作。模型训练、数据集导入 / "
@@ -1201,21 +1207,21 @@ msgstr ""
 "dataset Export / Import and training-warmup reset. The full reference for "
 "training and dataset operations lives in :ref:`模型管理`."
 
-#: ../../source/complete_user_guide/system_management/index.rst:451
+#: ../../source/complete_user_guide/system_management/index.rst:454
 msgid "数据备份和迁移"
 msgstr "Data backup and migration"
 
-#: ../../source/complete_user_guide/system_management/index.rst:453
+#: ../../source/complete_user_guide/system_management/index.rst:456
 msgid "随着检测记录不断积累，硬盘空间会逐渐减少，建议定期进行数据备份和清理。"
 msgstr ""
 "As inspection records pile up, disk space dwindles — back up and clean up "
 "data periodically."
 
-#: ../../source/complete_user_guide/system_management/index.rst:455
+#: ../../source/complete_user_guide/system_management/index.rst:458
 msgid "请在安装目录下运行 `aoi_pcb_blob_liner.exe` 工具。"
 msgstr "Run `aoi_pcb_blob_liner.exe` from the install directory."
 
-#: ../../source/complete_user_guide/system_management/index.rst:457
+#: ../../source/complete_user_guide/system_management/index.rst:460
 msgid "主要界面说明（见下图）："
 msgstr "Main UI (see below):"
 
@@ -1223,57 +1229,57 @@ msgstr "Main UI (see below):"
 msgid "数据迁移示意"
 msgstr "Data migration"
 
-#: ../../source/complete_user_guide/system_management/index.rst:463
+#: ../../source/complete_user_guide/system_management/index.rst:466
 msgid "左上角 File → FTP mount points 可配置 FTP 服务器，实现远程备份到 NAS 或其他网络硬盘。"
 msgstr ""
 "Top-left **File → FTP mount points** configures an FTP server for remote "
 "backup to a NAS or other network drive."
 
-#: ../../source/complete_user_guide/system_management/index.rst:464
+#: ../../source/complete_user_guide/system_management/index.rst:467
 msgid "右上角 Destination Volume 用于选择目标盘（如移动硬盘、第二磁盘等）。"
 msgstr ""
 "**Destination Volume** at the top-right picks the target drive (an external "
 "drive, a second internal disk, and so on)."
 
-#: ../../source/complete_user_guide/system_management/index.rst:465
+#: ../../source/complete_user_guide/system_management/index.rst:468
 msgid "上方搜索栏可按产品名或序列号快速检索检测记录。"
 msgstr ""
 "The search bar at the top filters inspection records by product name or "
 "serial number."
 
-#: ../../source/complete_user_guide/system_management/index.rst:466
+#: ../../source/complete_user_guide/system_management/index.rst:469
 msgid "搜索栏旁边的过滤器按钮可按日期、时间等条件过滤记录，便于批量操作。"
 msgstr ""
 "The filter button next to the search bar filters by date / time so batch "
 "operations are easier."
 
-#: ../../source/complete_user_guide/system_management/index.rst:470
+#: ../../source/complete_user_guide/system_management/index.rst:473
 msgid "选择目标盘（Destination Volume），如需远程备份可先配置 FTP。"
 msgstr ""
 "Pick the **Destination Volume**; configure FTP first if you need remote "
 "backup."
 
-#: ../../source/complete_user_guide/system_management/index.rst:471
+#: ../../source/complete_user_guide/system_management/index.rst:474
 msgid "可通过搜索栏输入产品名或序列号，或点击 过滤器 按钮按日期/时间筛选需要迁移的检测记录。"
 msgstr ""
 "Filter the records to migrate by typing a product name or serial number in "
 "the search bar, or by clicking the filter button to filter by date / time."
 
-#: ../../source/complete_user_guide/system_management/index.rst:472
+#: ../../source/complete_user_guide/system_management/index.rst:475
 msgid "在列表中框选或按住 Shift 选中多个检测记录。"
 msgstr "Drag-select or Shift-click to pick multiple records in the list."
 
-#: ../../source/complete_user_guide/system_management/index.rst:473
+#: ../../source/complete_user_guide/system_management/index.rst:476
 msgid "点击下方 Archive 按钮，即可将选中的记录迁移至目标盘。"
 msgstr ""
 "Click the **Archive** button at the bottom to migrate the selected records "
 "to the destination drive."
 
-#: ../../source/complete_user_guide/system_management/index.rst:474
+#: ../../source/complete_user_guide/system_management/index.rst:477
 msgid "如需恢复数据，可点击 Unarchive 按钮从目标盘导入。"
 msgstr "Click **Unarchive** to restore data from the destination drive."
 
-#: ../../source/complete_user_guide/system_management/index.rst:475
+#: ../../source/complete_user_guide/system_management/index.rst:478
 msgid "若需删除无用记录，可点击 Delete 按钮。"
 msgstr "Click **Delete** to remove unwanted records."
 
@@ -1281,7 +1287,7 @@ msgstr "Click **Delete** to remove unwanted records."
 msgid "目标磁盘中的归档文件示意"
 msgstr "Archive files on the destination drive"
 
-#: ../../source/complete_user_guide/system_management/index.rst:481
+#: ../../source/complete_user_guide/system_management/index.rst:484
 msgid "建议定期将重要检测数据备份到安全存储介质，防止因硬盘故障或空间不足导致数据丢失。"
 msgstr ""
 "Back up critical inspection data to safe storage periodically so a disk "

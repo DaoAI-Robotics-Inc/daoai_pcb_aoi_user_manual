@@ -1,0 +1,386 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021-2026
+# This file is distributed under the same license as the PCBA AOI User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 13:16-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:2
+msgid "MES 结果导出"
+msgstr "MES Result Export"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:4
+msgid ""
+"系统可在每块板检测完成后，自动将检测结果导出到指定目录，供 MES / 上位系统读取。导出内容包括 CSV "
+"报告文件、缺陷元件裁剪图与整板拼接图。本页介绍默认配置文件 ``default_csv`` 的使用方法。"
+msgstr ""
+"After each board is inspected, the system can automatically export the "
+"inspection results to a designated directory for an MES / host system to "
+"consume. The export includes a CSV report file, cropped images of defective "
+"components, and the stitched full-board image. This page describes how to "
+"use the default ``default_csv`` profile."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:6
+msgid "**此页面的用途**"
+msgstr "**Purpose of this page**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:8
+msgid "说明如何启用 MES 导出、如何选择导出配置文件，以及默认配置下文件保存在哪里、报告包含哪些字段，便于现场对接 MES 或归档查阅。"
+msgstr ""
+"Explains how to enable MES export, how to choose an export profile, "
+"and—under the default profile—where files are stored and which fields the "
+"report contains, to help the site integrate with an MES or archive the "
+"results."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:10
+msgid "**如何进入**"
+msgstr "**How to access**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:12
+msgid ""
+"右上角齿轮 → **设置** → **系统设置** → **系统配置** \\ （Admin / 编程员 可见）。该页面与 MES "
+"相关的设置分为两部分："
+msgstr ""
+"Top-right gear → **Settings** → **System Settings** → **System "
+"Configuration** (visible to Admin / Programmer). The MES-related settings on"
+" this page fall into two parts:"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:14
+msgid "**MES导出配置**：导出开关、路径、图像质量与保留天数。各选项含义详见 :ref:`系统JSON配置`。"
+msgstr ""
+"**MES Export Config**: export toggles, path, image quality, and retention "
+"days. See :ref:`系统JSON配置` for the meaning of each option."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:15
+msgid "**MES 配置文件**：选择当前生效的导出配置文件，并编辑其输出端配置。"
+msgstr ""
+"**MES Profile**: choose the active export profile and edit its sink "
+"configuration."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:17
+msgid "**启用 MES 导出**"
+msgstr "**Enabling MES export**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:19
+msgid "在 **系统配置** → **MES导出配置** 中："
+msgstr "Under **System Configuration** → **MES Export Config**:"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:21
+msgid "在 **导出MES路径** 填写导出根目录（请确保目录已存在且可写入）。"
+msgstr ""
+"Fill in **Export MES Path** with the export root directory (make sure it "
+"already exists and is writable)."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:22
+msgid "按需开启 **导出报告**、**导出元件图像**、**导出拼接图像** 三个开关（默认均为关闭，需要导出图片时请先开启）。"
+msgstr ""
+"Turn on the **Export Report**, **Export Component Image**, and **Export "
+"Stitched Image** switches as needed (all off by default; turn them on before"
+" you need image export)."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:23
+msgid "通过 **导出图像质量（1-100）** 调整 JPEG 清晰度，通过 **报告保存期限（1-30天）** 设置本地文件保留天数。"
+msgstr ""
+"Use **Export Image Quality (1–100)** to adjust JPEG sharpness, and **Report "
+"Retention (1–30 days)** to set how long local files are kept."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:24
+msgid "在页面底部点击 **保存** 生效。"
+msgstr "Click **Save** at the bottom of the page to apply."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:26
+msgid "**选择导出配置文件（MES 配置文件）**"
+msgstr "**Choosing an export profile (MES Profile)**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:28
+msgid "不同的\"配置文件\"对应不同的 MES 对接格式与输出方式。在 **MES 配置文件** 区块："
+msgstr ""
+"Different \"profiles\" correspond to different MES integration formats and "
+"output methods. In the **MES Profile** section:"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:30
+msgid ""
+"**激活配置文件**：下拉选择当前生效的配置文件。出厂默认为 ``default_csv`` —— 导出为本地 CSV 报告与图片，适用于无需直连 "
+"MES 的现场。"
+msgstr ""
+"**Active profile**: a dropdown that selects the profile currently in effect."
+" The factory default is ``default_csv`` — it exports a local CSV report and "
+"images, suitable for sites that do not connect directly to an MES."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:31
+msgid "选择带连接信息的厂商配置文件时，下方会出现该配置文件的输出端配置项，带 ``*`` 的字段为必填。"
+msgstr ""
+"When a vendor profile that carries connection details is selected, that "
+"profile's sink configuration fields appear below; fields marked with ``*`` "
+"are required."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:32
+msgid "部分定制配置文件需要单独启动外接进程，可在其外接进程控制区点击 **连接** / **断开** 管理运行状态。"
+msgstr ""
+"Some customized profiles require a separate external process to be started; "
+"use **Connect** / **Disconnect** in that profile's external-process controls"
+" to manage its running state."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:33
+msgid "配置文件的选择与编辑在点击页面底部的 **保存** 后才会生效。"
+msgstr ""
+"Profile selection and edits take effect only after you click **Save** at the"
+" bottom of the page."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:38
+msgid "修改导出配置文件或其字段后需重启后端服务才会完全生效。"
+msgstr ""
+"Changing the export profile or its fields requires a backend restart to take"
+" full effect."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:40
+msgid "**默认配置 default_csv 的导出内容**"
+msgstr "**What the default ``default_csv`` profile exports**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:42
+msgid "启用导出后，所有文件保存在 **导出MES路径** 指定的根目录下，分为两个子目录："
+msgstr ""
+"Once export is enabled, all files are saved under the root directory set in "
+"**Export MES Path**, in two subdirectories:"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:44
+msgid "``reports/``：报告文件。"
+msgstr "``reports/``: report files."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:45
+msgid "``images/``：缺陷元件图与整板拼接图。"
+msgstr ""
+"``images/``: defective-component images and stitched full-board images."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:47
+msgid "**报告文件**"
+msgstr "**Report file**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:49
+msgid "每次检测生成一个 CSV 文件，文件名由 大板SN、检测状态、机型、产线编号 与 检测记录编号 组成，便于按板检索。报告包含两段内容。"
+msgstr ""
+"Each inspection produces one CSV file. The file name is composed of the "
+"board SN, inspection status, model, lane number, and inspection record ID, "
+"so reports can be looked up per board. The report contains two parts."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:51
+msgid "整板信息（一行）："
+msgstr "Board summary (one row):"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:53
+msgid "整板信息字段"
+msgstr "Board summary fields"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:57
+#: ../../source/complete_user_guide/system_management/mes_export.rst:78
+msgid "字段"
+msgstr "Field"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:58
+#: ../../source/complete_user_guide/system_management/mes_export.rst:79
+msgid "含义"
+msgstr "Meaning"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:59
+msgid "机型"
+msgstr "Model"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:60
+msgid "该板对应的 PCB 产品（程序）名称。"
+msgstr "Name of the PCB product (program) this board corresponds to."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:61
+msgid "大板SN"
+msgstr "Board SN"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:62
+msgid "整板条码 / 序列号。"
+msgstr "Barcode / serial number of the whole board."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:63
+msgid "开始时间"
+msgstr "Start time"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:64
+msgid "本次检测开始时间。"
+msgstr "Time this inspection started."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:65
+msgid "结束时间"
+msgstr "End time"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:66
+msgid "本次检测结束时间。"
+msgstr "Time this inspection ended."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:67
+msgid "拼版数量"
+msgstr "Panel count"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:68
+msgid "本次实际检测的有效小板数量。"
+msgstr "Number of valid sub-boards actually inspected this run."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:69
+#: ../../source/complete_user_guide/system_management/mes_export.rst:92
+msgid "状态"
+msgstr "Status"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:70
+msgid "整板最终判定结果（合格 / 不合格）。"
+msgstr "Final verdict for the whole board (pass / fail)."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:72
+msgid "缺陷明细（每个缺陷一行）："
+msgstr "Defect detail (one row per defect):"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:74
+msgid "缺陷明细字段"
+msgstr "Defect detail fields"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:80
+msgid "异常原因"
+msgstr "Defect reason"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:81
+msgid "缺陷 / 错误类型；显示为经\"错误类型翻译\"映射后的 MES 厂商代码（若已配置）。"
+msgstr ""
+"Defect / error type; shown as the MES vendor code after mapping through "
+"\"Error Type Translation\" (if configured)."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:82
+msgid "位置号"
+msgstr "Designator"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:83
+msgid "缺陷元件的位号（designator）。"
+msgstr "The defective component's designator."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:84
+msgid "物料"
+msgstr "Part"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:85
+msgid "元件的物料编号（part number）。"
+msgstr "The component's part number."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:86
+msgid "图片位置"
+msgstr "Image location"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:87
+msgid "该缺陷元件裁剪图在导出目录中的路径。"
+msgstr ""
+"Path to the cropped image of the defective component within the export "
+"directory."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:88
+msgid "小板号"
+msgstr "Sub-board number"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:89
+msgid "缺陷所在小板在拼版中的序号。"
+msgstr ""
+"Index of the sub-board (within the panel) where the defect is located."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:90
+msgid "小板SN"
+msgstr "Sub-board SN"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:91
+msgid "缺陷所在小板的条码 / 序列号。"
+msgstr "Barcode / serial number of the sub-board where the defect is located."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:93
+msgid "该缺陷复核后的状态（合格 / 不合格）。"
+msgstr "Status of the defect after review (pass / fail)."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:95
+msgid "**图片存储路径**"
+msgstr "**Image storage paths**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:97
+msgid ""
+"开启 **导出元件图像** / **导出拼接图像** 后，图片按 机型 / 日期 / 大板SN / 检测记录编号 "
+"分目录存放（每次检测独立目录，重复测量同一条码不会互相覆盖）："
+msgstr ""
+"Once **Export Component Image** / **Export Stitched Image** is enabled, "
+"images are stored in subdirectories by model / date / board SN / inspection "
+"record ID (each inspection gets its own directory, so re-measuring the same "
+"barcode does not overwrite earlier results):"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:99
+msgid "整板拼接图：固定命名为 ``full_image.jpg``。"
+msgstr "Stitched full-board image: always named ``full_image.jpg``."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:100
+msgid "缺陷元件图：按 位置号、小板号、小板序号 命名的 JPG 文件，与报告\"图片位置\"列一一对应。"
+msgstr ""
+"Defective-component images: JPG files named by designator, sub-board number,"
+" and sub-board index, matching the report's \"Image location\" column one-"
+"to-one."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:102
+msgid "**注意事项**"
+msgstr "**Notes**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:104
+msgid "**导出报告**、**导出元件图像**、**导出拼接图像** 默认均为关闭；需要导出图片时请先开启对应开关。"
+msgstr ""
+"**Export Report**, **Export Component Image**, and **Export Stitched Image**"
+" are all off by default; turn on the corresponding switch before you need "
+"image export."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:105
+msgid "报告与图片仅在勾选导出且检测时实时生成；事后在复核页重新导出只会刷新报告，不会重新生成图片。"
+msgstr ""
+"Reports and images are generated in real time only when export is enabled "
+"and during inspection; re-exporting later from the review page only "
+"refreshes the report and does not regenerate images."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:106
+msgid ""
+"超过 **报告保存期限** 的本地报告与图片会被系统定期清理；通过 HTTP / 厂商接口直连 MES 的配置文件不写本地文件，不受此清理影响。"
+msgstr ""
+"Local reports and images older than **Report Retention** are periodically "
+"cleaned up by the system; profiles that connect directly to an MES over HTTP"
+" / a vendor interface do not write local files and are unaffected by this "
+"cleanup."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:107
+msgid "默认配置依据 大板SN 命名文件；若未扫描到整板条码，该次导出会失败并记录日志。"
+msgstr ""
+"The default profile names files by board SN; if the board barcode was not "
+"scanned, that export fails and is logged."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:108
+msgid "缺陷的 **异常原因** 显示的是 MES 厂商代码，其映射在 :ref:`错误类型翻译` 中维护。"
+msgstr ""
+"A defect's **Defect reason** shows the MES vendor code; its mapping is "
+"maintained in :ref:`错误类型翻译`."
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:110
+msgid "**相关页面**"
+msgstr "**Related pages**"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:112
+msgid ":ref:`系统JSON配置`"
+msgstr ":ref:`系统JSON配置`"
+
+#: ../../source/complete_user_guide/system_management/mes_export.rst:113
+msgid ":ref:`错误类型翻译`"
+msgstr ":ref:`错误类型翻译`"

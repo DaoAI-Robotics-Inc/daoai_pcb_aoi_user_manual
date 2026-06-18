@@ -36,6 +36,7 @@ PCBA AOI 用户手册
    :caption: 检测
 
    complete_user_guide/inspection/index
+   complete_user_guide/inspection/data_analysis_report
 
 .. only:: online
 
@@ -56,6 +57,7 @@ PCBA AOI 用户手册
    :caption: 系统设置
 
    complete_user_guide/system_management/index
+   complete_user_guide/system_management/mes_export
 
 .. toctree::
    :maxdepth: 2
