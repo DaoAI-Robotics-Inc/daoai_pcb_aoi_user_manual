@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 14:17-0700\n"
+"POT-Creation-Date: 2026-06-17 14:02-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: en <LL@li.org>\n"
 "Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:2
@@ -41,8 +41,8 @@ msgstr "**How to open it**"
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:10
 msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
 msgstr ""
-"Draw the corresponding ROI in the Template Editor, then configure the tool's"
-" parameters in the parameter panel."
+"Draw the corresponding ROI in the Template Editor, then configure the "
+"tool's parameters in the parameter panel."
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:12
 msgid "**操作流程**"
@@ -51,10 +51,10 @@ msgstr "**Workflow**"
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:14
 msgid "**用途**：在引脚阵列上自动生成引脚子框，结合 AI 缺陷检测识别桥接、缺焊、虚焊、少锡等。检测框上的三角箭头指向引脚 *外侧*。"
 msgstr ""
-"**Purpose**: generate per-lead sub-frames across the lead array and combine "
-"them with AI defect detection to catch solder bridges, missing solder, cold "
-"solder, and insufficient solder. The triangle marker on the ROI points to "
-"the *outside* of the leads."
+"**Purpose**: generate per-lead sub-frames across the lead array and "
+"combine them with AI defect detection to catch solder bridges, missing "
+"solder, cold solder, and insufficient solder. The triangle marker on the "
+"ROI points to the *outside* of the leads."
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst
 msgid "引脚2D(AI)示意"
@@ -71,8 +71,8 @@ msgstr "**Lead Count**: the ROI is divided into this many equal sub-ROIs."
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:23
 msgid "**引脚宽度 (mm)（Lead Width）**：匹配实际引脚宽度，使子 ROI 与实体引脚对齐。"
 msgstr ""
-"**Lead Width (mm)**: matches the physical lead width so each sub-ROI aligns "
-"with the corresponding lead."
+"**Lead Width (mm)**: matches the physical lead width so each sub-ROI "
+"aligns with the corresponding lead."
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:24
 msgid "**引脚角度（Lead Angle）**：引脚相对 ROI 的方向角。"
@@ -80,26 +80,19 @@ msgstr "**Lead Angle**: the lead direction relative to the ROI."
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:25
 msgid "**引脚阈值（Lead Threshold）**：基于每个引脚子 ROI 的 AI 分数判定缺陷。"
-msgstr ""
-"**Lead Threshold**: AI-score threshold applied to each per-lead sub-ROI."
+msgstr "**Lead Threshold**: AI-score threshold applied to each per-lead sub-ROI."
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:26
-msgid "**桥接阈值（Bridge Threshold）**：相邻引脚间连锡（短路）的判定阈值。"
-msgstr ""
-"**Bridge Threshold**: threshold for detecting solder bridges (shorts) "
-"between adjacent leads."
-
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:27
 msgid ""
 "**桥接宽度 (mm)（Bridge Width）/ 间隙宽度 (%)（Gap "
 "Width）**：定义相邻引脚间桥接检测带的宽度；可按毫米或按引脚间隙百分比设定，居中裁剪以避免引脚边缘干扰。"
 msgstr ""
 "**Bridge Width (mm) / Gap Width (%)**: define the width of the bridge-"
-"detection band between adjacent leads. Configure it in millimeters or as a "
-"percentage of the lead gap; the band is centered between the leads to avoid "
-"lead-edge interference."
+"detection band between adjacent leads. Configure it in millimeters or as "
+"a percentage of the lead gap; the band is centered between the leads to "
+"avoid lead-edge interference."
 
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:28
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:27
 msgid ""
 "**引脚忽略列表（Lead Ignore List）/ 桥接忽略列表（Bridge Ignore List）**：选择不参与检测的引脚 / "
 "桥接（从左到右编号，注意特征框角度）。"
@@ -108,42 +101,49 @@ msgstr ""
 "exclude from inspection (numbered left to right; mind the feature box "
 "orientation)."
 
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:29
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:28
 msgid "**启用可视化（Enable Visualization）**：显示引脚子框与检测结果。"
 msgstr ""
-"**Enable Visualization**: shows the per-lead sub-frames and the detection "
-"results overlaid on the canvas."
+"**Enable Visualization**: shows the per-lead sub-frames and the detection"
+" results overlaid on the canvas."
 
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:30
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:29
 msgid "**使用同步参数（Use sync param）**：开启后，对同一组件下所有同类型引脚特征共用一套参数；关闭后可对单个特征单独调参。"
 msgstr ""
-"**Use sync param**: when on, every lead feature of this type within the same"
-" component shares one parameter set; turn it off to tune a single feature "
-"independently."
+"**Use sync param**: when on, every lead feature of this type within the "
+"same component shares one parameter set; turn it off to tune a single "
+"feature independently."
 
 #: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst
 msgid "引脚2D AI检测示意"
 msgstr "IC Lead 2D AI inspection illustration"
 
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:37
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:36
 msgid "**常见问题与提示**"
 msgstr "**Common questions and tips**"
 
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:41
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:40
 msgid "**引脚末端误报多**：若元件末端没有红色焊料，关闭 **引脚末端** 子检测。"
 msgstr ""
 "**Frequent false positives on the lead tip**: if the lead tip has no red "
 "solder, turn off the **Lead Tip** sub-check."
 
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:42
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:41
 msgid "**焊盘检测误报多**：焊盘检测把红色作为有效区域；若元件引脚没有明显焊盘区域，关闭 **焊盘** 子检测。"
 msgstr ""
-"**Frequent false positives on the pad**: pad inspection treats red as the "
-"valid region; if the leads don't expose a clear pad area, turn off the "
+"**Frequent false positives on the pad**: pad inspection treats red as the"
+" valid region; if the leads don't expose a clear pad area, turn off the "
 "**Pad** sub-check."
 
-#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:43
+#: ../../source/complete_user_guide/config/detection_tools/lead_2d.rst:42
 msgid "**短引脚定位不准**：使用 **短引脚模式**，整段引脚作为一个检测区域，定位更稳定。"
 msgstr ""
 "**Short leads are localized poorly**: use **Short-lead mode**, which "
 "inspects the whole lead as one region and tracks more reliably."
+
+#~ msgid "**桥接阈值（Bridge Threshold）**：相邻引脚间连锡（短路）的判定阈值。"
+#~ msgstr ""
+#~ "**Bridge Threshold**: threshold for detecting"
+#~ " solder bridges (shorts) between adjacent"
+#~ " leads."
+

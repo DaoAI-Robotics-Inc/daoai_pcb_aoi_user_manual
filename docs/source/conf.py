@@ -6,8 +6,8 @@ project = 'PCBA AOI User Manual'
 copyright = '2021-2026'
 author = ''
 
-release = '2025.2'
-version = '2025.2.0'
+release = '4.6'
+version = '4.6'
 
 # -- General configuration
 

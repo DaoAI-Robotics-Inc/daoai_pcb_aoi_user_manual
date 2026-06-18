@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 14:35-0700\n"
+"POT-Creation-Date: 2026-06-17 14:55-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/features/collinearity_inspection.rst:2
-msgid "共线性检测（Collinearity Inspection）"
+msgid "共线性检测"
 msgstr "Collinearity Inspection"
 
 #: ../../source/complete_user_guide/features/collinearity_inspection.rst:4
@@ -417,3 +417,6 @@ msgstr ":ref:`手动编程与编辑工具`"
 #: ../../source/complete_user_guide/features/collinearity_inspection.rst:112
 msgid ":ref:`料号封装和分组`"
 msgstr ":ref:`料号封装和分组`"
+
+#~ msgid "共线性检测（Collinearity Inspection）"
+#~ msgstr "Collinearity Inspection"

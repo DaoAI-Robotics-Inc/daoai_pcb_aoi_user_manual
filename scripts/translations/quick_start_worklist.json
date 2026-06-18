@@ -1,0 +1,6 @@
+{
+  "introduce/quick_start/index.po": {
+    "在主页点击 :ui-btn:`工作列表` 进入 :ui-tab:`数据分析报告`。页面包含 :ui-tab:`总结`、:ui-tab:`检测结果`、:ui-tab:`元件` 三个标签，并可按时间范围、PCBA、序列号、机台、操作员等条件过滤。": "On the Home page, click :ui-btn:`Work List` to open the :ui-tab:`Data Analysis Report`. The page has three tabs — :ui-tab:`Summary`, :ui-tab:`Inspection Result`, :ui-tab:`Component` — and can be filtered by time range, PCBA, serial number, machine, operator, and more.",
+    "切换到 :ui-tab:`检测结果`，可查看每次检测记录：PCBA 名称、主序列号、不良元件数、误报数、复核结果、操作员、机台、检测起止时间等。点击某条记录的 :ui-btn:`查看` 进入复检详情。": "Switch to :ui-tab:`Inspection Result` to see each inspection record: PCBA name, Main SN, NG component count, false alarm count, review result, operator, machine, start/end time, etc. Click :ui-btn:`View` on a record to open the review detail."
+  }
+}

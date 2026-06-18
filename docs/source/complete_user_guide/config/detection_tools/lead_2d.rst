@@ -23,7 +23,6 @@ IC 引脚检测 2D（Lead 2D，AI）
 - **引脚宽度 (mm)（Lead Width）**：匹配实际引脚宽度，使子 ROI 与实体引脚对齐。
 - **引脚角度（Lead Angle）**：引脚相对 ROI 的方向角。
 - **引脚阈值（Lead Threshold）**：基于每个引脚子 ROI 的 AI 分数判定缺陷。
-- **桥接阈值（Bridge Threshold）**：相邻引脚间连锡（短路）的判定阈值。
 - **桥接宽度 (mm)（Bridge Width）/ 间隙宽度 (%)（Gap Width）**：定义相邻引脚间桥接检测带的宽度；可按毫米或按引脚间隙百分比设定，居中裁剪以避免引脚边缘干扰。
 - **引脚忽略列表（Lead Ignore List）/ 桥接忽略列表（Bridge Ignore List）**：选择不参与检测的引脚 / 桥接（从左到右编号，注意特征框角度）。
 - **启用可视化（Enable Visualization）**：显示引脚子框与检测结果。
