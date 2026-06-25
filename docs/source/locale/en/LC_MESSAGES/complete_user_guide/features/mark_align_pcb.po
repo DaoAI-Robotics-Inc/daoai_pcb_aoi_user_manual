@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 16:16-0700\n"
+"POT-Creation-Date: 2026-06-25 12:01-0700\n"
 "PO-Revision-Date: 2026-06-05 11:50-0700\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
@@ -21,10 +21,11 @@ msgid "标记 / 对齐 PCB"
 msgstr "Mark / Align PCB"
 
 #: ../../source/complete_user_guide/features/mark_align_pcb.rst:4
-msgid "为产品定义 **Mark 点** 与 **独特标记**，让系统在每次检测前都能稳定定位 PCB 的实际位置："
+msgid "为产品定义 **Mark 点**、**子板标记** 与 **独特标记**，让系统在每次检测前都能稳定定位 PCB 的实际位置："
 msgstr ""
-"Define a product's **Mark Points** and **Unique Markers** so the system can "
-"reliably locate the actual PCB position before every inspection:"
+"Define a product's **Mark Points**, **Sub-board Markers**, and **Unique "
+"Markers** so the system can reliably locate the actual PCB position before "
+"every inspection:"
 
 #: ../../source/complete_user_guide/features/mark_align_pcb.rst:6
 msgid "**Mark 点（参考标记）**：补偿来料偏移与拼板单元之间的微小错位。"
@@ -33,16 +34,22 @@ msgstr ""
 "small misalignment between sub-boards in an array."
 
 #: ../../source/complete_user_guide/features/mark_align_pcb.rst:7
+msgid "**子板标记（Sub-board Marker）**：拼板产品中为每个子板单独细化对齐（可选）。"
+msgstr ""
+"**Sub-board Marker**: refines alignment per sub-board on panelized products "
+"(optional)."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:8
 msgid "**独特标记（Unique Marker）**：在 A/B 面双产品检测中自动区分两块不同的 PCB。"
 msgstr ""
 "**Unique Markers**: automatically distinguish two different PCBs in A/B-side"
 " mixed-product inspection."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:19
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:20
 msgid "如何进入"
 msgstr "How to open it"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:21
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:22
 msgid "进入产品的 :ui-tab:`产品编程页面（Teach）`，点击顶部第一个标签页 :ui-tab:`标记 / 对齐 PCB`。"
 msgstr ""
 "Open a product's :ui-tab:`Teach` page, then click the first top tab, :ui-"
@@ -54,11 +61,11 @@ msgstr ""
 "Mark / Align PCB main view: marker list on the left, PCB canvas in the "
 "center."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:28
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:29
 msgid "Mark 点（参考标记点）"
 msgstr "Mark Points (reference marks)"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:30
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:31
 msgid ""
 "点击工具栏的 :ui-btn:`+ 标记`，在拍摄图像上框选 PCB 上固定、易识别的参考标记点（圆形 mark、矩形 "
 "mark、或复杂的丝印图案均可）。绘制完成后会出现在左侧标记列表中。"
@@ -68,70 +75,70 @@ msgstr ""
 "a rectangular mark, or a complex silkscreen pattern). The new mark appears "
 "in the marker list on the left."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:33
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:34
 msgid "标记形状（Shape Type）"
 msgstr "Shape Type"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:35
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:36
 msgid "每个 mark 点的 :ui-param:`标记形状` 支持三种定位方式。优先用 AI 算法（圆形 / 矩形），失败时再退到模板匹配："
 msgstr ""
 "Each Mark Point's :ui-param:`Shape Type` supports three ways to be located. "
 "Prefer the AI algorithm (Circle / Rectangle); fall back to template matching"
 " when it fails:"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:41
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:42
 msgid "形状类型"
 msgstr "Shape type"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:42
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:43
 msgid "定位原理"
 msgstr "How it locates"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:43
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:44
 msgid "何时使用"
 msgstr "When to use"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:44
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:45
 msgid ":ui-opt:`圆形标记 (Circle)`"
 msgstr ":ui-opt:`Circle Marker`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:45
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:46
 msgid "AI 算法在图像中搜索 **圆形** 特征来定位"
 msgstr "An AI algorithm searches the image for a **circular** feature."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:46
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:47
 msgid "mark 为圆形，首选"
 msgstr "Mark is circular — preferred."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:47
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:48
 msgid ":ui-opt:`矩形标记 (Rectangle)`"
 msgstr ":ui-opt:`Rectangle Marker`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:48
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:49
 msgid "AI 算法在图像中搜索 **矩形** 特征来定位"
 msgstr "An AI algorithm searches the image for a **rectangular** feature."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:49
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:50
 msgid "mark 为矩形，首选"
 msgstr "Mark is rectangular — preferred."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:50
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:51
 msgid ":ui-opt:`模板标记 (Template)`"
 msgstr ":ui-opt:`Template Marker`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:51
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:52
 msgid "把框内图像存为 **模板**，检测时用模板匹配找最相似的位置"
 msgstr ""
 "Stores the image inside the box as a **template**, then uses template "
 "matching to find the most similar spot at inspection time."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:52
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:53
 msgid "mark 不规则，或表面有油墨 / 氧化 / 反光导致 AI 失败时的退路"
 msgstr ""
 "A fallback when the mark is irregular, or when ink / oxidation / glare on "
 "its surface makes the AI fail."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:56
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:57
 msgid "模板匹配对旋转、缩放、光照变化比 AI 算法更敏感，要求 mark 外观稳定；因此 **优先圆形 / 矩形，AI 失败再改模板标记**。"
 msgstr ""
 "Template matching is more sensitive to rotation, scaling, and lighting "
@@ -139,11 +146,11 @@ msgstr ""
 "**prefer Circle / Rectangle, and switch to Template Marker only when the AI "
 "fails**."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:59
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:60
 msgid "其他属性"
 msgstr "Other options"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:61
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:62
 msgid ""
 ":ui-param:`二值化抽色（Mark Binarization）`：mark 点底色不稳定时启用，先把 mark 抽成二值掩膜再匹配。开启后会出现"
 " :ui-param:`三色范围` 参数（X / Y / Z / A），点击 :ui-btn:`显示色范围 Mask` 可实时预览抽色效果。"
@@ -153,25 +160,25 @@ msgstr ""
 "exposes a :ui-param:`Tricolor range` (X / Y / Z / A); click :ui-btn:`Show "
 "Color Range Mask` to preview the binarization live."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:62
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:63
 msgid ":ui-btn:`定位（Locate）`：让相机移动到当前 mark 点的金板位置，便于核对位置是否正确。"
 msgstr ""
 ":ui-btn:`Locate`: move the camera to this Mark Point's golden-board position"
 " to verify the location is correct."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:63
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:64
 msgid ":ui-btn:`预测中心（Predict Center）`：系统重新分析框内图像，自动微调 mark 点中心，消除手画时的轻微偏差。"
 msgstr ""
 ":ui-btn:`Predict Center`: re-analyzes the image inside the box and auto-"
 "adjusts the Mark Point's center, removing the slight drift of a hand-drawn "
 "box."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:64
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:65
 msgid ":ui-btn:`精修（Refine）`：手动微调 mark 点框的位置与大小。"
 msgstr ""
 ":ui-btn:`Refine`: manually fine-tune the Mark Point box's position and size."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:68
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:69
 msgid "二维定位需要 **2 个 mark 点**，分别置于 PCB 的对角位置。当前版本 **最多 2 个**，不能再添加更多。"
 msgstr ""
 "2D alignment needs **two Mark Points**, one in each opposite corner of the "
@@ -181,106 +188,235 @@ msgstr ""
 msgid "标记 / 对齐 PCB 画布上的 mark 点位置示意"
 msgstr "Mark Point placement on the Mark / Align PCB canvas"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:75
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:76
+msgid "子板标记（Sub-board Marker）"
+msgstr "Sub-board Marker"
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:78
+msgid ""
+"仅适用于 **拼板产品**（一块大板上含多个子板）。常规 Mark 点为整块拼板提供统一的位置 / 旋转补偿；当各子板之间存在微小相对偏移或形变、需要 "
+"**逐个子板** 单独细化对齐时，可改用 **子板标记**。"
+msgstr ""
+"Only for **panelized products** (one large board carrying several sub-"
+"boards). Regular Mark Points give the whole panel one shared position / "
+"rotation compensation; when the sub-boards shift or deform slightly relative"
+" to each other and need **per-sub-board** alignment refinement, use **Sub-"
+"board Markers** instead."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:80
+msgid ""
+"点击工具栏的 :ui-btn:`+ 子板标记`，在 **任意一个子板的拼板区域内** 框选一处参考标记。子板标记的形状类型（圆形 / 矩形 / "
+"模板）、:ui-btn:`定位`、:ui-btn:`预测中心`、:ui-btn:`精修` 等属性与常规 Mark 点相同。"
+msgstr ""
+"Click :ui-btn:`+ Sub-board Marker` on the toolbar and box a reference mark "
+"**inside the panel region of any one sub-board**. A sub-board marker's shape"
+" type (Circle / Rectangle / Template), :ui-btn:`Locate`, :ui-btn:`Predict "
+"Center`, and :ui-btn:`Refine` work the same as a regular Mark Point."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:82
+msgid "行为要点："
+msgstr "Key behaviors:"
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:84
+msgid ""
+"**创建即自动套用到每个子板**：在一个子板上画好后，系统会按拼板布局自动复制到所有其他子板；左侧列表中每个子板标记只显示一行（对应基准子板）。"
+msgstr ""
+"**Created once, applied to every sub-board**: after you draw it on one sub-"
+"board, the system copies it to all the others according to the panel layout;"
+" the list on the left shows one row per sub-board marker (the base sub-"
+"board)."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:85
+msgid "**逐个子板微调**：之后调整某个子板上的标记时，只影响该子板，不会改动其他子板。"
+msgstr ""
+"**Per-sub-board tuning**: editing the marker on one sub-board afterwards "
+"affects only that sub-board, not the others."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:86
+msgid "**预测中心** 会对拼板内 **每一个子板** 分别检测标记中心，并把结果分别应用到对应子板。"
+msgstr ""
+"**Predict Center** detects the marker center on **every sub-board** in the "
+"panel and applies each result to its own sub-board."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:90
+msgid ""
+"子板标记必须画在 **拼板区域（panel）内**。若画在拼板区域之外，系统会拒绝并提示 **子板标记必须放置在拼板区域内**。因此请先在 "
+":doc:`pcb_array` 中完成拼板（子板布局）的定义，再添加子板标记。"
+msgstr ""
+"A sub-board marker must be drawn **inside a panel region**. If drawn outside"
+" a panel region, the system rejects it and shows **Sub-board marker must be "
+"placed inside a panel.** So define the panel (sub-board layout) in "
+":doc:`pcb_array` first, then add sub-board markers."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:95
 msgid "独特标记（Unique Marker）"
 msgstr "Unique Marker"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:77
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:97
 msgid ""
 "仅在 **A/B 面双产品检测** 场景下需要。点击 :ui-btn:`+ "
-"独特标记`，在每个产品上框选一处与另一面差异明显的区域（例如缺口、专属丝印、特殊器件），该区域将作为产品识别特征。"
+"独特标记`，框选一处与另一面差异明显的区域（例如缺口、专属丝印、特殊器件），该区域将作为产品识别特征。两个产品 **至少有一个** "
+"需要标记；也可只在其中一个产品上标记，由系统按排除法识别（见下文 单标记模式）。"
 msgstr ""
 "Only needed for **A/B-side mixed-product inspection**. Click :ui-btn:`+ "
-"Unique Marker`, then box an area on each product that is visibly different "
-"from the other side (a notch, a unique silkscreen, a one-of-a-kind "
-"component); this area becomes the product's identification feature."
+"Unique Marker`, then box an area that is visibly different from the other "
+"side (a notch, a unique silkscreen, a one-of-a-kind component); this area "
+"becomes the product's identification feature. **At least one** of the two "
+"products needs a marker; you may also mark only one of them and let the "
+"system identify by elimination (see Single-Mark Mode below)."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:79
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:99
 msgid "独特标记支持三种 :ui-param:`分类方法`："
 msgstr "A Unique Marker supports three :ui-param:`classification methods`:"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:85
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:105
 msgid "分类方法"
 msgstr "Method"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:86
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:106
 msgid "原理"
 msgstr "How it works"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:87
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:107
 msgid "适合场景"
 msgstr "Best for"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:88
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:108
 msgid ":ui-opt:`GENERIC`"
 msgstr ":ui-opt:`GENERIC`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:89
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:109
 msgid "通用 AI 分类器"
 msgstr "General-purpose AI classifier"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:90
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:110
 msgid "大多数差异明显的场景"
 msgstr "Most cases where the products differ obviously"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:91
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:111
 msgid ":ui-opt:`OCV`"
 msgstr ":ui-opt:`OCV`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:92
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:112
 msgid "基于字符外观对比"
 msgstr "Compares character appearance"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:93
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:113
 msgid "两个产品有不同但相近的丝印文字"
 msgstr "Two products with different but similar silkscreen text"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:94
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:114
 msgid ":ui-opt:`OCR`"
 msgstr ":ui-opt:`OCR`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:95
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:115
 msgid "基于字符识别"
 msgstr "Character recognition"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:96
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:116
 msgid "字符清晰、可读"
 msgstr "Text is clear and legible"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:97
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:117
 msgid ":ui-opt:`TM`"
 msgstr ":ui-opt:`TM`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:98
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:118
 msgid "模板匹配：无需加载模型，将实时图像与各产品的参考图比对，选最相似的"
 msgstr ""
 "Template matching: no model is loaded; the live image is compared against "
 "each product's reference image and the most similar one is chosen"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:99
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:119
 msgid "产品有独特印刷 / 丝印图案、但无可读文字、且不希望加载模型"
 msgstr ""
 "Products with a distinctive printed / silkscreen pattern but no readable "
 "text, where loading a model is undesirable"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:103
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:123
 msgid ""
-"每个产品在 A/B 面模式下需要 **正好一个** 独特标记。若所选区域在两面区分度不足，启动检测时系统会返回 **HTTP 428** "
-"错误并提示重选区域。"
+"在 A/B 面（双产品）模式下，两个产品 **至少有一个** 需要 **一个** "
+"独特标记（单个产品最多一个）；两个产品都不标记会被拒绝。若所选区域在两面区分度不足，启动检测时系统会返回 **HTTP 428** 错误并提示重选区域。"
 msgstr ""
-"In A/B-side mode each product needs **exactly one** Unique Marker. If the "
-"chosen region is not distinctive enough between the two sides, starting "
-"inspection returns **HTTP 428** and prompts you to re-select the area."
+"In A/B-side mode, **at least one** of the two products needs **one** Unique "
+"Marker (at most one per product); leaving both products unmarked is "
+"rejected. If the chosen region is not distinctive enough between the two "
+"sides, starting inspection returns **HTTP 428** and prompts you to re-select"
+" the area."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:106
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:126
+msgid "单标记模式（Single-Mark Mode）"
+msgstr "Single-Mark Mode"
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:128
+msgid ""
+"在 A/B 面（恰好两个产品）模式下，可以 **只在其中一个产品** "
+"上定义独特标记。系统按\"排除法\"识别：若来料板与该标记匹配，判定为带标记的产品；否则判定为另一个（未标记的）产品。这样可将常见两面产品的标记维护工作量减半。"
+msgstr ""
+"In A/B-side mode (exactly two products) you can define a Unique Marker on "
+"**only one of the products**. The system identifies by \"elimination\": if "
+"an incoming board matches that marker it is the marked product, otherwise it"
+" is the other (unmarked) product. This halves the marker-maintenance effort "
+"for the common two-side case."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:130
+msgid ""
+"**图像类方法（GENERIC / OCV / "
+"TM）**：在两个产品的金板上同一标记区域各取参考图比对，取更相似者；若两者得分完全相同，则回退到由操作员手动选择产品。"
+msgstr ""
+"**Image methods (GENERIC / OCV / TM)**: a reference image is taken from the "
+"same marked region on both products' golden boards and compared, and the "
+"better-scoring one wins; if the two scores are exactly equal, it falls back "
+"to the operator manually selecting the product."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:131
+msgid ""
+"**OCR 方法**：识别标记区域文本并与带标记产品的期望文本比较，编辑距离 **低于阈值** 判为该产品，**达到或超过阈值** "
+"判为另一个产品；该方式为确定性判定，无需人工选择。未标记的产品无需填写期望文本。"
+msgstr ""
+"**OCR method**: the text in the marked region is recognized and compared "
+"with the marked product's expected text — an edit distance **below the "
+"threshold** classifies the board as that product, **at or above** as the "
+"other product; this is deterministic and needs no manual selection. The "
+"unmarked product needs no expected text."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:133
+msgid ""
+"当独特标记的 :ui-param:`分类方法` 选择 **OCR** 时，标记编辑面板会出现 :ui-param:`编辑距离阈值` 输入框（默认 "
+"**2**）：识别文本与期望文本的编辑距离小于该阈值时判为本产品，否则判为另一产品。"
+msgstr ""
+"When a Unique Marker's :ui-param:`Method` is set to **OCR**, an :ui-"
+"param:`Edit distance threshold` input appears on the marker editor (default "
+"**2**): if the edit distance between the recognized text and the expected "
+"text is below the threshold, the board is classified as this product, "
+"otherwise as the other product."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:137
+msgid ""
+"单标记模式会把带标记产品的标记区域同时套用到 **未标记产品** 的金板上做对比。若该区域超出了未标记产品的图像范围，启动检测时会返回 **HTTP "
+"428** 错误，提示把标记移到两板共有的图像区域，或以相同尺寸重新拍摄两个基准。"
+msgstr ""
+"Single-mark mode also applies the marked product's marker region onto the "
+"**unmarked product's** golden board for comparison. If that region falls "
+"outside the unmarked product's image, starting inspection returns **HTTP "
+"428**, prompting you to move the marker into an image area shared by both "
+"boards, or to re-capture both goldens at the same size."
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:-1
+msgid "独特标记 OCR 分类方法下出现的 编辑距离阈值 输入框"
+msgstr ""
+"Edit distance threshold input that appears when the unique marker uses the "
+"OCR classification method"
+
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:144
 msgid "使用建议与常见问题"
 msgstr "Tips and common issues"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:110
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:148
 msgid "**常见 Mark 点定位问题与处理：**"
 msgstr "**Common Mark Point issues and fixes:**"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:112
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:150
 msgid ""
 "**检测时找不到 Mark 点、报错退出**：先切到 AI 算法（圆形 / 矩形）更稳定；若表面有油墨、氧化、污渍导致 AI 找圆失败，改用 :ui-"
 "opt:`模板标记`。"
@@ -290,7 +426,7 @@ msgstr ""
 " oxidation, or contamination makes the AI circle finder fail, switch to :ui-"
 "opt:`Template Marker`."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:113
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:151
 msgid ""
 "**找到了但定位不准 / 误报多**：检查板子是否放反（对称 mark 可能巧合找到但定位错误）；两个 mark "
 "点都画在稳定不易磨损处，且尽量分布在对角，利于精确解算旋转角。"
@@ -301,7 +437,7 @@ msgstr ""
 "far apart as possible (near opposite corners) so the rotation angle resolves"
 " precisely."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:114
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:152
 msgid ""
 "**AB 面切换后找不到 Mark 点**：先确认板子方向；若单测 B 面能找到、AB "
 "一起测找不到，多半是独特标记区分度不足，回本页重选差异更明显的区域。"
@@ -311,7 +447,7 @@ msgstr ""
 " is most likely not distinctive enough — return to this page and re-select a"
 " more clearly different area."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:115
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:153
 msgid ""
 "**热板 / 冷板差异导致间歇误报**：在元件配置中适当放大 :ui-param:`允许偏移距离` 与 :ui-"
 "param:`允许旋转角度`，吸收温度形变。"
@@ -320,46 +456,46 @@ msgstr ""
 "component configuration, increase :ui-param:`Allowed Shift Distance` and "
 ":ui-param:`Allowed Rotation Angle` to absorb thermal deformation."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:119
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:157
 msgid "**Mark 点选择建议：**"
 msgstr "**Mark Point selection guidelines:**"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:121
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:159
 msgid "优先选 PCB 上 **固定、不易磨损、不易被遮挡** 的圆形或矩形丝印参考点。"
 msgstr ""
 "Prefer **stable, wear-resistant, unobstructed** circular or rectangular "
 "silkscreen reference marks on the PCB."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:122
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:160
 msgid "避免选 **元件本身**，因为可能贴歪或缺料；也避免 **靠近板边**，拼接时可能被裁切。"
 msgstr ""
 "Avoid **components themselves**, which may be skewed or missing; also avoid "
 "**locations near the board edge**, which can be cropped during stitching."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:123
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:161
 msgid "避免选 **对称分布** 的 mark 点（板子放反时可能被错误识别）。"
 msgstr ""
 "Avoid **symmetrically placed** marks (they can be mis-identified when the "
 "board is loaded reversed)."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:124
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:162
 msgid "每块 PCB 选 **2 个** mark 点（当前上限），分别置于对角，覆盖整板范围。"
 msgstr ""
 "Pick **2 Mark Points** per PCB (the current ceiling), one in each opposite "
 "corner, to span the whole board."
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:127
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:165
 msgid "相关页面"
 msgstr "Related pages"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:129
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:167
 msgid ":doc:`auto_programming`"
 msgstr ":doc:`auto_programming`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:130
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:168
 msgid ":doc:`manual_programming`"
 msgstr ":doc:`manual_programming`"
 
-#: ../../source/complete_user_guide/features/mark_align_pcb.rst:131
+#: ../../source/complete_user_guide/features/mark_align_pcb.rst:169
 msgid ":doc:`pcb_array`"
 msgstr ":doc:`pcb_array`"

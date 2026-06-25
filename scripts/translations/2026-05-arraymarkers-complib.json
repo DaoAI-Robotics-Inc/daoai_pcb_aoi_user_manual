@@ -1,0 +1,18 @@
+{
+  "complete_user_guide/features/mark_align_pcb.po": {
+    "为产品定义 **Mark 点**、**子板标记** 与 **独特标记**，让系统在每次检测前都能稳定定位 PCB 的实际位置：": "Define a product's **Mark Points**, **Sub-board Markers**, and **Unique Markers** so the system can reliably locate the actual PCB position before every inspection:",
+    "**子板标记（Sub-board Marker）**：拼板产品中为每个子板单独细化对齐（可选）。": "**Sub-board Marker**: refines alignment per sub-board on panelized products (optional).",
+    "子板标记（Sub-board Marker）": "Sub-board Marker",
+    "仅适用于 **拼板产品**（一块大板上含多个子板）。常规 Mark 点为整块拼板提供统一的位置 / 旋转补偿；当各子板之间存在微小相对偏移或形变、需要 **逐个子板** 单独细化对齐时，可改用 **子板标记**。": "Only for **panelized products** (one large board carrying several sub-boards). Regular Mark Points give the whole panel one shared position / rotation compensation; when the sub-boards shift or deform slightly relative to each other and need **per-sub-board** alignment refinement, use **Sub-board Markers** instead.",
+    "点击工具栏的 :ui-btn:`+ 子板标记`，在 **任意一个子板的拼板区域内** 框选一处参考标记。子板标记的形状类型（圆形 / 矩形 / 模板）、:ui-btn:`定位`、:ui-btn:`预测中心`、:ui-btn:`精修` 等属性与常规 Mark 点相同。": "Click :ui-btn:`+ Sub-board Marker` on the toolbar and box a reference mark **inside the panel region of any one sub-board**. A sub-board marker's shape type (Circle / Rectangle / Template), :ui-btn:`Locate`, :ui-btn:`Predict Center`, and :ui-btn:`Refine` work the same as a regular Mark Point.",
+    "行为要点：": "Key behaviors:",
+    "**创建即自动套用到每个子板**：在一个子板上画好后，系统会按拼板布局自动复制到所有其他子板；左侧列表中每个子板标记只显示一行（对应基准子板）。": "**Created once, applied to every sub-board**: after you draw it on one sub-board, the system copies it to all the others according to the panel layout; the list on the left shows one row per sub-board marker (the base sub-board).",
+    "**逐个子板微调**：之后调整某个子板上的标记时，只影响该子板，不会改动其他子板。": "**Per-sub-board tuning**: editing the marker on one sub-board afterwards affects only that sub-board, not the others.",
+    "**预测中心** 会对拼板内 **每一个子板** 分别检测标记中心，并把结果分别应用到对应子板。": "**Predict Center** detects the marker center on **every sub-board** in the panel and applies each result to its own sub-board.",
+    "子板标记必须画在 **拼板区域（panel）内**。若画在拼板区域之外，系统会拒绝并提示 **子板标记必须放置在拼板区域内**。因此请先在 :doc:`pcb_array` 中完成拼板（子板布局）的定义，再添加子板标记。": "A sub-board marker must be drawn **inside a panel region**. If drawn outside a panel region, the system rejects it and shows **Sub-board marker must be placed inside a panel.** So define the panel (sub-board layout) in :doc:`pcb_array` first, then add sub-board markers.",
+    "独特标记 OCR 分类方法下出现的 编辑距离阈值 输入框": "Edit distance threshold input that appears when the unique marker uses the OCR classification method"
+  },
+  "complete_user_guide/features/part_library_and_grouping.po": {
+    "导入完成后，系统以提示消息汇总结果，例如\"导入完成 — 新增 X 个，覆盖 Y 个，跳过 Z 个\"；若有部分模板导入失败，提示中还会追加\"失败 N 个\"。": "When the import finishes, a message summarizes the result, for example \"Import complete — X added, Y overwritten, Z skipped\"; if some templates fail to import, the message also appends \"N failed\"."
+  }
+}

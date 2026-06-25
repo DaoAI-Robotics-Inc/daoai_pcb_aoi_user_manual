@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-17 15:28-0700\n"
+"POT-Creation-Date: 2026-06-25 11:55-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: en <LL@li.org>\n"
 "Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:2
@@ -25,17 +25,22 @@ msgstr "Inspection history (Data Analysis Report)"
 
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:4
 msgid ""
-"在主页点击 **工作列表** 进入 **数据分析报告** （路由 ``/worklist``）。页面提供 **总结**、**检测结果**、**元件** "
-"三个标签页，共享顶部的过滤栏，内容区随选中标签页切换。"
+"在主页点击 **工作列表** 进入 **数据分析报告** （路由 ``/worklist``）。页面提供 "
+"**总结**、**检测结果**、**元件**、**GRR 分析**、**Cpk 分析** 五个标签页，内容区随选中标签页切换。其中 **总结** "
+"/ **检测结果** / **元件** 共享顶部的过滤栏；**GRR 分析** 与 **Cpk 分析** "
+"各自带有独立的筛选行，不受顶部过滤栏影响。"
 msgstr ""
-"On the Home page, click **Worklist** to open the **Data Analysis Report** "
-"(route ``/worklist``). The page has three sub-tabs — **Summary**, "
-"**Inspection Result**, and **Component** — that share the filter bar at the "
-"top; the content area switches with the selected tab."
+"On the Home page, click **Worklist** to open the **Data Analysis Report**"
+" (route ``/worklist``). The page has five tabs — **Summary**, "
+"**Inspection Result**, **Component**, **GRR Analysis**, and **Cpk "
+"Analysis** — and the content area switches with the selected tab. "
+"**Summary** / **Inspection Result** / **Component** share the filter bar "
+"at the top; **GRR Analysis** and **Cpk Analysis** each have their own "
+"filter row and are not affected by the top filter bar."
 
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:6
-msgid "**三个标签页**"
-msgstr "**Three sub-tabs**"
+msgid "**五个标签页**"
+msgstr "**Five tabs**"
 
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:8
 msgid "**总结**：总览统计指标、不良/良品比环形图与前十不良元件柱状图。"
@@ -52,328 +57,348 @@ msgstr ""
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:10
 msgid "**元件**：按元件维度汇总检测结果，支持 **全部** / **不良** / **误报** 切换，并提供饼图、柱状图与图像查看。"
 msgstr ""
-"**Component**: aggregates results by component, with an **All** / **NG** / "
-"**False alarm** toggle, plus a pie chart, a bar chart, and image viewing."
+"**Component**: aggregates results by component, with an **All** / **NG** "
+"/ **False alarm** toggle, plus a pie chart, a bar chart, and image "
+"viewing."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:11
+msgid "**GRR 分析**：评估测量系统重复性（量具重复性与再现性），用于对同一块板重复检测的研究，可导出 Excel。"
+msgstr ""
+"**GRR Analysis**: assesses measurement-system repeatability (Gauge R&R) "
+"for studies that re-inspect the same board; exportable to Excel."
 
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:12
+msgid "**Cpk 分析**：评估贴装工艺相对于给定公差的过程能力（Cp / Cpk），可导出 Excel。"
+msgstr ""
+"**Cpk Analysis**: assesses the process capability (Cp / Cpk) of the "
+"placement process against given tolerances; exportable to Excel."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:14
 msgid "**过滤栏**"
 msgstr "**Filter bar**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:14
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:16
 msgid ""
-"过滤栏按功能分组。除 **序列号** 外，筛选条件修改后需点击底部的 **应用** 按钮才会重新查询；**序列号** 按 Enter 或扫码即时生效。"
+"过滤栏按功能分组。除 **序列号** 外，筛选条件修改后需点击底部的 **应用** 按钮才会重新查询；**序列号** 按 Enter "
+"或扫码即时生效。"
 msgstr ""
 "The filter bar is grouped by function. Except for **Serial no.**, filter "
-"changes take effect only when you click the **Apply** button at the bottom; "
-"**Serial no.** fires immediately on Enter or scanner input."
+"changes take effect only when you click the **Apply** button at the "
+"bottom; **Serial no.** fires immediately on Enter or scanner input."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:16
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:18
 msgid ""
 "**日期范围**：**快选** 下拉（今天 / 昨天 / 本周 / 本月 / 今年 / 所有时间 / 自定义）与 **开始**、**结束** "
 "日期。直接修改日期会自动切换为 **自定义**；选择预设会覆盖起止日期；**所有时间** 清除日期限制。"
 msgstr ""
-"**Date range**: a **Quick** dropdown (Today / Yesterday / This Week / This "
-"Month / This Year / All time / Custom) plus **Begin** and **End** dates. "
-"Editing a date directly switches the dropdown to **Custom**; choosing a "
-"preset overwrites both dates; **All time** clears the date constraint."
-
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:17
-msgid "**识别**：**PCBA名称** 下拉选择已训练的基准产品；**序列号** 按板件序列号过滤。"
-msgstr ""
-"**Identification**: **PCBA name** (a dropdown of trained golden products); "
-"**Serial no.** filters by board serial number."
-
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:18
-msgid "**归属**：**机台**、**操作员**。两者均为自动补全输入框，会建议历史会话中出现过的值，也可自由输入。"
-msgstr ""
-"**Attribution**: **Machine** and **Operator**. Both are autocomplete inputs "
-"that suggest values seen across past sessions; free text is also accepted."
+"**Date range**: a **Quick** dropdown (Today / Yesterday / This Week / "
+"This Month / This Year / All time / Custom) plus **Begin** and **End** "
+"dates. Editing a date directly switches the dropdown to **Custom**; "
+"choosing a preset overwrites both dates; **All time** clears the date "
+"constraint."
 
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:19
-msgid "**元件识别** \\ （仅 **元件** 标签页）：**位号**、**料号** 文本输入框。"
+msgid "**识别**：**PCBA名称** 下拉选择已训练的基准产品；**序列号** 按板件序列号过滤。"
 msgstr ""
-"**Component identification** (Component tab only): **Designator** and **Part"
-" No.** text inputs."
+"**Identification**: **PCBA name** (a dropdown of trained golden "
+"products); **Serial no.** filters by board serial number."
 
 #: ../../source/complete_user_guide/inspection/data_analysis_report.rst:20
-msgid ""
-"**结果类型** \\ （仅 **元件** 标签页）：模式单选 **全部** / **不良** / **误报**，以及 **错误类型** 多选列表。"
+msgid "**归属**：**机台**、**操作员**。两者均为自动补全输入框，会建议历史会话中出现过的值，也可自由输入。"
+msgstr ""
+"**Attribution**: **Machine** and **Operator**. Both are autocomplete "
+"inputs that suggest values seen across past sessions; free text is also "
+"accepted."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:21
+msgid "**元件识别** \\ （仅 **元件** 标签页）：**位号**、**料号** 文本输入框。"
+msgstr ""
+"**Component identification** (Component tab only): **Designator** and "
+"**Part No.** text inputs."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:22
+msgid "**结果类型** \\ （仅 **元件** 标签页）：模式单选 **全部** / **不良** / **误报**，以及 **错误类型** 多选列表。"
 msgstr ""
 "**Result type** (Component tab only): a mode radio — **All** / **NG** / "
 "**False alarm** — plus an **Error types** multi-select list."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:22
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:24
 msgid "过滤栏底部为 **最大显示数量** 输入框（默认 1000）与 **应用** 按钮；修改数量上限同样在点击 **应用** 后生效。"
 msgstr ""
 "At the bottom of the filter bar are the **Max displayed count** input "
-"(default 1000) and the **Apply** button; changing the cap also takes effect "
-"only on **Apply**."
+"(default 1000) and the **Apply** button; changing the cap also takes "
+"effect only on **Apply**."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:26
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:-1
+msgid "数据分析报告过滤栏：日期范围、识别、归属、元件识别、结果类型分组与应用按钮"
+msgstr ""
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:30
 msgid "**总结 标签页**"
 msgstr "**Summary tab**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:28
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:32
 msgid "**总结** 标签页由三个并列面板组成。"
 msgstr "The **Summary** tab consists of three side-by-side panels."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:36
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:40
 msgid "**总览面板**"
 msgstr "**Overview panel**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:31
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:35
 msgid "显示所选范围内的整体统计数据，分为两个区域："
 msgstr "Shows the overall statistics for the selected scope, in two areas:"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:33
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:37
 msgid "**PCBA**：检测总数、良好板数及占比、不良板数及占比。"
 msgstr ""
-"**PCBA**: total inspected, good board count and ratio, defective board count"
-" and ratio."
+"**PCBA**: total inspected, good board count and ratio, defective board "
+"count and ratio."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:34
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:38
 msgid ""
-"**报警元件**：报警元件总数，以及经反馈确认的 **不良** 元件数及 PPM、被 **误判** 的元件数及 PPM、每板平均缺陷数 **DPU**。"
+"**报警元件**：报警元件总数，以及经反馈确认的 **不良** 元件数及 PPM、被 **误判** 的元件数及 PPM、每板平均缺陷数 "
+"**DPU**。"
 msgstr ""
 "**Alerted components**: the total alerted-component count, plus the "
-"feedback-confirmed **defective** count and its PPM, the **falsely-judged** "
-"count and its PPM, and defects per unit (**DPU**)."
+"feedback-confirmed **defective** count and its PPM, the **falsely-"
+"judged** count and its PPM, and defects per unit (**DPU**)."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:36
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:40
 msgid "面板底部显示当前查询的时间范围。"
 msgstr "The bottom of the panel shows the time range of the current query."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:39
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:43
 msgid "**不良/良品比 面板**"
 msgstr "**Defective / Good ratio panel**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:39
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:43
 msgid "以环形图展示合格与不良板件的数量与百分比。"
-msgstr ""
-"A donut chart of the count and percentage of good vs defective boards."
+msgstr "A donut chart of the count and percentage of good vs defective boards."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:42
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:46
 msgid "**前十不良元件 面板**"
 msgstr "**Top-10 defective components panel**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:42
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:46
 msgid "选定具体基准产品后，展示该产品下报警次数最多的前 10 个元件横向柱状图；未选择产品时提示先选择产品。"
 msgstr ""
-"Once a specific golden product is selected, shows a horizontal bar chart of "
-"the 10 most-alerted components for that product; if no product is selected, "
-"it prompts you to select one first."
+"Once a specific golden product is selected, shows a horizontal bar chart "
+"of the 10 most-alerted components for that product; if no product is "
+"selected, it prompts you to select one first."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:45
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:49
 msgid "**总结** 标签页同样受过滤栏 **机台** / **操作员** 过滤的影响，统计范围与其他标签页保持一致。"
 msgstr ""
 "The **Summary** tab is also affected by the filter bar's **Machine** / "
 "**Operator** filters, so its scope matches the other tabs."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:47
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:51
 msgid "**检测结果 标签页**"
 msgstr "**Inspection Results tab**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:49
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:53
 msgid ""
 "逐条列出每次整板检测记录。表头旁显示 **显示 X / Y 行** 指示器；当匹配行数超过 **最大显示数量** "
 "时，追加\"已截断\"提示，表格只展示最近的若干行。各列含义："
 msgstr ""
 "Lists each whole-board inspection record. A **Displaying X of Y rows** "
 "indicator appears next to the table header; when the matched row count "
-"exceeds **Max displayed count**, a \"truncated\" note is appended and the "
-"table shows only the most recent rows. Columns:"
+"exceeds **Max displayed count**, a \"truncated\" note is appended and the"
+" table shows only the most recent rows. Columns:"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:51
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:55
 msgid "检测结果列"
 msgstr "Inspection Result columns"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:55
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:59
 msgid "列"
 msgstr "Column"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:56
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:60
 msgid "含义"
 msgstr "Meaning"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:57
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:61
 msgid "PCBA名称"
 msgstr "PCBA Name"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:58
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:62
 msgid "本次检测所用基准产品名称。"
 msgstr "The golden product used for this inspection."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:59
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:63
 msgid "主序列号"
 msgstr "Main SN"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:60
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:64
 msgid "整板条码 / 序列号。"
 msgstr "Board barcode / serial number."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:61
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:65
 msgid "拼版序列号"
 msgstr "Panel SN"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:62
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:66
 msgid "子板序列号（非拼板产品为空）。"
 msgstr "Sub-board serial number (empty for non-panelized products)."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:63
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:67
 msgid "检测结果"
 msgstr "Inspection Result"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:64
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:68
 msgid "整板的 AI 检测判定。"
 msgstr "The board's AI inspection verdict."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:65
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:69
 msgid "不良元件数量"
 msgstr "NG Component Count"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:66
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:70
 msgid "经反馈确认为不良的元件数。"
 msgstr "Number of components confirmed defective via feedback."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:67
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:71
 msgid "误报数"
 msgstr "False Alarm Count"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:68
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:72
 msgid "系统报警但反馈为良品的元件数（报警数减去确认不良数）。"
 msgstr ""
-"Number of components the system alerted but feedback marked good (alerted "
-"count minus confirmed-defective count)."
+"Number of components the system alerted but feedback marked good (alerted"
+" count minus confirmed-defective count)."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:69
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:73
 msgid "复核结果"
 msgstr "Review Result"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:70
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:74
 msgid "操作员复核后的整板结论，由前端按下述规则推导。"
 msgstr ""
-"The operator's post-review board verdict, derived on the frontend per the "
-"rule below."
+"The operator's post-review board verdict, derived on the frontend per the"
+" rule below."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:71
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:75
 msgid "检测开始时间"
 msgstr "Inspection Start Time"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:72
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:76
 msgid "本次检测的开始时间。"
 msgstr "When this inspection started."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:73
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:77
 msgid "检测时长"
 msgstr "Inspection Time Span"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:74
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:78
 msgid "本次检测的耗时。"
 msgstr "How long this inspection took."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:75
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:79
 msgid "操作员 / 机台"
 msgstr "Operator / Machine"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:76
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:80
 msgid "本次检测所属会话记录的操作员与 AOI 机台。"
 msgstr ""
-"The operator and AOI machine recorded on the session this inspection belongs"
-" to."
+"The operator and AOI machine recorded on the session this inspection "
+"belongs to."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:77
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:81
 msgid "操作"
 msgstr "Actions"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:78
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:82
 msgid "**导出报告**（在新标签页打开详细报告）、**删除记录**。"
 msgstr ""
 "**Export Report** (opens the detailed report in a new tab) and **Delete "
 "Record**."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:80
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:84
 msgid "列表顶部提供 **导出CSV** 与 **删除选中记录**，支持多选批量删除。"
 msgstr ""
-"The top of the list offers **Export CSV** and **Delete selected records** "
-"(multi-select for batch deletion)."
+"The top of the list offers **Export CSV** and **Delete selected records**"
+" (multi-select for batch deletion)."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:83
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:87
 msgid ""
 "**复核结果（整板）**：仅当该板已被操作员复核且反馈后无不良元件时显示 **良好**；否则（含尚未复核的 AI 判不良板）显示 "
 "**不良**。该口径比主页良率更严格——未经人工复核的不良板一律计为 **不良**。"
 msgstr ""
 "**Review Result (board)**: shows **OK** only when the board has been "
 "reviewed by an operator and has no defective components after feedback; "
-"otherwise (including not-yet-reviewed AI-NG boards) it shows **NG**. This is"
-" stricter than the Home page yield convention — any board not reviewed by a "
-"human counts as **NG**."
+"otherwise (including not-yet-reviewed AI-NG boards) it shows **NG**. This"
+" is stricter than the Home page yield convention — any board not reviewed"
+" by a human counts as **NG**."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:85
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:89
 msgid "**元件 标签页**"
 msgstr "**Component tab**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:87
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:91
 msgid ""
 "**元件** 标签页取代了旧版的 **不良元件** 与 **误判元件** 两个标签页，以单一列表呈现元件级结果，并通过 **结果类型** 的 "
 "**全部** / **不良** / **误报** 单选切换查看范围。"
 msgstr ""
 "The **Component** tab replaces the former **NG Component** and **False "
-"Positive Component** tabs, presenting component-level results in a single "
-"list, with the **Result type** **All** / **NG** / **False alarm** radio to "
-"switch the viewed scope."
+"Positive Component** tabs, presenting component-level results in a single"
+" list, with the **Result type** **All** / **NG** / **False alarm** radio "
+"to switch the viewed scope."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:89
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:93
 msgid ""
 "页面左侧上方为元件表格、下方为图像查看区，右侧为图表区。表头旁同样显示 **显示 X / Y 行** "
 "指示器。表格各列：**PCBA名称**、**主序列号**、**拼版序列号**、**位号**、**料号**、**检测错误类型**、**复核结果**、**复核错误类型**、**检测开始时间**、**操作员**、**机台**。"
 msgstr ""
-"The left side stacks the component table (top) over the image-viewing area "
-"(bottom); the right side holds the charts. A **Displaying X of Y rows** "
-"indicator appears next to the table header. Columns: **PCBA name**, **Main "
-"SN**, **Panel SN**, **Designator**, **Part No.**, **Inspected error type**, "
-"**Review result**, **Review error type**, **Inspection start time**, "
-"**Operator**, **Machine**."
+"The left side stacks the component table (top) over the image-viewing "
+"area (bottom); the right side holds the charts. A **Displaying X of Y "
+"rows** indicator appears next to the table header. Columns: **PCBA "
+"name**, **Main SN**, **Panel SN**, **Designator**, **Part No.**, "
+"**Inspected error type**, **Review result**, **Review error type**, "
+"**Inspection start time**, **Operator**, **Machine**."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:92
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:96
 msgid "**复核结果（元件）**：当元件检测通过，或反馈错误类型为\"无错误\"时显示 **良好**；否则显示 **不良**。"
 msgstr ""
 "**Review Result (component)**: shows **OK** when the component passed "
 "inspection or its feedback error type is \"no error\"; otherwise **NG**."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:94
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:98
 msgid "**右侧图表区**"
 msgstr "**Charts (right pane)**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:96
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:100
 msgid ""
 "**饼图**：通过 **饼图字段** 下拉选择统计维度，可选 检测错误类型 / 复核错误类型 / 机台 / PCBA名称 / "
 "复核结果，按当前筛选行集聚合占比。"
 msgstr ""
-"**Pie chart**: pick the aggregation field from the **Pie target** dropdown —"
-" Inspected error type / Review error type / Machine / PCBA name / Review "
-"result — to aggregate proportions over the current filtered row set."
+"**Pie chart**: pick the aggregation field from the **Pie target** "
+"dropdown — Inspected error type / Review error type / Machine / PCBA name"
+" / Review result — to aggregate proportions over the current filtered row"
+" set."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:97
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:101
 msgid ""
-"**柱状图**：通过下拉选择统计维度，可选 位号 / 料号 / 主序列号，展示出现频次 **前 10 名**。当结果被截断时标题显示为 **前 10 名"
-" (基于已显示)**，提示统计仅基于已显示的行。"
+"**柱状图**：通过下拉选择统计维度，可选 位号 / 料号 / 主序列号，展示出现频次 **前 10 名**。当结果被截断时标题显示为 **前 "
+"10 名 (基于已显示)**，提示统计仅基于已显示的行。"
 msgstr ""
-"**Bar chart**: pick the field from the dropdown — Designator / Part No. / "
-"Main SN — to show the **Top 10** by frequency. When the result is truncated,"
-" the title reads **Top 10 (within displayed)**, indicating the stats cover "
-"only the displayed rows."
+"**Bar chart**: pick the field from the dropdown — Designator / Part No. /"
+" Main SN — to show the **Top 10** by frequency. When the result is "
+"truncated, the title reads **Top 10 (within displayed)**, indicating the "
+"stats cover only the displayed rows."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:98
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:102
 msgid "两个图表均随过滤条件与 **全部** / **不良** / **误报** 切换实时重新聚合。"
 msgstr ""
-"Both charts re-aggregate live on every filter change and on the **All** / "
-"**NG** / **False alarm** toggle."
+"Both charts re-aggregate live on every filter change and on the **All** /"
+" **NG** / **False alarm** toggle."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:100
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:104
 msgid "**底部图像查看区**"
 msgstr "**Image-viewing area (bottom)**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:102
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:106
 msgid ""
 "单击表格中任意一行，下方图像区显示该元件的 **检测图** 与 **基准图**：检测图为实际检测裁剪图，基准图为 golden "
 "参考图。未选择行时显示\"选择一行以查看图像\"；无基准图时显示\"无基准图像\"。"
@@ -384,127 +409,286 @@ msgstr ""
 "images\"; when there is no reference it shows \"No reference image "
 "available\"."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:104
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:108
 msgid "**导出**"
 msgstr "**Export**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:106
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:110
 msgid ""
 "**元件** 标签页提供 **导出CSV** 与 **导出Excel** 两种方式。导出的 Excel "
 "含一个数据表，以及一张图表工作表——内嵌当前饼图、柱状图的图像与对应的分类计数表（图表按导出时的字段选择生成）。两种导出均不含元件图片。"
 msgstr ""
 "The **Component** tab offers **Export CSV** and **Export Excel**. The "
-"exported Excel contains a data sheet plus a charts sheet — the current pie "
-"and bar charts embedded as images alongside their category-count tables "
-"(charts reflect the field selections at export time). Neither export "
-"includes component images."
+"exported Excel contains a data sheet plus a charts sheet — the current "
+"pie and bar charts embedded as images alongside their category-count "
+"tables (charts reflect the field selections at export time). Neither "
+"export includes component images."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:112
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:-1
+msgid "元件标签页整体布局：元件表格、检测图/基准图、饼图与柱状图"
+msgstr ""
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:-1
+msgid "元件标签页右侧饼图与柱状图及其字段选择下拉"
+msgstr ""
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:120
+msgid "**GRR 分析 标签页**"
+msgstr "**GRR Analysis tab**"
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:122
+msgid ""
+"**GRR 分析** 用于评估测量系统的重复性（量具重复性与再现性，Gauge R&R）——即对 **同一块板重复检测多次** "
+"时，元件贴装偏移测量值的离散程度。仅当检测任务开启了 **GRR / Cpk 测量研究** 开关（见 "
+":ref:`新建检测任务`）后，系统才会记录每个元件的带符号 X/Y 偏移与旋转，供本标签页分析；历史检测若未开启该开关则没有可分析的数据。"
+msgstr ""
+"**GRR Analysis** evaluates the repeatability of the measurement system "
+"(Gauge R&R) — that is, how much the placement-offset measurements scatter"
+" when the **same board is inspected several times**. The system records "
+"each component's signed X/Y shift and rotation only when the inspection "
+"task had the **GRR / Cpk measurement study** switch enabled (see "
+":ref:`新建检测任务`); historical inspections run without that switch have no "
+"data to analyze."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:124
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:143
+msgid "操作步骤："
+msgstr "Steps:"
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:126
+msgid "选择 **日期范围** 与 **PCBA名称**；如需限定到单次检测会话，使用 **限定检测会话**。点击 **分析**。"
+msgstr ""
+"Select a **Date Range** and **PCBA Name**; to limit the analysis to a "
+"single inspection session, use **Scope to session**. Click **Analyze**."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:127
+msgid "左侧表格逐行列出每个（元件 × 检测）的 **X 偏移 (mm)**、**Y 偏移 (mm)**、**旋转 (°)**、**拼板** 与时间。"
+msgstr ""
+"The table on the left lists, one row per (component × inspection), the "
+"**X Shift (mm)**, **Y Shift (mm)**, **Rotation (°)**, **Panel**, and "
+"time."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:128
+msgid ""
+"右侧 **详情** 面板按 **指标**（X 偏移 / Y 偏移 / 旋转）给出 **Sigma (σ)**、**6σ**、**%公差** 与 "
+"**判定**，判定阈值为 ``<10%`` 良好、``10–30%`` 一般、``>30%`` 较差。"
+msgstr ""
+"On the right, the **Detail** panel reports, per **Metric** (X Shift / Y "
+"Shift / Rotation), the **Sigma (σ)**, **6σ**, **%Tolerance**, and "
+"**Verdict**, with thresholds ``<10%`` good, ``10–30%`` marginal, ``>30%``"
+" poor."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:129
+msgid ""
+"顶部计数显示 **元件数**、**试验次数（检测次数）**、**总测量数** 与 **纳入元件**；未在所有试验中都出现的元件会被排除，并以\"N"
+" 个被排除——并非在所有试验中都出现\"提示。"
+msgstr ""
+"The counts at the top show **Components**, **Trials (inspections)**, "
+"**Total measurements**, and **Included parts**; components that do not "
+"appear in every trial are excluded, with an \"N excluded — not present in"
+" all trials\" note."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:130
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:149
+msgid "点击导出按钮可导出 Excel。"
+msgstr "Click the export button to export to Excel."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:133
+msgid ""
+"有效的 GRR 研究要求所选时间窗内 **仅包含对同一块板的重复检测**；若窗口内混入了不同板，σ 与 %公差会被放大。可使用 "
+"**限定检测会话** 缩小范围。GRR 至少需要对同一块板检测 2 次、且每次检测中都出现至少 2 个相同元件，否则相应指标显示 N/A。"
+msgstr ""
+"A valid GRR study requires the selected time window to **contain only re-"
+"inspections of a single board**; if different boards are mixed into the "
+"window, σ and %Tolerance are inflated. Use **Scope to session** to narrow"
+" it. GRR needs at least 2 inspections of the same board and at least 2 of"
+" the same components present in every inspection, otherwise the "
+"corresponding metrics show N/A."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:-1
+msgid "数据分析报告 GRR 分析 标签页：筛选行、测量表格、%公差/σ/6σ/判定 汇总与柱状图"
+msgstr ""
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:139
+msgid "**Cpk 分析 标签页**"
+msgstr "**Cpk Analysis tab**"
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:141
+msgid ""
+"**Cpk 分析** 评估贴装工艺相对于给定公差的 **过程能力**（Cp / Cpk），同样依赖检测任务开启 **GRR / Cpk "
+"测量研究** 后记录的偏移数据。"
+msgstr ""
+"**Cpk Analysis** evaluates the **process capability** (Cp / Cpk) of the "
+"placement process against given tolerances, also relying on the offset "
+"data recorded once the inspection task has **GRR / Cpk measurement "
+"study** enabled."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:145
+msgid ""
+"选择 **日期范围** 与 **PCBA名称**，设置 **偏移公差** 与 **旋转公差**（必须为正数，否则 **分析** "
+"与导出按钮不可用），并按 **位号** 或 **料号** 选择要分析的项目。点击 **分析**。"
+msgstr ""
+"Select a **Date Range** and **PCBA Name**, set the **Shift tol** and "
+"**Rotation tol** (which must be positive, otherwise **Analyze** and "
+"export are disabled), and pick the items to analyze by **Designator** or "
+"**Part No.**. Click **Analyze**."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:146
+msgid "左侧 **项目 (Cpk)** 列表逐项显示其最差 Cpk 值；点击某项进入详情。"
+msgstr ""
+"The **Items (Cpk)** list on the left shows each item's worst Cpk value; "
+"click an item to drill into its details."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:147
+msgid ""
+"中部 **计算详情** 给出该项各指标的 **上限 USL**、**下限 LSL**、**均值 μ**、**标准差 "
+"σ**、**样本数**、**Cp** 与 **Cpk**，并附测量数据表。"
+msgstr ""
+"The **Calculation details** pane in the middle gives, per metric, the "
+"**USL**, **LSL**, **Mean μ**, **Sigma σ**, **Samples**, **Cp**, and "
+"**Cpk** for that item, plus a measurement table."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:148
+msgid "右侧并列三张直方图（X 偏移 / Y 偏移 / 旋转），并以虚线标出 ±公差 规格界限。"
+msgstr ""
+"On the right, three histograms (X Shift / Y Shift / Rotation) sit side by"
+" side, with dashed lines marking the ±tolerance spec limits."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:152
+msgid "当样本数过少（少于 2 个）或测量值完全一致（σ = 0）时，Cp / Cpk 显示为 N/A。"
+msgstr ""
+"When there are too few samples (fewer than 2) or the measurements are "
+"identical (σ = 0), Cp / Cpk shows N/A."
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:-1
+msgid "数据分析报告 Cpk 分析 标签页：项目列表、计算详情与三张直方图"
+msgstr ""
+
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:158
 msgid "**注意事项**"
 msgstr "**Notes**"
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:115
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:161
 msgid ""
 "**机台 / 操作员 的来源将在后续版本接入**；历史检测会话这两列可能为空，空值显示为\"—\"，且按 **机台** / **操作员** "
 "过滤会排除这些未归属的记录。"
 msgstr ""
-"**The source of Machine / Operator will be wired in a later version**; for "
-"historical sessions these two columns may be empty, rendered as \"—\", and "
-"filtering by **Machine** / **Operator** excludes such unattributed records."
+"**The source of Machine / Operator will be wired in a later version**; "
+"for historical sessions these two columns may be empty, rendered as "
+"\"—\", and filtering by **Machine** / **Operator** excludes such "
+"unattributed records."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:116
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:162
 msgid ""
-"**元件** 标签页的图表与表格基于同一批已获取的行集聚合；当行数超过 **最大显示数量** 时，表格与图表均只反映已显示的行（柱状图标题会提示 **前"
-" 10 名 (基于已显示)**）。"
+"**元件** 标签页的图表与表格基于同一批已获取的行集聚合；当行数超过 **最大显示数量** 时，表格与图表均只反映已显示的行（柱状图标题会提示 "
+"**前 10 名 (基于已显示)**）。"
 msgstr ""
 "The Component tab's charts and table aggregate from the same fetched row "
-"set; when the row count exceeds **Max displayed count**, both the table and "
-"the charts reflect only the displayed rows (the bar chart title shows **Top "
-"10 (within displayed)**)."
+"set; when the row count exceeds **Max displayed count**, both the table "
+"and the charts reflect only the displayed rows (the bar chart title shows"
+" **Top 10 (within displayed)**)."
 
-#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:117
+#: ../../source/complete_user_guide/inspection/data_analysis_report.rst:163
 msgid ""
 "**子板良率（FPY）与坏板标记**：对于拼板产品，良率可在 **整板** 与 **子板** "
-"口径间切换，按实际检测的子板数统计；非拼板产品的子板口径显示为 N/A。被标记为 **坏板标记** 的元件用于驱动子板好 / 坏判定，但 **不计入**"
-" 复核 NG 列表，也不计入数据分析报告的 总数 / 告警 / NG 统计。子板的自动判废逻辑在 :ref:`检测设置（子板判废逻辑）` 中配置。"
+"口径间切换，按实际检测的子板数统计；非拼板产品的子板口径显示为 N/A。被标记为 **坏板标记** 的元件用于驱动子板好 / 坏判定，但 "
+"**不计入** 复核 NG 列表，也不计入数据分析报告的 总数 / 告警 / NG 统计。子板的自动判废逻辑在 "
+":ref:`检测设置（子板判废逻辑）` 中配置。"
 msgstr ""
-"**Sub-board first-pass yield (FPY) and badmarks**: for panelized products, "
-"yield can switch between **whole-board** and **sub-board** scope, counted "
-"against the number of sub-boards actually inspected; for non-panelized "
-"products the sub-board scope shows N/A. Components marked as **badmarks** "
-"drive the sub-board good/bad verdict but are **not counted** in the review "
-"NG list, nor in the Data Analysis Report's total / alert / NG statistics. "
-"The sub-board auto-scrap logic is configured in :ref:`检测设置（子板判废逻辑）`."
+"**Sub-board first-pass yield (FPY) and badmarks**: for panelized "
+"products, yield can switch between **whole-board** and **sub-board** "
+"scope, counted against the number of sub-boards actually inspected; for "
+"non-panelized products the sub-board scope shows N/A. Components marked "
+"as **badmarks** drive the sub-board good/bad verdict but are **not "
+"counted** in the review NG list, nor in the Data Analysis Report's total "
+"/ alert / NG statistics. The sub-board auto-scrap logic is configured in "
+":ref:`检测设置（子板判废逻辑）`."
 
 #~ msgid "**不良元件**：按元件维度汇总不良结果，便于定位高发问题元件。"
 #~ msgstr ""
-#~ "**Defective Components**: aggregates defective results at the component "
-#~ "level — highlights repeat offenders."
+#~ "**Defective Components**: aggregates defective "
+#~ "results at the component level — "
+#~ "highlights repeat offenders."
 
 #~ msgid "**误判元件**：按元件维度汇总误报结果，用于优化模型减少误报。"
 #~ msgstr ""
-#~ "**False-Positive Components**: aggregates false-positive results at the "
-#~ "component level — used to tune the model and cut false positives."
+#~ "**False-Positive Components**: aggregates "
+#~ "false-positive results at the component "
+#~ "level — used to tune the model "
+#~ "and cut false positives."
 
 #~ msgid "过滤栏位于标签页下方，所有标签页共用以下过滤项："
-#~ msgstr ""
-#~ "The filter bar sits under the tab strip and is shared across all tabs:"
+#~ msgstr "The filter bar sits under the tab strip and is shared across all tabs:"
 
 #~ msgid "**按基准产品过滤**：下拉选择指定产品（仅限已训练的基准产品），不选则显示全部产品数据。"
 #~ msgstr ""
-#~ "**Filter by golden product**: drop-down to pick one product (trained golden "
-#~ "products only). Leave empty to show all products."
+#~ "**Filter by golden product**: drop-down"
+#~ " to pick one product (trained golden"
+#~ " products only). Leave empty to show"
+#~ " all products."
 
 #~ msgid ""
-#~ "**时间范围**：日期时间区间选择器（**从** / **到**）。可直接输入或点击以下快捷按钮自动填充：**今天** / **昨天** / "
+#~ "**时间范围**：日期时间区间选择器（**从** / "
+#~ "**到**）。可直接输入或点击以下快捷按钮自动填充：**今天** / **昨天** / "
 #~ "**本周** / **本月** / **今年**。"
 #~ msgstr ""
-#~ "**Time range**: a date-time range picker (**From** / **To**). Type the "
-#~ "values, or click the quick presets — **Today**, **Yesterday**, **This "
-#~ "Week**, **This Month**, **This Year**."
+#~ "**Time range**: a date-time range "
+#~ "picker (**From** / **To**). Type the "
+#~ "values, or click the quick presets "
+#~ "— **Today**, **Yesterday**, **This Week**, "
+#~ "**This Month**, **This Year**."
 
 #~ msgid "**按序列号搜索**：按板件序列号（S/N）过滤。"
 #~ msgstr "**Search by serial number**: filter by board serial number (S/N)."
 
 #~ msgid "**最大显示数量**：限制列表最多显示的条目数（默认 1000），输入后点击应用生效（**总结** 标签页无此项）。"
 #~ msgstr ""
-#~ "**Max rows**: caps the number of rows displayed (default 1000); type a value"
-#~ " and click Apply (not shown on the **Summary** tab)."
+#~ "**Max rows**: caps the number of "
+#~ "rows displayed (default 1000); type a"
+#~ " value and click Apply (not shown "
+#~ "on the **Summary** tab)."
 
 #~ msgid "在 **不良元件** 和 **误判元件** 标签页下，过滤栏额外显示 **按位号/料号搜索** 输入框，可按元件位号或料号过滤。"
 #~ msgstr ""
-#~ "On the **Defective Components** and **False-Positive Components** tabs, the "
-#~ "filter bar also exposes a **Search by designator / part number** input."
+#~ "On the **Defective Components** and "
+#~ "**False-Positive Components** tabs, the "
+#~ "filter bar also exposes a **Search "
+#~ "by designator / part number** input."
 
 #~ msgid "数据分析报告-总结"
 #~ msgstr "Data Analysis Report — Summary tab"
 
 #~ msgid "**报警元件** （元件维度）：报警元件总数 （``defective_component_count``），以及："
 #~ msgstr ""
-#~ "**Alerted components** (component-level): total alerted component count "
+#~ "**Alerted components** (component-level): "
+#~ "total alerted component count "
 #~ "(``defective_component_count``), plus:"
 
 #~ msgid "**不良**：经反馈确认为不良的元件数及其 PPM 值；"
-#~ msgstr ""
-#~ "**Defective**: feedback-confirmed defective component count, with PPM."
+#~ msgstr "**Defective**: feedback-confirmed defective component count, with PPM."
 
 #~ msgid "**误判**：被误报（系统预测不良但反馈为良好）的元件数及其 PPM 值；"
 #~ msgstr ""
-#~ "**False positive**: component count of system-predicted defects that "
-#~ "feedback marked good, with PPM."
+#~ "**False positive**: component count of "
+#~ "system-predicted defects that feedback "
+#~ "marked good, with PPM."
 
 #~ msgid "**DPU**：每板平均缺陷数（Defects Per Unit）。"
 #~ msgstr "**DPU**: defects per unit (average defects per board)."
 
 #~ msgid ""
-#~ "以环形图（Donut Chart）直观展示合格（**合格**）与不良（**不良**）板件的数量与百分比；图例显示绿色（合格）和红色（不良）色块。"
+#~ "以环形图（Donut "
+#~ "Chart）直观展示合格（**合格**）与不良（**不良**）板件的数量与百分比；图例显示绿色（合格）和红色（不良）色块。"
 #~ msgstr ""
-#~ "A donut chart visualizing the Pass (**Pass**) vs. NG (**NG**) board count "
-#~ "and ratio; the legend uses green (Pass) and red (NG) swatches."
+#~ "A donut chart visualizing the Pass "
+#~ "(**Pass**) vs. NG (**NG**) board count"
+#~ " and ratio; the legend uses green "
+#~ "(Pass) and red (NG) swatches."
 
 #~ msgid "**检测结果** 标签页以列表形式列出每一条检测记录，各列含义如下："
 #~ msgstr ""
-#~ "The **Inspection Results** tab lists each inspection record with the "
+#~ "The **Inspection Results** tab lists "
+#~ "each inspection record with the "
 #~ "following columns:"
 
 #~ msgid "**序列号（S/N）**：板件序列号（无序列号时为空）。"
@@ -512,13 +696,14 @@ msgstr ""
 
 #~ msgid "**总元件数量**：本次检测中参与检测的元件总数。"
 #~ msgstr ""
-#~ "**Total Component Count**: the total number of components inspected this "
-#~ "run."
+#~ "**Total Component Count**: the total "
+#~ "number of components inspected this run."
 
 #~ msgid "**报警元件数量**：系统报警（含待复检）的元件总数。"
 #~ msgstr ""
-#~ "**Alerted Component Count**: total components alerted by the system "
-#~ "(including pending review)."
+#~ "**Alerted Component Count**: total components"
+#~ " alerted by the system (including "
+#~ "pending review)."
 
 #~ msgid "**检测开始时间** / **检测结束时间**：本次检测的开始和结束时间戳。"
 #~ msgstr "**Inspection Start / End Time**: timestamps for the inspection."
@@ -526,12 +711,15 @@ msgstr ""
 #~ msgid "**操作**：每行提供以下操作按钮："
 #~ msgstr "**Actions**: each row provides the buttons:"
 
-#~ msgid ""
-#~ "**查看**：跳转至复检页面，在左侧查看该次检测的不良元件列表，在中部与右侧查看整板缩略图、缺陷放大图、定位框、缺陷类型与判定依据，并可直接提交反馈。"
+#~ msgid "**查看**：跳转至复检页面，在左侧查看该次检测的不良元件列表，在中部与右侧查看整板缩略图、缺陷放大图、定位框、缺陷类型与判定依据，并可直接提交反馈。"
 #~ msgstr ""
-#~ "**View**: opens the Review page — NG components on the left, whole-board "
-#~ "thumbnail, zoomed defect image, localization box, defect type, and deciding "
-#~ "feature in the center and right; feedback can be submitted directly."
+#~ "**View**: opens the Review page — "
+#~ "NG components on the left, whole-"
+#~ "board thumbnail, zoomed defect image, "
+#~ "localization box, defect type, and "
+#~ "deciding feature in the center and "
+#~ "right; feedback can be submitted "
+#~ "directly."
 
 #~ msgid "**删除记录**：删除该条检测记录。"
 #~ msgstr "**Delete Record**: delete the inspection record."
@@ -539,21 +727,27 @@ msgstr ""
 #~ msgid "复检详情与反馈"
 #~ msgstr "Review detail and feedback"
 
-#~ msgid ""
-#~ "在复检详情中，左侧列出该次检测的不良元件，中部与右侧展示整板及缺陷的放大图、定位框、缺陷类型与判定依据，并可直接反馈；反馈结果将回写到数据集。"
+#~ msgid "在复检详情中，左侧列出该次检测的不良元件，中部与右侧展示整板及缺陷的放大图、定位框、缺陷类型与判定依据，并可直接反馈；反馈结果将回写到数据集。"
 #~ msgstr ""
-#~ "In the Review detail, defective components for this inspection are listed on"
-#~ " the left; the center and right show the whole-board view plus the defect's "
-#~ "enlarged image, localization box, defect type, and deciding feature. "
-#~ "Feedback can be submitted directly and is written back to the dataset."
+#~ "In the Review detail, defective "
+#~ "components for this inspection are "
+#~ "listed on the left; the center and"
+#~ " right show the whole-board view "
+#~ "plus the defect's enlarged image, "
+#~ "localization box, defect type, and "
+#~ "deciding feature. Feedback can be "
+#~ "submitted directly and is written back"
+#~ " to the dataset."
 
 #~ msgid "**不良元件 / 误判元件 标签页**"
 #~ msgstr "**Defective Components / False-Positive Components tabs**"
 
 #~ msgid "**不良元件** 和 **误判元件** 标签页结构相同，均以列表形式展示元件级别的汇总结果，各列含义如下："
 #~ msgstr ""
-#~ "**Defective Components** and **False-Positive Components** share the same "
-#~ "layout — a component-level summary list with these columns:"
+#~ "**Defective Components** and **False-Positive"
+#~ " Components** share the same layout —"
+#~ " a component-level summary list with"
+#~ " these columns:"
 
 #~ msgid "**图片**：元件的检测截图缩略图。"
 #~ msgstr "**Image**: thumbnail of the component's inspection snapshot."
@@ -566,7 +760,8 @@ msgstr ""
 
 #~ msgid "**拼版序列号**：子板序列号（非拼板产品显示 N/A）。"
 #~ msgstr ""
-#~ "**Panel Serial No.**: the sub-board's serial number (N/A on non-panel "
+#~ "**Panel Serial No.**: the sub-board's"
+#~ " serial number (N/A on non-panel "
 #~ "products)."
 
 #~ msgid "**主序列号**：整板序列号（无时显示 N/A）。"
@@ -577,24 +772,33 @@ msgstr ""
 
 #~ msgid "**不良类型**：经反馈确认的不良类型（未提供反馈时显示 N/A）。"
 #~ msgstr ""
-#~ "**Defect Type**: the defect type confirmed via feedback (N/A when no "
+#~ "**Defect Type**: the defect type "
+#~ "confirmed via feedback (N/A when no "
 #~ "feedback yet)."
 
 #~ msgid "**预测错误**：系统预测的错误类型（无预测时显示 N/A）。"
 #~ msgstr ""
-#~ "**Predicted Error**: the error type predicted by the system (N/A when none)."
+#~ "**Predicted Error**: the error type "
+#~ "predicted by the system (N/A when "
+#~ "none)."
 
 #~ msgid "列表顶部显示元件总数并提供 **导出 CSV** 按钮。"
 #~ msgstr ""
-#~ "The list header shows the total component count and provides an **Export "
-#~ "CSV** button."
+#~ "The list header shows the total "
+#~ "component count and provides an **Export"
+#~ " CSV** button."
 
 #~ msgid ""
 #~ "两个标签页的区别：**不良元件** 显示系统预测不良且反馈确认为不良的元件；**误判元件** "
 #~ "显示系统预测不良但反馈标记为良品（即误报）的元件，用于分析误报来源。"
 #~ msgstr ""
-#~ "The difference between the two tabs: **Defective Components** lists "
-#~ "components the system predicted as defective and feedback confirmed; "
-#~ "**False-Positive Components** lists components the system predicted as "
-#~ "defective but feedback marked good — the false-positive set, useful when "
-#~ "diagnosing false-positive sources."
+#~ "The difference between the two tabs: "
+#~ "**Defective Components** lists components the"
+#~ " system predicted as defective and "
+#~ "feedback confirmed; **False-Positive "
+#~ "Components** lists components the system "
+#~ "predicted as defective but feedback "
+#~ "marked good — the false-positive "
+#~ "set, useful when diagnosing false-"
+#~ "positive sources."
+

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PCBA AOI User Manual 2025.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 18:33-0700\n"
+"POT-Creation-Date: 2026-06-25 11:55-0700\n"
 "PO-Revision-Date: 2026-05-28 14:17-0700\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -29,8 +29,8 @@ msgstr "**What this page covers**"
 #: ../../source/complete_user_guide/config/detection_tools/color.rst:6
 msgid "基于颜色比例校验目标区域颜色特征（如带色标识、色环等）。"
 msgstr ""
-"Verifies the color profile of a target region (color markings, color bands, "
-"and so on) using color-ratio analysis."
+"Verifies the color profile of a target region (color markings, color "
+"bands, and so on) using color-ratio analysis."
 
 #: ../../source/complete_user_guide/config/detection_tools/color.rst:8
 msgid "**如何进入**"
@@ -39,8 +39,8 @@ msgstr "**How to open it**"
 #: ../../source/complete_user_guide/config/detection_tools/color.rst:10
 msgid "模板编辑器中绘制对应 ROI 后，在参数面板中配置该工具的参数。"
 msgstr ""
-"Draw the corresponding ROI in the Template Editor, then configure the tool's "
-"parameters in the parameter panel."
+"Draw the corresponding ROI in the Template Editor, then configure the "
+"tool's parameters in the parameter panel."
 
 #: ../../source/complete_user_guide/config/detection_tools/color.rst:12
 msgid "**操作流程**"
@@ -53,6 +53,33 @@ msgstr "Example of a Color inspection component in the Template Editor"
 #: ../../source/complete_user_guide/config/detection_tools/color.rst:18
 msgid "**颜色有效比例范围（Valid Color Ratio Ranges）**：配置一组或多组颜色范围及其有效比例区间，落入范围内判 OK。"
 msgstr ""
-"**Valid Color Ratio Ranges**: configure one or more color ranges along with "
-"their OK ratio bands; the region is judged OK when the ratio falls within "
-"the band."
+"**Valid Color Ratio Ranges**: configure one or more color ranges along "
+"with their OK ratio bands; the region is judged OK when the ratio falls "
+"within the band."
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:20
+msgid "**CRM 端子颜色（自动编程）**"
+msgstr "**CRM Termination Color (auto-program)**"
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:22
+msgid ""
+"除在模板编辑器中手动绘制颜色检测框外，**自动编程** 还可为 **CRM（片式元件，如片式电阻）** "
+"自动放置端子颜色检测框：在自动编程配置中勾选 **CRM 端子颜色**，系统会在每个 CRM "
+"元件的两个端子（焊端）处各生成一个颜色检测框，用于校验端子颜色。端子检测框的大小由参数 **端子条宽度 (本体最长边的 %)** "
+"控制（取本体最长边的百分比）。端子颜色检测项与 **元件本体颜色** 相互独立，可分别启用。"
+msgstr ""
+"Besides drawing color-inspection boxes by hand in the template editor, "
+"**auto-program** can also place termination color-inspection boxes "
+"automatically for **CRM (chip components such as chip resistors)**: check"
+" **CRM Termination Color** in the auto-program configuration and the "
+"system generates one color-inspection box at each of the two terminations"
+" (solder ends) of every CRM component to verify the termination color. "
+"The size of the termination box is set by the **Termination Band Width (%"
+" of longest body side)** parameter (a percentage of the body's longest "
+"side). The termination color check is independent of **Component Body "
+"Color** and can be enabled on its own."
+
+#: ../../source/complete_user_guide/config/detection_tools/color.rst:-1
+msgid "自动编程配置：勾选 CRM 端子颜色 与 端子条宽度 参数"
+msgstr ""
+
